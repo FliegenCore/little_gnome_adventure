@@ -1,0 +1,665 @@
+.ds-node__extension-container
+{
+    background-color: #1D1D1E;
+    padding: 8px;
+}
+
+.ds-node__main-container
+{
+    background-color: #1D1D1E;
+}
+
+.ds-node__custom-data-container
+{
+    background-color: #212325;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.ds-node__textfield > .unity-text-field__input
+{
+    background-color: #1D1D1E;
+    border-color: #27292C;
+    border-radius: 4px;
+    max-width: 240px;
+    min-width: 160px;
+    padding: 8px;
+}
+
+.ds-node__textfield__hidden > .unity-text-field__input
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.ds-node__textfield__hidden > .unity-text-field__input:focus
+{
+    background-color: #1D1D1E;
+    border-color: #27292C;
+}
+
+.ds-node__filename-textfield > .unity-text-field__input
+{
+    max-width: 1000px;
+}
+
+.ds-node__filename-textfield > .unity-text-field__input:focus
+{
+    margin: 4px;
+    padding: 4px;
+}
+
+.ds-node__choice-textfield > .unity-text-field__input
+{
+    font-size: 11px;
+    height: 35px;
+    max-width: 1000px;
+    min-width: 0px;
+}
+
+.ds-node__choice-textfield > .unity-text-field__input:focus
+{
+    height: 25px;
+    margin: 4px;
+    padding: 4px;
+}
+
+.ds-node__quote-textfield > .unity-text-field__input
+{
+    background-color: #232527;
+    border-color: transparent;
+    border-left-color: #27292C;
+    border-left-width: 4px;
+    padding: 16px;
+    max-width: 600px;
+}
+
+.ds-node__quote-textfield > .unity-text-field__input:hover
+{
+    background-color: #252729;
+}
+
+.ds-node__quote-textfield > .unity-text-field__input:focus
+{
+    background-color: #1D1D1E;
+    border-color: #27292C;
+}
+
+.ds-node__button
+{
+    background-color: #252729;
+    border-color: #1D1D1E;
+    margin: 4px;
+    max-height: 25px;
+}
+
+.ds-node__button:hover
+{
+    background-color: #2B2D2F;
+}
+
+.ds-node__button:active
+{
+    background-color: #212325;
+    color: #FDD057
+}
+
+TextField
+{
+    margin-left: 0px;
+}
+
+.ds-node__custom-data-container > Foldout
+{
+    margin-left: -4px;
+    margin-top: 4px;
+}
+
+.ds-node__custom-data-container > Foldout > TextField
+{
+    margin-left: -12px;
+    margin-top: 8px;
+}
+
+.unity-toggle_text
+{
+    margin-left: 2px;
+}
+
+.event-row {
+    margin-bottom: 5px;
+}
+
+.events-container {
+    margin-bottom: 10px;
+}
+
+.event-textfield {
+    margin-right: 5px;
+}
+
+.remove-button {
+    min-width: 30px;
+    max-width: 30px;
+    background-color: #ff4444;
+    color: white;
+}
+
+.choice-container {
+    flex-direction: column;
+    width: 100%;
+}
+
+.toggle-events-button {
+    margin-top: 5px;
+    background-color: #888888;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    min-height: 20px;
+}
+
+.choice-events-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.ds-node__start-toggle {
+    margin-left: 8px;
+    font-size: 10px;
+    min-width: 40px;
+}
+
+.ds-node__start-toggle-active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.ds-node__start-toggle-inactive {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.ds-node__choice-textfield {
+    margin-right: 5px;
+}
+
+.choice-port {
+    margin: 5px 0;
+}
+
+.ds-multiply-choice-node {
+    min-width: 320px;
+}
+
+.add-choice-button {
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    font-size: 11px;
+    padding: 4px;
+}
+
+.add-choice-button:hover {
+    background-color: #0056b3;
+}
+
+.choice-container {
+    background-color: #252729;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px 0;
+    min-width: 250px;
+}
+
+.choice-top-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.ds-node__choice-textfield {
+    flex-grow: 1;
+    margin-right: 5px;
+    min-width: 150px;
+}
+
+.ds-node__choice-textfield > .unity-text-field__input {
+    background-color: #1D1D1E;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 11px;
+    height: 25px;
+    min-width: 150px;
+}
+
+.delete-choice-button {
+    background-color: #DC3545;
+    color: white;
+    border-color: #DC3545;
+    min-width: 30px;
+    max-width: 30px;
+    height: 25px;
+    padding: 0;
+    font-size: 10px;
+}
+
+.delete-choice-button:hover {
+    background-color: #C82333;
+}
+
+.toggle-events-button {
+    background-color: #6C757D;
+    color: white;
+    padding: 4px 12px;
+    font-size: 11px;
+    height: 25px;
+    margin: 5px 0;
+    min-width: 80px;
+}
+
+.toggle-events-button:hover {
+    background-color: #5A6268;
+}
+
+.choice-events-container {
+    background-color: rgba(29, 29, 30, 0.7);
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 8px;
+    display: none;
+}
+
+.choice-events-label {
+    color: #E0E0E0;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.add-event-button {
+    background-color: #28A745;
+    color: white;
+    border-color: #28A745;
+    padding: 4px 12px;
+    font-size: 11px;
+    height: 25px;
+    margin-top: 8px;
+}
+
+.add-event-button:hover {
+    background-color: #218838;
+}
+
+.event-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+    min-height: 30px;
+}
+
+.event-textfield {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+.event-textfield > .unity-text-field__input {
+    background-color: #1D1D1E;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 11px;
+    height: 25px;
+}
+
+.remove-button {
+    background-color: #DC3545;
+    color: white;
+    border-color: #DC3545;
+    min-width: 30px;
+    max-width: 30px;
+    height: 25px;
+    padding: 0;
+    font-size: 10px;
+}
+
+.remove-button:hover {
+    background-color: #C82333;
+}
+
+.choice-port {
+    margin: 5px 0;
+}
+
+.choice-port > .unity-port {
+    margin: 0;
+    padding: 0;
+}
+
+.choice-port .unity-port__connector {
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+.output-container {
+    padding: 5px;
+    min-width: 250px;
+}
+
+.choice-events-container > .unity-foldout {
+    margin: 0;
+    padding: 0;
+}
+
+.choice-events-container > .unity-foldout > .unity-foldout__content {
+    padding-left: 10px;
+}
+
+/* Стили для ноды с множественным выбором */
+.ds-multiply-choice-node {
+    min-width: 350px;
+}
+
+/* Кнопка добавления выбора */
+.add-choice-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #007BFF;
+    color: white;
+    width: 100%;
+}
+
+.add-choice-button:hover {
+    background-color: #0056b3;
+}
+
+/* Контейнер выбора */
+.choice-container {
+    background-color: #252729;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+/* Верхняя строка выбора */
+.choice-top-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* Текстовое поле выбора */
+.ds-node__choice-textfield {
+    flex-grow: 1;
+    margin-right: 8px;
+}
+
+.ds-node__choice-textfield > .unity-text-field__input {
+    background-color: #1D1D1E;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 11px;
+    height: 25px;
+}
+
+/* Кнопка переключения событий */
+.toggle-events-button {
+    background-color: #6C757D;
+    color: white;
+    padding: 4px 12px;
+    font-size: 11px;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-width: 80px;
+}
+
+.toggle-events-button:hover {
+    background-color: #5A6268;
+}
+
+/* Контейнер событий выбора */
+.choice-events-container {
+    background-color: rgba(29, 29, 30, 0.8);
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+/* Заголовок событий */
+.choice-events-label {
+    color: #E0E0E0;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Кнопка добавления события */
+.add-event-button {
+    background-color: #28A745;
+    color: white;
+    border-color: #28A745;
+    padding: 4px 12px;
+    font-size: 11px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.add-event-button:hover {
+    background-color: #218838;
+}
+
+/* Контейнер списка событий */
+.events-list-container {
+    margin-bottom: 10px;
+}
+
+/* Кнопка удаления выбора */
+.ds-node__button-danger {
+    min-width: 25px;
+    max-width: 25px;
+    height: 20px;
+    background-color: #ff4444;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* Кнопка удаления события */
+.remove-button {
+    min-width: 25px;
+    max-width: 25px;
+    height: 20px;
+    background-color: #ff4444;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.choice-port {
+    margin: 8px 0;
+}
+
+.choice-port > .unity-port {
+    margin: 0;
+    padding: 0;
+}
+
+.output-container {
+    padding: 10px 5px;
+    min-width: 300px;
+}
+
+/* Нода с множественным выбором */
+.multiply-choice-node {
+    min-width: 350px;
+}
+
+/* Кнопка добавления выбора */
+.add-choice-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.add-choice-button:hover {
+    background-color: #0056b3;
+}
+
+/* Контейнер выбора */
+.choice-container {
+    background-color: #252729;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 6px 0;
+    min-width: 280px;
+}
+
+/* Ряд с названием выбора */
+.choice-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Поле названия выбора */
+.ds-node__choice-textfield {
+    flex-grow: 1;
+    margin-right: 10px;
+    min-width: 180px;
+    max-width: 200px;
+}
+
+.ds-node__choice-textfield > .unity-text-field__input {
+    background-color: #1D1D1E;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 11px;
+    height: 25px;
+}
+
+/* Кнопка переключения событий - ОТДЕЛЬНАЯ СТРОКА */
+.toggle-events-button {
+    background-color: #6C757D;
+    color: white;
+    padding: 4px 12px;
+    font-size: 11px;
+    height: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: flex-start;
+}
+
+.toggle-events-button:hover {
+    background-color: #5A6268;
+}
+
+/* Попап событий */
+.events-popup {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+
+/* Контент попапа */
+.events-popup-content {
+    background-color: #1D1D1E;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 12px;
+    min-width: 220px;
+    max-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовок попапа */
+.events-popup-title {
+    color: #E0E0E0;
+    font-size: 12px;
+    margin-bottom: 10px;
+    -unity-font-style: bold;
+}
+
+/* Контейнер списка событий */
+.events-list-container {
+    margin-bottom: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Кнопка добавления события */
+.add-event-button {
+    background-color: #28A745;
+    color: white;
+    border-color: #28A745;
+    padding: 4px 12px;
+    font-size: 11px;
+    height: 25px;
+}
+
+.add-event-button:hover {
+    background-color: #218838;
+}
+
+/* Строка события */
+.event-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Поле события */
+.event-textfield {
+    flex-grow: 1;
+    margin-right: 5px;
+    min-width: 150px;
+}
+
+.event-textfield > .unity-text-field__input {
+    background-color: #1D1D1E;
+    border-color: #37393C;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 11px;
+    height: 25px;
+}
+
+/* Кнопка удаления события */
+.remove-button {
+    min-width: 25px;
+    max-width: 25px;
+    height: 20px;
+    background-color: #ff4444;
+    color: white;
+}
+
+/* Кнопка удаления выбора */
+.ds-node__button-danger {
+    min-width: 25px;
+    max-width: 25px;
+    height: 20px;
+    background-color: #ff4444;
+    color: white;
+}

@@ -1,0 +1,181 @@
+{
+  "Nodes": [
+    {
+      "NodeId": "90b09dd0-f55d-460f-9fe0-f560ec12e6b6",
+      "DialogueName": "Скебоб",
+      "Text": "ЛОЛ",
+      "Type": 0,
+      "Position": {
+        "x": -226.0,
+        "y": 165.0,
+        "normalized": {
+          "x": -0.80765295,
+          "y": 0.589658141,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 279.823151,
+        "sqrMagnitude": 78301.0
+      },
+      "IsStartNode": true,
+      "OnStartEvents": [
+        "Event_ID"
+      ],
+      "OnEndEvents": [
+        "Event_ID"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "d5db6171-bcae-4a81-b989-073feced314e",
+      "DialogueName": "Пипу",
+      "Text": "Привет",
+      "Type": 1,
+      "Position": {
+        "x": 318.0,
+        "y": 165.0,
+        "normalized": {
+          "x": 0.8876277,
+          "y": 0.460561544,
+          "normalized": {
+            "x": 0.8876278,
+            "y": 0.460561574,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
+        },
+        "magnitude": 358.2583,
+        "sqrMagnitude": 128349.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "Открыть окно"
+      ],
+      "OnEndEvents": [
+        "ЗАкрыть окно"
+      ],
+      "ChoiceEvents": [
+        {
+          "ChoiceIndex": 0,
+          "Events": []
+        },
+        {
+          "ChoiceIndex": 1,
+          "Events": []
+        },
+        {
+          "ChoiceIndex": 2,
+          "Events": []
+        },
+        {
+          "ChoiceIndex": 3,
+          "Events": []
+        },
+        {
+          "ChoiceIndex": 4,
+          "Events": []
+        },
+        {
+          "ChoiceIndex": 5,
+          "Events": []
+        },
+        {
+          "ChoiceIndex": 6,
+          "Events": []
+        }
+      ],
+      "Choices": [
+        "asda",
+        "Choice 2",
+        "Choice 3",
+        "Choice 4",
+        "Choice 5",
+        "Choice 6",
+        "Choice 7"
+      ]
+    },
+    {
+      "NodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
+      "DialogueName": "Пиписька",
+      "Text": "Dialogue text.",
+      "Type": 0,
+      "Position": {
+        "x": 1059.0,
+        "y": 393.0,
+        "normalized": {
+          "x": 0.9375243,
+          "y": 0.3479198,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 1129.57068,
+        "sqrMagnitude": 1275930.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "Писька"
+      ],
+      "OnEndEvents": [
+        "1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
+      "DialogueName": "Писька",
+      "Text": "Dialogue text.",
+      "Type": 0,
+      "Position": {
+        "x": 1024.0,
+        "y": -62.0,
+        "normalized": {
+          "x": 0.998172045,
+          "y": -0.0604362,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1025.87524,
+        "sqrMagnitude": 1052420.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "Пиписька"
+      ],
+      "OnEndEvents": [
+        "2"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    }
+  ],
+  "Edges": [
+    {
+      "InputNodeId": "d5db6171-bcae-4a81-b989-073feced314e",
+      "OutputNodeId": "90b09dd0-f55d-460f-9fe0-f560ec12e6b6",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
+      "OutputNodeId": "d5db6171-bcae-4a81-b989-073feced314e",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
+      "OutputNodeId": "d5db6171-bcae-4a81-b989-073feced314e",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 1
+    }
+  ]
+}
