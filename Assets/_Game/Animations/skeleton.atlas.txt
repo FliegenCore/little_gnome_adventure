@@ -1,0 +1,118 @@
+
+skeleton.png
+size: 871,373
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2mounthOPEN
+  rotate: true
+  xy: 839, 334
+  size: 37, 29
+  orig: 37, 29
+  offset: 0, 0
+  index: -1
+LPOINT
+  rotate: true
+  xy: 839, 258
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+L_eye
+  rotate: false
+  xy: 798, 114
+  size: 52, 56
+  orig: 52, 56
+  offset: 0, 0
+  index: -1
+Lbrow
+  rotate: false
+  xy: 798, 235
+  size: 21, 12
+  orig: 21, 14
+  offset: 0, 1
+  index: -1
+RPOINT
+  rotate: true
+  xy: 839, 237
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+R_eye
+  rotate: true
+  xy: 807, 60
+  size: 52, 56
+  orig: 52, 56
+  offset: 0, 0
+  index: -1
+Rbrow
+  rotate: true
+  xy: 821, 226
+  size: 21, 12
+  orig: 21, 14
+  offset: 0, 1
+  index: -1
+TOY
+  rotate: false
+  xy: 616, 249
+  size: 221, 122
+  orig: 221, 122
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 616, 105
+  size: 142, 180
+  orig: 142, 180
+  offset: 0, 0
+  index: -1
+cry
+  rotate: false
+  xy: 616, 28
+  size: 189, 75
+  orig: 189, 76
+  offset: 0, 1
+  index: -1
+head
+  rotate: true
+  xy: 401, 2
+  size: 369, 213
+  orig: 369, 213
+  offset: 0, 0
+  index: -1
+leg
+  rotate: true
+  xy: 798, 172
+  size: 52, 69
+  orig: 52, 69
+  offset: 0, 0
+  index: -1
+leg копия
+  rotate: true
+  xy: 798, 172
+  size: 52, 69
+  orig: 52, 69
+  offset: 0, 0
+  index: -1
+mouth_1
+  rotate: false
+  xy: 839, 279
+  size: 30, 17
+  orig: 30, 17
+  offset: 0, 0
+  index: -1
+nose
+  rotate: true
+  xy: 839, 298
+  size: 34, 26
+  orig: 34, 26
+  offset: 0, 0
+  index: -1
+девочка
+  rotate: true
+  xy: 2, 2
+  size: 369, 397
+  orig: 369, 397
+  offset: 0, 0
+  index: -1

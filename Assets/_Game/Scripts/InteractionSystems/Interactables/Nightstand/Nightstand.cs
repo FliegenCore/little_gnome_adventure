@@ -10,7 +10,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem.InspectWindows
         private readonly NightstandModel _nightstandModel;
         private readonly NightstandView _nightstandView;
         
-        public Nightstand(EventBus eventBus, NightstandModel nightstandModel, NightstandView nightstandView) : base(nightstandModel, eventBus)
+        public Nightstand(EventBus eventBus, NightstandModel nightstandModel, NightstandView nightstandView) : base(nightstandModel,nightstandView, eventBus)
         {
             _nightstandModel = nightstandModel;
             _nightstandView = nightstandView;

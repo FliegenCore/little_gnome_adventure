@@ -12,7 +12,7 @@ namespace _Game.Scripts.RoomSystems
         private readonly ITeleportable _teleportable;
         private readonly LocationsModel _locationsModel;
         
-        public Door(DoorModel doorModel, EventBus eventBus,DoorView doorView, DoorsService doorsService, ITeleportable teleportable) : base(doorModel, eventBus)
+        public Door(DoorModel doorModel, EventBus eventBus,DoorView doorView, DoorsService doorsService, ITeleportable teleportable) : base(doorModel,doorView, eventBus)
         {
             _teleportable = teleportable;
             _doorsService =  doorsService;

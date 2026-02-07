@@ -41,11 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ignore Light
-    uniqueID: 4061863469
+  - name: Background
+    uniqueID: 2240632173
     locked: 0
-  - name: Particle
-    uniqueID: 4245043371
+  - name: Center
+    uniqueID: 3110753715
+    locked: 0
+  - name: foreground
+    uniqueID: 1905320111
     locked: 0
   - name: Inspect
     uniqueID: 4002187913

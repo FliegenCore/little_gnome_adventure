@@ -8,7 +8,10 @@ namespace _Game.Scripts.InventorySystem
     {
         public readonly InventoryItemView InventoryItemView;
         
-        public InventoryItem(InventoryItemModel inventoryItemModel, EventBus eventBus, InventoryItemView inventoryItemView) : base(inventoryItemModel, eventBus)
+        public InventoryItem(InventoryItemModel inventoryItemModel, 
+            EventBus eventBus, 
+            InventoryItemView inventoryItemView) : 
+            base(inventoryItemModel, inventoryItemView, eventBus)
         {
             InventoryItemView = inventoryItemView;
         }

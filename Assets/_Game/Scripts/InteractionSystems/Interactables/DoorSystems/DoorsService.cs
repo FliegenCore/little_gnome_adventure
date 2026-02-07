@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 
 namespace _Game.Scripts.RoomSystems
 {
@@ -21,7 +22,7 @@ namespace _Game.Scripts.RoomSystems
             return _doors[doorId].DoorModel;
         }
         
-        public DoorView GetViewDoorById(string doorId)
+        public NightstandView GetViewDoorById(string doorId)
         {
             return _doors[doorId].DoorView;
         }

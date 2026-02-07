@@ -1,12 +1,11 @@
 using _Game.Scripts.InteractionSystems;
+using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using UnityEngine;
 
 namespace _Game.Scripts.RoomSystems
 {
-    public class DoorView : MonoBehaviour
+    public class DoorView : NightstandView
     {
         [field: SerializeField] public DoorsIdEnum MarkId { get; private set; }
-        [field: SerializeField] public ContactTriggerProvider ContactTriggerProvider { get; private set; }
-        public Vector2 Position => transform.position;
     }
 }
