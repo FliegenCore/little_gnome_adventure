@@ -65,6 +65,8 @@ namespace _Game.Scripts.InteractionSystems
         private void SetCurrentInteractable(AbstractInteractable abstractInteractable)
         {
             _currentAbstractInteractable = abstractInteractable;
+
+            _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = true;
         }
 
         private void RemoveCurrentInteractable(AbstractInteractable abstractInteractable)
@@ -73,8 +75,8 @@ namespace _Game.Scripts.InteractionSystems
             {
                 return;
             }
-            
-            //hide
+
+            _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = false;
             _currentAbstractInteractable = null;
         }
         

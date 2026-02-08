@@ -1,5 +1,6 @@
 using _Game.Scripts.ChaptersSystem;
 using _Game.Scripts.GameInitializeSystems;
+using _Game.Scripts.InteractionSystems.HintSystem;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
@@ -19,6 +20,7 @@ namespace _Game.Scripts._Installers
         {
             builder.RegisterInstance(_playerConfig);
             builder.RegisterInstance(_forestChapterConfig);
+            builder.Register<OutlineHintController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<PlayerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorsService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();

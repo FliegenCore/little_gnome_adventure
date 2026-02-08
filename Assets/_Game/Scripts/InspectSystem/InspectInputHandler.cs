@@ -34,6 +34,9 @@ namespace _Game.Scripts.InspectSystem
         public void DisableInput()
         {
             _inputSystemActions.UI.Navigate.performed -= Navigate;
+            if (_selectedInteractableModel != null)
+                _selectedInteractableModel.IsSelected.Value = false;
+
         }
 
         private void Navigate(InputAction.CallbackContext callback)
@@ -47,11 +50,10 @@ namespace _Game.Scripts.InspectSystem
                 if (newModel != null)
                 {
                     if (_selectedInteractableModel != null)
-                        _selectedInteractableModel.Selected.Value = false;
+                        _selectedInteractableModel.IsSelected.Value = false;
                     
                     _selectedInteractableModel = newModel;
-                    _selectedInteractableModel.Selected.Value = true;
-                    Debug.Log($"Selected interactable model: {_selectedInteractableModel} {_selectedInteractableModel.Position}");
+                    _selectedInteractableModel.IsSelected.Value = true;
                 }
             }
         }
@@ -91,7 +93,7 @@ namespace _Game.Scripts.InspectSystem
         private void SelectFirst()
         {
             _selectedInteractableModel = _currentInspectModel.Interactables[0].AbstractInteractableModel;
-            _selectedInteractableModel.Selected.Value = true;
+            _selectedInteractableModel.IsSelected.Value = true;
         }
 
         public void Dispose()

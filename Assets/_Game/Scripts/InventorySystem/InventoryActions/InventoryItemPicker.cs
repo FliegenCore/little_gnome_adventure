@@ -11,7 +11,7 @@ namespace _Game.Scripts.InventorySystem.InventoryActions
             
         }
         
-        public void SetItem(InventoryItemModel inventoryItemModel)
+        public void ChooseItem(InventoryItemModel inventoryItemModel)
         {
             _inventoryItemModel = inventoryItemModel;
         }

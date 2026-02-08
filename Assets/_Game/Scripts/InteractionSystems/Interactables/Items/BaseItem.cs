@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.InventorySystem;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using Core.Common;
@@ -20,6 +21,7 @@ namespace _Game.Scripts.InteractionSystems.Interactables.Items
 
         public override void Interact()
         {
+            _inventory.AddItem(Enum.Parse<ItemId>(AbstractInteractableModel.Id));
         }
 
         public override bool CanInteract()

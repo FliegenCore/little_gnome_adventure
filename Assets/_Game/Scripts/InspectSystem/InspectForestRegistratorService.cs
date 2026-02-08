@@ -1,11 +1,9 @@
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InteractionSystems.Interactables.Items;
 using _Game.Scripts.InventorySystem;
-using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.PlayerSystems.InspectSystem.ViewVariants;
 using _Game.Scripts.RoomSystems;
 using Core.Common;
-using VContainer.Unity;
 
 namespace _Game.Scripts.PlayerSystems.InspectSystem
 {
@@ -31,13 +29,25 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         private void RegisterInspects()
         {
             RegisterNightstand();
+            RegisterTable();
         }
 
         private void RegisterNightstand()
         {
             InspectsView inspectsView = _forestRootViewFactory.GetLocationsRootView().InspectsView;
+
+            BaseItemView toyView = inspectsView.InspectNightstandView.Toy;
+            BaseItemView appleView = inspectsView.InspectNightstandView.Apple;
             
-            RegisterInspect("Nightstand", inspectsView.InspectNightstandView);
+            BaseItem toy = CreateInteractableItem(ItemId.Toy, toyView, true);
+            BaseItem apple = CreateInteractableItem(ItemId.Apple, appleView, true);
+            
+            RegisterInspect("Nightstand", inspectsView.InspectNightstandView, toy, apple);
+        }
+
+        private void RegisterTable()
+        {
+            InspectsView inspectsView = _forestRootViewFactory.GetLocationsRootView().InspectsView;
             RegisterInspect("Table", inspectsView.Table);
         }
 
@@ -50,9 +60,11 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             _inspectController.AddInspectModel(id, inspectModel);
         }
 
-        private BaseItem CreateInteractableItem(string id, IContactTriggerProvider triggerProvider, NightstandView view)
+        private BaseItem CreateInteractableItem(ItemId id, BaseItemView view, bool isEnabled)
         {
-            BaseItemModel model = new BaseItemModel(triggerProvider, view.transform.position, id);
+            BaseItemModel model = new BaseItemModel(view.ContactTriggerProvider, view.transform.position, id.ToString(), isEnabled);
+            view.AbstractHintSelect.Construct(_eventBus, model.IsSelected);
+            
             BaseItem baseItem = new BaseItem(model, view, _eventBus, _inventory);
 
             return baseItem;
