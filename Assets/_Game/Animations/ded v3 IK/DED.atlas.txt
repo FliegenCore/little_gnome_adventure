@@ -1,0 +1,167 @@
+
+DED.png
+size: 1672,586
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ER
+  rotate: false
+  xy: 1267, 302
+  size: 52, 43
+  orig: 54, 46
+  offset: 1, 1
+  index: -1
+EYL
+  rotate: true
+  xy: 1247, 2
+  size: 53, 35
+  orig: 55, 37
+  offset: 1, 1
+  index: -1
+Ear_L
+  rotate: false
+  xy: 1531, 18
+  size: 40, 40
+  orig: 42, 42
+  offset: 1, 1
+  index: -1
+Ear_R
+  rotate: true
+  xy: 1573, 20
+  size: 38, 41
+  orig: 40, 43
+  offset: 1, 1
+  index: -1
+L arm
+  rotate: true
+  xy: 1513, 180
+  size: 165, 137
+  orig: 165, 137
+  offset: 0, 0
+  index: -1
+PALKA
+  rotate: false
+  xy: 1595, 418
+  size: 75, 166
+  orig: 77, 168
+  offset: 1, 1
+  index: -1
+R arm
+  rotate: false
+  xy: 1321, 15
+  size: 165, 137
+  orig: 165, 137
+  offset: 0, 0
+  index: -1
+USI
+  rotate: true
+  xy: 1213, 100
+  size: 197, 106
+  orig: 197, 106
+  offset: 0, 0
+  index: -1
+bear
+  rotate: true
+  xy: 1513, 60
+  size: 118, 128
+  orig: 120, 131
+  offset: 1, 2
+  index: -1
+body
+  rotate: false
+  xy: 1321, 154
+  size: 190, 191
+  orig: 192, 193
+  offset: 1, 1
+  index: -1
+eye_L
+  rotate: false
+  xy: 1488, 18
+  size: 41, 40
+  orig: 43, 42
+  offset: 1, 1
+  index: -1
+eye_L_POINT
+  rotate: false
+  xy: 1506, 2
+  size: 13, 14
+  orig: 15, 16
+  offset: 1, 1
+  index: -1
+eye_R
+  rotate: false
+  xy: 1273, 57
+  size: 42, 41
+  orig: 44, 43
+  offset: 1, 1
+  index: -1
+eye_RPOINT
+  rotate: true
+  xy: 1488, 2
+  size: 14, 16
+  orig: 16, 18
+  offset: 1, 1
+  index: -1
+eyebrow_L
+  rotate: true
+  xy: 1213, 2
+  size: 58, 32
+  orig: 60, 34
+  offset: 1, 1
+  index: -1
+eyebrow_R
+  rotate: false
+  xy: 1213, 62
+  size: 58, 36
+  orig: 60, 38
+  offset: 1, 1
+  index: -1
+head
+  rotate: true
+  xy: 1267, 347
+  size: 237, 326
+  orig: 239, 328
+  offset: 1, 1
+  index: -1
+main
+  rotate: false
+  xy: 2, 5
+  size: 739, 579
+  orig: 741, 581
+  offset: 1, 1
+  index: -1
+nose
+  rotate: true
+  xy: 1595, 376
+  size: 40, 70
+  orig: 42, 72
+  offset: 1, 1
+  index: -1
+odeyalo
+  rotate: false
+  xy: 743, 299
+  size: 522, 285
+  orig: 524, 287
+  offset: 1, 1
+  index: -1
+podushka
+  rotate: false
+  xy: 743, 24
+  size: 301, 273
+  orig: 303, 275
+  offset: 1, 1
+  index: -1
+soplya
+  rotate: false
+  xy: 1488, 82
+  size: 23, 70
+  orig: 25, 72
+  offset: 1, 1
+  index: -1
+stupenki
+  rotate: false
+  xy: 1046, 17
+  size: 165, 280
+  orig: 167, 282
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,174 @@
+
+skeleton.png
+size: 666,514
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1mounthSMILE
+  rotate: false
+  xy: 144, 8
+  size: 24, 15
+  orig: 24, 15
+  offset: 0, 0
+  index: -1
+2mounthOPEN
+  rotate: false
+  xy: 144, 25
+  size: 37, 25
+  orig: 37, 29
+  offset: 0, 4
+  index: -1
+3mounthNORM
+  rotate: true
+  xy: 565, 216
+  size: 34, 9
+  orig: 34, 9
+  offset: 0, 0
+  index: -1
+LPOINT
+  rotate: false
+  xy: 183, 30
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+RPOINT
+  rotate: false
+  xy: 183, 30
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+L_ear
+  rotate: true
+  xy: 51, 5
+  size: 45, 47
+  orig: 45, 47
+  offset: 0, 0
+  index: -1
+L_eye
+  rotate: false
+  xy: 536, 156
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+L_eyebrow
+  rotate: false
+  xy: 536, 138
+  size: 30, 16
+  orig: 30, 16
+  offset: 0, 0
+  index: -1
+Larm
+  rotate: false
+  xy: 578, 205
+  size: 47, 180
+  orig: 47, 180
+  offset: 0, 0
+  index: -1
+Lleg
+  rotate: false
+  xy: 627, 280
+  size: 37, 105
+  orig: 37, 105
+  offset: 0, 0
+  index: -1
+Lleg2
+  rotate: true
+  xy: 585, 139
+  size: 64, 27
+  orig: 64, 27
+  offset: 0, 0
+  index: -1
+R-ear
+  rotate: false
+  xy: 100, 9
+  size: 42, 41
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+R_eye
+  rotate: false
+  xy: 2, 3
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+R_eyebrow
+  rotate: true
+  xy: 183, 2
+  size: 26, 16
+  orig: 26, 16
+  offset: 0, 0
+  index: -1
+Rarm
+  rotate: true
+  xy: 215, 25
+  size: 44, 182
+  orig: 44, 182
+  offset: 0, 0
+  index: -1
+Rleg
+  rotate: false
+  xy: 627, 133
+  size: 33, 107
+  orig: 33, 107
+  offset: 0, 0
+  index: -1
+Rlleg3
+  rotate: true
+  xy: 536, 213
+  size: 37, 27
+  orig: 37, 27
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 409, 141
+  size: 125, 109
+  orig: 125, 109
+  offset: 0, 0
+  index: -1
+cup
+  rotate: true
+  xy: 215, 71
+  size: 179, 192
+  orig: 180, 192
+  offset: 0, 0
+  index: -1
+downBODY
+  rotate: true
+  xy: 578, 387
+  size: 125, 77
+  orig: 125, 77
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 409, 8
+  size: 246, 123
+  orig: 246, 123
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 52
+  size: 211, 198
+  orig: 211, 198
+  offset: 0, 0
+  index: -1
+nose
+  rotate: false
+  xy: 627, 242
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+гномик
+  rotate: true
+  xy: 2, 252
+  size: 260, 574
+  orig: 260, 574
+  offset: 0, 0
+  index: -1
