@@ -1,0 +1,83 @@
+
+Hedgehog.png
+size: 586,372
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+гвоздь
+  rotate: false
+  xy: 514, 88
+  size: 58, 110
+  orig: 58, 110
+  offset: 0, 0
+  index: -1
+глаз1
+  rotate: false
+  xy: 502, 23
+  size: 40, 63
+  orig: 42, 65
+  offset: 1, 1
+  index: -1
+глаз2
+  rotate: false
+  xy: 544, 23
+  size: 40, 63
+  orig: 42, 65
+  offset: 1, 1
+  index: -1
+конфета
+  rotate: true
+  xy: 330, 2
+  size: 96, 105
+  orig: 96, 105
+  offset: 0, 0
+  index: -1
+нога
+  rotate: false
+  xy: 467, 200
+  size: 116, 79
+  orig: 118, 81
+  offset: 1, 1
+  index: -1
+нога2
+  rotate: false
+  xy: 467, 281
+  size: 111, 89
+  orig: 113, 91
+  offset: 1, 1
+  index: -1
+нос
+  rotate: false
+  xy: 330, 100
+  size: 106, 141
+  orig: 108, 143
+  offset: 1, 1
+  index: -1
+рука
+  rotate: false
+  xy: 330, 243
+  size: 135, 127
+  orig: 137, 129
+  offset: 1, 1
+  index: -1
+рука2
+  rotate: false
+  xy: 438, 100
+  size: 74, 98
+  orig: 76, 100
+  offset: 1, 1
+  index: -1
+тело
+  rotate: false
+  xy: 2, 5
+  size: 326, 365
+  orig: 328, 367
+  offset: 1, 1
+  index: -1
+челюсть
+  rotate: true
+  xy: 437, 12
+  size: 86, 63
+  orig: 88, 66
+  offset: 1, 1
+  index: -1

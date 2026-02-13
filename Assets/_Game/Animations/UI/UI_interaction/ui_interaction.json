@@ -1,0 +1,157 @@
+{
+"skeleton": {
+	"hash": "XGUnmBLs468oYuqIeFNZywi/9mY",
+	"spine": "3.8.0",
+	"x": -64,
+	"y": -66,
+	"width": 128,
+	"height": 128,
+	"images": "",
+	"audio": "D:/арт Игра про маленького ГНОМА/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "0", "parent": "root", "length": 90.52, "rotation": 90.59, "x": -63.84, "y": -44.5 },
+	{ "name": "1", "parent": "0", "length": 97.04, "rotation": 0.14, "x": -5.01, "y": -65.36 }
+],
+"slots": [
+	{ "name": "BACKOLATE", "bone": "0", "attachment": "BACKOLATE" },
+	{ "name": "DIALOGUE", "bone": "1" },
+	{ "name": "EYE", "bone": "1" },
+	{ "name": "HAND", "bone": "1" },
+	{ "name": "USE", "bone": "1" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"EYE": {
+				"EYE": { "x": 54.89, "y": 3.87, "rotation": -90.73, "width": 86, "height": 80 }
+			},
+			"DIALOGUE": {
+				"DIALOGUE": { "x": 44.38, "y": 2.51, "rotation": -90.73, "width": 81, "height": 77 }
+			},
+			"USE": {
+				"USE": { "x": 46.35, "y": 0.48, "rotation": -90.73, "width": 127, "height": 83 }
+			},
+			"BACKOLATE": {
+				"BACKOLATE": { "x": 41.84, "y": -64.27, "rotation": -90.59, "width": 128, "height": 128 }
+			},
+			"HAND": {
+				"HAND": { "x": 50.94, "y": 7.42, "rotation": -90.73, "width": 85, "height": 100 }
+			}
+		}
+	}
+],
+"animations": {
+	"icon_dialogue": {
+		"slots": {
+			"DIALOGUE": {
+				"attachment": [
+					{ "name": "DIALOGUE" }
+				]
+			}
+		},
+		"bones": {
+			"0": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": 0.93, "y": -1.24 },
+					{ "time": 1 }
+				]
+			},
+			"1": {
+				"rotate": [
+					{},
+					{ "time": 0.5, "angle": -2.64 },
+					{ "time": 1 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.5, "x": -4.76, "y": 0.05 },
+					{ "time": 1 }
+				]
+			}
+		}
+	},
+	"icon_eye": {
+		"slots": {
+			"EYE": {
+				"attachment": [
+					{ "name": "EYE" }
+				]
+			}
+		},
+		"bones": {
+			"0": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": 0.93, "y": -1.24 },
+					{ "time": 1 }
+				]
+			},
+			"1": {
+				"rotate": [
+					{},
+					{ "time": 0.5, "angle": -1.89 },
+					{ "time": 1 }
+				]
+			}
+		}
+	},
+	"icon_hand": {
+		"slots": {
+			"HAND": {
+				"attachment": [
+					{ "name": "HAND" }
+				]
+			}
+		},
+		"bones": {
+			"0": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": 0.93, "y": -1.24 },
+					{ "time": 1 }
+				]
+			},
+			"1": {
+				"rotate": [
+					{},
+					{ "time": 0.5, "angle": 7.81 },
+					{ "time": 1 }
+				]
+			}
+		}
+	},
+	"icon_use": {
+		"slots": {
+			"USE": {
+				"attachment": [
+					{ "name": "USE" }
+				]
+			}
+		},
+		"bones": {
+			"0": {
+				"translate": [
+					{},
+					{ "time": 0.5, "x": 0.93, "y": -1.24 },
+					{ "time": 1 }
+				]
+			},
+			"1": {
+				"rotate": [
+					{},
+					{ "time": 0.5, "angle": -4.15 },
+					{ "time": 1 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}
