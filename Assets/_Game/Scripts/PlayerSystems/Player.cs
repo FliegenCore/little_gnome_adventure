@@ -11,10 +11,10 @@ namespace _Game.Scripts.PlayerSystems
     public class Player : IUpdateListener, ITeleportable, IDisposable
     {
         private readonly PlayerModel _playerModel;
-        private readonly PlayerView _playerView;
         private readonly InteractionController _interactionController;
         private readonly Fsm _motionStateMachine;
         private readonly Fsm _playerStateMachine;
+        public readonly PlayerView PlayerView;
 
         private readonly EventBus _eventBus;
         
@@ -29,7 +29,7 @@ namespace _Game.Scripts.PlayerSystems
             _eventBus = eventBus;
             _interactionController = interactionController;
             _playerModel = playerModel;
-            _playerView = playerView;
+            PlayerView = playerView;
             _motionStateMachine = motionStateMachine;
             _playerStateMachine = playerStateMachine;
             

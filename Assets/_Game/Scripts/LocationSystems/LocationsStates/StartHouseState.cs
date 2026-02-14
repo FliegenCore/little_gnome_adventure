@@ -9,7 +9,7 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
         public readonly StartHouseLocationModel StartHouseLocationModel;
         public readonly StartHouseView StartHouseView;
         
-        public StartHouseState(Fsm fsm, StartHouseLocationModel startHouseLocationModel, StartHouseView startHouseView) : base(fsm)
+        public StartHouseState(Fsm fsm, StartHouseLocationModel startHouseLocationModel, StartHouseView startHouseView) : base(fsm, startHouseView)
         {
             StartHouseLocationModel = startHouseLocationModel;
             StartHouseView = startHouseView;

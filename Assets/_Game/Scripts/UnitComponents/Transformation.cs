@@ -1,4 +1,5 @@
 using _Game.Scripts.Utils;
+using UniRx;
 using UnityEngine;
 
 namespace Game.PlayerSystem
@@ -6,6 +7,7 @@ namespace Game.PlayerSystem
     public class Transformation
     {
         public Observable<Vector2> Direction { get; }
+        public ReactiveProperty<Quaternion> Rotation { get; }
         public Observable<Vector2> Position { get; }
         public Observable<Vector3> Scale { get; }
 
@@ -14,6 +16,7 @@ namespace Game.PlayerSystem
             Position = new Observable<Vector2>(position);
             Scale = new Observable<Vector3>(scale);
             Direction = new Observable<Vector2>(Vector2.zero);
+            Rotation = new ReactiveProperty<Quaternion>(Quaternion.identity);
         }
     }
 }

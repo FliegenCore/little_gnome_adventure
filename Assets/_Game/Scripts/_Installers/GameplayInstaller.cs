@@ -1,10 +1,13 @@
+using _Game.Scripts.CameraSystem;
 using _Game.Scripts.ChaptersSystem;
 using _Game.Scripts.GameInitializeSystems;
+using _Game.Scripts.InspectSystem.Camera;
 using _Game.Scripts.InteractionSystems.HintSystem;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
 using _Game.Scripts.RoomSystems.Variants;
+using Unity.Cinemachine;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -15,12 +18,19 @@ namespace _Game.Scripts._Installers
     {
         [SerializeField] private ForestChapterConfig _forestChapterConfig;
         [SerializeField] private PlayerConfig _playerConfig;
+        [SerializeField] private CinemachineCamera _cinemachineCamera;
+        [SerializeField] private Camera _mainCamera;
+        [SerializeField] private InspectCamera _inspectCamera;
         
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInstance(_playerConfig);
             builder.RegisterInstance(_forestChapterConfig);
+            builder.RegisterInstance(_inspectCamera);
+            builder.RegisterInstance(_mainCamera);
+            builder.RegisterInstance(_cinemachineCamera).AsSelf().AsImplementedInterfaces();
             builder.Register<OutlineHintController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<CameraController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<PlayerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorsService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();

@@ -6,8 +6,11 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
 {
     public class LocationAbstractState : FsmAbstractState
     {
-        public LocationAbstractState(Fsm fsm) : base(fsm)
+        public readonly AbstractLocationView AbstractLocationView;
+        
+        public LocationAbstractState(Fsm fsm, AbstractLocationView abstractLocation) : base(fsm)
         {
+            AbstractLocationView = abstractLocation;
         }
 
         public override void Enter()

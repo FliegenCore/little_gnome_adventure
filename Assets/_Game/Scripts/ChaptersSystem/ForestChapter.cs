@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using _Game.Scripts.CameraSystem;
 using _Game.Scripts.GameInitializeSystems;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
@@ -20,6 +21,7 @@ namespace _Game.Scripts.ChaptersSystem
         private readonly LocationsControllerFactory _locationsControllerFactory;
         private readonly UpdateController _updateController;
         private readonly InspectForestRegistratorService _inspectForestRegistratorService;
+        private readonly CameraController _cameraController;
         
         private LocationsController _locationsController;
         private List<DoorView> _allDoors = new();
@@ -31,8 +33,10 @@ namespace _Game.Scripts.ChaptersSystem
             HouseLocationFactory houseLocationFactory,
             LocationsControllerFactory locationsControllerFactory,
             UpdateController updateController,
-            InspectForestRegistratorService inspectForestRegistratorService)
+            InspectForestRegistratorService inspectForestRegistratorService,
+            CameraController cameraController)
         {
+            _cameraController = cameraController;
             _inspectForestRegistratorService = inspectForestRegistratorService;
             _updateController = updateController;
             _locationsControllerFactory = locationsControllerFactory;
@@ -47,12 +51,13 @@ namespace _Game.Scripts.ChaptersSystem
         {
             CreateLocation();
             CreatePlayer();
+            TieCamera();
             CacheAllDoorView();
             CreateDoorConnections();
             RegisterInspects();
             RegisterUpdates();
         }
-
+        
         private void RegisterInspects()
         {
             _inspectForestRegistratorService.Initialize();
@@ -62,7 +67,13 @@ namespace _Game.Scripts.ChaptersSystem
         {
             _forestRootViewFactory.CreateForestLocationsRootView();
             _locationsController = _locationsControllerFactory.Create();
+            //create locations objects, characters;
             _locationsController.CreateLocation(_houseLocationFactory);
+            
+            
+            
+            //------------
+            _locationsController.LocationsModel.CurrentLocation.Value = LocationsIdEnum.MainHouse;
             
             _locationsController.Initialize();
         }
@@ -71,7 +82,13 @@ namespace _Game.Scripts.ChaptersSystem
         {
             _playerFactory.CreatePlayer();
         }
-
+        
+        private void TieCamera()
+        {
+            _cameraController.SetFollowTarget(_playerFactory.GetPlayer().PlayerView.transform);
+            _cameraController.SetFollowZone(_locationsController.GetCurrentLocation().AbstractLocationView.CameraCollider);
+        }
+        
         private void CacheAllDoorView()
         {
             _allDoors.AddRange(_forestRootViewFactory.GetLocationsRootView().StartHouseView.Doors);

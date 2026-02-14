@@ -1,5 +1,6 @@
 using System;
 using _Game.Scripts.FSM;
+using _Game.Scripts.RoomSystems.LocationsStates;
 using _Game.Scripts.UpdateSystems;
 using UnityEngine;
 
@@ -33,6 +34,13 @@ namespace _Game.Scripts.RoomSystems
             _locationsStateMachine.SetState(StaticLocationsConnection.LocationsTypeMap[locationIdEnum]);
         }
 
+        public LocationAbstractState GetCurrentLocation()
+        {
+            Type type = StaticLocationsConnection.LocationsTypeMap[LocationsModel.CurrentLocation.Value];
+            
+            return (LocationAbstractState)_locationsStateMachine.GetState(type);
+        }
+        
         public void Update(float deltaTime)
         {
             _locationsStateMachine?.Update(deltaTime);
