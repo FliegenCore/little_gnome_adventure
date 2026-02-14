@@ -10,6 +10,21 @@ namespace _Game.Scripts.FSM
         
         private Dictionary<Type, FsmAbstractState> _states = new();
 
+        public T GetState<T>() where T : FsmAbstractState
+        {
+            if(_states.TryGetValue(typeof(T), out FsmAbstractState state))
+            {
+                return (T) state;
+            }
+            
+            return default;
+        }
+
+        public FsmAbstractState GetState(Type stateType)
+        {
+            return _states.GetValueOrDefault(stateType);
+        }
+        
         public void AddState(FsmAbstractState state)
         {
             _states.Add(state.GetType(), state);

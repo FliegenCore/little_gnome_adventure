@@ -41,6 +41,7 @@ namespace _Game.Scripts.RoomSystems.Variants
         {
             NightstandView nightstandView = view;
             NightstandModel nightstandModel = new NightstandModel(nightstandView.transform.position,id, nightstandView.ContactTriggerProvider);
+            nightstandView.HintSelect.Construct(_eventBus, nightstandModel.IsSelected);
             Nightstand nightstand = new Nightstand(_eventBus, nightstandModel, nightstandView);
             
             return nightstand;

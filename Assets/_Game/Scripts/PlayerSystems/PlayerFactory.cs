@@ -51,6 +51,7 @@ namespace _Game.Scripts.PlayerSystems
             
             PlayerView playerView = Object.Instantiate(_playerConfig.PlayerViewPrefab);
             playerView.Transformable.Construct(transformation);
+            playerView.AnimationPlayer.Construct(playerModel.AnimationPlayerModel);
             
             Fsm motionFsm = new Fsm();
             FillPlayerMotion(motionFsm, playerModel);

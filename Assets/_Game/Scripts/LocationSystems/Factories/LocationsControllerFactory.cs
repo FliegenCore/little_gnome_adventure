@@ -6,7 +6,7 @@ namespace _Game.Scripts.RoomSystems
         
         public LocationsController Create()
         {
-            //from playerData
+            //current = from playerData
             LocationsModel locationsModel = new LocationsModel(LocationsIdEnum.MainHouse);
             
             LocationsController locationsController = new LocationsController(locationsModel);

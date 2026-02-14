@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using _Game.Scripts.InspectSystem;
+using _Game.Scripts.InspectSystem.Camera;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using Core.Common;
 using UnityEngine;
@@ -12,12 +13,14 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
     {
         private readonly EventBus _eventBus;
         private readonly InputSystem_Actions _inputSystemActions;
+        private readonly InspectCamera _inspectCamera;
         private readonly Dictionary<string, InspectModel> _inspectModels = new Dictionary<string, InspectModel>();
         private InspectInputHandler _inspectInputHandler;
         private InspectModel _currentInspectModel;
         
-        private InspectController(EventBus eventBus, InputSystem_Actions inputSystemActions)
+        private InspectController(EventBus eventBus, InputSystem_Actions inputSystemActions, InspectCamera inspectCamera)
         {
+            _inspectCamera = inspectCamera;
             _eventBus = eventBus;
             _inputSystemActions = inputSystemActions;
             _inspectInputHandler = new InspectInputHandler(inputSystemActions);
@@ -50,6 +53,8 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             _currentInspectModel = _inspectModels[id];
             
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerInspectState));
+            
+            _inspectCamera.gameObject.SetActive(true);
         }
 
         private void Hide(InputAction.CallbackContext _)
@@ -63,6 +68,8 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             _currentInspectModel = null;
             
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
+
+            _inspectCamera.gameObject.SetActive(false);
         }
 
         public void Dispose()
