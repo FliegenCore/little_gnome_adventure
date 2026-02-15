@@ -48,7 +48,7 @@ namespace _Game.Scripts.PlayerSystems
 
         public void Teleport(Vector2 position)
         {
-            
+            _playerModel.Transformation.Position.Value = position;
         }
 
         public void Dispose()

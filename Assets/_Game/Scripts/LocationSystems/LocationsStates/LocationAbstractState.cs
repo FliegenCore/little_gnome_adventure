@@ -15,16 +15,16 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
 
         public override void Enter()
         {
-                        
+            AbstractLocationView.gameObject.SetActive(true);
         }
 
         public override void Exit()
         {
+            AbstractLocationView.gameObject.SetActive(false);
         }
 
         public override void Update(float deltaTime)
         {
-            //_locationView?.SelfUpdate(deltaTime);
         }
     }
 }

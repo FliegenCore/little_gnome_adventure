@@ -9,7 +9,7 @@ namespace _Game.Scripts.RoomSystems
 
         public void RegisterDoor(string id, Door door)
         {
-            _doors.Add(id, door);
+            _doors.TryAdd(id, door);
         }
 
         public Door GetDoorById(string doorId)
@@ -25,6 +25,11 @@ namespace _Game.Scripts.RoomSystems
         public NightstandView GetViewDoorById(string doorId)
         {
             return _doors[doorId].DoorView;
+        }
+
+        public IReadOnlyCollection<Door> GetDoors()
+        {
+            return _doors.Values;
         }
     }
 }

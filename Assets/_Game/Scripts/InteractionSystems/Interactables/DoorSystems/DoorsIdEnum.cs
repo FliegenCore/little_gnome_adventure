@@ -4,7 +4,7 @@ namespace _Game.Scripts.RoomSystems
     {
         MainHouseExit = 0,
         MainHouseLeftDoor = 1,
-        
         ForestMainHouseEnter = 2,
+        Test1 = 3,
     }
 }

@@ -9,7 +9,6 @@ namespace _Game.Scripts.RoomSystems.Rooms
 {
     public class StartHouseView : AbstractLocationView
     {
-        [field: SerializeField] public DoorView[] Doors { get; private set; }
         [field: SerializeField] public NightstandView NightstandView { get; private set; }
         [field: SerializeField] public NightstandView Table { get; private set; }
         

@@ -1,6 +1,7 @@
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.ChaptersSystem;
 using _Game.Scripts.GameInitializeSystems;
+using _Game.Scripts.Hacks;
 using _Game.Scripts.InspectSystem.Camera;
 using _Game.Scripts.InteractionSystems.HintSystem;
 using _Game.Scripts.PlayerSystems;
@@ -22,6 +23,16 @@ namespace _Game.Scripts._Installers
         [SerializeField] private Camera _mainCamera;
         [SerializeField] private InspectCamera _inspectCamera;
         
+        private void Start()
+        {
+            var hackController = FindObjectOfType<HackController>();
+            if (hackController != null)
+            {
+                Container.InjectGameObject(hackController.gameObject);
+                Debug.Log("Injected dependencies into HackController");
+            }
+            
+        }
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInstance(_playerConfig);
@@ -36,6 +47,7 @@ namespace _Game.Scripts._Installers
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ForestRootViewFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<HouseLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<ForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<LocationsControllerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectForestRegistratorService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();

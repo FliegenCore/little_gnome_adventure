@@ -6,11 +6,12 @@ namespace _Game.Scripts.RoomSystems
 {
     public static class StaticLocationsConnection
     {
-        public static Dictionary<string, LocationsIdEnum> LocationsIdEnumMap =
+        public static Dictionary<string, LocationsIdEnum> DoorLocationConnectionId =
             new Dictionary<string, LocationsIdEnum>()
             {
                 [nameof(DoorsIdEnum.MainHouseExit)] = LocationsIdEnum.MainHouse,
                 [nameof(DoorsIdEnum.ForestMainHouseEnter)] = LocationsIdEnum.Forest,
+                [nameof(DoorsIdEnum.Test1)] = LocationsIdEnum.Test1,
             };
         
         public static Dictionary<LocationsIdEnum, Type> LocationsTypeMap =

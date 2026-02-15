@@ -4,6 +4,6 @@ namespace _Game.Scripts.RoomSystems
     {
         MainHouse = 0,
         Forest = 1,
-        
+        Test1 = 2
     }
 }

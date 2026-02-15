@@ -5,11 +5,11 @@ namespace _Game.Scripts.RoomSystems.LocationModels
     public class StartHouseLocationModel : AbstractLocationModel
     {
         private readonly LampModel _mainLampModel;
-        public readonly Nightstand _nightstand;
+        public readonly Nightstand Nightstand;
         
         public StartHouseLocationModel(LocationsIdEnum locationsIdEnum, LampModel mainLampModel, Nightstand nightstand) : base(locationsIdEnum)
         {
-            _nightstand = nightstand;
+            Nightstand = nightstand;
             _mainLampModel = mainLampModel;
         }
 

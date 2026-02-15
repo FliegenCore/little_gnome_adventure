@@ -1,6 +1,7 @@
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems;
 using Core.Common;
+using UnityEngine;
 
 namespace _Game.Scripts.RoomSystems
 {
@@ -12,8 +13,14 @@ namespace _Game.Scripts.RoomSystems
         private readonly ITeleportable _teleportable;
         private readonly LocationsModel _locationsModel;
         
-        public Door(DoorModel doorModel, EventBus eventBus,DoorView doorView, DoorsService doorsService, ITeleportable teleportable) : base(doorModel,doorView, eventBus)
+        public Door(DoorModel doorModel,
+            EventBus eventBus, 
+            DoorView doorView, 
+            DoorsService doorsService, 
+            LocationsModel locationsModel,
+            ITeleportable teleportable) : base(doorModel,doorView, eventBus)
         {
+            _locationsModel = locationsModel;
             _teleportable = teleportable;
             _doorsService =  doorsService;
             DoorModel = doorModel;
@@ -27,7 +34,7 @@ namespace _Game.Scripts.RoomSystems
             if (connectedDoor != null)
             {
                 //do fast fade
-                _locationsModel.CurrentLocation.Value = StaticLocationsConnection.LocationsIdEnumMap[connectedDoor.Id];
+                _locationsModel.CurrentLocation.Value = StaticLocationsConnection.DoorLocationConnectionId[connectedDoor.Id];
                 _teleportable.Teleport(connectedDoor.Position);
             }
         }

@@ -8,5 +8,6 @@ namespace _Game.Scripts.RoomSystems
     {
         [field: SerializeField] public LocationsIdEnum LocationsId { get; private set; }
         [field: SerializeField] public PolygonCollider2D CameraCollider { get; private set; }
+        [field: SerializeField] public DoorView[] Doors { get; private set; }
     }
 }

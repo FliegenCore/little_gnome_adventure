@@ -18,6 +18,16 @@ namespace _Game.Scripts.InventorySystem
             
             //_inventoryModel.ItemModels.Subscribe(AddItem);
         }
+
+        public void EnableInput()
+        {
+            
+        }
+
+        public void DisableInput()
+        {
+            
+        }
         
         public void AddItem(ItemId id)
         {
