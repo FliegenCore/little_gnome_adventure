@@ -53,8 +53,7 @@ MonoBehaviour:
   <InspectsView>k__BackingField: {fileID: 7322653323673480104}
   <StartHouseView>k__BackingField: {fileID: 4219775341326276242}
   <ForestLocationView>k__BackingField: {fileID: 3853060641923255780}
-  <TestRooms>k__BackingField:
-  - {fileID: 8076096563960107233}
+  <TestRoom>k__BackingField: {fileID: 8076096563960107233}
 --- !u!1 &2886847589504507824
 GameObject:
   m_ObjectHideFlags: 0

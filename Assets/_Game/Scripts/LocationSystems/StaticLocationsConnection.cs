@@ -19,6 +19,7 @@ namespace _Game.Scripts.RoomSystems
             {
                 [LocationsIdEnum.MainHouse] = typeof(StartHouseState),
                 [LocationsIdEnum.Forest] = typeof(ForestState),
+                [LocationsIdEnum.Test1] = typeof(TestLocState),
             };
     }
 }

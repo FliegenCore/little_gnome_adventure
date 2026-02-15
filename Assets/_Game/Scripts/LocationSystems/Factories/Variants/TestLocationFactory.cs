@@ -2,19 +2,18 @@ using _Game.Scripts.FSM;
 using _Game.Scripts.PlayerSystems.InspectSystem.InspectWindows;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.Nightstand;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
-using _Game.Scripts.RoomSystems.LocationModels;
-using _Game.Scripts.RoomSystems.LocationModels.Forest;
+using _Game.Scripts.RoomSystems.LocationModels.Test;
 using _Game.Scripts.RoomSystems.LocationsStates;
 using Core.Common;
 
 namespace _Game.Scripts.RoomSystems.Variants
 {
-    public class ForestLocationFactory : ILocationFactory
+    public class TestLocationFactory: ILocationFactory
     {
         private readonly ForestRootViewFactory _forestRootViewFactory;
         private readonly EventBus _eventBus;
         
-        public ForestLocationFactory(ForestRootViewFactory forestRootViewFactory, EventBus eventBus)
+        public TestLocationFactory(ForestRootViewFactory forestRootViewFactory, EventBus eventBus)
         {
             _forestRootViewFactory = forestRootViewFactory;
             _eventBus = eventBus;
@@ -22,15 +21,11 @@ namespace _Game.Scripts.RoomSystems.Variants
         
         public void Create(Fsm fsm)
         {
-            LampModel lampModel = new LampModel(0.6f, 1.6f);
+            TestLocationModel forestLocationModel = new TestLocationModel(LocationsIdEnum.Test1);
             
-            ForestLocationModel forestLocationModel = new ForestLocationModel(LocationsIdEnum.Forest);
+            TestLocState testState = new TestLocState(fsm, _forestRootViewFactory.GetLocationsRootView().TestRoom);
             
-            ForestState forestState = new ForestState(fsm, _forestRootViewFactory.GetLocationsRootView().ForestLocationView);
-            
-            _forestRootViewFactory.GetLocationsRootView().StartHouseView.Construct(lampModel);
-            
-            fsm.AddState(forestState);
+            fsm.AddState(testState);
         }
 
         private Nightstand CreateInteractable(string id, NightstandView view)

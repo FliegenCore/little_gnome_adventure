@@ -10,6 +10,6 @@ namespace _Game.Scripts.RoomSystems
         [field: SerializeField] public InspectsView InspectsView { get; private set; }
         [field: SerializeField] public StartHouseView StartHouseView { get; private set; }
         [field: SerializeField] public ForestLocationView ForestLocationView { get; private set; }
-        [field: SerializeField] public TestRoom[] TestRooms { get; private set; }
+        [field: SerializeField] public TestRoom TestRoom { get; private set; }
     }
 }

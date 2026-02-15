@@ -15,8 +15,6 @@ namespace _Game.Scripts.ChaptersSystem
 {
     public class ForestChapter: IInitializable
     {
-        public event Action OnAllDoorCreated;
-        
         private readonly DoorFactory _doorFactory;
         private readonly ForestChapterConfig _forestChapterConfig;
         private readonly IPlayerFactory _playerFactory;
@@ -28,6 +26,7 @@ namespace _Game.Scripts.ChaptersSystem
         
         private readonly HouseLocationFactory _houseLocationFactory;
         private readonly ForestLocationFactory _forestLocationFactory;
+        private readonly TestLocationFactory _testLocationFactory;
         
         private LocationsController _locationsController;
         private List<DoorView> _allDoorsView = new();
@@ -37,12 +36,14 @@ namespace _Game.Scripts.ChaptersSystem
             IPlayerFactory playerFactory,
             ForestRootViewFactory forestRootViewFactory,
             HouseLocationFactory houseLocationFactory,
+            TestLocationFactory testLocationFactory,
             LocationsControllerFactory locationsControllerFactory,
             UpdateController updateController,
             InspectForestRegistratorService inspectForestRegistratorService,
             CameraController cameraController,
             ForestLocationFactory forestLocationFactory)
         {
+            _testLocationFactory = testLocationFactory;
             _cameraController = cameraController;
             _inspectForestRegistratorService = inspectForestRegistratorService;
             _updateController = updateController;
@@ -78,7 +79,7 @@ namespace _Game.Scripts.ChaptersSystem
             //create locations objects, characters;
             _locationsController.CreateLocation(_houseLocationFactory);
             _locationsController.CreateLocation(_forestLocationFactory);
-            
+            _locationsController.CreateLocation(_testLocationFactory);
             //------------
             _locationsController.LocationsModel.CurrentLocation.Value = LocationsIdEnum.MainHouse;
             
@@ -100,11 +101,7 @@ namespace _Game.Scripts.ChaptersSystem
         {
             _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().StartHouseView.Doors);
             _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().ForestLocationView.Doors);
-
-            foreach (var room in _forestRootViewFactory.GetLocationsRootView().TestRooms)
-            {
-                _allDoorsView.AddRange(room.Doors);
-            }
+            _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().TestRoom.Doors);
         }
 
         private void CreateDoorConnections()
@@ -123,8 +120,6 @@ namespace _Game.Scripts.ChaptersSystem
                     connection.Id.ToString(),
                     view2);
             }
-            
-            OnAllDoorCreated?.Invoke();
         }
         
         private void RegisterUpdates()

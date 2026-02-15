@@ -47,6 +47,7 @@ namespace _Game.Scripts._Installers
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ForestRootViewFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<HouseLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<TestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<LocationsControllerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
