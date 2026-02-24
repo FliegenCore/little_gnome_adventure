@@ -1,0 +1,41 @@
+
+TV.png
+size: 1168,517
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+point
+  rotate: true
+  xy: 926, 53
+  size: 60, 118
+  orig: 64, 122
+  offset: 2, 2
+  index: -1
+свет
+  rotate: true
+  xy: 851, 115
+  size: 400, 315
+  orig: 422, 345
+  offset: 11, 20
+  index: -1
+столик
+  rotate: true
+  xy: 633, 2
+  size: 513, 216
+  orig: 517, 220
+  offset: 2, 2
+  index: -1
+телик
+  rotate: true
+  xy: 2, 90
+  size: 425, 629
+  orig: 429, 633
+  offset: 2, 2
+  index: -1
+чашка
+  rotate: false
+  xy: 851, 52
+  size: 73, 61
+  orig: 77, 65
+  offset: 2, 2
+  index: -1
