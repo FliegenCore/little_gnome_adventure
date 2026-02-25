@@ -20,6 +20,8 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
         {
             if (!_playerModel.MoveDirectionInput.GetCanMove())
             {
+                _playerModel.Transformation.Direction.Value = Vector2.zero;
+                _fsm.SetState<PlayerIdleMotionState>();
                 return;
             }
             
@@ -47,6 +49,8 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
         public override void Exit()
         {
             base.Exit();
+            
+            _playerModel.Transformation.Direction.Value = Vector2.zero;
             _playerModel.AnimationPlayerModel.IsMove.Value = false;
         }
     }

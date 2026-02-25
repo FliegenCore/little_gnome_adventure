@@ -18,7 +18,8 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
         public override void Update(float deltaTime)
         {
             base.Update(deltaTime);
-            if (_playerModel.MoveDirectionInput.GetDirection() != Vector2.zero)
+            
+            if (_playerModel.MoveDirectionInput.GetDirection() != Vector2.zero && _playerModel.MoveDirectionInput.GetCanMove())
             {
                 _fsm.SetState<PlayerMoveMotionState>();                
             }

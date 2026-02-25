@@ -22,7 +22,6 @@ namespace _Game.Scripts.InventorySystem
         
         private InventoryItem _currentSelectedInventoryItem;
         private int _currentSelectedInventoryIndex = -1;
-        
 
         public Inventory(InventoryModel inventoryModel, 
             InventoryFactoryProvider inventoryFactoryProvider,
@@ -35,28 +34,36 @@ namespace _Game.Scripts.InventorySystem
             _inventoryFactoryProvider = inventoryFactoryProvider;
         }
 
-        public void EnableOpenInput()
+        public void EnableOpenCloseInput()
         {
-           // _inputSystemActions.Player.InventoryOpen.performed += Enable;
+            _inputSystemActions.Player.InventoryOpen.performed += SetOpen;
         }
 
-        public void DisableOpenInput()
+        public void DisableOpenCloseInput()
         {
-            
+            _inputSystemActions.Player.InventoryOpen.performed -= SetOpen;
+        }
+
+        private void SetOpen(InputAction.CallbackContext _)
+        {
+            if (!_inventoryModel.IsOpen.Value)
+                Enable();
+            else
+                Disable();
         }
 
         public void Enable()
         {
+            _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerInventoryState));
             _inputSystemActions.UI.Navigate.performed += Navigate;
             EnableInventory();
-            //sub close on escape and Q
         }
 
         public void Disable()
         {
             _inputSystemActions.UI.Navigate.performed -= Navigate;
             DisableInventory();
-            //unsub close on escape and Q
+            _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
         }
         
         public void AddItem(ItemId id)

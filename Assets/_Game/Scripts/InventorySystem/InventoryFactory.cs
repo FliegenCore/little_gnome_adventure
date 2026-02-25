@@ -11,8 +11,9 @@ namespace _Game.Scripts.InventorySystem
         private readonly InventoryView _inventoryView;
         private readonly EventBus _eventBus;
 
-        private InventoryFactory(InventoryFactoryProvider inventoryFactoryProvider, EventBus eventBus, InputSystem_Actions  inputSystemActions)
+        private InventoryFactory(InventoryFactoryProvider inventoryFactoryProvider, EventBus eventBus, InputSystem_Actions  inputSystemActions, InventoryView inventoryView)
         {
+            _inventoryView =  inventoryView;
             _inputSystemActions = inputSystemActions;
             _eventBus = eventBus;
             _inventoryFactoryProvider = inventoryFactoryProvider; 

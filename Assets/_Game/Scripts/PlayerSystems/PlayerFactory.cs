@@ -55,7 +55,7 @@ namespace _Game.Scripts.PlayerSystems
             
             PlayerModel playerModel = new PlayerModel(transformation, _moveDirectionInput, animationPlayerModel, _playerConfig.MoveSpeed);
             
-            PlayerView playerView = Object.Instantiate(_playerConfig.PlayerViewPrefab);
+            PlayerView playerView = Object.Instantiate(_playerConfig.PlayerViewPrefab, _playerConfig.StartSpawnPosition, Quaternion.identity);
             playerView.Transformable.Construct(transformation);
             playerView.AnimationPlayer.Construct(playerModel.AnimationPlayerModel);
             
@@ -84,7 +84,7 @@ namespace _Game.Scripts.PlayerSystems
         {
             Fsm playerFsm = new Fsm();
             
-            playerFsm.AddState(new PlayerBaseState(playerFsm, model));
+            playerFsm.AddState(new PlayerBaseState(playerFsm, model, _inventory));
             playerFsm.AddState(new PlayerInventoryState(playerFsm, model, _inventory));
             playerFsm.AddState(new PlayerInspectState(playerFsm, model, _inspectController));
      
