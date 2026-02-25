@@ -9,7 +9,7 @@ namespace _Game.Scripts.InventorySystem
         
         public SpriteStorage(Sprite sprite)
         {
-            Sprite = new  Observable<Sprite>(sprite);
+            Sprite = new Observable<Sprite>(sprite);
         }
     }
 }

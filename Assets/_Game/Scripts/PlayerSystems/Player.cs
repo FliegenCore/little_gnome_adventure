@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.FSM;
 using _Game.Scripts.InteractionSystems;
+using _Game.Scripts.InventorySystem;
 using _Game.Scripts.RoomSystems;
 using _Game.Scripts.UpdateSystems;
 using Core.Common;
@@ -12,6 +13,7 @@ namespace _Game.Scripts.PlayerSystems
     {
         private readonly PlayerModel _playerModel;
         private readonly InteractionController _interactionController;
+        private readonly Inventory _inventory;
         private readonly Fsm _motionStateMachine;
         private readonly Fsm _playerStateMachine;
         public readonly PlayerView PlayerView;
@@ -24,8 +26,10 @@ namespace _Game.Scripts.PlayerSystems
             Fsm motionStateMachine,
             Fsm playerStateMachine, 
             InteractionController interactionController,
+            Inventory inventory,
             EventBus eventBus)
         {
+            _inventory = inventory;
             _eventBus = eventBus;
             _interactionController = interactionController;
             _playerModel = playerModel;

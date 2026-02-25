@@ -4,6 +4,7 @@ using _Game.Scripts.GameInitializeSystems;
 using _Game.Scripts.Hacks;
 using _Game.Scripts.InspectSystem.Camera;
 using _Game.Scripts.InteractionSystems.HintSystem;
+using _Game.Scripts.InventorySystem;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
@@ -22,6 +23,7 @@ namespace _Game.Scripts._Installers
         [SerializeField] private CinemachineCamera _cinemachineCamera;
         [SerializeField] private Camera _mainCamera;
         [SerializeField] private InspectCamera _inspectCamera;
+        [SerializeField] private InventoryView _inventoryView;
         
         private void Start()
         {
@@ -40,6 +42,7 @@ namespace _Game.Scripts._Installers
             builder.RegisterInstance(_inspectCamera);
             builder.RegisterInstance(_mainCamera);
             builder.RegisterInstance(_cinemachineCamera).AsSelf().AsImplementedInterfaces();
+            builder.RegisterInstance(_inventoryView).AsSelf().AsImplementedInterfaces();
             builder.Register<OutlineHintController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CameraController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<PlayerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
@@ -52,6 +55,7 @@ namespace _Game.Scripts._Installers
             builder.Register<LocationsControllerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectForestRegistratorService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<InventoryFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
 
             RegisterCurrentChapterInitializer(builder);
         }

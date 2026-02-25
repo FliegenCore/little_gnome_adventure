@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Game.Scripts.InventorySystem
 {
     public class SpriteApplyer : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Image _image;
 
         private SpriteStorage _spriteStorage;
         
@@ -18,7 +19,7 @@ namespace _Game.Scripts.InventorySystem
 
         private void SetSprite(Sprite sprite)
         {
-            _spriteRenderer.sprite = sprite;
+            _image.sprite = sprite;
         }
 
         private void OnDestroy()

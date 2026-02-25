@@ -2,6 +2,7 @@ using System;
 using _Game.Scripts.FSM;
 using _Game.Scripts.Input;
 using _Game.Scripts.InteractionSystems;
+using _Game.Scripts.InventorySystem;
 using _Game.Scripts.PlayerSystems.Animations;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.PlayerSystems.MotionStates;
@@ -20,16 +21,21 @@ namespace _Game.Scripts.PlayerSystems
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly EventBus _eventBus;
         private readonly InspectController _inspectController;
+        private readonly InventoryFactory _inventoryFactory;
 
         private Player _player;
+
+        private Inventory _inventory;
         
         public PlayerFactory(
             PlayerConfig playerConfig, 
             IMoveDirectionInput moveDirectionInput, 
             EventBus eventBus, 
             InputSystem_Actions inputSystemActions,
-            InspectController inspectController)
+            InspectController inspectController,
+            InventoryFactory inventoryFactory)
         {
+            _inventoryFactory = inventoryFactory;
             _inspectController = inspectController;
             _inputSystemActions = inputSystemActions;
             _eventBus = eventBus;
@@ -56,11 +62,14 @@ namespace _Game.Scripts.PlayerSystems
             Fsm motionFsm = new Fsm();
             FillPlayerMotion(motionFsm, playerModel);
             
+            _inventory = _inventoryFactory.CreateInventory();
+            
             Fsm playerStateMachine = CreatePlayerStateMachine(playerModel);
 
             InteractionController interactionController = new InteractionController(_inputSystemActions, playerModel, _eventBus);
             
-            Player player = new Player(playerModel, playerView, motionFsm, playerStateMachine, interactionController, _eventBus);
+            
+            Player player = new Player(playerModel, playerView, motionFsm, playerStateMachine, interactionController, _inventory, _eventBus);
             _player = player;
             
             return player;
@@ -76,7 +85,7 @@ namespace _Game.Scripts.PlayerSystems
             Fsm playerFsm = new Fsm();
             
             playerFsm.AddState(new PlayerBaseState(playerFsm, model));
-            playerFsm.AddState(new PlayerInventoryState(playerFsm, model));
+            playerFsm.AddState(new PlayerInventoryState(playerFsm, model, _inventory));
             playerFsm.AddState(new PlayerInspectState(playerFsm, model, _inspectController));
      
             playerFsm.SetState<PlayerBaseState>();

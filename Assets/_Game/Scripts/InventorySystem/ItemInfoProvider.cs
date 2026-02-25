@@ -11,6 +11,12 @@ namespace _Game.Scripts.InventorySystem
         
         public ItemConfig GetItemConfig(ItemId itemId)
         {
+            foreach (var item in _itemConfigs.Items)
+            {
+                if(item.ItemId == itemId)
+                    return item;
+            }
+            
             return new ItemConfig();
         }
     }
