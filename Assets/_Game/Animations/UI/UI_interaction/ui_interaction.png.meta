@@ -17,6 +17,39 @@ TextureImporter:
   - first:
       213: 4476044383852803457
     second: ui_interaction_4
+  - first:
+      213: 550665206798291114
+    second: ui_interaction_5
+  - first:
+      213: 5163259305446368810
+    second: ui_interaction_6
+  - first:
+      213: 6165948518683304406
+    second: ui_interaction_7
+  - first:
+      213: 2340574497948447184
+    second: ui_interaction_8
+  - first:
+      213: -6260329478794838029
+    second: ui_interaction_9
+  - first:
+      213: 8957509077085463032
+    second: ui_interaction_10
+  - first:
+      213: -4454774451364631687
+    second: ui_interaction_11
+  - first:
+      213: -7717319606907031334
+    second: ui_interaction_12
+  - first:
+      213: 1208722381051428996
+    second: ui_interaction_13
+  - first:
+      213: -4200789885374725235
+    second: ui_interaction_14
+  - first:
+      213: 6790344951924169547
+    second: ui_interaction_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,45 +141,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -154,10 +148,10 @@ TextureImporter:
       name: ui_interaction_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 127
-        width: 125
-        height: 81
+        x: 8
+        y: 160
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +170,10 @@ TextureImporter:
       name: ui_interaction_1
       rect:
         serializedVersion: 2
-        x: 126
-        y: 177
-        width: 79
-        height: 75
+        x: 15
+        y: 131
+        width: 73
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,10 +192,10 @@ TextureImporter:
       name: ui_interaction_2
       rect:
         serializedVersion: 2
-        x: 127
-        y: 79
-        width: 83
-        height: 98
+        x: 16
+        y: 167
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +214,10 @@ TextureImporter:
       name: ui_interaction_3
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 126
-        height: 126
+        x: 88
+        y: 153
+        width: 19
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,10 +236,10 @@ TextureImporter:
       name: ui_interaction_4
       rect:
         serializedVersion: 2
-        x: 127
-        y: 1
-        width: 84
-        height: 78
+        x: 102
+        y: 132
+        width: 73
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,6 +250,248 @@ TextureImporter:
       bones: []
       spriteID: 185bd6ae6aa1e1e30800000000000000
       internalID: 4476044383852803457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 99
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa01169861b54a700800000000000000
+      internalID: 550665206798291114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_6
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 99
+        width: 78
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a266c507bf497a740800000000000000
+      internalID: 5163259305446368810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 127
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1e6775289d19550800000000000000
+      internalID: 6165948518683304406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 150
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d13e80ea146b7020800000000000000
+      internalID: 2340574497948447184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_9
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 144
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fff687f187de19a0800000000000000
+      internalID: -6260329478794838029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_10
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 133
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f12404fb077f4c70800000000000000
+      internalID: 8957509077085463032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 127
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bece72d367d22c0800000000000000
+      internalID: -4454774451364631687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad03624a4b296e490800000000000000
+      internalID: -7717319606907031334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1
+        width: 81
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48082aaf99e36c010800000000000000
+      internalID: 1208722381051428996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_14
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1
+        width: 83
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d838f222bdbc3b5c0800000000000000
+      internalID: -4200789885374725235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_interaction_15
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1
+        width: 75
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b9ec9c1c62c3e50800000000000000
+      internalID: 6790344951924169547
       vertices: []
       indices: 
       edges: []
@@ -276,9 +512,20 @@ TextureImporter:
     nameFileIdTable:
       ui_interaction_0: -4434242654119333112
       ui_interaction_1: 1746018177555863795
+      ui_interaction_10: 8957509077085463032
+      ui_interaction_11: -4454774451364631687
+      ui_interaction_12: -7717319606907031334
+      ui_interaction_13: 1208722381051428996
+      ui_interaction_14: -4200789885374725235
+      ui_interaction_15: 6790344951924169547
       ui_interaction_2: 2147291725992624201
       ui_interaction_3: -819952692787406260
       ui_interaction_4: 4476044383852803457
+      ui_interaction_5: 550665206798291114
+      ui_interaction_6: 5163259305446368810
+      ui_interaction_7: 6165948518683304406
+      ui_interaction_8: 2340574497948447184
+      ui_interaction_9: -6260329478794838029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

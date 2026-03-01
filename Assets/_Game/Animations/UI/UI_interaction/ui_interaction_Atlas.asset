@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atlasFile: {fileID: 4900000, guid: 8e26d39881c6be2408182968ba13bf0d, type: 3}
   materials:
-  - {fileID: 2100000, guid: 25a17c1097bb8f24ca47f5f4c7a9108d, type: 2}
+  - {fileID: 2100000, guid: d02f5145bc4240d49bbf37383588f7b5, type: 2}

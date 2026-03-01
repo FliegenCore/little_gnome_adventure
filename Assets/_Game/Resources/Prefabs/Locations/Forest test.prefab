@@ -231,11 +231,11 @@ Transform:
   m_GameObject: {fileID: 723916062300751527}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61, y: 4.24, z: 0}
+  m_LocalPosition: {x: 0.050000012, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2406546053412865682}
+  m_Father: {fileID: 1830105213667146800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5573767177026441029
 SpriteRenderer:
@@ -741,7 +741,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ContactTriggerProvider>k__BackingField: {fileID: 9129559348080642855}
-  <SpriteRenderer>k__BackingField: {fileID: 7481842397229845815}
   <HintSelect>k__BackingField: {fileID: 6017819898716993648}
   <MarkId>k__BackingField: 2
   <SpawnTransform>k__BackingField: {fileID: 3440456610294933175}
@@ -987,6 +986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830105213667146800}
   - component: {fileID: 2196848215864553727}
+  - component: {fileID: 1443131811773368716}
   m_Layer: 0
   m_Name: moon
   m_TagString: Untagged
@@ -1003,10 +1003,11 @@ Transform:
   m_GameObject: {fileID: 4634355773256967798}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.66, y: 4.57, z: 0}
+  m_LocalPosition: {x: -0.66, y: 4.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3945762635372844037}
   m_Father: {fileID: 2406546053412865682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2196848215864553727
@@ -1064,6 +1065,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1443131811773368716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634355773256967798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4497f873f7c4906af792539093d8cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parallaxStrength: 0.605
 --- !u!1 &5015161725277314400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1285,6 @@ Transform:
   - {fileID: 7527254104388380775}
   - {fileID: 7744390706119453300}
   - {fileID: 124872829259060128}
-  - {fileID: 3945762635372844037}
   - {fileID: 1830105213667146800}
   - {fileID: 9099403966794649985}
   - {fileID: 8719762694350216609}
@@ -1819,6 +1832,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5392635589361418065, guid: 0eda3f0bf10fd7f49ab36834953dae83, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d02f5145bc4240d49bbf37383588f7b5, type: 2}
     - target: {fileID: 8798797460807341242, guid: 0eda3f0bf10fd7f49ab36834953dae83, type: 3}
       propertyPath: m_Name
       value: Hint

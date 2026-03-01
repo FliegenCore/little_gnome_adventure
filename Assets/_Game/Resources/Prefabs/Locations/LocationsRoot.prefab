@@ -234,7 +234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ContactTriggerProvider>k__BackingField: {fileID: 0}
-  <SpriteRenderer>k__BackingField: {fileID: 4611701151666908204}
   <HintSelect>k__BackingField: {fileID: 0}
   <AbstractHintSelect>k__BackingField: {fileID: 297311912750823148}
 --- !u!114 &297311912750823148
@@ -363,7 +362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ContactTriggerProvider>k__BackingField: {fileID: 0}
-  <SpriteRenderer>k__BackingField: {fileID: 8905557873218081006}
   <HintSelect>k__BackingField: {fileID: 0}
   <AbstractHintSelect>k__BackingField: {fileID: 4353750033384216367}
 --- !u!114 &4353750033384216367
