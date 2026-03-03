@@ -1,0 +1,91 @@
+{
+"skeleton": {
+	"hash": "JMIseEOLfNwRG+d09lOo01SBkgw",
+	"spine": "3.8.0",
+	"x": -81.82,
+	"y": -84.16,
+	"width": 164.13,
+	"height": 164.13,
+	"images": "",
+	"audio": "D:/арт Игра про маленького ГНОМА/UI"
+},
+"bones": [
+	{ "name": "root" },
+	{
+		"name": "0",
+		"parent": "root",
+		"length": 90.52,
+		"rotation": 90.59,
+		"x": -81.61,
+		"y": -56.59,
+		"scaleX": 1.2823,
+		"scaleY": 1.2823
+	},
+	{ "name": "1", "parent": "0", "length": 97.04, "rotation": 0.14, "x": -5.01, "y": -65.36 }
+],
+"slots": [
+	{ "name": "BACKOLATE", "bone": "0", "dark": "000000", "attachment": "BACKOLATE" },
+	{ "name": "E", "bone": "1" },
+	{ "name": "selected_slot", "bone": "root" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"E": {
+				"E": { "x": 47.82, "y": 1.22, "rotation": -90.73, "width": 77, "height": 81 }
+			},
+			"BACKOLATE": {
+				"BACKOLATE": { "x": 41.84, "y": -64.27, "rotation": -90.59, "width": 128, "height": 128 }
+			}
+		}
+	}
+],
+"animations": {
+	"icon_E": {
+		"slots": {
+			"E": {
+				"attachment": [
+					{ "name": "E" }
+				]
+			}
+		},
+		"bones": {
+			"1": {
+				"rotate": [
+					{ "angle": 0.29 },
+					{ "time": 0.3333, "angle": 5.82 },
+					{ "time": 0.5, "angle": 3.5 },
+					{ "time": 0.6667, "angle": 0.29 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.3333, "x": -1.39, "y": 2.86 },
+					{ "time": 0.5, "curve": "stepped" },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"no": {
+		"slots": {
+			"BACKOLATE": {
+				"twoColor": [
+					{ "light": "ffffffff", "dark": "000000" },
+					{ "time": 0.1667, "light": "ffffffff", "dark": "ffffff" },
+					{ "time": 0.3333, "light": "ffffffff", "dark": "000000" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{ "x": 0.857, "y": 0.857 },
+					{ "time": 0.1667, "x": 1.181, "y": 1.181 },
+					{ "time": 0.3333, "x": 0.857, "y": 0.857 }
+				]
+			}
+		}
+	}
+}
+}
