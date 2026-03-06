@@ -1,61 +1,75 @@
 
 ui_interaction.png
-size: 367,184
+size: 227,506
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 BACKOLATE
   rotate: false
-  xy: 2, 58
+  xy: 2, 89
   size: 124, 124
   orig: 128, 128
   offset: 2, 2
   index: -1
 DIALOGUE
-  rotate: true
-  xy: 292, 105
+  rotate: false
+  xy: 127, 2
   size: 77, 73
   orig: 81, 77
   offset: 2, 2
   index: -1
 E
-  rotate: false
-  xy: 209, 3
+  rotate: true
+  xy: 128, 77
   size: 77, 81
   orig: 77, 81
   offset: 0, 0
   index: -1
 EYE
-  rotate: true
-  xy: 288, 2
+  rotate: false
+  xy: 138, 254
   size: 82, 76
   orig: 86, 80
   offset: 2, 2
   index: -1
 HAND
   rotate: false
-  xy: 209, 86
+  xy: 138, 156
   size: 81, 96
   orig: 85, 100
   offset: 2, 2
   index: -1
 USE
-  rotate: true
-  xy: 128, 59
+  rotate: false
+  xy: 2, 8
   size: 123, 79
   orig: 127, 83
   offset: 2, 2
   index: -1
-step1
+needles
   rotate: true
-  xy: 2, 7
+  xy: 2, 215
+  size: 117, 134
+  orig: 117, 134
+  offset: 0, 0
+  index: -1
+selected_slot
+  rotate: false
+  xy: 2, 334
+  size: 172, 170
+  orig: 172, 170
+  offset: 0, 0
+  index: -1
+step1
+  rotate: false
+  xy: 176, 419
   size: 49, 85
   orig: 49, 85
   offset: 0, 0
   index: -1
 step2
-  rotate: true
-  xy: 89, 7
+  rotate: false
+  xy: 176, 332
   size: 49, 85
   orig: 49, 85
   offset: 0, 0

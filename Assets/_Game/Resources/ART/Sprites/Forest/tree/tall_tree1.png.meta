@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d06a16c209b86a94eb11e2381c0570ff
+guid: 1e3cea243ee11aa498b4275b2f12d721
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1511849832365779204
-    second: toy_0
+      213: 4026052870397204674
+    second: tall_tree1_0
+  - first:
+      213: 2704386819116826214
+    second: tall_tree1_1
+  - first:
+      213: -8349331031157997294
+    second: tall_tree1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: toy_0
+      name: tall_tree1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 124
-        height: 138
+        y: 10
+        width: 8
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40965e3996b2bf410800000000000000
-      internalID: 1511849832365779204
+      spriteID: 2c897f231c96fd730800000000000000
+      internalID: 4026052870397204674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall_tree1_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2
+        width: 262
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ef4b8cb79e78520800000000000000
+      internalID: 2704386819116826214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tall_tree1_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2118eafe9a7312c80800000000000000
+      internalID: -8349331031157997294
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      toy_0: 1511849832365779204
+      tall_tree1_0: 4026052870397204674
+      tall_tree1_1: 2704386819116826214
+      tall_tree1_2: -8349331031157997294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

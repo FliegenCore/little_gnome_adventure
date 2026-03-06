@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d06a16c209b86a94eb11e2381c0570ff
+guid: cd73be791d6f19744aeb481e048c50c7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1511849832365779204
-    second: toy_0
+      213: -6013823671663399976
+    second: yellow_bear_TOY_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: toy_0
+      name: yellow_bear_TOY_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 124
-        height: 138
+        width: 179
+        height: 306
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40965e3996b2bf410800000000000000
-      internalID: 1511849832365779204
+      spriteID: 8dbeaa4bb3b9a8ca0800000000000000
+      internalID: -6013823671663399976
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      toy_0: 1511849832365779204
+      yellow_bear_TOY_0: -6013823671663399976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
