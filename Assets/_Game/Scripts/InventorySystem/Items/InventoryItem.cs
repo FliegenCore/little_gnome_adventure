@@ -16,6 +16,11 @@ namespace _Game.Scripts.InventorySystem
             InventoryItemView = inventoryItemView;
         }
 
+        public void FillItemNeeder()
+        {
+            
+        }
+
         public override void Interact()
         {
             Debug.Log(AbstractInteractableModel.Id);

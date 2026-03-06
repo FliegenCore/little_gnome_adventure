@@ -15,7 +15,7 @@ namespace _Game.Scripts.InteractionSystems.Interactables.Toy
 
         public override void Interact()
         {
-            
+            //надеть на игрушку через эвент бас, похуй
         }
 
         public override bool CanInteract()

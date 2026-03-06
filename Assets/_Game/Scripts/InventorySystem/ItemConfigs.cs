@@ -20,6 +20,7 @@ namespace _Game.Scripts.InventorySystem
     {
         [field: SerializeField] public ItemId ItemId { get; private set; }
         [field: SerializeField] public Sprite Sprite { get; private set; }
+        [field: SerializeField] public string ItemnameKey { get; private set; }
         [field: SerializeField] public InventoryItemView ViewPrefab { get; private set; }
     }
 }

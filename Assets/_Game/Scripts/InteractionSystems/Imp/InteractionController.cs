@@ -24,6 +24,7 @@ namespace _Game.Scripts.InteractionSystems
             
             _eventBus.Subscribe<SetCurrentInteractableSignal, AbstractInteractable>(this, SetCurrentInteractable);
             _eventBus.Subscribe<RemoveCurrentInteractableSignal, AbstractInteractable>(this, RemoveCurrentInteractable);
+            
         }
 
         private void OnCanInteractChanged(bool canInteract)
@@ -64,6 +65,11 @@ namespace _Game.Scripts.InteractionSystems
 
         private void SetCurrentInteractable(AbstractInteractable abstractInteractable)
         {
+            if (_currentAbstractInteractable != null)
+            {
+                _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = false;
+            }
+            
             _currentAbstractInteractable = abstractInteractable;
 
             _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = true;

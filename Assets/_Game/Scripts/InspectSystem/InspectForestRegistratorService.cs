@@ -12,10 +12,15 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         private readonly InspectController _inspectController;
         private readonly ForestRootViewFactory _forestRootViewFactory;
         private readonly EventBus _eventBus;
-        private readonly Inventory _inventory;
+        private readonly InventoryProxy _inventoryProxy;
         
-        public InspectForestRegistratorService(InspectController inspectController, ForestRootViewFactory forestRootViewFactory, EventBus eventBus)
+        public InspectForestRegistratorService(
+            InspectController inspectController, 
+            ForestRootViewFactory forestRootViewFactory,
+            EventBus eventBus,
+            InventoryProxy inventoryProxy)
         {
+            _inventoryProxy = inventoryProxy;
             _eventBus = eventBus;
             _inspectController = inspectController;
             _forestRootViewFactory = forestRootViewFactory;
@@ -65,7 +70,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             BaseItemModel model = new BaseItemModel(view.ContactTriggerProvider, view.transform.position, id.ToString(), isEnabled);
             view.AbstractHintSelect.Construct(_eventBus, model.IsSelected);
             
-            BaseItem baseItem = new BaseItem(model, view, _eventBus, _inventory);
+            BaseItem baseItem = new BaseItem(model, view, _eventBus, _inventoryProxy);
 
             return baseItem;
         }

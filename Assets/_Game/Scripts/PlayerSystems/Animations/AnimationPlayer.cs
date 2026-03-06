@@ -24,5 +24,7 @@ namespace _Game.Scripts.PlayerSystems.Animations
             else
                 _animationControl.SetAnimation(0, PlayerAnimationsName.IDLE_ANIMATION_NAME);
         }
+        
+        
     }
 }

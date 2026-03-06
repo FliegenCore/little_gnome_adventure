@@ -23,7 +23,7 @@ namespace _Game.Scripts.ParalaxSystem
 
             _startPosition = _camera.transform.position;
             
-            transform.position += delta * _parallaxStrength;
+            transform.position += new Vector3(delta.x, 0,0) * _parallaxStrength;
         }
     }
 }

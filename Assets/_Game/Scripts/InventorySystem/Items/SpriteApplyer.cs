@@ -20,6 +20,7 @@ namespace _Game.Scripts.InventorySystem
         private void SetSprite(Sprite sprite)
         {
             _image.sprite = sprite;
+            _image.SetNativeSize();
         }
 
         private void OnDestroy()

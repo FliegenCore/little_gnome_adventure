@@ -61,6 +61,7 @@ namespace _Game.Scripts._Installers
             builder.Register<InventoryFactoryProvider>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InventoryFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ItemInfoProvider>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<InventoryProxy>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
 
             RegisterCurrentChapterInitializer(builder);
         }

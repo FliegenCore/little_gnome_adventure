@@ -12,7 +12,7 @@ namespace _Game.Scripts.InspectSystem
         private readonly InputSystem_Actions _inputSystemActions;
         
         private InspectModel _currentInspectModel;
-        private AbstractInteractableModel _selectedInteractableModel;
+        private AbstractInteractable _selectedInteractable;
 
         public InspectInputHandler(InputSystem_Actions inputSystemActions)
         {
@@ -29,13 +29,16 @@ namespace _Game.Scripts.InspectSystem
             SelectFirst();
             
             _inputSystemActions.UI.Navigate.performed += Navigate;
+            _inputSystemActions.Player.Interact.performed += InteractWithSelectedItem;
         }
         
         public void DisableInput()
         {
             _inputSystemActions.UI.Navigate.performed -= Navigate;
-            if (_selectedInteractableModel != null)
-                _selectedInteractableModel.IsSelected.Value = false;
+            _inputSystemActions.Player.Interact.performed -= InteractWithSelectedItem;
+            
+            if (_selectedInteractable != null)
+                _selectedInteractable.AbstractInteractableModel.IsSelected.Value = false;
 
         }
 
@@ -45,15 +48,15 @@ namespace _Game.Scripts.InspectSystem
 
             if (HasItem())
             {
-                AbstractInteractableModel newModel = GetInteractableModelByDirection(direction);
+                AbstractInteractable newModel = GetInteractableByDirection(direction);
 
                 if (newModel != null)
                 {
-                    if (_selectedInteractableModel != null)
-                        _selectedInteractableModel.IsSelected.Value = false;
+                    if (_selectedInteractable != null)
+                        _selectedInteractable.AbstractInteractableModel.IsSelected.Value = false;
                     
-                    _selectedInteractableModel = newModel;
-                    _selectedInteractableModel.IsSelected.Value = true;
+                    _selectedInteractable = newModel;
+                    _selectedInteractable.AbstractInteractableModel.IsSelected.Value = true;
                 }
             }
         }
@@ -66,34 +69,42 @@ namespace _Game.Scripts.InspectSystem
             return true;
         }
 
-        private AbstractInteractableModel GetInteractableModelByDirection(Vector2 direction)
+        private AbstractInteractable GetInteractableByDirection(Vector2 direction)
         {
-            AbstractInteractableModel bestCandidate = null;
+            AbstractInteractable bestCandidate = null;
             float bestScore = -1f;
     
             foreach (var interactable in _currentInspectModel.Interactables)
             {
-                if (_selectedInteractableModel == interactable.AbstractInteractableModel)
+                if (_selectedInteractable == interactable)
                     continue;
         
-                Vector2 toInteractable = (interactable.AbstractInteractableModel.Position - _selectedInteractableModel.Position).normalized;
+                Vector2 toInteractable = (interactable.AbstractInteractableModel.Position - _selectedInteractable.AbstractInteractableModel.Position).normalized;
         
                 float dot = Vector2.Dot(direction.normalized, toInteractable);
         
                 if (dot > bestScore)
                 {
                     bestScore = dot;
-                    bestCandidate = interactable.AbstractInteractableModel;
+                    bestCandidate = interactable;
                 }
             }
     
             return bestScore > 0.5f ? bestCandidate : null;
         }
 
+        private void InteractWithSelectedItem(InputAction.CallbackContext _)
+        {
+            if(_selectedInteractable == null)
+                return;
+            
+            _selectedInteractable.Interact();
+        }
+        
         private void SelectFirst()
         {
-            _selectedInteractableModel = _currentInspectModel.Interactables[0].AbstractInteractableModel;
-            _selectedInteractableModel.IsSelected.Value = true;
+            _selectedInteractable = _currentInspectModel.Interactables[0];
+            _selectedInteractable.AbstractInteractableModel.IsSelected.Value = true;
         }
 
         public void Dispose()

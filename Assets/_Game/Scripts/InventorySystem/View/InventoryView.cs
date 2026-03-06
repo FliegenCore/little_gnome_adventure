@@ -6,17 +6,22 @@ namespace _Game.Scripts.InventorySystem
 {
     public class InventoryView : MonoBehaviour
     {
+        [SerializeField] private SelectorView _selectorView;
         [SerializeField] private RectTransform _inventoryBackground;
         [SerializeField] private CellView[] _cells;
-        
-        private Sequence _openAnimationSequence;
 
+        private Sequence _openAnimationSequence;
         private ReactiveProperty<bool> _isOpen;
+        private ReactiveProperty<int> _choosedIndex;
         
-        public void Construct(ReactiveProperty<bool> isOpen)
+        public CellView[] Cells => _cells;
+            
+        public void Construct(ReactiveProperty<bool> isOpen, ReactiveProperty<int> choosedIndex)
         {
             _isOpen = isOpen;
+            _choosedIndex = choosedIndex;
 
+            _choosedIndex.Subscribe(SelectCell).AddTo(gameObject);
             _isOpen.Subscribe(Open).AddTo(gameObject);
         }
 
@@ -26,6 +31,12 @@ namespace _Game.Scripts.InventorySystem
                 Show();
             else
                 Hide();
+        }
+
+        private void SelectCell(int cellIndex)
+        {
+            _selectorView.transform.SetParent(_cells[cellIndex].transform);
+            _selectorView.SetPosition(_cells[cellIndex].Position);
         }
 
         private void SetTitleText(string title)

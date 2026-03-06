@@ -54,6 +54,9 @@ namespace _Game.Scripts.InteractionSystems
                 AbstractInteractableModel.ContactTriggerProvider.OnEnter -= OnPlayerCollided;
                 AbstractInteractableModel.ContactTriggerProvider.OnExit -= OnPlayerExit;
             }
+            
+            AbstractInteractableModel.IsSelected.Value = false;
+            GameObject.Destroy(InteractableView.gameObject);
         }
     }
 }
