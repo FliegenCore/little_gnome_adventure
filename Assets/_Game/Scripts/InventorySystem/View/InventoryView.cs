@@ -36,6 +36,7 @@ namespace _Game.Scripts.InventorySystem
         private void SelectCell(int cellIndex)
         {
             _selectorView.transform.SetParent(_cells[cellIndex].transform);
+            _selectorView.RectTransform.SetAsFirstSibling();
             _selectorView.SetPosition(_cells[cellIndex].Position);
         }
 

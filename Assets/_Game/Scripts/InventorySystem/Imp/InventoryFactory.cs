@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InventorySystem.Factories;
+using _Game.Scripts.PlayerSystems;
 using Core.Common;
 
 namespace _Game.Scripts.InventorySystem
@@ -14,7 +16,11 @@ namespace _Game.Scripts.InventorySystem
         
         private Inventory _inventory;
 
-        private InventoryFactory(InventoryFactoryProvider inventoryFactoryProvider, EventBus eventBus, InputSystem_Actions  inputSystemActions, InventoryView inventoryView)
+        private InventoryFactory(
+            InventoryFactoryProvider inventoryFactoryProvider,
+            EventBus eventBus, 
+            InputSystem_Actions inputSystemActions,
+            InventoryView inventoryView)
         {
             _inventoryView =  inventoryView;
             _inputSystemActions = inputSystemActions;
@@ -22,13 +28,13 @@ namespace _Game.Scripts.InventorySystem
             _inventoryFactoryProvider = inventoryFactoryProvider; 
         }
         
-        public Inventory CreateInventory()
+        public Inventory CreateInventory(InteractionController interactionController)
         {
             //load data items
             InventoryModel inventoryModel = new InventoryModel(new List<InventoryItemModel>());
             
             _inventoryView.Construct(inventoryModel.IsOpen, inventoryModel.SelectedIndex);
-            _inventory = new Inventory(inventoryModel, _inventoryFactoryProvider, _eventBus, _inputSystemActions);
+            _inventory = new Inventory(inventoryModel, _inventoryFactoryProvider, _eventBus, _inputSystemActions, interactionController);
             
             return _inventory;
         }

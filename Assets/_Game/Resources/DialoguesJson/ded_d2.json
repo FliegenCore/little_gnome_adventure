@@ -1,0 +1,76 @@
+{
+  "Nodes": [
+    {
+      "NodeId": "9363650a-28dc-4f84-9520-050677d74877",
+      "DialogueName": "Ded",
+      "Text": "Вкусно яблоко внучок",
+      "Type": 0,
+      "Position": {
+        "x": 219.0,
+        "y": 307.0,
+        "normalized": {
+          "x": 0.5807364,
+          "y": 0.8140916,
+          "normalized": {
+            "x": 0.580736458,
+            "y": 0.8140917,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.00000012
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 377.107422,
+        "sqrMagnitude": 142210.0
+      },
+      "IsStartNode": true,
+      "OnStartEvents": [],
+      "OnEndEvents": [
+        "playerAnimation_fly"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "3981220c-0604-40fb-97d9-e5c5bd31a203",
+      "DialogueName": "Player",
+      "Text": "Я хочу сиськи",
+      "Type": 0,
+      "Position": {
+        "x": 676.0,
+        "y": 307.0,
+        "normalized": {
+          "x": 0.910504758,
+          "y": 0.413498461,
+          "normalized": {
+            "x": 0.9105048,
+            "y": 0.4134985,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
+        },
+        "magnitude": 742.4453,
+        "sqrMagnitude": 551225.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    }
+  ],
+  "Edges": [
+    {
+      "InputNodeId": "3981220c-0604-40fb-97d9-e5c5bd31a203",
+      "OutputNodeId": "9363650a-28dc-4f84-9520-050677d74877",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    }
+  ]
+}

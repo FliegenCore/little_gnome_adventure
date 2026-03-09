@@ -20,7 +20,7 @@ namespace _Game.Scripts.CameraSystem
         {
             _currentFollowTarget = followTarget;
             
-            CurrentCinemachineCamera.Follow = followTarget;
+            CurrentCinemachineCamera.Follow = _currentFollowTarget;
         }
 
         public void SetFollowZone(PolygonCollider2D zone)

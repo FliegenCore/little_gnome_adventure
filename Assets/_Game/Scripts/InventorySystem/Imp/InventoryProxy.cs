@@ -11,14 +11,14 @@ namespace _Game.Scripts.InventorySystem
         
         public void AddItem(ItemId id)
         {
-            Inventory inventory = _inventoryFactory.CreateInventory();
+            Inventory inventory = _inventoryFactory.GetCachedInventory();
 
             inventory.AddItem(id);
         }
 
         public void RemoveItem(InventoryItem inventoryItem)
         {
-            Inventory inventory = _inventoryFactory.CreateInventory();
+            Inventory inventory = _inventoryFactory.GetCachedInventory();
 
             inventory.RemoveItem(inventoryItem);
         }

@@ -1,4 +1,5 @@
 using System;
+using _Game.Scripts.CameraSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.RoomSystems.LocationsStates;
 using _Game.Scripts.UpdateSystems;
@@ -11,10 +12,12 @@ namespace _Game.Scripts.RoomSystems
         public readonly LocationsModel LocationsModel;
 
         private readonly Fsm _locationsStateMachine;
+        private readonly CameraController _cameraController;
         
-        public LocationsController(LocationsModel locationsModel)
+        public LocationsController(LocationsModel locationsModel, CameraController cameraController)
         {
-            LocationsModel = locationsModel;
+            LocationsModel         = locationsModel;
+            _cameraController      = cameraController;
             _locationsStateMachine = new Fsm();
         }
 
@@ -32,6 +35,7 @@ namespace _Game.Scripts.RoomSystems
         {
             Debug.Log(locationIdEnum.ToString());
             _locationsStateMachine.SetState(StaticLocationsConnection.LocationsTypeMap[locationIdEnum]);
+            _cameraController.SetFollowZone(GetCurrentLocation().AbstractLocationView.CameraCollider);
         }
 
         public LocationAbstractState GetCurrentLocation()

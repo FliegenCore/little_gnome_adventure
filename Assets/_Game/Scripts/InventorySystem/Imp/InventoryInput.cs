@@ -23,6 +23,7 @@ namespace _Game.Scripts.InventorySystem
         public void Enable()
         {
             _inputSystemActions.UI.Navigate.performed += Navigate;
+            SelectItem();
         }
 
         public void Disable()

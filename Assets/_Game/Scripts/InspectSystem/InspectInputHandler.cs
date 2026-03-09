@@ -78,6 +78,9 @@ namespace _Game.Scripts.InspectSystem
             {
                 if (_selectedInteractable == interactable)
                     continue;
+                
+                if(!interactable.AbstractInteractableModel.CanSelected.Value)
+                    continue;
         
                 Vector2 toInteractable = (interactable.AbstractInteractableModel.Position - _selectedInteractable.AbstractInteractableModel.Position).normalized;
         
@@ -99,12 +102,35 @@ namespace _Game.Scripts.InspectSystem
                 return;
             
             _selectedInteractable.Interact();
+
+            if(!_selectedInteractable.CanInteract())
+                SelectFirst();
         }
         
         private void SelectFirst()
         {
-            _selectedInteractable = _currentInspectModel.Interactables[0];
-            _selectedInteractable.AbstractInteractableModel.IsSelected.Value = true;
+            bool hasSelectable = false;
+            int i = 0;
+            foreach (var interactable in _currentInspectModel.Interactables)
+            {
+                if (interactable.CanInteract())
+                {
+                    hasSelectable = true;
+                    break;
+                }
+
+                i++;
+            }
+
+            if (hasSelectable)
+            {
+                _selectedInteractable = _currentInspectModel.Interactables[i];
+                _selectedInteractable.AbstractInteractableModel.IsSelected.Value = true;
+            }
+            else
+            {
+                _selectedInteractable = null;
+            }
         }
 
         public void Dispose()

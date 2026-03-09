@@ -26,7 +26,7 @@ namespace _Game.Scripts.InteractionSystems.Interactables.Items
 
         public override bool CanInteract()
         {
-            return true;
+            return AbstractInteractableModel.CanSelected.Value;
         }
     }
 }

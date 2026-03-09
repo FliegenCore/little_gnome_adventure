@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InventorySystem.Factories;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using Core.Common;
 using UnityEngine;
@@ -19,26 +21,29 @@ namespace _Game.Scripts.InventorySystem
         private readonly InputSystem_Actions  _inputSystemActions;
         private readonly EventBus _eventBus;
         private readonly InventoryInput _inventoryInput;
+        private readonly InteractionController _interactionController;
         
-        private List<InventoryItem> _items = new  List<InventoryItem>();
+        private readonly List<InventoryItem> _items = new List<InventoryItem>();
         
         private InventoryItem _currentSelectedInventoryItem;
 
         public Inventory(InventoryModel inventoryModel, 
             InventoryFactoryProvider inventoryFactoryProvider,
             EventBus eventBus, 
-            InputSystem_Actions inputSystemActions)
+            InputSystem_Actions inputSystemActions,
+            InteractionController interactionController)
         {
-            _inputSystemActions = inputSystemActions;
-            _eventBus = eventBus;
-            _inventoryModel = inventoryModel;   
+            _interactionController    = interactionController;
+            _inputSystemActions       = inputSystemActions;
+            _eventBus                 = eventBus;
+            _inventoryModel           = inventoryModel;   
             _inventoryFactoryProvider = inventoryFactoryProvider;
-            _inventoryInput = new InventoryInput(inputSystemActions, _eventBus);
+            _inventoryInput           = new InventoryInput(inputSystemActions, _eventBus);
 
             Initialize();
         }
 
-        public void Initialize()
+        private void Initialize()
         {
             _eventBus.Subscribe<SendChooseInventoryIndexSignal, int>(this, SelectInventoryCell);
         }
@@ -79,14 +84,16 @@ namespace _Game.Scripts.InventorySystem
         private void Enable()
         {
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerInventoryState));
-            _inventoryInput.Enable();
             
+            _inventoryInput.Enable();
+            _inputSystemActions.Player.Interact.performed += UseItem;
             EnableInventory();
         }
 
         private void Disable()
         {
             _inventoryInput.Disable();
+            _inputSystemActions.Player.Interact.performed -= UseItem;
             DisableInventory();
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
         }
@@ -94,7 +101,6 @@ namespace _Game.Scripts.InventorySystem
         private InventoryItem CreateItem(ItemId id)
         {
             IInventoryItemFactory inventoryItemFactory = _inventoryFactoryProvider.GetItemFactory(id);
-
             InventoryItem inventoryItem = inventoryItemFactory.CreateItem(id, _items.Count);
             
             return inventoryItem;
@@ -103,19 +109,35 @@ namespace _Game.Scripts.InventorySystem
         private void SelectInventoryCell(int index)
         {
             _inventoryModel.SelectedIndex.Value = index;
-        }
-        
-        private void FillItems()
-        {
-            foreach (InventoryItem inventoryItem in _items)
+
+            if (_items.Count > index)
             {
-                //fill here
+                _currentSelectedInventoryItem = _items[index];
+                Debug.Log(_currentSelectedInventoryItem.AbstractInteractableModel.Id);
             }
         }
 
-        public void UseItem(int index)
+        private void UseItem(InputAction.CallbackContext _)
         {
-            _items[index].Interact();
+            if (_currentSelectedInventoryItem == null)
+                return;
+            
+            AbstractInteractable currentInteractable = _interactionController.CurrentAbstractInteractable;
+
+            if (currentInteractable == null)
+                return;
+            
+            ItemId id = Enum.Parse<ItemId>(_currentSelectedInventoryItem.AbstractInteractableModel.Id);
+
+            ACustomBehaviour customBehaviour = currentInteractable.CustomBehaviour;
+            if (customBehaviour == null)
+                return;
+
+            if (customBehaviour is IItemNeeder itemNeeder)
+            {
+                Disable();
+                itemNeeder.InteractWithItem(id);
+            }
         }
 
         private void EnableInventory()

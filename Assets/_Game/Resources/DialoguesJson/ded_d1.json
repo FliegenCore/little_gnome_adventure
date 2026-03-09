@@ -1,0 +1,99 @@
+{
+  "Nodes": [
+    {
+      "NodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
+      "DialogueName": "Player",
+      "Text": "Привет деда",
+      "Type": 0,
+      "Position": {
+        "x": 270.0,
+        "y": 165.0,
+        "normalized": {
+          "x": 0.8532818,
+          "y": 0.52145,
+          "normalized": {
+            "x": 0.853281856,
+            "y": 0.521450043,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.00000012
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
+        },
+        "magnitude": 316.425354,
+        "sqrMagnitude": 100125.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "90b09dd0-f55d-460f-9fe0-f560ec12e6b6",
+      "DialogueName": "Ded",
+      "Text": "Привет внучок",
+      "Type": 0,
+      "Position": {
+        "x": -226.0,
+        "y": 165.0,
+        "normalized": {
+          "x": -0.80765295,
+          "y": 0.589658141,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 279.823151,
+        "sqrMagnitude": 78301.0
+      },
+      "IsStartNode": true,
+      "OnStartEvents": [],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
+      "DialogueName": "Ded",
+      "Text": "Пока внучок",
+      "Type": 0,
+      "Position": {
+        "x": 691.0,
+        "y": 165.0,
+        "normalized": {
+          "x": 0.972655,
+          "y": 0.2322548,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 710.426636,
+        "sqrMagnitude": 504706.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    }
+  ],
+  "Edges": [
+    {
+      "InputNodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
+      "OutputNodeId": "90b09dd0-f55d-460f-9fe0-f560ec12e6b6",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
+      "OutputNodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    }
+  ]
+}

@@ -21,8 +21,7 @@ namespace _Game.Scripts.InventorySystem.Factories
             ItemConfig itemConfig = _itemInfoProvider.GetItemConfig(id);
             
             SpriteStorage spriteStorage = new SpriteStorage(itemConfig.Sprite);
-            InventoryItemModel inventoryItemModel = new InventoryItemModel(null, new Vector2(), nameof(id), spriteStorage);
-            
+            InventoryItemModel inventoryItemModel = new InventoryItemModel(null, new Vector2(), id.ToString(), spriteStorage);
             InventoryItemView inventoryItemViewPrefab = Object.Instantiate(itemConfig.ViewPrefab, _inventoryView.Cells[index].transform);
             inventoryItemViewPrefab.SpriteApplyer.Construct(spriteStorage);
             

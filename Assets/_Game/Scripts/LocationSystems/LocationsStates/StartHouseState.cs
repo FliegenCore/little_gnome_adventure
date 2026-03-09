@@ -1,4 +1,6 @@
+using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
+using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.RoomSystems.LocationModels;
 using _Game.Scripts.RoomSystems.Rooms;
 
@@ -8,11 +10,16 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
     {
         public readonly StartHouseLocationModel StartHouseLocationModel;
         public readonly StartHouseView StartHouseView;
-        
-        public StartHouseState(Fsm fsm, StartHouseLocationModel startHouseLocationModel, StartHouseView startHouseView) : base(fsm, startHouseView)
+
+
+        public StartHouseState(
+            Fsm fsm, 
+            StartHouseView abstractLocation,
+            IDialogueManager dialogueManager, 
+            StartHouseLocationModel startHouseLocationModel) : base(fsm, abstractLocation, dialogueManager)
         {
             StartHouseLocationModel = startHouseLocationModel;
-            StartHouseView = startHouseView;
+            StartHouseView = abstractLocation;
         }
 
         public override void Update(float deltaTime)

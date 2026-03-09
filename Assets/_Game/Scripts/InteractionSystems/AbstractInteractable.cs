@@ -1,5 +1,6 @@
 using System;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using Core.Common;
 using UnityEngine;
@@ -8,12 +9,17 @@ namespace _Game.Scripts.InteractionSystems
 {
     public abstract class AbstractInteractable : IDisposable
     {
+        public readonly ACustomBehaviour CustomBehaviour;
         public readonly AbstractInteractableModel AbstractInteractableModel;
         public readonly NightstandView InteractableView;
         protected readonly EventBus EventBus;
         
-        public AbstractInteractable(AbstractInteractableModel abstractInteractableModel, NightstandView interactableView, EventBus eventBus)
+        public AbstractInteractable(AbstractInteractableModel abstractInteractableModel, 
+            NightstandView interactableView,
+            EventBus eventBus,
+            ACustomBehaviour customBehaviour = null)
         {
+            CustomBehaviour = customBehaviour;
             EventBus = eventBus;
             AbstractInteractableModel = abstractInteractableModel;
             InteractableView = interactableView;
@@ -55,8 +61,10 @@ namespace _Game.Scripts.InteractionSystems
                 AbstractInteractableModel.ContactTriggerProvider.OnExit -= OnPlayerExit;
             }
             
+            if(InteractableView != null)
+                InteractableView.gameObject.SetActive(false);
             AbstractInteractableModel.IsSelected.Value = false;
-            GameObject.Destroy(InteractableView.gameObject);
+            AbstractInteractableModel.CanSelected.Value = false;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace _Game.Scripts.RoomSystems.Rooms
     {
         [field: SerializeField] public NightstandView NightstandView { get; private set; }
         [field: SerializeField] public NightstandView Table { get; private set; }
+        [field: SerializeField] public NightstandView DedView { get; private set; }
         
         [SerializeField] private LightBlicker _mainLightBlicker;
 

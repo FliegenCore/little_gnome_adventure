@@ -7,11 +7,13 @@ namespace _Game.Scripts.InteractionSystems
     {
         public readonly IContactTriggerProvider ContactTriggerProvider;
         public readonly ReactiveProperty<bool> IsSelected = new ReactiveProperty<bool>();
+        public readonly ReactiveProperty<bool> CanSelected = new ReactiveProperty<bool>();
         public readonly Vector2 Position;
         public readonly string Id;
 
         public AbstractInteractableModel(IContactTriggerProvider contactTriggerProvider, Vector2 position, string id)
         {
+            CanSelected = new ReactiveProperty<bool>(true);
             ContactTriggerProvider = contactTriggerProvider;
             Position = position;
             Id = id;

@@ -17,11 +17,12 @@ namespace _Game.Scripts.PlayerSystems.PlayerStates
         public override void Enter()
         {
             _inventory.EnableOpenCloseInput();
-            
+            _playerModel.AnimationPlayerModel.InInventory.Value = true;
         }
 
         public override void Exit()
         {
+            _playerModel.AnimationPlayerModel.InInventory.Value = false;
             _inventory.DisableOpenCloseInput();
         }
     }

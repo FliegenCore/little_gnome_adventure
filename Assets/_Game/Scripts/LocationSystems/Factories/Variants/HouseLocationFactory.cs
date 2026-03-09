@@ -1,12 +1,16 @@
+using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
-using _Game.Scripts.PlayerSystems.InspectSystem;
+using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.Animations.Factory;
+using _Game.Scripts.PlayerSystems.Animations.Impl;
+using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
+using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem.InspectWindows;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.Nightstand;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.RoomSystems.LocationModels;
 using _Game.Scripts.RoomSystems.LocationsStates;
 using Core.Common;
-using UnityEngine;
 
 namespace _Game.Scripts.RoomSystems.Variants
 {
@@ -14,11 +18,22 @@ namespace _Game.Scripts.RoomSystems.Variants
     {
         private readonly ForestRootViewFactory _forestRootViewFactory;
         private readonly EventBus _eventBus;
+        private readonly IDialogueManager _dialogueManager;
+        private readonly ICharacterFactory _characterFactory;
+        private readonly IPlayerFactory _playerFactory;
         
-        public HouseLocationFactory(ForestRootViewFactory forestRootViewFactory, EventBus eventBus)
+        public HouseLocationFactory(
+            ForestRootViewFactory forestRootViewFactory, 
+            EventBus eventBus, 
+            IDialogueManager dialogueManager,
+            ICharacterFactory characterFactory,
+            IPlayerFactory playerFactory)
         {
+            _playerFactory         = playerFactory;
+            _characterFactory      = characterFactory;
+            _dialogueManager       = dialogueManager;
             _forestRootViewFactory = forestRootViewFactory;
-            _eventBus = eventBus;
+            _eventBus              = eventBus;
         }
         
         public void Create(Fsm fsm)
@@ -30,9 +45,16 @@ namespace _Game.Scripts.RoomSystems.Variants
             
             StartHouseLocationModel startHouseLocationModel = new StartHouseLocationModel(LocationsIdEnum.Forest, lampModel, nightstand);
             
-            StartHouseState startHouseState = new StartHouseState(fsm, startHouseLocationModel, _forestRootViewFactory.GetLocationsRootView().StartHouseView);
+            StartHouseState startHouseState = 
+                new StartHouseState(fsm,
+                    _forestRootViewFactory.GetLocationsRootView().StartHouseView,
+                    _dialogueManager,
+                    startHouseLocationModel);
             
             _forestRootViewFactory.GetLocationsRootView().StartHouseView.Construct(lampModel);
+
+            CreateCharacter(nameof(ECharacters.Ded), new DedBehaviour(_eventBus),
+                _forestRootViewFactory.GetLocationsRootView().StartHouseView.DedView);
             
             fsm.AddState(startHouseState);
         }
@@ -45,6 +67,11 @@ namespace _Game.Scripts.RoomSystems.Variants
             Nightstand nightstand = new Nightstand(_eventBus, nightstandModel, nightstandView);
             
             return nightstand;
+        }
+
+        private Character CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
+        {
+            return _characterFactory.CreateCharacter(id, customBehaviour, nightstandView);
         }
     }
 }

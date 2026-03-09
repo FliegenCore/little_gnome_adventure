@@ -6,10 +6,14 @@ namespace _Game.Scripts.PlayerSystems.Animations
     public class AnimationPlayerModel
     {
         public readonly ReactiveProperty<bool> IsMove;
+        public readonly ReactiveProperty<bool> InInventory;
+        public readonly ReactiveProperty<bool> InRage; //todo проверка
 
         public AnimationPlayerModel()
         {
-            IsMove = new ReactiveProperty<bool>();
+            InInventory = new ReactiveProperty<bool>();
+            IsMove      = new ReactiveProperty<bool>();
+            InRage       = new  ReactiveProperty<bool>();
         }
     }
 }

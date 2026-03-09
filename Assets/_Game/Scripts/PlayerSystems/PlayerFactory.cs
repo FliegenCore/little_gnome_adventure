@@ -1,4 +1,5 @@
 using System;
+using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.Input;
 using _Game.Scripts.InteractionSystems;
@@ -22,6 +23,7 @@ namespace _Game.Scripts.PlayerSystems
         private readonly EventBus _eventBus;
         private readonly InspectController _inspectController;
         private readonly InventoryFactory _inventoryFactory;
+        private readonly IDialogueManager _dialogueManager;
 
         private Player _player;
 
@@ -33,14 +35,16 @@ namespace _Game.Scripts.PlayerSystems
             EventBus eventBus, 
             InputSystem_Actions inputSystemActions,
             InspectController inspectController,
-            InventoryFactory inventoryFactory)
+            InventoryFactory inventoryFactory,
+            IDialogueManager dialogueManager)
         {
-            _inventoryFactory = inventoryFactory;
-            _inspectController = inspectController;
+            _dialogueManager    = dialogueManager;
+            _inventoryFactory   = inventoryFactory;
+            _inspectController  = inspectController;
             _inputSystemActions = inputSystemActions;
-            _eventBus = eventBus;
+            _eventBus           = eventBus;
             _moveDirectionInput = moveDirectionInput;
-            _playerConfig = playerConfig;
+            _playerConfig       = playerConfig;
         }
         
         public Player CreatePlayer()
@@ -57,18 +61,18 @@ namespace _Game.Scripts.PlayerSystems
             
             PlayerView playerView = Object.Instantiate(_playerConfig.PlayerViewPrefab, _playerConfig.StartSpawnPosition, Quaternion.identity);
             playerView.Transformable.Construct(transformation);
+            
             playerView.AnimationPlayer.Construct(playerModel.AnimationPlayerModel);
+            _dialogueManager.RegisterSpeakerCharacters(playerView.SpeakerView);
             
             Fsm motionFsm = new Fsm();
             FillPlayerMotion(motionFsm, playerModel);
             
-            _inventory = _inventoryFactory.CreateInventory();
+            InteractionController interactionController = new InteractionController(_inputSystemActions, playerModel, _eventBus);
+            _inventory = _inventoryFactory.CreateInventory(interactionController);
             
             Fsm playerStateMachine = CreatePlayerStateMachine(playerModel);
 
-            InteractionController interactionController = new InteractionController(_inputSystemActions, playerModel, _eventBus);
-            
-            
             Player player = new Player(playerModel, playerView, motionFsm, playerStateMachine, interactionController, _inventory, _eventBus);
             _player = player;
             
@@ -84,9 +88,10 @@ namespace _Game.Scripts.PlayerSystems
         {
             Fsm playerFsm = new Fsm();
             
-            playerFsm.AddState(new PlayerBaseState(playerFsm, model, _inventory));
+            playerFsm.AddState(new PlayerBaseState(playerFsm, model, _inventory, _eventBus));
             playerFsm.AddState(new PlayerInventoryState(playerFsm, model, _inventory));
             playerFsm.AddState(new PlayerInspectState(playerFsm, model, _inspectController));
+            playerFsm.AddState(new PlayerDialogueState(playerFsm, model, _dialogueManager));
      
             playerFsm.SetState<PlayerBaseState>();
             
