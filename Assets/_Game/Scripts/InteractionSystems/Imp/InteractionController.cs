@@ -112,9 +112,12 @@ namespace _Game.Scripts.InteractionSystems
             _currentAbstractInteractables.Remove(abstractInteractable);
 
             abstractInteractable.AbstractInteractableModel.IsSelected.Value = false;
-            
-            if(_currentAbstractInteractables.Count == 0)
+
+            if (_currentAbstractInteractables.Count == 0)
+            {
+                _currentAbstractInteractable = null;
                 StopUpdate();
+            }
         }
 
         private void StartUpdate()
