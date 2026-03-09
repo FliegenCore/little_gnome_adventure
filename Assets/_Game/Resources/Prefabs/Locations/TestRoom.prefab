@@ -138,6 +138,7 @@ MonoBehaviour:
   <CameraCollider>k__BackingField: {fileID: 0}
   <Doors>k__BackingField:
   - {fileID: 9056546034243773024}
+  <SpeakerViews>k__BackingField: []
 --- !u!1 &3454326401123125286
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,11 +437,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2054722580099561476, guid: 0eda3f0bf10fd7f49ab36834953dae83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.049999952
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 2054722580099561476, guid: 0eda3f0bf10fd7f49ab36834953dae83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6099999
+      value: 1.32
       objectReference: {fileID: 0}
     - target: {fileID: 2054722580099561476, guid: 0eda3f0bf10fd7f49ab36834953dae83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -473,6 +474,10 @@ PrefabInstance:
     - target: {fileID: 2054722580099561476, guid: 0eda3f0bf10fd7f49ab36834953dae83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225955581848989096, guid: 0eda3f0bf10fd7f49ab36834953dae83, type: 3}
+      propertyPath: _animationName
+      value: icon_E
       objectReference: {fileID: 0}
     - target: {fileID: 5392635589361418065, guid: 0eda3f0bf10fd7f49ab36834953dae83, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

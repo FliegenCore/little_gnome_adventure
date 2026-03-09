@@ -32,10 +32,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8844313514319714874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1360.645, y: -559.3}
-  m_SizeDelta: {x: 2121.29, y: 518.6}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146474086291166213
 CanvasRenderer:
@@ -65,10 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' asdasdas'
+  m_text: "dasdasda\nsdasdasdas\ndsadasdas\n<color=red> \u0436\u043E\u043F\u0430
+    \u0436\u043E\u043F\u0430 \u0445\u0443\u0439 \u043F\u0438\u0441\u044C\u043A\u0430</color>\ndasd\nasd\nasdas\ndasd\nasddddddddddddddddddddddddddddd"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4624aa906e0b6314380a1b1e6804ed80, type: 2}
+  m_sharedMaterial: {fileID: 6482043857347931561, guid: 4624aa906e0b6314380a1b1e6804ed80, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,14 +93,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 464.2
-  m_fontSizeBase: 464.2
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -155,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2238199533511642889
 RectTransform:
   m_ObjectHideFlags: 0
@@ -173,7 +174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.89, y: 0.07}
+  m_AnchoredPosition: {x: -0.89001465, y: 0.070007324}
   m_SizeDelta: {x: 6802.8223, y: 3862.3909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7493226347212172310
@@ -221,7 +222,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5827230099397616542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,11 +287,11 @@ RectTransform:
   - {fileID: 3357147283335341426}
   m_Father: {fileID: 2238199533511642889}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 383.92014, y: -387.39}
-  m_SizeDelta: {x: 2721.29, y: 1390.6}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -1572, y: 450}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &3213361031250629264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -356,10 +357,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 300
-    m_Right: 300
-    m_Top: 300
-    m_Bottom: 572
+    m_Left: 150
+    m_Right: 150
+    m_Top: 150
+    m_Bottom: 430
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 0

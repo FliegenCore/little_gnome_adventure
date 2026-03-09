@@ -98,6 +98,9 @@ TextureImporter:
   - first:
       213: 7896041310816220251
     second: GNOME_31
+  - first:
+      213: 2004893619335141278
+    second: GNOME_32
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -189,45 +192,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -235,10 +199,10 @@ TextureImporter:
       name: GNOME_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 208
-        width: 90
-        height: 58
+        x: 1
+        y: 1
+        width: 6
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +221,10 @@ TextureImporter:
       name: GNOME_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 262
-        width: 262
-        height: 6
+        x: 10
+        y: 1
+        width: 6
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +243,10 @@ TextureImporter:
       name: GNOME_2
       rect:
         serializedVersion: 2
-        x: 399
-        y: 169
-        width: 108
-        height: 97
+        x: 16
+        y: 216
+        width: 49
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,8 +265,8 @@ TextureImporter:
       name: GNOME_3
       rect:
         serializedVersion: 2
-        x: 589
-        y: 219
+        x: 65
+        y: 216
         width: 49
         height: 49
       alignment: 0
@@ -323,10 +287,10 @@ TextureImporter:
       name: GNOME_4
       rect:
         serializedVersion: 2
-        x: 95
-        y: 253
-        width: 262
-        height: 6
+        x: 114
+        y: 216
+        width: 47
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,8 +309,8 @@ TextureImporter:
       name: GNOME_5
       rect:
         serializedVersion: 2
-        x: 95
-        y: 206
+        x: 161
+        y: 216
         width: 114
         height: 47
       alignment: 0
@@ -367,10 +331,10 @@ TextureImporter:
       name: GNOME_6
       rect:
         serializedVersion: 2
-        x: 209
-        y: 206
-        width: 114
-        height: 47
+        x: 275
+        y: 215
+        width: 29
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +353,10 @@ TextureImporter:
       name: GNOME_7
       rect:
         serializedVersion: 2
-        x: 547
-        y: 237
-        width: 32
-        height: 18
+        x: 308
+        y: 195
+        width: 35
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +375,10 @@ TextureImporter:
       name: GNOME_8
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 215
-        height: 205
+        x: 343
+        y: 195
+        width: 29
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,8 +397,8 @@ TextureImporter:
       name: GNOME_9
       rect:
         serializedVersion: 2
-        x: 216
-        y: 195
+        x: 372
+        y: 257
         width: 36
         height: 11
       alignment: 0
@@ -455,10 +419,10 @@ TextureImporter:
       name: GNOME_10
       rect:
         serializedVersion: 2
-        x: 323
-        y: 195
-        width: 49
-        height: 49
+        x: 468
+        y: 169
+        width: 108
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,10 +441,10 @@ TextureImporter:
       name: GNOME_11
       rect:
         serializedVersion: 2
-        x: 372
-        y: 195
-        width: 20
-        height: 43
+        x: 578
+        y: 159
+        width: 97
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,10 +463,10 @@ TextureImporter:
       name: GNOME_12
       rect:
         serializedVersion: 2
-        x: 509
-        y: 167
-        width: 38
-        height: 85
+        x: 675
+        y: 250
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,10 +485,10 @@ TextureImporter:
       name: GNOME_13
       rect:
         serializedVersion: 2
-        x: 547
-        y: 153
-        width: 42
-        height: 84
+        x: 707
+        y: 250
+        width: 26
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,10 +507,10 @@ TextureImporter:
       name: GNOME_14
       rect:
         serializedVersion: 2
-        x: 589
-        y: 153
-        width: 29
-        height: 66
+        x: 16
+        y: 1
+        width: 205
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,10 +529,10 @@ TextureImporter:
       name: GNOME_15
       rect:
         serializedVersion: 2
-        x: 618
-        y: 197
-        width: 21
-        height: 22
+        x: 221
+        y: 195
+        width: 22
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,10 +551,10 @@ TextureImporter:
       name: GNOME_16
       rect:
         serializedVersion: 2
-        x: 639
-        y: 197
-        width: 18
-        height: 28
+        x: 243
+        y: 195
+        width: 22
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +573,10 @@ TextureImporter:
       name: GNOME_17
       rect:
         serializedVersion: 2
-        x: 657
-        y: 201
-        width: 36
-        height: 33
+        x: 265
+        y: 195
+        width: 43
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +595,10 @@ TextureImporter:
       name: GNOME_18
       rect:
         serializedVersion: 2
-        x: 661
-        y: 165
-        width: 36
-        height: 36
+        x: 374
+        y: 197
+        width: 90
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,10 +617,10 @@ TextureImporter:
       name: GNOME_19
       rect:
         serializedVersion: 2
-        x: 216
-        y: 1
-        width: 181
-        height: 194
+        x: 675
+        y: 157
+        width: 55
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,10 +639,10 @@ TextureImporter:
       name: GNOME_20
       rect:
         serializedVersion: 2
-        x: 399
-        y: 3
-        width: 134
-        height: 162
+        x: 221
+        y: 1
+        width: 181
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,10 +661,10 @@ TextureImporter:
       name: GNOME_21
       rect:
         serializedVersion: 2
-        x: 618
-        y: 153
-        width: 43
-        height: 44
+        x: 402
+        y: 167
+        width: 18
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,10 +683,10 @@ TextureImporter:
       name: GNOME_22
       rect:
         serializedVersion: 2
-        x: 675
-        y: 127
-        width: 38
-        height: 38
+        x: 420
+        y: 167
+        width: 39
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,10 +705,10 @@ TextureImporter:
       name: GNOME_23
       rect:
         serializedVersion: 2
-        x: 697
-        y: 165
-        width: 17
-        height: 26
+        x: 404
+        y: 3
+        width: 134
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -763,10 +727,10 @@ TextureImporter:
       name: GNOME_24
       rect:
         serializedVersion: 2
-        x: 535
-        y: 98
-        width: 93
-        height: 55
+        x: 540
+        y: 1
+        width: 34
+        height: 151
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -785,10 +749,10 @@ TextureImporter:
       name: GNOME_25
       rect:
         serializedVersion: 2
-        x: 628
-        y: 100
-        width: 47
-        height: 49
+        x: 574
+        y: 115
+        width: 43
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -807,10 +771,10 @@ TextureImporter:
       name: GNOME_26
       rect:
         serializedVersion: 2
-        x: 640
-        y: 71
-        width: 53
-        height: 29
+        x: 574
+        y: 1
+        width: 47
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -829,10 +793,10 @@ TextureImporter:
       name: GNOME_27
       rect:
         serializedVersion: 2
-        x: 675
-        y: 100
-        width: 39
-        height: 27
+        x: 617
+        y: 115
+        width: 84
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,10 +815,10 @@ TextureImporter:
       name: GNOME_28
       rect:
         serializedVersion: 2
-        x: 535
+        x: 621
         y: 1
-        width: 109
-        height: 97
+        width: 38
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -873,10 +837,10 @@ TextureImporter:
       name: GNOME_29
       rect:
         serializedVersion: 2
-        x: 640
-        y: 36
-        width: 69
-        height: 35
+        x: 659
+        y: 71
+        width: 38
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,10 +859,10 @@ TextureImporter:
       name: GNOME_30
       rect:
         serializedVersion: 2
-        x: 693
-        y: 71
-        width: 21
-        height: 22
+        x: 659
+        y: 1
+        width: 35
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -917,10 +881,10 @@ TextureImporter:
       name: GNOME_31
       rect:
         serializedVersion: 2
-        x: 643
-        y: 1
-        width: 71
-        height: 35
+        x: 694
+        y: 37
+        width: 33
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -931,6 +895,28 @@ TextureImporter:
       bones: []
       spriteID: b54b207bcbf549d60800000000000000
       internalID: 7896041310816220251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GNOME_32
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e971be8df10d2db10800000000000000
+      internalID: 2004893619335141278
       vertices: []
       indices: 
       edges: []
@@ -975,6 +961,7 @@ TextureImporter:
       GNOME_3: 6007710312023004876
       GNOME_30: 7928096216817074051
       GNOME_31: 7896041310816220251
+      GNOME_32: 2004893619335141278
       GNOME_4: -2697388826538087321
       GNOME_5: 70328614101151505
       GNOME_6: -6365488589971084470

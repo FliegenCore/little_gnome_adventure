@@ -80,6 +80,31 @@
       "Choices": [
         "Next dialogue"
       ]
+    },
+    {
+      "NodeId": "ab0b417f-10ba-4be5-8390-4feb2420b5aa",
+      "DialogueName": "Player",
+      "Text": "ну и пойду я ",
+      "Type": 0,
+      "Position": {
+        "x": 1110.0,
+        "y": 156.0,
+        "normalized": {
+          "x": 0.9902681,
+          "y": 0.1391728,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 1120.90857,
+        "sqrMagnitude": 1256436.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
     }
   ],
   "Edges": [
@@ -92,6 +117,12 @@
     {
       "InputNodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
       "OutputNodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "ab0b417f-10ba-4be5-8390-4feb2420b5aa",
+      "OutputNodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
       "InputPortIndex": 0,
       "OutputPortIndex": 0
     }
