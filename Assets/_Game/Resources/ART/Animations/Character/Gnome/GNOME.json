@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "vc6fSjHoN7aViBYkBLMIif6rrtA",
+	"hash": "R74VcYE9/U8ynmk2oT/qOONZgsQ",
 	"spine": "3.8.0",
 	"x": -138.04,
 	"y": -12.58,
@@ -163,6 +163,9 @@
 			"стопа копия": {
 				"стопа копия": { "x": 22.15, "y": 4.8, "rotation": 1.68, "width": 68, "height": 31 }
 			},
+			"нога": {
+				"нога": { "x": 24.23, "y": 0.18, "rotation": 86.86, "width": 37, "height": 76 }
+			},
 			"head": {
 				"head": { "x": 71.5, "y": -0.31, "rotation": -92.9, "width": 217, "height": 207 }
 			},
@@ -187,11 +190,14 @@
 			"стопа": {
 				"стопа": { "x": 17.28, "y": 4.29, "rotation": 1.16, "width": 68, "height": 31 }
 			},
+			"cup": {
+				"cup": { "x": 58.19, "y": -28.65, "rotation": -101.36, "width": 184, "height": 196 }
+			},
 			"пердплечье2": {
 				"пердплечье2": { "x": 42.14, "y": 3.17, "rotation": 97.57, "width": 41, "height": 88 }
 			},
-			"L_ear": {
-				"L_ear": { "x": 16.66, "y": 6.26, "rotation": -177.04, "width": 49, "height": 51 }
+			"nose": {
+				"nose": { "x": 5.18, "y": 2.45, "rotation": -86.82, "width": 40, "height": 40 }
 			},
 			"чуп": {
 				"чуп": {
@@ -204,9 +210,6 @@
 					"width": 92,
 					"height": 60
 				}
-			},
-			"nose": {
-				"nose": { "x": 5.18, "y": 2.45, "rotation": -86.82, "width": 40, "height": 40 }
 			},
 			"тело": {
 				"тело": {
@@ -250,8 +253,8 @@
 			"shadow": {
 				"shadow": { "x": 62.5, "y": 4.92, "rotation": -0.31, "width": 150, "height": 32 }
 			},
-			"L_eye": {
-				"L_eye": { "x": 12.01, "y": -14.32, "rotation": -90, "width": 51, "height": 51 }
+			"L_ear": {
+				"L_ear": { "x": 16.66, "y": 6.26, "rotation": -177.04, "width": 49, "height": 51 }
 			},
 			"лодыжка копия": {
 				"лодыжка копия": { "x": 27.23, "y": 0.23, "rotation": 98.85, "width": 37, "height": 71 }
@@ -261,9 +264,6 @@
 			},
 			"2mounthOPEN": {
 				"2mounthOPEN": { "x": 1.49, "y": 1.47, "rotation": -88.7, "width": 41, "height": 33 }
-			},
-			"верх руки": {
-				"верх руки": { "x": 44.06, "y": -1.86, "rotation": 93.13, "width": 49, "height": 116 }
 			},
 			"R_eye": {
 				"R_eye": { "x": 11.84, "y": -14.43, "rotation": -92, "width": 51, "height": 51 }
@@ -277,8 +277,8 @@
 			"лодыжка": {
 				"лодыжка": { "x": 29.52, "y": -0.31, "rotation": 94.48, "width": 37, "height": 71 }
 			},
-			"cup": {
-				"cup": { "x": 58.19, "y": -28.65, "rotation": -101.36, "width": 184, "height": 196 }
+			"верх руки": {
+				"верх руки": { "x": 44.06, "y": -1.86, "rotation": 93.13, "width": 49, "height": 116 }
 			},
 			"волосы право": {
 				"волосы право": { "x": 23.31, "y": 3.77, "rotation": -95.96, "width": 57, "height": 96 }
@@ -292,8 +292,8 @@
 			"R_eyebrow": {
 				"R_eyebrow": { "x": 10.39, "y": -0.78, "rotation": -161.86, "width": 30, "height": 20 }
 			},
-			"нога": {
-				"нога": { "x": 24.23, "y": 0.18, "rotation": 86.86, "width": 37, "height": 76 }
+			"L_eye": {
+				"L_eye": { "x": 12.01, "y": -14.32, "rotation": -90, "width": 51, "height": 51 }
 			}
 		}
 	}
@@ -606,12 +606,12 @@
 	},
 	"emotion/WTF": {
 		"slots": {
-			"веко": {
+			"веко2": {
 				"attachment": [
 					{ "name": "веко" }
 				]
 			},
-			"веко2": {
+			"веко": {
 				"attachment": [
 					{ "name": "веко" }
 				]
@@ -665,6 +665,11 @@
 	},
 	"emotion/angry": {
 		"slots": {
+			"3mounthNORM": {
+				"attachment": [
+					{ "name": "3mounthNORM" }
+				]
+			},
 			"1mounthSMILE": {
 				"attachment": [
 					{ "name": null }
@@ -673,11 +678,6 @@
 			"2mounthOPEN": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"3mounthNORM": {
-				"attachment": [
-					{ "name": "3mounthNORM" }
 				]
 			}
 		},
@@ -1159,6 +1159,47 @@
 				]
 			}
 		}
+	},
+	"body/take": {
+		"bones": {
+			"hand": {
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": 90.72, "y": -162.22 },
+					{ "time": 0.3333, "x": 64.13, "y": -28.25, "curve": "stepped" },
+					{ "time": 0.4, "x": 64.13, "y": -28.25 },
+					{ "time": 0.5 }
+				]
+			},
+			"hop": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "angle": -7.62 },
+					{ "time": 0.5 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.1667, "x": 8.76, "y": -7.72 },
+					{ "time": 0.4, "curve": "stepped" },
+					{ "time": 0.5 }
+				]
+			},
+			"ARM": {
+				"translate": [
+					{ "time": 0.1667, "x": -8.11, "y": -19.93 },
+					{ "time": 0.4, "x": -1.78, "y": 4.91 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 0.3333,
+				"offsets": [
+					{ "slot": "верх руки", "offset": -28 },
+					{ "slot": "предплечье", "offset": -28 }
+				]
+			}
+		]
 	},
 	"body/walk": {
 		"bones": {
