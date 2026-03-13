@@ -1,56 +1,6 @@
 {
   "Nodes": [
     {
-      "NodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
-      "DialogueName": "Ded",
-      "Text": "Нет. Я тренируюсь.",
-      "Type": 0,
-      "Position": {
-        "x": 178.0,
-        "y": 167.0,
-        "normalized": {
-          "x": 0.7292816,
-          "y": 0.684213638,
-          "magnitude": 1.0,
-          "sqrMagnitude": 0.99999994
-        },
-        "magnitude": 244.0758,
-        "sqrMagnitude": 59573.0
-      },
-      "IsStartNode": false,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
-      "ChoiceEvents": [],
-      "Choices": [
-        "Next dialogue"
-      ]
-    },
-    {
-      "NodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
-      "DialogueName": "Player",
-      "Text": "В чем?",
-      "Type": 0,
-      "Position": {
-        "x": 576.0,
-        "y": 169.0,
-        "normalized": {
-          "x": 0.959551,
-          "y": 0.28153494,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
-        },
-        "magnitude": 600.280762,
-        "sqrMagnitude": 360337.0
-      },
-      "IsStartNode": false,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
-      "ChoiceEvents": [],
-      "Choices": [
-        "Next dialogue"
-      ]
-    },
-    {
       "NodeId": "ab0b417f-10ba-4be5-8390-4feb2420b5aa",
       "DialogueName": "Ded",
       "Text": "Лежать неподвижно.\nЭто олимпийский вид спорта для стариков.",
@@ -68,58 +18,12 @@
         "sqrMagnitude": 970730.0
       },
       "IsStartNode": false,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
-      "ChoiceEvents": [],
-      "Choices": [
-        "Next dialogue"
-      ]
-    },
-    {
-      "NodeId": "57f303da-f349-47d9-a3c1-6f9eed741544",
-      "DialogueName": "Player",
-      "Text": "А медаль дадут?",
-      "Type": 0,
-      "Position": {
-        "x": 1328.0,
-        "y": 170.0,
-        "normalized": {
-          "x": 0.9919058,
-          "y": 0.1269759,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
-        },
-        "magnitude": 1338.83679,
-        "sqrMagnitude": 1792484.0
-      },
-      "IsStartNode": false,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
-      "ChoiceEvents": [],
-      "Choices": [
-        "Next dialogue"
-      ]
-    },
-    {
-      "NodeId": "c846d713-a18f-4772-b279-cd0341159b0f",
-      "DialogueName": "Ded",
-      "Text": "Неа. Но однажды...",
-      "Type": 0,
-      "Position": {
-        "x": 1711.0,
-        "y": 166.0,
-        "normalized": {
-          "x": 0.995326638,
-          "y": 0.09656588,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.00000012
-        },
-        "magnitude": 1719.03369,
-        "sqrMagnitude": 2955077.0
-      },
-      "IsStartNode": false,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
+      "OnStartEvents": [
+        "a_Ded_emotion/speak_0_1"
+      ],
+      "OnEndEvents": [
+        "a_Ded_emotion/wait_0_1"
+      ],
       "ChoiceEvents": [],
       "Choices": [
         "Next dialogue"
@@ -143,8 +47,100 @@
         "sqrMagnitude": 4384469.0
       },
       "IsStartNode": false,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
+      "OnStartEvents": [
+        "a_Ded_emotion/speak_0_1"
+      ],
+      "OnEndEvents": [
+        "a_Ded_emotion/wait_0_1",
+        "a_Ded_body/sleep_0_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
+      "DialogueName": "Ded",
+      "Text": "Нет. Я тренируюсь.",
+      "Type": 0,
+      "Position": {
+        "x": 178.0,
+        "y": 167.0,
+        "normalized": {
+          "x": 0.7292816,
+          "y": 0.684213638,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 244.0758,
+        "sqrMagnitude": 59573.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Ded_emotion/speak_0_1"
+      ],
+      "OnEndEvents": [
+        "a_Ded_emotion/wait_0_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "c846d713-a18f-4772-b279-cd0341159b0f",
+      "DialogueName": "Ded",
+      "Text": "Неа. Но однажды...",
+      "Type": 0,
+      "Position": {
+        "x": 1711.0,
+        "y": 166.0,
+        "normalized": {
+          "x": 0.995326638,
+          "y": 0.09656588,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 1719.03369,
+        "sqrMagnitude": 2955077.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Ded_emotion/speak_0_1"
+      ],
+      "OnEndEvents": [
+        "a_Ded_emotion/wait_0_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
+      "DialogueName": "Player",
+      "Text": "В чем?",
+      "Type": 0,
+      "Position": {
+        "x": 576.0,
+        "y": 169.0,
+        "normalized": {
+          "x": 0.959551,
+          "y": 0.28153494,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 600.280762,
+        "sqrMagnitude": 360337.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Player_emotion/WTF_1_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/angry_1_1"
+      ],
       "ChoiceEvents": [],
       "Choices": [
         "Next dialogue"
@@ -168,8 +164,42 @@
         "sqrMagnitude": 90562.0
       },
       "IsStartNode": true,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
+      "OnStartEvents": [
+        "a_Player_emotion/WTF_1_1",
+        "a_Ded_body/idle_0_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/angry_1_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "57f303da-f349-47d9-a3c1-6f9eed741544",
+      "DialogueName": "Player",
+      "Text": "А медаль дадут?",
+      "Type": 0,
+      "Position": {
+        "x": 1328.0,
+        "y": 170.0,
+        "normalized": {
+          "x": 0.9919058,
+          "y": 0.1269759,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 1338.83679,
+        "sqrMagnitude": 1792484.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Player_emotion/WTF_1_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/angry_1_1"
+      ],
       "ChoiceEvents": [],
       "Choices": [
         "Next dialogue"

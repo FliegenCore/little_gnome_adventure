@@ -46,8 +46,8 @@ namespace _Game.Scripts.RoomSystems.Variants
                 _dialogueManager,
                 _eventBus);
             
-            CreateCharacter(nameof(ECharacters.Girl), new GirlBehaviour(_eventBus),
-                _forestRootViewFactory.GetLocationsRootView().ForestLocationView.GirlView);
+            //CreateCharacter(nameof(ECharacters.Girl), new GirlBehaviour(_eventBus),
+              //  _forestRootViewFactory.GetLocationsRootView().ForestLocationView.GirlView);
             
             _forestRootViewFactory.GetLocationsRootView().StartHouseView.Construct(lampModel);
             

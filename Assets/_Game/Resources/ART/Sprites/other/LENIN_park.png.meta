@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 8927a06ffc4218f4eaa4a493158cc20e
+guid: aa88c680b3a798e438fbcec25f0a986b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2145042428665407284
-    second: paper_helper_0
-  - first:
-      213: 1866871653930207205
-    second: paper_helper_1
-  - first:
-      213: -1055992674422589145
-    second: paper_helper_2
-  - first:
-      213: -9790047123298445
-    second: paper_helper_3
+      213: 6450910878136590467
+    second: LENIN_park_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -64,7 +55,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,7 +127,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -148,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: paper_helper_0
+      name: LENIN_park_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 155
-        height: 258
+        x: 0
+        y: 0
+        width: 190
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,74 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4372eb459b8b4cd10800000000000000
-      internalID: 2145042428665407284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paper_helper_1
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 1
-        width: 212
-        height: 252
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e781cdc0e578e910800000000000000
-      internalID: 1866871653930207205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paper_helper_2
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 1
-        width: 139
-        height: 227
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72970abe14c5851f0800000000000000
-      internalID: -1055992674422589145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paper_helper_3
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 1
-        width: 170
-        height: 197
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 377a1e601083ddff0800000000000000
-      internalID: -9790047123298445
+      spriteID: 380e809e34d368950800000000000000
+      internalID: 6450910878136590467
       vertices: []
       indices: 
       edges: []
@@ -239,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -249,10 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      paper_helper_0: 2145042428665407284
-      paper_helper_1: 1866871653930207205
-      paper_helper_2: -1055992674422589145
-      paper_helper_3: -9790047123298445
+      LENIN_park_0: 6450910878136590467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

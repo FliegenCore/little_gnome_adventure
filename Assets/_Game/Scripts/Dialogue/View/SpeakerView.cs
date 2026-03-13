@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.PlayerSystems.Animations.Impl;
 using Core.Common;
 using TMPro;
@@ -17,7 +18,7 @@ namespace _Game.Scripts.DialogueSystem.View
         private EventBus _eventBus;
 
         private bool _isInitialized;
-        
+
         public void Initialize(EventBus eventBus)
         {
             if (_isInitialized)

@@ -13,7 +13,7 @@ namespace _Game.Scripts.PlayerSystems.Animations
         private Spine.AnimationState _animationState;
         private Coroutine _durationCoroutine;
         
-        public void SetLoopAnimation(int layer, string animationName, bool isLoop = true)
+        public void SetAnimation(int layer, string animationName, bool isLoop = true)
         {
             if (_animationState == null)
             {

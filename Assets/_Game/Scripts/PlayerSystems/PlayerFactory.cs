@@ -63,6 +63,7 @@ namespace _Game.Scripts.PlayerSystems
             playerView.Transformable.Construct(transformation);
             
             playerView.AnimationPlayer.Construct(playerModel.AnimationPlayerModel);
+            playerView.SpeakerView.Initialize(_eventBus);
             _dialogueManager.RegisterSpeakerCharacters(playerView.SpeakerView);
             
             Fsm motionFsm = new Fsm();

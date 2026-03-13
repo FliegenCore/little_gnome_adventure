@@ -86,6 +86,14 @@ namespace _Game.Scripts.DialogueSystem
 
         private void ShowCurrentDialogue()
         {
+            if (_currentDialogue.OnStartEvents.Count > 0)
+            {
+                foreach (var startEventName in _currentDialogue.OnStartEvents)
+                {
+                    _eventBus.TriggerEvenet<DialogueEventSignal, string>(startEventName);
+                }
+            }
+            
             if (_currentSpeakerView != null)
             {
                 _currentSpeakerView.SetDialogue(string.Empty);

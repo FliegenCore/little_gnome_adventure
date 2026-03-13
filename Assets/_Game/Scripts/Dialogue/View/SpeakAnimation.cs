@@ -8,9 +8,9 @@ namespace _Game.Scripts.DialogueSystem.View
     public class SpeakAnimation : MonoBehaviour
     {
         [SerializeField] private AnimationControl _animationControl;
+        [SerializeField] private string _name;
         
         private EventBus _eventBus;
-        private string _name;
 
         public void Construct(EventBus eventBus, string nme)
         {
@@ -23,27 +23,28 @@ namespace _Game.Scripts.DialogueSystem.View
         private void AnimationEvent(string message)
         {
             string[] parameters = GetParams(message);
-
             if (parameters == null)
                 return;
 
             string nme = parameters[0];
             string animationName = parameters[1];
             int layer = int.Parse(parameters[2]);
+            int isLoopInt = int.Parse(parameters[3]);
             
+            bool isLoop = isLoopInt == 1;
             if (nme != _name)
             {
                 return;
             }
             
-            _animationControl.SetLoopAnimation(layer, animationName);
+            _animationControl.SetAnimation(layer, animationName, isLoop);
         }
 
         private string[] GetParams(string message)
         {
-            if (message.Contains("animation_"))
+            if (message.Contains("a_"))
             {
-                message = message.Replace("animation_", "");
+                message = message.Replace("a_", "");
                 
                 string[] parameters =  message.Split('_');
                 

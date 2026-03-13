@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 9127604325733127963}
   - component: {fileID: 1335218314881318455}
   - component: {fileID: 6824364372013263889}
+  - component: {fileID: 1356436324982076926}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.04621598, y: -1.7343373}
+  m_Offset: {x: 0.04621598, y: 0.265663}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -168,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skeletonAnimation: {fileID: 7483846723804003102}
+  _defaultMixDuration: 0.25
 --- !u!61 &1335218314881318455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -202,7 +204,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.025166988, y: -0.70689845}
+  m_Offset: {x: 0.025166988, y: 1.2931015}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -228,8 +230,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 0
   _speakWindowView: {fileID: 2288431709487336563}
-  _alphaText: {fileID: 0}
   _realText: {fileID: 4510568765472505507}
+  _speakAnimation: {fileID: 1356436324982076926}
+--- !u!114 &1356436324982076926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639637518722933775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ce71e78ad642a5aa1f7edcf6e06bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationControl: {fileID: 9127604325733127963}
 --- !u!1 &6846856357699614140
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +270,7 @@ Transform:
   m_GameObject: {fileID: 6846856357699614140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.78, y: 3.28, z: 0}
+  m_LocalPosition: {x: -0.78, y: 5.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -274,6 +289,7 @@ GameObject:
   - component: {fileID: 8760066789157979714}
   - component: {fileID: 3351851404996302289}
   - component: {fileID: 7483846723804003102}
+  - component: {fileID: 2290874145665316158}
   m_Layer: 0
   m_Name: Spine GameObject (skeleton)
   m_TagString: Untagged
@@ -290,7 +306,7 @@ Transform:
   m_GameObject: {fileID: 7164667106390074633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.666, y: 0.666, z: 0.666}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -384,6 +400,18 @@ MonoBehaviour:
   _animationName: body/idle
   loop: 1
   timeScale: 1
+--- !u!210 &2290874145665316158
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7164667106390074633}
+  m_Enabled: 1
+  m_SortingLayerID: -1184213581
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1001 &385951086950860262
 PrefabInstance:
   m_ObjectHideFlags: 0
