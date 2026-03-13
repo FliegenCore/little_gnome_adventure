@@ -49,12 +49,15 @@ namespace _Game.Scripts.RoomSystems.Variants
                 new StartHouseState(fsm,
                     _forestRootViewFactory.GetLocationsRootView().StartHouseView,
                     _dialogueManager,
-                    startHouseLocationModel);
+                    startHouseLocationModel,
+                    _eventBus);
             
             _forestRootViewFactory.GetLocationsRootView().StartHouseView.Construct(lampModel);
 
             CreateCharacter(nameof(ECharacters.Ded), new DedBehaviour(_eventBus),
                 _forestRootViewFactory.GetLocationsRootView().StartHouseView.DedView);
+            
+            
             
             fsm.AddState(startHouseState);
         }

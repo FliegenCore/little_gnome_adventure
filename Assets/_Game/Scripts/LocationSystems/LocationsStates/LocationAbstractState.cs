@@ -6,6 +6,8 @@ using _Game.Scripts.FSM;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.RoomSystems.LocationModels;
 using _Game.Scripts.RoomSystems.Rooms;
+using Core.Common;
+using TMPro;
 
 namespace _Game.Scripts.RoomSystems.LocationsStates
 {
@@ -14,12 +16,15 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
         public readonly AbstractLocationView AbstractLocationView;
 
         protected readonly IDialogueManager _dialogueManager;
+        protected readonly EventBus _eventBus;
         
         public LocationAbstractState(
             Fsm fsm, 
             AbstractLocationView abstractLocation,
-            IDialogueManager dialogueManager) : base(fsm)
+            IDialogueManager dialogueManager,
+            EventBus eventBus) : base(fsm)
         {
+            _eventBus            = eventBus;
             _dialogueManager     = dialogueManager;
             AbstractLocationView = abstractLocation;
         }
@@ -28,6 +33,11 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
         {
             List<SpeakerView> speakerViews = new List<SpeakerView>();
             speakerViews.AddRange(AbstractLocationView.SpeakerViews);
+
+            foreach (var speaker in speakerViews)
+            {
+                speaker.Initialize(_eventBus);
+            }
             
             _dialogueManager.RegisterSpeakerCharacters(speakerViews.ToArray());
             

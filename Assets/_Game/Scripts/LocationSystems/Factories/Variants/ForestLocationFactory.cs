@@ -1,6 +1,10 @@
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.Animations.Factory;
+using _Game.Scripts.PlayerSystems.Animations.Impl;
+using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
+using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem.InspectWindows;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.Nightstand;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
@@ -17,6 +21,7 @@ namespace _Game.Scripts.RoomSystems.Variants
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
+        private readonly ICharacterFactory _characterFactory;
         
         public ForestLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
@@ -38,7 +43,11 @@ namespace _Game.Scripts.RoomSystems.Variants
             
             ForestState forestState = new ForestState(fsm, 
                 _forestRootViewFactory.GetLocationsRootView().ForestLocationView, 
-                _dialogueManager);
+                _dialogueManager,
+                _eventBus);
+            
+            CreateCharacter(nameof(ECharacters.Girl), new GirlBehaviour(_eventBus),
+                _forestRootViewFactory.GetLocationsRootView().ForestLocationView.GirlView);
             
             _forestRootViewFactory.GetLocationsRootView().StartHouseView.Construct(lampModel);
             
@@ -53,6 +62,11 @@ namespace _Game.Scripts.RoomSystems.Variants
             Nightstand nightstand = new Nightstand(_eventBus, nightstandModel, nightstandView);
             
             return nightstand;
+        }
+        
+        private Character CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
+        {
+            return _characterFactory.CreateCharacter(id, customBehaviour, nightstandView);
         }
     }
 }

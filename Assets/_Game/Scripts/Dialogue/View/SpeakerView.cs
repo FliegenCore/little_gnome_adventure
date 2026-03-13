@@ -1,6 +1,8 @@
 using _Game.Scripts.PlayerSystems.Animations.Impl;
+using Core.Common;
 using TMPro;
 using UnityEngine;
+using VContainer;
 
 namespace _Game.Scripts.DialogueSystem.View
 {
@@ -9,16 +11,21 @@ namespace _Game.Scripts.DialogueSystem.View
         [field: SerializeField] public ECharacters Id { get; private set; }
 
         [SerializeField] private SpeakWindowView _speakWindowView;
-        [SerializeField] private TMP_Text _alphaText;
         [SerializeField] private TMP_Text _realText;
+        [SerializeField] private SpeakAnimation _speakAnimation;
+        
+        private EventBus _eventBus;
 
-        /// <summary>
-        /// Используется для расширения диалогового окна
-        /// </summary>
-        /// <param name="dialogueText"></param>
-        public void SetFakeText(string dialogueText)
+        private bool _isInitialized;
+        
+        public void Initialize(EventBus eventBus)
         {
-            //_alphaText.text = dialogueText;
+            if (_isInitialized)
+                return;
+
+            _isInitialized = true;
+            _eventBus = eventBus;
+            _speakAnimation.Construct(_eventBus, Id.ToString());
         }
         
         public void SetDialogue(string dialogueText)

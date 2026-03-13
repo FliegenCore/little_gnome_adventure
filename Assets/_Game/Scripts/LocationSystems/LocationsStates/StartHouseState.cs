@@ -3,6 +3,7 @@ using _Game.Scripts.FSM;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.RoomSystems.LocationModels;
 using _Game.Scripts.RoomSystems.Rooms;
+using Core.Common;
 
 namespace _Game.Scripts.RoomSystems.LocationsStates
 {
@@ -16,7 +17,8 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
             Fsm fsm, 
             StartHouseView abstractLocation,
             IDialogueManager dialogueManager, 
-            StartHouseLocationModel startHouseLocationModel) : base(fsm, abstractLocation, dialogueManager)
+            StartHouseLocationModel startHouseLocationModel,
+            EventBus eventBus) : base(fsm, abstractLocation, dialogueManager, eventBus)
         {
             StartHouseLocationModel = startHouseLocationModel;
             StartHouseView = abstractLocation;

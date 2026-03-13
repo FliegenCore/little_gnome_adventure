@@ -27,8 +27,8 @@ namespace _Game.Scripts.DialogueSystem
         private DialogueManager(InputSystem_Actions inputSystemActions, EventBus eventBus)
         {
             _eventBus           = eventBus;
-            _dialogueProvider   = new DialogueProvider();
             _inputSystemActions = inputSystemActions;
+            _dialogueProvider   = new DialogueProvider();
 
             Init();
         }
@@ -88,7 +88,6 @@ namespace _Game.Scripts.DialogueSystem
         {
             if (_currentSpeakerView != null)
             {
-                _currentSpeakerView.SetFakeText(string.Empty);
                 _currentSpeakerView.SetDialogue(string.Empty);
                 _currentSpeakerView.HideDialogueWindow();
             }
@@ -99,7 +98,6 @@ namespace _Game.Scripts.DialogueSystem
                 return;
             
             string dialogueText = _currentDialogue.Text; //todo: получить перевод 
-            _currentSpeakerView.SetFakeText(dialogueText);
             _currentSpeakerView.SetDialogue(dialogueText);
             
             _currentSpeakerView.ShowDialogueWindow();
@@ -122,7 +120,6 @@ namespace _Game.Scripts.DialogueSystem
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
             
             _currentSpeakerView.SetDialogue(string.Empty);
-            _currentSpeakerView.SetFakeText(string.Empty);
             _currentSpeakerView.HideDialogueWindow();
             _dialogueIsStarted = false;
             

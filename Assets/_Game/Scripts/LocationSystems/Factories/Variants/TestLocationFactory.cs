@@ -36,7 +36,8 @@ namespace _Game.Scripts.RoomSystems.Variants
             TestLocState testState = 
                 new TestLocState(fsm,
                     _forestRootViewFactory.GetLocationsRootView().TestRoom,
-                    _dialogueManager);
+                    _dialogueManager,
+                    _eventBus);
             
             fsm.AddState(testState);
         }

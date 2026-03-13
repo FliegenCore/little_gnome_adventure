@@ -2,6 +2,7 @@ using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.LocationSystems.LocationsView;
 using _Game.Scripts.PlayerSystems;
+using Core.Common;
 
 namespace _Game.Scripts.RoomSystems.LocationsStates
 {
@@ -13,7 +14,8 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
         public TestLocState(
             Fsm fsm,
             TestRoom abstractLocation,
-            IDialogueManager dialogueManager) : base(fsm, abstractLocation, dialogueManager)
+            IDialogueManager dialogueManager,
+            EventBus eventBus) : base(fsm, abstractLocation, dialogueManager, eventBus)
         {
             TestRoom = abstractLocation;
         }

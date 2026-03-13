@@ -23,24 +23,24 @@ namespace _Game.Scripts.PlayerSystems.Animations
         {
             if (inRage)
             {
-                _animationControl.SetAnimation(0, PlayerAnimationsName.IN_RAGE_ANIMATION_NAME);
+                _animationControl.SetLoopAnimation(0, PlayerAnimationsName.IN_RAGE_ANIMATION_NAME);
             }
         }
 
         private void SetInventory(bool inInventory)
         {
             if(inInventory)
-                _animationControl.SetAnimation(0, PlayerAnimationsName.IN_INVENTORY_ANIMATION_NAME);
+                _animationControl.SetLoopAnimation(0, PlayerAnimationsName.IN_INVENTORY_ANIMATION_NAME);
             else
-                _animationControl.SetAnimation(0, PlayerAnimationsName.IDLE_ANIMATION_NAME);
+                _animationControl.SetLoopAnimation(0, PlayerAnimationsName.IDLE_ANIMATION_NAME);
         }
 
         private void SetMove(bool isMove)
         {
             if(isMove)
-                _animationControl.SetAnimation(0, PlayerAnimationsName.MOVE_ANIMATION_NAME);
+                _animationControl.SetLoopAnimation(0, PlayerAnimationsName.MOVE_ANIMATION_NAME);
             else
-                _animationControl.SetAnimation(0, PlayerAnimationsName.IDLE_ANIMATION_NAME);
+                _animationControl.SetLoopAnimation(0, PlayerAnimationsName.IDLE_ANIMATION_NAME);
         }
         
         
