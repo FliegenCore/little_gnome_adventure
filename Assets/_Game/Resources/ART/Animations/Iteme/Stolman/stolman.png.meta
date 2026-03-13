@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: f64fc1bd6b0c13242b06d38091154ec2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 643146981914764942
+    second: stolman_0
+  - first:
+      213: 2349408534823873185
+    second: stolman_1
+  - first:
+      213: -2943808162505009176
+    second: stolman_2
+  - first:
+      213: 4992321466839431992
+    second: stolman_3
+  - first:
+      213: -857435649777924352
+    second: stolman_4
+  - first:
+      213: 5869570230165370634
+    second: stolman_5
+  - first:
+      213: 1521889157084681256
+    second: stolman_6
+  - first:
+      213: -7445783937223538069
+    second: stolman_7
+  - first:
+      213: -8793851421920259012
+    second: stolman_8
+  - first:
+      213: 6470144661956202817
+    second: stolman_9
+  - first:
+      213: 2254918936879595517
+    second: stolman_10
+  - first:
+      213: -6955595890345675704
+    second: stolman_11
+  - first:
+      213: -3702309052867743881
+    second: stolman_12
+  - first:
+      213: 7917791613774671091
+    second: stolman_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stolman_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 171
+        width: 322
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86e463c5caece800800000000000000
+      internalID: 643146981914764942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 160
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aaa27e5d96ca9020800000000000000
+      internalID: 2349408534823873185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_2
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1
+        width: 276
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e75efab21e7527d0800000000000000
+      internalID: -2943808162505009176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_3
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1
+        width: 268
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b75837ce9484540800000000000000
+      internalID: 4992321466839431992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_4
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 132
+        width: 113
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0070b35c1d6c914f0800000000000000
+      internalID: -857435649777924352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_5
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 164
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07f639a607e47150800000000000000
+      internalID: 5869570230165370634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_6
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 164
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8241d830026de1510800000000000000
+      internalID: 1521889157084681256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_7
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 130
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a4b7365f24ba890800000000000000
+      internalID: -7445783937223538069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_8
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 51
+        width: 157
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3411ec39b6f5f580800000000000000
+      internalID: -8793851421920259012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_9
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 1
+        width: 304
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1411a4d2a429ac950800000000000000
+      internalID: 6470144661956202817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_10
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 130
+        width: 151
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff720673d41b4f10800000000000000
+      internalID: 2254918936879595517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_11
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 92
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84477cad362c87f90800000000000000
+      internalID: -6955595890345675704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 215
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77fea173881ce9cc0800000000000000
+      internalID: -3702309052867743881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stolman_13
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1
+        width: 72
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc2b90c585a1ed60800000000000000
+      internalID: 7917791613774671091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      stolman_0: 643146981914764942
+      stolman_1: 2349408534823873185
+      stolman_10: 2254918936879595517
+      stolman_11: -6955595890345675704
+      stolman_12: -3702309052867743881
+      stolman_13: 7917791613774671091
+      stolman_2: -2943808162505009176
+      stolman_3: 4992321466839431992
+      stolman_4: -857435649777924352
+      stolman_5: 5869570230165370634
+      stolman_6: 1521889157084681256
+      stolman_7: -7445783937223538069
+      stolman_8: -8793851421920259012
+      stolman_9: 6470144661956202817
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

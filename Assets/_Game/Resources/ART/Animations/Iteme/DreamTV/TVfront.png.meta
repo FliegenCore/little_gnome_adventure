@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: 034dad84f309ca942ba3072c643c34b5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3721886984089642785
+    second: TVfront_0
+  - first:
+      213: 7847176971066741847
+    second: TVfront_1
+  - first:
+      213: -7552843549739586183
+    second: TVfront_2
+  - first:
+      213: 6284040631379636858
+    second: TVfront_3
+  - first:
+      213: 2078308976737637711
+    second: TVfront_4
+  - first:
+      213: 8907070302077674373
+    second: TVfront_5
+  - first:
+      213: 4155349594397977716
+    second: TVfront_6
+  - first:
+      213: 4324442989232652171
+    second: TVfront_7
+  - first:
+      213: -5945468197701905980
+    second: TVfront_8
+  - first:
+      213: -7199524470567774324
+    second: TVfront_9
+  - first:
+      213: -2853283867857810159
+    second: TVfront_10
+  - first:
+      213: 5407268432335445741
+    second: TVfront_11
+  - first:
+      213: -1615824396769300933
+    second: TVfront_12
+  - first:
+      213: 5709592891904946274
+    second: TVfront_13
+  - first:
+      213: -1140954077759835584
+    second: TVfront_14
+  - first:
+      213: 6301099497137756314
+    second: TVfront_15
+  - first:
+      213: 4368181860380628554
+    second: TVfront_16
+  - first:
+      213: -884661375955527408
+    second: TVfront_17
+  - first:
+      213: 7598211577615121893
+    second: TVfront_18
+  - first:
+      213: 1807836304877849790
+    second: TVfront_19
+  - first:
+      213: -5800733458144614839
+    second: TVfront_20
+  - first:
+      213: 8816096849375106138
+    second: TVfront_21
+  - first:
+      213: -4326806802171164232
+    second: TVfront_22
+  - first:
+      213: -7244372768754183664
+    second: TVfront_23
+  - first:
+      213: -3810660777788379829
+    second: TVfront_24
+  - first:
+      213: -2948893875445719180
+    second: TVfront_25
+  - first:
+      213: -2240448844417907060
+    second: TVfront_26
+  - first:
+      213: -7956031374313099106
+    second: TVfront_27
+  - first:
+      213: -4962037995771585986
+    second: TVfront_28
+  - first:
+      213: -2143490207872843456
+    second: TVfront_29
+  - first:
+      213: 5253596659694002906
+    second: TVfront_30
+  - first:
+      213: -1217059060615305155
+    second: TVfront_31
+  - first:
+      213: 8909638603015952231
+    second: TVfront_32
+  - first:
+      213: -1869985789270082163
+    second: TVfront_33
+  - first:
+      213: 7826293992455166193
+    second: TVfront_34
+  - first:
+      213: 2917605546720983407
+    second: TVfront_35
+  - first:
+      213: -1240722427838768117
+    second: TVfront_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TVfront_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 318
+        width: 274
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12720dc1e7cc6a330800000000000000
+      internalID: 3721886984089642785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 318
+        width: 222
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7541f0a01e5c6ec60800000000000000
+      internalID: 7847176971066741847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_2
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 442
+        width: 185
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97deba5eec8ee2790800000000000000
+      internalID: -7552843549739586183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_3
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 341
+        width: 241
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a723183f8a5653750800000000000000
+      internalID: 6284040631379636858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_4
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 486
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45d3f3c003a7dc10800000000000000
+      internalID: 2078308976737637711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_5
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 488
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58365c08f354c9b70800000000000000
+      internalID: 8907070302077674373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_6
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 487
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ca7aba074caa930800000000000000
+      internalID: 4155349594397977716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_7
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 490
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ff3a0acf1830c30800000000000000
+      internalID: 4324442989232652171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_8
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 259
+        width: 190
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c19894bc247d7da0800000000000000
+      internalID: -5945468197701905980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_9
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 330
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87531483a6261c90800000000000000
+      internalID: -7199524470567774324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_10
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 341
+        width: 135
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d8bf480791768d0800000000000000
+      internalID: -2853283867857810159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_11
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 334
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee99828df97a0b40800000000000000
+      internalID: 5407268432335445741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_12
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 328
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ee72ba5407399e0800000000000000
+      internalID: -1615824396769300933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_13
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 327
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260f6160c7c8c3f40800000000000000
+      internalID: 5709592891904946274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_14
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 327
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0427712bf448a20f0800000000000000
+      internalID: -1140954077759835584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_15
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 299
+        width: 258
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98d945ab90027750800000000000000
+      internalID: 6301099497137756314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_16
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 323
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46da462246ee9c30800000000000000
+      internalID: 4368181860380628554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_17
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 322
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01999ab6a2d09b3f0800000000000000
+      internalID: -884661375955527408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 402
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed720c3c25427960800000000000000
+      internalID: 7598211577615121893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_19
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 291
+        width: 237
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc8c4c7a89b61910800000000000000
+      internalID: 1807836304877849790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_20
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 118
+        width: 72
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946219647a7af7fa0800000000000000
+      internalID: -5800733458144614839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_21
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1
+        width: 327
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a549174ff51195a70800000000000000
+      internalID: 8816096849375106138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_22
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 229
+        width: 254
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b908d8432814f3c0800000000000000
+      internalID: -4326806802171164232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_23
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 255
+        width: 252
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012d4e16951d67b90800000000000000
+      internalID: -7244372768754183664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_24
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 118
+        width: 34
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4de86c5630dd1bc0800000000000000
+      internalID: -3810660777788379829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_25
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 212
+        width: 240
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f9bb9e4ac6317d0800000000000000
+      internalID: -2948893875445719180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_26
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 220
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86490b75a358e0e0800000000000000
+      internalID: -2240448844417907060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_27
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 194
+        width: 238
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9074303e9f769190800000000000000
+      internalID: -7956031374313099106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_28
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 193
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a1b0c9bbc432bb0800000000000000
+      internalID: -4962037995771585986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_29
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1
+        width: 258
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041063c330bc042e0800000000000000
+      internalID: -2143490207872843456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_30
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 106
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad26d36c35688e840800000000000000
+      internalID: 5253596659694002906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_31
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 91
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d38aa5d8b332c1fe0800000000000000
+      internalID: -1217059060615305155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_32
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 74
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7679fd9aa1565ab70800000000000000
+      internalID: 8909638603015952231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_33
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 54
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d378f05d97c06e0800000000000000
+      internalID: -1869985789270082163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_34
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 50
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f85010bbe49c9c60800000000000000
+      internalID: 7826293992455166193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_35
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 14
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69730f59ca6d7820800000000000000
+      internalID: 2917605546720983407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TVfront_36
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c5fc7868118cee0800000000000000
+      internalID: -1240722427838768117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TVfront_0: 3721886984089642785
+      TVfront_1: 7847176971066741847
+      TVfront_10: -2853283867857810159
+      TVfront_11: 5407268432335445741
+      TVfront_12: -1615824396769300933
+      TVfront_13: 5709592891904946274
+      TVfront_14: -1140954077759835584
+      TVfront_15: 6301099497137756314
+      TVfront_16: 4368181860380628554
+      TVfront_17: -884661375955527408
+      TVfront_18: 7598211577615121893
+      TVfront_19: 1807836304877849790
+      TVfront_2: -7552843549739586183
+      TVfront_20: -5800733458144614839
+      TVfront_21: 8816096849375106138
+      TVfront_22: -4326806802171164232
+      TVfront_23: -7244372768754183664
+      TVfront_24: -3810660777788379829
+      TVfront_25: -2948893875445719180
+      TVfront_26: -2240448844417907060
+      TVfront_27: -7956031374313099106
+      TVfront_28: -4962037995771585986
+      TVfront_29: -2143490207872843456
+      TVfront_3: 6284040631379636858
+      TVfront_30: 5253596659694002906
+      TVfront_31: -1217059060615305155
+      TVfront_32: 8909638603015952231
+      TVfront_33: -1869985789270082163
+      TVfront_34: 7826293992455166193
+      TVfront_35: 2917605546720983407
+      TVfront_36: -1240722427838768117
+      TVfront_4: 2078308976737637711
+      TVfront_5: 8907070302077674373
+      TVfront_6: 4155349594397977716
+      TVfront_7: 4324442989232652171
+      TVfront_8: -5945468197701905980
+      TVfront_9: -7199524470567774324
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
