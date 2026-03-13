@@ -1,0 +1,295 @@
+{
+"skeleton": {
+	"hash": "cuSb1q8MJtn3TRFXxPvMittt/g0",
+	"spine": "3.8.0",
+	"x": -176.49,
+	"y": -13.05,
+	"width": 324,
+	"height": 267.59,
+	"images": "./png/",
+	"audio": "D:/арт Игра про маленького ГНОМА/локации/dream_L1/stolman"
+},
+"bones": [
+	{ "name": "root", "x": -0.54 },
+	{ "name": "bone", "parent": "root", "length": 171.63, "rotation": 90.36, "x": -0.21, "y": 23.93 },
+	{ "name": "armR", "parent": "bone", "length": 48.43, "rotation": -1.63, "x": 120.53, "y": -83.07 },
+	{ "name": "armL", "parent": "bone", "length": 50.06, "rotation": 1.49, "x": 122.75, "y": 99.84 },
+	{ "name": "stol", "parent": "root", "length": 124.29, "rotation": 91.23, "x": -0.7, "y": 214.95 },
+	{ "name": "stol2", "parent": "stol", "length": 18.2, "rotation": 144.61, "x": 30.36, "y": 87.64 },
+	{ "name": "stol3", "parent": "stol2", "length": 45.19, "rotation": 34.16, "x": 18.2 },
+	{ "name": "key1", "parent": "bone", "x": 135.86, "y": 44.88 },
+	{ "name": "key2", "parent": "bone", "x": 126.27, "y": -25.54 },
+	{ "name": "light1", "parent": "bone", "x": 117.04, "y": 46.61 },
+	{ "name": "light2", "parent": "bone", "x": 112.29, "y": -24.38 }
+],
+"slots": [
+	{ "name": "shadow", "bone": "bone", "attachment": "shadow" },
+	{ "name": "stol", "bone": "stol", "attachment": "stol" },
+	{ "name": "body", "bone": "bone", "attachment": "body" },
+	{ "name": "Lhand", "bone": "armL", "attachment": "Lhand" },
+	{ "name": "Rhand", "bone": "armR", "attachment": "Rhand" },
+	{ "name": "key2", "bone": "key2" },
+	{ "name": "key1", "bone": "key1" },
+	{ "name": "body2", "bone": "bone" },
+	{ "name": "plate", "bone": "stol2", "attachment": "plate" },
+	{ "name": "light", "bone": "light1", "color": "ff9595c7", "blend": "additive" },
+	{ "name": "light2", "bone": "light2", "color": "ff9595c7", "blend": "additive" },
+	{ "name": "provoda1", "bone": "bone" },
+	{ "name": "provoda2", "bone": "bone" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Rhand": {
+				"Rhand": { "x": 20.32, "y": -11.49, "rotation": -88.73, "width": 74, "height": 93 }
+			},
+			"light": {
+				"light": { "x": 16.12, "y": -3.33, "width": 94, "height": 96 }
+			},
+			"body2": {
+				"body2": { "x": 81.13, "y": 3.23, "rotation": -90.36, "width": 270, "height": 221 }
+			},
+			"plate": {
+				"plate": {
+					"type": "mesh",
+					"uvs": [ 0.99564, 0.31492, 0.96257, 0.48941, 0.54634, 1, 0.34425, 0.99999, 0.0261, 0.54923, 0.00931, 0.27558, 0.18191, 0, 1, 0, 0.67123, 0.29862, 0.25601, 0.2901 ],
+					"triangles": [ 8, 9, 6, 5, 6, 9, 7, 8, 6, 0, 8, 7, 1, 8, 0, 4, 5, 9, 2, 3, 9, 4, 9, 3, 2, 8, 1, 8, 2, 9 ],
+					"vertices": [ 2, 6, 3.54, 61.75, 0.35, 5, -13.53, 53.09, 0.65, 1, 6, 18.9, 57.94, 1, 1, 6, 63.83, 10.08, 1, 1, 6, 63.83, -13.16, 1, 1, 6, 24.16, -49.75, 1, 2, 6, 0.08, -51.68, 0.35, 5, 47.29, -42.72, 0.65, 1, 5, 16.08, -39.91, 1, 1, 5, -36.75, 37.94, 1, 2, 6, 2.11, 24.44, 0.35, 5, 6.23, 21.41, 0.65, 2, 6, 1.36, -23.31, 0.35, 5, 32.42, -18.52, 0.65 ],
+					"hull": 8,
+					"edges": [ 12, 14, 4, 6, 0, 14, 6, 8, 8, 10, 10, 12, 0, 2, 2, 4 ],
+					"width": 115,
+					"height": 88
+				}
+			},
+			"light2": {
+				"light": { "x": 17.2, "y": -3.34, "width": 94, "height": 96 }
+			},
+			"shadow": {
+				"shadow": { "x": -20.98, "y": 0.13, "scaleX": 1.8877, "rotation": -90.36, "width": 150, "height": 32 }
+			},
+			"body": {
+				"body": { "x": 81.61, "y": 0.23, "rotation": -90.36, "width": 278, "height": 222 }
+			},
+			"provoda1": {
+				"provoda1": { "x": 27.83, "y": 34.89, "rotation": -90, "width": 331, "height": 168 }
+			},
+			"provoda2": {
+				"provoda2": { "x": 21.61, "y": -0.1, "rotation": -90, "width": 302, "height": 127 }
+			},
+			"key1": {
+				"key1": { "x": -0.98, "y": -1.48, "rotation": -90.36, "width": 43, "height": 40 }
+			},
+			"key2": {
+				"key2": { "x": 3.17, "y": -1.03, "rotation": -90.36, "width": 45, "height": 44 }
+			},
+			"Lhand": {
+				"Lhand": { "x": 38, "y": 15.42, "rotation": -91.85, "width": 69, "height": 74 }
+			},
+			"stol": {
+				"stol": { "x": 9.37, "y": 13.05, "rotation": -91.23, "width": 324, "height": 61 }
+			}
+		}
+	}
+],
+"animations": {
+	"st1/key/key1": {
+		"slots": {
+			"key1": {
+				"attachment": [
+					{ "name": "key1" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "color": "ff95956a" },
+					{ "time": 0.2667, "color": "ff9595c7" },
+					{ "time": 0.6667, "color": "ff95956a" }
+				],
+				"attachment": [
+					{ "name": "light" }
+				]
+			},
+			"provoda1": {
+				"attachment": [
+					{ "name": "provoda1" }
+				]
+			}
+		},
+		"bones": {
+			"stol3": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "angle": -2.02 },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"st1/key/key2": {
+		"slots": {
+			"key2": {
+				"attachment": [
+					{ "name": "key2" }
+				]
+			},
+			"light2": {
+				"color": [
+					{ "color": "ff9595c7" },
+					{ "time": 0.4333, "color": "ff95956d" },
+					{ "time": 0.6667, "color": "ff9595c7" }
+				],
+				"attachment": [
+					{ "name": "light" }
+				]
+			},
+			"provoda1": {
+				"attachment": [
+					{ "name": "provoda1" }
+				]
+			}
+		},
+		"bones": {
+			"stol3": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "angle": -2.02 },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"st2/stolman2": {
+		"slots": {
+			"plate": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"body2": {
+				"attachment": [
+					{ "name": "body2" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "color": "ff9595c7" },
+					{ "time": 0.3333, "color": "ff959582" },
+					{ "time": 0.6667, "color": "ff9595c7" }
+				],
+				"attachment": [
+					{ "name": "light" }
+				]
+			},
+			"provoda2": {
+				"attachment": [
+					{ "name": "provoda2" }
+				]
+			},
+			"body": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Rhand": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Lhand": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"light2": {
+				"color": [
+					{ "color": "ff9595c7" },
+					{ "time": 0.4, "color": "ff95958a" },
+					{ "time": 0.6667, "color": "ff9595c7" }
+				],
+				"attachment": [
+					{ "name": "light" }
+				]
+			}
+		}
+	},
+	"st1/stolmanOFF": {
+		"slots": {
+			"key1": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"light": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"key2": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"light2": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"provoda1": {
+				"attachment": [
+					{ "name": "provoda1" }
+				]
+			}
+		}
+	},
+	"st1/stolmanON": {
+		"slots": {
+			"key1": {
+				"attachment": [
+					{ "name": "key1" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "color": "ff9595c7" },
+					{ "time": 0.3333, "color": "ff959582" },
+					{ "time": 0.6667, "color": "ff9595c7" }
+				],
+				"attachment": [
+					{ "name": "light" }
+				]
+			},
+			"key2": {
+				"attachment": [
+					{ "name": "key2" }
+				]
+			},
+			"light2": {
+				"color": [
+					{ "color": "ff9595c7" },
+					{ "time": 0.3333, "color": "ff959581" },
+					{ "time": 0.6667, "color": "ff9595c7" }
+				],
+				"attachment": [
+					{ "name": "light" }
+				]
+			},
+			"provoda1": {
+				"attachment": [
+					{ "name": "provoda1" }
+				]
+			}
+		},
+		"bones": {
+			"stol3": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "angle": 3.57 },
+					{ "time": 0.4333, "angle": 4.73 },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	}
+}
+}

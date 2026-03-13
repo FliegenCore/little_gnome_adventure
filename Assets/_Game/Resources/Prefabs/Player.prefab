@@ -472,9 +472,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3357147283335341426, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357147283335341426, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357147283335341426, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2651.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357147283335341426, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1620.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357147283335341426, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1475.665
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357147283335341426, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -960.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632889282550402727, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4535033461977467981, guid: e8ed243a752b94a40b1330919218538a, type: 3}
       propertyPath: m_Name
       value: SpeakCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535033461977467981, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844313514319714874, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2951.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844313514319714874, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2200.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

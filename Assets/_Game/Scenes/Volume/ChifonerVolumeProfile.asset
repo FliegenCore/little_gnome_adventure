@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e1dc532bcb41949b58bc4f2abfbb7e, type: 3}
   m_Name: LensDistortion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
-    m_OverrideState: 1
-    m_Value: -0.197
+    m_OverrideState: 0
+    m_Value: -1
   xMultiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -46,10 +46,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.74
+    m_Value: 0.9
   intensity:
     m_OverrideState: 1
-    m_Value: 5.33
+    m_Value: 1.12
   scatter:
     m_OverrideState: 0
     m_Value: 0.949
@@ -57,8 +57,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 65472
   tint:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.9528302, g: 0.64993197, b: 0.4269758, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
@@ -114,13 +114,13 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.335
+    m_Value: 0.29
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.316
+    m_Value: 0.98
   rounded:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &3400758754166863148
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb60a22f311433c4c962b888d1393f88, type: 3}
   m_Name: PaniniProjection
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   distance:
     m_OverrideState: 1
     m_Value: 0.205
@@ -155,4 +155,4 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.299
+    m_Value: 0.2

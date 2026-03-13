@@ -1,0 +1,48 @@
+
+kolona.png
+size: 206,837
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+LENIN
+  rotate: false
+  xy: 2, 110
+  size: 180, 223
+  orig: 184, 227
+  offset: 2, 2
+  index: -1
+grib
+  rotate: true
+  xy: 2, 2
+  size: 106, 120
+  orig: 110, 124
+  offset: 2, 2
+  index: -1
+kolonna
+  rotate: false
+  xy: 2, 432
+  size: 150, 403
+  orig: 154, 407
+  offset: 2, 2
+  index: -1
+light
+  rotate: true
+  xy: 124, 29
+  size: 79, 80
+  orig: 83, 84
+  offset: 2, 2
+  index: -1
+plant
+  rotate: false
+  xy: 2, 369
+  size: 114, 61
+  orig: 118, 65
+  offset: 2, 2
+  index: -1
+Слой 7
+  rotate: false
+  xy: 154, 335
+  size: 47, 500
+  orig: 51, 504
+  offset: 2, 2
+  index: -1

@@ -1,54 +1,54 @@
 
 skeleton.png
-size: 871,373
+size: 874,373
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 2mounthOPEN
   rotate: true
-  xy: 839, 334
+  xy: 807, 191
   size: 37, 29
   orig: 37, 29
   offset: 0, 0
   index: -1
 LPOINT
-  rotate: true
-  xy: 839, 258
+  rotate: false
+  xy: 644, 6
   size: 19, 20
   orig: 19, 20
   offset: 0, 0
   index: -1
 L_eye
-  rotate: false
-  xy: 798, 114
+  rotate: true
+  xy: 807, 137
   size: 52, 56
   orig: 52, 56
   offset: 0, 0
   index: -1
 Lbrow
-  rotate: false
-  xy: 798, 235
+  rotate: true
+  xy: 616, 5
   size: 21, 12
   orig: 21, 14
   offset: 0, 1
   index: -1
 RPOINT
-  rotate: true
-  xy: 839, 237
+  rotate: false
+  xy: 665, 6
   size: 19, 20
   orig: 19, 20
   offset: 0, 0
   index: -1
 R_eye
   rotate: true
-  xy: 807, 60
+  xy: 798, 29
   size: 52, 56
   orig: 52, 56
   offset: 0, 0
   index: -1
 Rbrow
   rotate: true
-  xy: 821, 226
+  xy: 630, 5
   size: 21, 12
   orig: 21, 14
   offset: 0, 1
@@ -62,17 +62,24 @@ TOY
   index: -1
 body
   rotate: true
-  xy: 616, 105
+  xy: 616, 28
   size: 142, 180
   orig: 142, 180
   offset: 0, 0
   index: -1
 cry
   rotate: false
-  xy: 616, 28
+  xy: 616, 172
   size: 189, 75
   orig: 189, 76
   offset: 0, 1
+  index: -1
+crypoint
+  rotate: false
+  xy: 686, 7
+  size: 18, 19
+  orig: 18, 19
+  offset: 0, 0
   index: -1
 head
   rotate: true
@@ -83,30 +90,37 @@ head
   index: -1
 leg
   rotate: true
-  xy: 798, 172
+  xy: 798, 83
   size: 52, 69
   orig: 52, 69
   offset: 0, 0
   index: -1
 leg копия
   rotate: true
-  xy: 798, 172
+  xy: 798, 83
   size: 52, 69
   orig: 52, 69
   offset: 0, 0
   index: -1
 mouth_1
   rotate: false
-  xy: 839, 279
+  xy: 807, 230
   size: 30, 17
   orig: 30, 17
   offset: 0, 0
   index: -1
 nose
-  rotate: true
-  xy: 839, 298
+  rotate: false
+  xy: 838, 194
   size: 34, 26
   orig: 34, 26
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 839, 222
+  size: 149, 32
+  orig: 150, 32
   offset: 0, 0
   index: -1
 девочка

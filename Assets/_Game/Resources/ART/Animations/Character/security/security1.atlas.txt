@@ -1,0 +1,167 @@
+
+security1.png
+size: 1266,359
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Rarm
+  rotate: true
+  xy: 998, 61
+  size: 67, 111
+  orig: 71, 115
+  offset: 2, 2
+  index: -1
+RarmUP
+  rotate: true
+  xy: 423, 2
+  size: 96, 193
+  orig: 100, 197
+  offset: 2, 2
+  index: -1
+UHO
+  rotate: true
+  xy: 618, 2
+  size: 96, 48
+  orig: 101, 52
+  offset: 3, 2
+  index: -1
+UHOdown
+  rotate: false
+  xy: 880, 31
+  size: 96, 48
+  orig: 101, 52
+  offset: 2, 2
+  index: -1
+arm
+  rotate: false
+  xy: 1111, 3
+  size: 68, 110
+  orig: 72, 114
+  offset: 2, 2
+  index: -1
+armSTOP
+  rotate: true
+  xy: 880, 81
+  size: 81, 116
+  orig: 81, 116
+  offset: 0, 0
+  index: -1
+armUP
+  rotate: true
+  xy: 688, 64
+  size: 98, 190
+  orig: 103, 194
+  offset: 2, 2
+  index: -1
+body
+  rotate: false
+  xy: 2, 7
+  size: 419, 350
+  orig: 424, 354
+  offset: 2, 2
+  index: -1
+bodyhvist
+  rotate: false
+  xy: 688, 164
+  size: 498, 193
+  orig: 498, 194
+  offset: 0, 1
+  index: -1
+brow1
+  rotate: true
+  xy: 668, 75
+  size: 23, 17
+  orig: 27, 21
+  offset: 2, 2
+  index: -1
+brow2
+  rotate: false
+  xy: 733, 43
+  size: 25, 19
+  orig: 29, 23
+  offset: 2, 2
+  index: -1
+eyeL
+  rotate: false
+  xy: 686, 18
+  size: 45, 44
+  orig: 49, 48
+  offset: 2, 2
+  index: -1
+eyeR
+  rotate: false
+  xy: 978, 14
+  size: 46, 45
+  orig: 50, 49
+  offset: 2, 2
+  index: -1
+head
+  rotate: false
+  xy: 423, 100
+  size: 263, 257
+  orig: 267, 261
+  offset: 2, 2
+  index: -1
+kepa
+  rotate: true
+  xy: 1188, 181
+  size: 176, 76
+  orig: 180, 80
+  offset: 2, 2
+  index: -1
+nose
+  rotate: true
+  xy: 1026, 16
+  size: 43, 65
+  orig: 48, 69
+  offset: 2, 2
+  index: -1
+poinR
+  rotate: false
+  xy: 668, 57
+  size: 16, 16
+  orig: 21, 20
+  offset: 3, 2
+  index: -1
+pointL
+  rotate: false
+  xy: 668, 57
+  size: 16, 16
+  orig: 21, 20
+  offset: 3, 2
+  index: -1
+remen
+  rotate: false
+  xy: 1181, 7
+  size: 70, 60
+  orig: 74, 64
+  offset: 2, 2
+  index: -1
+rot
+  rotate: false
+  xy: 1111, 117
+  size: 33, 11
+  orig: 37, 15
+  offset: 2, 2
+  index: -1
+shadow
+  rotate: false
+  xy: 998, 130
+  size: 149, 32
+  orig: 150, 32
+  offset: 0, 0
+  index: -1
+usikik
+  rotate: true
+  xy: 1188, 69
+  size: 110, 69
+  orig: 111, 69
+  offset: 1, 0
+  index: -1
+veko
+  rotate: true
+  xy: 1149, 115
+  size: 47, 26
+  orig: 51, 30
+  offset: 2, 2
+  index: -1

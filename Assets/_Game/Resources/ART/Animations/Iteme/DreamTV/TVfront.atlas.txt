@@ -1,0 +1,97 @@
+
+TVfront.png
+size: 1098,523
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 931, 12
+  size: 132, 24
+  orig: 136, 28
+  offset: 2, 2
+  index: -1
+bg3
+  rotate: false
+  xy: 690, 13
+  size: 239, 168
+  orig: 243, 172
+  offset: 2, 2
+  index: -1
+detal1
+  rotate: false
+  xy: 404, 265
+  size: 325, 256
+  orig: 329, 260
+  offset: 2, 2
+  index: -1
+detal2
+  rotate: false
+  xy: 990, 204
+  size: 70, 200
+  orig: 74, 204
+  offset: 2, 2
+  index: -1
+light
+  rotate: false
+  xy: 276, 14
+  size: 220, 190
+  orig: 258, 196
+  offset: 29, 2
+  index: -1
+light all
+  rotate: false
+  xy: 2, 206
+  size: 400, 315
+  orig: 422, 345
+  offset: 11, 20
+  index: -1
+man2
+  rotate: true
+  xy: 931, 38
+  size: 143, 133
+  orig: 147, 137
+  offset: 2, 2
+  index: -1
+mix
+  rotate: true
+  xy: 498, 15
+  size: 248, 190
+  orig: 249, 190
+  offset: 1, 0
+  index: -1
+niosr
+  rotate: false
+  xy: 731, 183
+  size: 257, 146
+  orig: 262, 150
+  offset: 2, 2
+  index: -1
+off
+  rotate: false
+  xy: 731, 331
+  size: 256, 190
+  orig: 260, 194
+  offset: 2, 2
+  index: -1
+pointdust
+  rotate: true
+  xy: 989, 406
+  size: 115, 107
+  orig: 120, 111
+  offset: 3, 2
+  index: -1
+scr
+  rotate: false
+  xy: 2, 2
+  size: 272, 202
+  orig: 272, 204
+  offset: 0, 1
+  index: -1
+shadow
+  rotate: true
+  xy: 1062, 255
+  size: 149, 32
+  orig: 150, 32
+  offset: 0, 0
+  index: -1

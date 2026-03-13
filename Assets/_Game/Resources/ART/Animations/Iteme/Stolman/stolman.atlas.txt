@@ -1,0 +1,90 @@
+
+stolman.png
+size: 1255,232
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Lhand
+  rotate: true
+  xy: 995, 2
+  size: 65, 70
+  orig: 69, 74
+  offset: 2, 2
+  index: -1
+Rhand
+  rotate: false
+  xy: 1183, 141
+  size: 70, 89
+  orig: 74, 93
+  offset: 2, 2
+  index: -1
+body
+  rotate: false
+  xy: 335, 12
+  size: 274, 218
+  orig: 278, 222
+  offset: 2, 2
+  index: -1
+body2
+  rotate: false
+  xy: 611, 13
+  size: 266, 217
+  orig: 270, 221
+  offset: 2, 2
+  index: -1
+key1
+  rotate: false
+  xy: 1183, 103
+  size: 39, 36
+  orig: 43, 40
+  offset: 2, 2
+  index: -1
+key2
+  rotate: false
+  xy: 1067, 27
+  size: 41, 40
+  orig: 45, 44
+  offset: 2, 2
+  index: -1
+light
+  rotate: false
+  xy: 1146, 13
+  size: 88, 88
+  orig: 94, 96
+  offset: 2, 5
+  index: -1
+plate
+  rotate: false
+  xy: 879, 13
+  size: 114, 88
+  orig: 115, 88
+  offset: 1, 0
+  index: -1
+provoda1
+  rotate: false
+  xy: 2, 62
+  size: 331, 168
+  orig: 331, 168
+  offset: 0, 0
+  index: -1
+provoda2
+  rotate: false
+  xy: 879, 103
+  size: 302, 127
+  orig: 302, 127
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 995, 69
+  size: 149, 32
+  orig: 150, 32
+  offset: 0, 0
+  index: -1
+stol
+  rotate: false
+  xy: 2, 3
+  size: 320, 57
+  orig: 324, 61
+  offset: 2, 2
+  index: -1
