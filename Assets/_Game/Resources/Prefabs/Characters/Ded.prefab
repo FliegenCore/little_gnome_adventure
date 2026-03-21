@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationControl: {fileID: 6580267275581799500}
+  _name: 
 --- !u!114 &6580267275581799500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skeletonAnimation: {fileID: 7851967711279773537}
-  _defaultMixDuration: 0.25
+  _defaultMixDuration: 1
 --- !u!1001 &1951355102965446406
 PrefabInstance:
   m_ObjectHideFlags: 0

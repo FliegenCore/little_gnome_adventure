@@ -1,106 +1,94 @@
 fileFormatVersion: 2
-guid: d06a4219d3af461458816c546692c34a
+guid: a22d19d24c090e444ba30641a37b0eda
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 835542279102416010
-    second: GNOME_0
+      213: -4443269328802900083
+    second: babushka_0
   - first:
-      213: 700621119188347762
-    second: GNOME_1
+      213: -6179668986179203787
+    second: babushka_1
   - first:
-      213: 1075508731115827555
-    second: GNOME_2
+      213: 519815362161422794
+    second: babushka_2
   - first:
-      213: 6007710312023004876
-    second: GNOME_3
+      213: -8689182022239849359
+    second: babushka_3
   - first:
-      213: -2697388826538087321
-    second: GNOME_4
+      213: 6574230120300726743
+    second: babushka_4
   - first:
-      213: 70328614101151505
-    second: GNOME_5
+      213: 6331863909078757177
+    second: babushka_5
   - first:
-      213: -6365488589971084470
-    second: GNOME_6
+      213: -5792632072512606844
+    second: babushka_6
   - first:
-      213: 8995021966659800409
-    second: GNOME_7
+      213: -5838106696950608717
+    second: babushka_7
   - first:
-      213: 3238901885228397351
-    second: GNOME_8
+      213: 965434169041714078
+    second: babushka_8
   - first:
-      213: 6836202242542092143
-    second: GNOME_9
+      213: 238135469119068282
+    second: babushka_9
   - first:
-      213: 7429434850450478437
-    second: GNOME_10
+      213: 4137774260747494035
+    second: babushka_10
   - first:
-      213: 1117887028269892471
-    second: GNOME_11
+      213: -9078738939673146565
+    second: babushka_11
   - first:
-      213: -4369077662782051491
-    second: GNOME_12
+      213: -3205789262286669261
+    second: babushka_12
   - first:
-      213: -2486325156556772018
-    second: GNOME_13
+      213: -795074799379167840
+    second: babushka_13
   - first:
-      213: -2203445999238560952
-    second: GNOME_14
+      213: -1419648652482472540
+    second: babushka_14
   - first:
-      213: 13288392023315087
-    second: GNOME_15
+      213: 3223213984896999754
+    second: babushka_15
   - first:
-      213: -4403835538866099891
-    second: GNOME_16
+      213: -4438843686884565582
+    second: babushka_16
   - first:
-      213: -1316594661490690323
-    second: GNOME_17
+      213: -7828975805947910939
+    second: babushka_17
   - first:
-      213: 4436964416168768272
-    second: GNOME_18
+      213: -8043247238483446447
+    second: babushka_18
   - first:
-      213: 1935414589440152013
-    second: GNOME_19
+      213: 340467136660119764
+    second: babushka_19
   - first:
-      213: 2613689527401950433
-    second: GNOME_20
+      213: 1159275261350934144
+    second: babushka_20
   - first:
-      213: 8307910470609684674
-    second: GNOME_21
+      213: -8644777546823686322
+    second: babushka_21
   - first:
-      213: 419219125923594776
-    second: GNOME_22
+      213: -1278709756772559181
+    second: babushka_22
   - first:
-      213: 5272758730381696429
-    second: GNOME_23
+      213: -244071179978065631
+    second: babushka_23
   - first:
-      213: 2062960399028690506
-    second: GNOME_24
+      213: 2042977692578367796
+    second: babushka_24
   - first:
-      213: 7286863012005502484
-    second: GNOME_25
+      213: -645286959598060126
+    second: babushka_25
   - first:
-      213: 5542775771963616570
-    second: GNOME_26
+      213: 349684470420619569
+    second: babushka_26
   - first:
-      213: -6956530367320815260
-    second: GNOME_27
+      213: -5238071100638846169
+    second: babushka_27
   - first:
-      213: 5842320940001984289
-    second: GNOME_28
-  - first:
-      213: 56849101567556184
-    second: GNOME_29
-  - first:
-      213: 7928096216817074051
-    second: GNOME_30
-  - first:
-      213: 7896041310816220251
-    second: GNOME_31
-  - first:
-      213: 2004893619335141278
-    second: GNOME_32
+      213: 1854963147225375994
+    second: babushka_28
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -196,13 +184,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GNOME_0
+      name: babushka_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 1
-        width: 6
-        height: 262
+        y: 977
+        width: 146
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8448b4a641789b00800000000000000
-      internalID: 835542279102416010
+      spriteID: d87905f36165652c0800000000000000
+      internalID: -4443269328802900083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_1
+      name: babushka_1
       rect:
         serializedVersion: 2
-        x: 10
-        y: 1
-        width: 6
-        height: 262
+        x: 1
+        y: 765
+        width: 211
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27bab53223b19b900800000000000000
-      internalID: 700621119188347762
+      spriteID: 53d4a416cc76d3aa0800000000000000
+      internalID: -6179668986179203787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_2
+      name: babushka_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 216
-        width: 49
-        height: 49
+        x: 147
+        y: 977
+        width: 146
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3617dfe1e79fcee00800000000000000
-      internalID: 1075508731115827555
+      spriteID: ac13c6a5151c63700800000000000000
+      internalID: 519815362161422794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_3
+      name: babushka_3
       rect:
         serializedVersion: 2
-        x: 65
-        y: 216
-        width: 49
-        height: 49
+        x: 293
+        y: 966
+        width: 69
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc61595d2bcaf5350800000000000000
-      internalID: 6007710312023004876
+      spriteID: 174feafecf2d96780800000000000000
+      internalID: -8689182022239849359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_4
+      name: babushka_4
       rect:
         serializedVersion: 2
-        x: 114
-        y: 216
-        width: 47
-        height: 49
+        x: 362
+        y: 966
+        width: 62
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,63 +287,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76ce6155723f09ad0800000000000000
-      internalID: -2697388826538087321
+      spriteID: 7d9c230767b5c3b50800000000000000
+      internalID: 6574230120300726743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_5
+      name: babushka_5
       rect:
         serializedVersion: 2
-        x: 161
-        y: 216
-        width: 114
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11f6b0d708bd9f000800000000000000
-      internalID: 70328614101151505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_6
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 215
-        width: 29
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a4ba8fc6add39a7a0800000000000000
-      internalID: -6365488589971084470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_7
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 195
-        width: 35
+        x: 424
+        y: 957
+        width: 73
         height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -365,20 +309,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95dc79d22dcb4dc70800000000000000
-      internalID: 8995021966659800409
+      spriteID: 93f61ca7dac4fd750800000000000000
+      internalID: 6331863909078757177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_8
+      name: babushka_6
       rect:
         serializedVersion: 2
-        x: 343
-        y: 195
-        width: 29
-        height: 66
+        x: 212
+        y: 966
+        width: 33
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,20 +331,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 723b16baa14e2fc20800000000000000
-      internalID: 3238901885228397351
+      spriteID: 48de95b12df6c9fa0800000000000000
+      internalID: -5792632072512606844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_9
+      name: babushka_7
       rect:
         serializedVersion: 2
-        x: 372
-        y: 257
-        width: 36
-        height: 11
+        x: 212
+        y: 765
+        width: 189
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,129 +353,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6f337748b11fde50800000000000000
-      internalID: 6836202242542092143
+      spriteID: 3bc0e6704e0eafea0800000000000000
+      internalID: -5838106696950608717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_10
+      name: babushka_8
       rect:
         serializedVersion: 2
-        x: 468
-        y: 169
-        width: 108
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 565120732a7aa1760800000000000000
-      internalID: 7429434850450478437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_11
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 159
-        width: 97
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7734b035458838f00800000000000000
-      internalID: 1117887028269892471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_12
-      rect:
-        serializedVersion: 2
-        x: 675
-        y: 250
-        width: 32
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5b28c9930bed53c0800000000000000
-      internalID: -4369077662782051491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_13
-      rect:
-        serializedVersion: 2
-        x: 707
-        y: 250
-        width: 26
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e4de057717cce7dd0800000000000000
-      internalID: -2486325156556772018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_14
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 1
-        width: 205
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 84341adb989cb61e0800000000000000
-      internalID: -2203445999238560952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_15
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 195
-        width: 22
+        x: 401
+        y: 945
+        width: 21
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -541,20 +375,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f829f2ed8b53f2000800000000000000
-      internalID: 13288392023315087
+      spriteID: e9b71cbf249e56d00800000000000000
+      internalID: 965434169041714078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_16
+      name: babushka_9
       rect:
         serializedVersion: 2
-        x: 243
-        y: 195
-        width: 22
-        height: 21
+        x: 401
+        y: 851
+        width: 71
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -563,20 +397,174 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4925a0f8ee62e2c0800000000000000
-      internalID: -4403835538866099891
+      spriteID: a78534d82f60e4300800000000000000
+      internalID: 238135469119068282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_17
+      name: babushka_10
       rect:
         serializedVersion: 2
-        x: 265
-        y: 195
+        x: 472
+        y: 905
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 392eb9c64c35c6930800000000000000
+      internalID: 4137774260747494035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_11
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 851
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b864c1907d10280800000000000000
+      internalID: -9078738939673146565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 553
+        width: 316
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a34a4a6afb283d0800000000000000
+      internalID: -3205789262286669261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_13
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 644
+        width: 116
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5c325bea357f4f0800000000000000
+      internalID: -795074799379167840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_14
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 739
+        width: 87
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a59bea72156c4ce0800000000000000
+      internalID: -1419648652482472540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_15
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 723
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a416bdcba082bbc20800000000000000
+      internalID: 3223213984896999754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_16
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 681
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd92cd4f2f0662c0800000000000000
+      internalID: -4438843686884565582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_17
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 666
         width: 43
-        height: 20
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -585,20 +573,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de6fba881248abde0800000000000000
-      internalID: -1316594661490690323
+      spriteID: 5e4e853fbf3e95390800000000000000
+      internalID: -7828975805947910939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_18
+      name: babushka_18
       rect:
         serializedVersion: 2
-        x: 374
-        y: 197
-        width: 90
-        height: 58
+        x: 341
+        y: 632
+        width: 23
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -607,20 +595,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 013b9c2e0a3439d30800000000000000
-      internalID: 4436964416168768272
+      spriteID: 1557d856045a06090800000000000000
+      internalID: -8043247238483446447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_19
+      name: babushka_19
       rect:
         serializedVersion: 2
-        x: 675
-        y: 157
-        width: 55
-        height: 93
+        x: 364
+        y: 515
+        width: 126
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -629,106 +617,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc150b89059fbda10800000000000000
-      internalID: 1935414589440152013
+      spriteID: 4d022529e0599b400800000000000000
+      internalID: 340467136660119764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_20
+      name: babushka_20
       rect:
         serializedVersion: 2
-        x: 221
-        y: 1
-        width: 181
-        height: 194
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1eca3f9f6c0b54420800000000000000
-      internalID: 2613689527401950433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_21
-      rect:
-        serializedVersion: 2
-        x: 402
-        y: 167
-        width: 18
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c8407a4e80ab4370800000000000000
-      internalID: 8307910470609684674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_22
-      rect:
-        serializedVersion: 2
-        x: 420
-        y: 167
-        width: 39
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 812c9bbe29d51d500800000000000000
-      internalID: 419219125923594776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_23
-      rect:
-        serializedVersion: 2
-        x: 404
-        y: 3
-        width: 134
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dad9db6012a9c2940800000000000000
-      internalID: 5272758730381696429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_24
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 1
+        x: 490
+        y: 515
         width: 34
         height: 151
       alignment: 0
@@ -739,20 +639,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4e9dc98d8b11ac10800000000000000
-      internalID: 2062960399028690506
+      spriteID: 08678b545b2961010800000000000000
+      internalID: 1159275261350934144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_25
+      name: babushka_21
       rect:
         serializedVersion: 2
-        x: 574
-        y: 115
-        width: 43
-        height: 44
+        x: 1
+        y: 296
+        width: 326
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -761,20 +661,108 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41e558d4d43202560800000000000000
-      internalID: 7286863012005502484
+      spriteID: e472d478f94970880800000000000000
+      internalID: -8644777546823686322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_26
+      name: babushka_22
       rect:
         serializedVersion: 2
-        x: 574
+        x: 323
+        y: 553
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6deb8404c114ee0800000000000000
+      internalID: -1278709756772559181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_23
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 296
+        width: 80
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1293f711e82ec9cf0800000000000000
+      internalID: -244071179978065631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_24
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 322
+        width: 105
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4394e22236d1a5c10800000000000000
+      internalID: 2042977692578367796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_25
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 216
+        width: 117
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad37faddea7b07f0800000000000000
+      internalID: -645286959598060126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babushka_26
+      rect:
+        serializedVersion: 2
+        x: 1
         y: 1
-        width: 47
-        height: 114
+        width: 403
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -783,42 +771,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3d688d9235ebec40800000000000000
-      internalID: 5542775771963616570
+      spriteID: 13144e25c245ad400800000000000000
+      internalID: 349684470420619569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_27
+      name: babushka_27
       rect:
         serializedVersion: 2
-        x: 617
-        y: 115
-        width: 84
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46900aafc70757f90800000000000000
-      internalID: -6956530367320815260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_28
-      rect:
-        serializedVersion: 2
-        x: 621
+        x: 404
         y: 1
-        width: 38
-        height: 85
+        width: 91
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -827,42 +793,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12ff4a4e0f7141150800000000000000
-      internalID: 5842320940001984289
+      spriteID: 723ae222612ae47b0800000000000000
+      internalID: -5238071100638846169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GNOME_29
+      name: babushka_28
       rect:
         serializedVersion: 2
-        x: 659
-        y: 71
-        width: 38
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85afbb8e4f7f9c000800000000000000
-      internalID: 56849101567556184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_30
-      rect:
-        serializedVersion: 2
-        x: 659
+        x: 495
         y: 1
-        width: 35
-        height: 71
+        width: 24
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -871,52 +815,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38fff7c1181460e60800000000000000
-      internalID: 7928096216817074051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_31
-      rect:
-        serializedVersion: 2
-        x: 694
-        y: 37
-        width: 33
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b54b207bcbf549d60800000000000000
-      internalID: 7896041310816220251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GNOME_32
-      rect:
-        serializedVersion: 2
-        x: 694
-        y: 1
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e971be8df10d2db10800000000000000
-      internalID: 2004893619335141278
+      spriteID: af42fc587272eb910800000000000000
+      internalID: 1854963147225375994
       vertices: []
       indices: 
       edges: []
@@ -935,39 +835,35 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GNOME_0: 835542279102416010
-      GNOME_1: 700621119188347762
-      GNOME_10: 7429434850450478437
-      GNOME_11: 1117887028269892471
-      GNOME_12: -4369077662782051491
-      GNOME_13: -2486325156556772018
-      GNOME_14: -2203445999238560952
-      GNOME_15: 13288392023315087
-      GNOME_16: -4403835538866099891
-      GNOME_17: -1316594661490690323
-      GNOME_18: 4436964416168768272
-      GNOME_19: 1935414589440152013
-      GNOME_2: 1075508731115827555
-      GNOME_20: 2613689527401950433
-      GNOME_21: 8307910470609684674
-      GNOME_22: 419219125923594776
-      GNOME_23: 5272758730381696429
-      GNOME_24: 2062960399028690506
-      GNOME_25: 7286863012005502484
-      GNOME_26: 5542775771963616570
-      GNOME_27: -6956530367320815260
-      GNOME_28: 5842320940001984289
-      GNOME_29: 56849101567556184
-      GNOME_3: 6007710312023004876
-      GNOME_30: 7928096216817074051
-      GNOME_31: 7896041310816220251
-      GNOME_32: 2004893619335141278
-      GNOME_4: -2697388826538087321
-      GNOME_5: 70328614101151505
-      GNOME_6: -6365488589971084470
-      GNOME_7: 8995021966659800409
-      GNOME_8: 3238901885228397351
-      GNOME_9: 6836202242542092143
+      babushka_0: -4443269328802900083
+      babushka_1: -6179668986179203787
+      babushka_10: 4137774260747494035
+      babushka_11: -9078738939673146565
+      babushka_12: -3205789262286669261
+      babushka_13: -795074799379167840
+      babushka_14: -1419648652482472540
+      babushka_15: 3223213984896999754
+      babushka_16: -4438843686884565582
+      babushka_17: -7828975805947910939
+      babushka_18: -8043247238483446447
+      babushka_19: 340467136660119764
+      babushka_2: 519815362161422794
+      babushka_20: 1159275261350934144
+      babushka_21: -8644777546823686322
+      babushka_22: -1278709756772559181
+      babushka_23: -244071179978065631
+      babushka_24: 2042977692578367796
+      babushka_25: -645286959598060126
+      babushka_26: 349684470420619569
+      babushka_27: -5238071100638846169
+      babushka_28: 1854963147225375994
+      babushka_3: -8689182022239849359
+      babushka_4: 6574230120300726743
+      babushka_5: 6331863909078757177
+      babushka_6: -5792632072512606844
+      babushka_7: -5838106696950608717
+      babushka_8: 965434169041714078
+      babushka_9: 238135469119068282
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1534,7 +1534,7 @@ MonoBehaviour:
   CameraDistance: 5
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: 0.02392352, y: 0.00851059}
+    ScreenPosition: {x: 0.03314006, y: 0.2912971}
     DeadZone:
       Enabled: 0
       Size: {x: 0.2, y: 0.2}

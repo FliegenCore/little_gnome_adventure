@@ -136,10 +136,10 @@
       },
       "IsStartNode": false,
       "OnStartEvents": [
-        "a_Player_emotion/WTF_1_1"
+        "a_Player_emotion/speak_1_1"
       ],
       "OnEndEvents": [
-        "a_Player_emotion/angry_1_1"
+        "a_Player_emotion/idle_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -165,11 +165,11 @@
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_Player_emotion/WTF_1_1",
+        "a_Player_emotion/speak_1_1",
         "a_Ded_body/idle_0_1"
       ],
       "OnEndEvents": [
-        "a_Player_emotion/angry_1_1"
+        "a_Player_emotion/idle_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -195,10 +195,39 @@
       },
       "IsStartNode": false,
       "OnStartEvents": [
-        "a_Player_emotion/WTF_1_1"
+        "a_Player_emotion/speak_1_1"
       ],
       "OnEndEvents": [
-        "a_Player_emotion/angry_1_1"
+        "a_Player_emotion/idle_1_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "c0170936-f6b5-44d9-bd54-c9cd47cbf4f3",
+      "DialogueName": "Player",
+      "Text": "...",
+      "Type": 0,
+      "Position": {
+        "x": 2449.0,
+        "y": 181.0,
+        "normalized": {
+          "x": 0.99728,
+          "y": 0.07370669,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 2455.67944,
+        "sqrMagnitude": 6030362.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Player_emotion/sad_1_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/idle_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -240,6 +269,12 @@
     {
       "InputNodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
       "OutputNodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "c0170936-f6b5-44d9-bd54-c9cd47cbf4f3",
+      "OutputNodeId": "0a7ef7d3-41db-4bcf-a354-73978c50f388",
       "InputPortIndex": 0,
       "OutputPortIndex": 0
     }
