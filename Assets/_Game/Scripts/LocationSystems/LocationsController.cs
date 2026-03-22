@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.RoomSystems.LocationsStates;
@@ -13,6 +14,7 @@ namespace _Game.Scripts.RoomSystems
 
         private readonly Fsm _locationsStateMachine;
         private readonly CameraController _cameraController;
+        private List<LocationAbstractState> _locationAbstractStates = new();
         
         public LocationsController(LocationsModel locationsModel, CameraController cameraController)
         {
@@ -28,21 +30,29 @@ namespace _Game.Scripts.RoomSystems
         
         public void CreateLocation(ILocationFactory locationFactory)
         {
-            locationFactory.Create(_locationsStateMachine);
+            _locationAbstractStates.Add(locationFactory.Create(_locationsStateMachine));
         }
 
-        private void SetCurrentRoom(LocationsIdEnum locationIdEnum)
+        public LocationAbstractState GetLocationByView(AbstractLocationView view)
         {
-            Debug.Log(locationIdEnum.ToString());
-            _locationsStateMachine.SetState(StaticLocationsConnection.LocationsTypeMap[locationIdEnum]);
+            foreach (var state in _locationAbstractStates)
+            {
+                if(state.AbstractLocationView == view)
+                    return state;
+            }
+            
+            return null;
+        }
+        
+        private void SetCurrentRoom(Type locationAbstractState)
+        {
+            _locationsStateMachine.SetState(locationAbstractState);
             _cameraController.SetFollowZone(GetCurrentLocation().AbstractLocationView.CameraCollider);
         }
 
         public LocationAbstractState GetCurrentLocation()
         {
-            Type type = StaticLocationsConnection.LocationsTypeMap[LocationsModel.CurrentLocation.Value];
-            
-            return (LocationAbstractState)_locationsStateMachine.GetState(type);
+            return (LocationAbstractState)_locationsStateMachine.GetState(LocationsModel.CurrentLocation.Value);
         }
         
         public void Update(float deltaTime)

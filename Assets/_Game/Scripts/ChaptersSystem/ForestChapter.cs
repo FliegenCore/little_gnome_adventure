@@ -6,6 +6,9 @@ using _Game.Scripts.GameInitializeSystems;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
+using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
+using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
+using _Game.Scripts.RoomSystems.LocationsStates;
 using _Game.Scripts.RoomSystems.Variants;
 using _Game.Scripts.UpdateSystems;
 using UnityEngine;
@@ -27,6 +30,8 @@ namespace _Game.Scripts.ChaptersSystem
         private readonly HouseLocationFactory _houseLocationFactory;
         private readonly ForestLocationFactory _forestLocationFactory;
         private readonly TestLocationFactory _testLocationFactory;
+        private readonly DreamLocationFactory _dreamLocationFactory;
+        private readonly DreamFirstQuestLocationFactory _dreamFirstQuestLocationFactory;
         
         private LocationsController _locationsController;
         private List<DoorView> _allDoorsView = new();
@@ -41,7 +46,9 @@ namespace _Game.Scripts.ChaptersSystem
             UpdateController updateController,
             InspectForestRegistratorService inspectForestRegistratorService,
             CameraController cameraController,
-            ForestLocationFactory forestLocationFactory)
+            ForestLocationFactory forestLocationFactory,
+            DreamLocationFactory dreamLocationFactory,
+            DreamFirstQuestLocationFactory dreamFirstQuestLocationFactory)
         {
             _testLocationFactory = testLocationFactory;
             _cameraController = cameraController;
@@ -54,6 +61,8 @@ namespace _Game.Scripts.ChaptersSystem
             _forestChapterConfig = forestChapterConfig;
             _doorFactory = doorFactory;
             _houseLocationFactory =  houseLocationFactory;
+            _dreamLocationFactory = dreamLocationFactory;
+            _dreamFirstQuestLocationFactory = dreamFirstQuestLocationFactory;
         }
         
         public void Initialize()
@@ -76,12 +85,14 @@ namespace _Game.Scripts.ChaptersSystem
         {
             _forestRootViewFactory.CreateForestLocationsRootView();
             _locationsController = _locationsControllerFactory.Create();
-            //create locations objects, characters;
+            //create locations ;
             _locationsController.CreateLocation(_houseLocationFactory);
             _locationsController.CreateLocation(_forestLocationFactory);
+            _locationsController.CreateLocation(_dreamLocationFactory);
+            _locationsController.CreateLocation(_dreamFirstQuestLocationFactory);
             _locationsController.CreateLocation(_testLocationFactory);
             //------------
-            _locationsController.LocationsModel.CurrentLocation.Value = LocationsIdEnum.MainHouse;
+            _locationsController.LocationsModel.CurrentLocation.Value = typeof(StartHouseState);
             
             _locationsController.Initialize();
         }
@@ -102,23 +113,39 @@ namespace _Game.Scripts.ChaptersSystem
             _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().StartHouseView.Doors);
             _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().ForestLocationView.Doors);
             _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().TestRoom.Doors);
+            _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().DreamLocationView.Doors);
+            _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().DreamQuestFirstLocationView.Doors);
         }
 
         private void CreateDoorConnections()
         {
-            foreach (var connection in _forestChapterConfig.DoorConnections)
+            foreach (var doorView in _allDoorsView)
             {
-                DoorView view = _allDoorsView.FirstOrDefault(x => x.MarkId == connection.Id);
+                string doorId = $"{doorView.ConnectedLocationView.name} {doorView.name}";
+
+                DoorView view2 = null;
+                string door2Id = "";
                 
-                _doorFactory.Create(connection.Id.ToString(), 
-                    connection.ConnectionId.ToString(),
-                    view);
+                if (doorView.ConnectedDoor != null)
+                {
+                    view2 = doorView.ConnectedDoor;
+                    door2Id = $"{view2.ConnectedLocationView.name} {view2.name}";
+                }
                 
-                DoorView view2 = _allDoorsView.FirstOrDefault(x => x.MarkId == connection.ConnectionId);
+
+                if (view2 != null)
+                {
+                    _doorFactory.Create(doorId, 
+                        door2Id,
+                        doorView);
+                }
+                else
+                {
+                    _doorFactory.Create(doorId, 
+                        doorId,
+                        doorView);
+                }
                 
-                _doorFactory.Create(connection.ConnectionId.ToString(), 
-                    connection.Id.ToString(),
-                    view2);
             }
         }
         

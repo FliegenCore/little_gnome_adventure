@@ -22,7 +22,7 @@ namespace _Game.Scripts.RoomSystems
             return _doors[doorId].DoorModel;
         }
         
-        public NightstandView GetViewDoorById(string doorId)
+        public DoorView GetViewDoorById(string doorId)
         {
             return _doors[doorId].DoorView;
         }

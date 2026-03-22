@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using _Game.Scripts.DialogueSystem;
@@ -14,16 +15,19 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
     public class LocationAbstractState : FsmAbstractState
     {
         public readonly AbstractLocationView AbstractLocationView;
+        public readonly AbstractLocationModel LocationModel;
 
         protected readonly IDialogueManager _dialogueManager;
         protected readonly EventBus _eventBus;
         
         public LocationAbstractState(
             Fsm fsm, 
+            AbstractLocationModel locationModel,
             AbstractLocationView abstractLocation,
             IDialogueManager dialogueManager,
             EventBus eventBus) : base(fsm)
         {
+            LocationModel = locationModel;
             _eventBus            = eventBus;
             _dialogueManager     = dialogueManager;
             AbstractLocationView = abstractLocation;

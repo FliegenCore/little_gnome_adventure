@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7144639017937470278}
   - component: {fileID: 6201350239731683220}
   m_Layer: 0
-  m_Name: frontDoor
+  m_Name: ExitDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ContactTriggerProvider>k__BackingField: {fileID: 7144639017937470278}
   <HintSelect>k__BackingField: {fileID: 1850036318758266594}
-  <MarkId>k__BackingField: 0
+  <ConnectedDoor>k__BackingField: {fileID: 0}
+  <ConnectedLocationView>k__BackingField: {fileID: 3785198866516550105}
   <SpawnTransform>k__BackingField: {fileID: 4816191756578057360}
 --- !u!114 &7144639017937470278
 MonoBehaviour:
@@ -1808,7 +1809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5557c542bc4fe7a4b8eae9b112057a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <LocationsId>k__BackingField: 0
   <CameraCollider>k__BackingField: {fileID: 5403553471115820054}
   <Doors>k__BackingField:
   - {fileID: 79093728790803312}
@@ -1843,7 +1843,7 @@ Transform:
   m_GameObject: {fileID: 8252055785652227691}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -1.59, z: 0}
+  m_LocalPosition: {x: 0.08, y: -3.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

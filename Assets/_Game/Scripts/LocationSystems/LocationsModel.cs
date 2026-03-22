@@ -1,14 +1,18 @@
+using System;
+using System.Collections.Generic;
+using _Game.Scripts.RoomSystems.LocationModels;
 using _Game.Scripts.Utils;
 
 namespace _Game.Scripts.RoomSystems
 {
     public class LocationsModel
     {
-        public readonly Observable<LocationsIdEnum> CurrentLocation;
+        public List<AbstractLocationModel> LocationModels = new List<AbstractLocationModel>();
+        public readonly Observable<Type> CurrentLocation;
 
-        public LocationsModel(LocationsIdEnum currentLocation)
+        public LocationsModel(Type currentLocation)
         {
-            CurrentLocation = new Observable<LocationsIdEnum>(currentLocation);
+            CurrentLocation = new Observable<Type>(currentLocation);
         }
     }
 }

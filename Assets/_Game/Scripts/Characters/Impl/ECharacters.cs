@@ -6,5 +6,6 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl
         Ded,
         Girl,
         Pig,
+        Granny,
     }
 }

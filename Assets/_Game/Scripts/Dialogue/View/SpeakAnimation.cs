@@ -8,13 +8,16 @@ namespace _Game.Scripts.DialogueSystem.View
     public class SpeakAnimation : MonoBehaviour
     {
         [SerializeField] private AnimationControl _animationControl;
+        [Header("Нужно только для гг, вомзожно еще понадобится для кого то")]
         [SerializeField] private string _name;
         
         private EventBus _eventBus;
 
         public void Construct(EventBus eventBus, string nme)
         {
-            _name = nme;
+            if(_name == "")
+                _name = nme;
+            
             _eventBus = eventBus;
             
             _eventBus.Subscribe<DialogueEventSignal, string>(this, AnimationEvent);

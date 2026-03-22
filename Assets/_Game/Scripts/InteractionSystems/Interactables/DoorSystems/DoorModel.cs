@@ -10,7 +10,11 @@ namespace _Game.Scripts.RoomSystems
 
         public bool IsOpen = true;
         
-        public DoorModel(IContactTriggerProvider contactTriggerProvider, string id, Vector2 position, string connectedDoorId) 
+        public DoorModel(
+            IContactTriggerProvider contactTriggerProvider,
+            string id,
+            Vector2 position,
+            string connectedDoorId) 
             : base(contactTriggerProvider, position, id)
         {
             Id = id;

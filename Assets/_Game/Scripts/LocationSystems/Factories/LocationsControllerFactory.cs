@@ -1,4 +1,6 @@
+using System;
 using _Game.Scripts.CameraSystem;
+using _Game.Scripts.RoomSystems.LocationsStates;
 
 namespace _Game.Scripts.RoomSystems
 {
@@ -15,7 +17,8 @@ namespace _Game.Scripts.RoomSystems
         public LocationsController Create()
         {
             //current = from playerData
-            LocationsModel locationsModel = new LocationsModel(LocationsIdEnum.MainHouse);
+            Type locationsControllerType = typeof(StartHouseState);
+            LocationsModel locationsModel = new LocationsModel(locationsControllerType);
             
             LocationsController locationsController = new LocationsController(locationsModel, _cameraController);
             _locationsController = locationsController;

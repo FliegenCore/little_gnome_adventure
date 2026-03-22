@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems;
 using Core.Common;
@@ -12,30 +13,35 @@ namespace _Game.Scripts.RoomSystems
         private readonly DoorsService _doorsService;
         private readonly ITeleportable _teleportable;
         private readonly LocationsModel _locationsModel;
+        private readonly LocationsController _locationsController;
         
         public Door(DoorModel doorModel,
             EventBus eventBus, 
             DoorView doorView, 
             DoorsService doorsService, 
             LocationsModel locationsModel,
-            ITeleportable teleportable) : base(doorModel,doorView, eventBus)
+            ITeleportable teleportable,
+            LocationsController locationsController) : base(doorModel,doorView, eventBus)
         {
-            _locationsModel = locationsModel;
-            _teleportable = teleportable;
-            _doorsService =  doorsService;
-            DoorModel = doorModel;
-            DoorView = doorView;
+            _locationsController = locationsController;
+            _locationsModel      = locationsModel;
+            _teleportable        = teleportable;
+            _doorsService        =  doorsService;
+            DoorModel            = doorModel;
+            DoorView             = doorView;
         }
         
-        public override  void Interact()
+        public override void Interact()
         {
-            DoorModel connectedDoor = _doorsService.GetModelDoorById(DoorModel.ConnectedDoorId);
+            DoorView connectedDoor = _doorsService.GetViewDoorById(DoorModel.ConnectedDoorId);
+            DoorModel modelConnectedDoor = _doorsService.GetModelDoorById(DoorModel.ConnectedDoorId);
             
             if (connectedDoor != null)
             {
                 //do fast fade
-                _locationsModel.CurrentLocation.Value = StaticLocationsConnection.DoorLocationConnectionId[connectedDoor.Id];
-                _teleportable.Teleport(connectedDoor.Position);
+                _locationsModel.CurrentLocation.Value =
+                    _locationsController.GetLocationByView(connectedDoor.ConnectedLocationView).GetType();
+                _teleportable.Teleport(modelConnectedDoor.Position);
             }
         }
 

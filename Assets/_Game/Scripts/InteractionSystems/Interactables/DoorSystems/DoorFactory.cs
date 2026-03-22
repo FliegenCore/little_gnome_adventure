@@ -11,7 +11,9 @@ namespace _Game.Scripts.RoomSystems
         private readonly EventBus _eventBus;
         private readonly LocationsControllerFactory _locationsControllerFactory;
         
-        public DoorFactory(DoorsService doorsService, IPlayerFactory playerFactory, EventBus eventBus, LocationsControllerFactory locationsControllerFactory)
+        public DoorFactory(DoorsService doorsService, IPlayerFactory playerFactory,
+            EventBus eventBus, 
+            LocationsControllerFactory locationsControllerFactory)
         {
             _locationsControllerFactory = locationsControllerFactory;
             _playerFactory = playerFactory;
@@ -24,7 +26,15 @@ namespace _Game.Scripts.RoomSystems
             Debug.Log($"Creating door {id} with connetction id {connectionId}" );
             DoorModel doorModel = new DoorModel(view.ContactTriggerProvider, id, view.SpawnTransform.transform.position, connectionId);
             
-            Door door = new Door(doorModel, _eventBus, view, _doorsService, _locationsControllerFactory.Get().LocationsModel, _playerFactory.GetPlayer());
+            Door door = new Door(
+                doorModel, 
+                _eventBus, 
+                view, 
+                _doorsService, 
+                _locationsControllerFactory.Get().LocationsModel,
+                _playerFactory.GetPlayer(),
+                _locationsControllerFactory.Get());
+            
             view.HintSelect.Construct(_eventBus, doorModel.IsSelected);
             
             _doorsService.RegisterDoor(id, door);

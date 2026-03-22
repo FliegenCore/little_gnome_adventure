@@ -11,6 +11,8 @@ using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Factory.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
+using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
+using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
 using _Game.Scripts.RoomSystems.Variants;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -58,6 +60,8 @@ namespace _Game.Scripts._Installers
             builder.Register<HouseLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<TestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<DreamLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<DreamFirstQuestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<LocationsControllerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectForestRegistratorService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();

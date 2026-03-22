@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using _Game.Scripts.UpdateSystems;
 
@@ -5,11 +6,11 @@ namespace _Game.Scripts.RoomSystems.LocationModels
 {
     public class AbstractLocationModel
     {
-        public readonly LocationsIdEnum LocationId;
+        public readonly Type LocationStateType;
         
-        public AbstractLocationModel(LocationsIdEnum locationId)
+        public AbstractLocationModel(Type locationStateType)
         {
-            LocationId = locationId;
+            LocationStateType = locationStateType;
         }
     }
 }
