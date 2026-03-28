@@ -1,12 +1,12 @@
 
 GNOME.png
-size: 734,269
+size: 731,269
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 1mounthSMILE
-  rotate: false
-  xy: 708, 3
+  rotate: true
+  xy: 576, 103
   size: 24, 15
   orig: 28, 19
   offset: 2, 2
@@ -48,14 +48,14 @@ L_eye
   index: -1
 L_eyebrow
   rotate: false
-  xy: 676, 2
+  xy: 593, 107
   size: 30, 16
   orig: 34, 20
   offset: 2, 2
   index: -1
 R-ear
-  rotate: true
-  xy: 575, 111
+  rotate: false
+  xy: 684, 125
   size: 42, 41
   orig: 46, 46
   offset: 2, 2
@@ -97,14 +97,14 @@ head
   index: -1
 nose
   rotate: false
-  xy: 660, 157
-  size: 36, 36
+  xy: 693, 204
+  size: 36, 29
   orig: 40, 40
-  offset: 2, 2
+  offset: 2, 9
   index: -1
 shadow
-  rotate: true
-  xy: 541, 118
+  rotate: false
+  xy: 579, 235
   size: 149, 32
   orig: 150, 32
   offset: 0, 0
@@ -131,29 +131,29 @@ shadow
   offset: 2, 2
   index: -1
 верхруки2
-  rotate: false
-  xy: 575, 155
+  rotate: true
+  xy: 579, 188
   size: 45, 112
   orig: 49, 116
   offset: 2, 2
   index: -1
 волосы лево
-  rotate: true
+  rotate: false
   xy: 579, 6
   size: 103, 95
   orig: 107, 99
   offset: 2, 2
   index: -1
 волосы право
-  rotate: false
-  xy: 676, 20
+  rotate: true
+  xy: 576, 129
   size: 53, 91
   orig: 57, 96
   offset: 2, 2
   index: -1
 л щечка
   rotate: false
-  xy: 695, 233
+  xy: 693, 168
   size: 34, 34
   orig: 38, 38
   offset: 2, 2
@@ -174,35 +174,35 @@ shadow
   index: -1
 нога
   rotate: false
-  xy: 660, 195
+  xy: 541, 110
   size: 33, 72
   orig: 37, 76
   offset: 2, 2
   index: -1
 нога копия
   rotate: false
-  xy: 660, 195
+  xy: 541, 110
   size: 33, 72
   orig: 37, 76
   offset: 2, 2
   index: -1
 п щечки
   rotate: true
-  xy: 695, 197
+  xy: 684, 5
   size: 34, 31
   orig: 38, 35
   offset: 2, 2
   index: -1
 пердплечье2
   rotate: false
-  xy: 622, 184
+  xy: 541, 184
   size: 36, 83
   orig: 41, 88
   offset: 3, 2
   index: -1
 предплечье
-  rotate: true
-  xy: 618, 113
+  rotate: false
+  xy: 684, 41
   size: 40, 82
   orig: 44, 87
   offset: 2, 2

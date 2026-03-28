@@ -1111,7 +1111,7 @@ SpriteRenderer:
   m_SortingLayerID: -2054335123
   m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 1b83862445f3b0b46bfa90eac17014d5, type: 3}
+  m_Sprite: {fileID: -2238227483419927250, guid: a8c174f6a8b445547ae915cb38e77dce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1177,7 +1177,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.01, y: 4.24}
+    oldSize: {x: 3.11, y: 5.06}
     newSize: {x: 3.01, y: 4.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2103,7 +2103,7 @@ PrefabInstance:
     - target: {fileID: 3208605605445865856, guid: f000c2ecdc998b14b83d795e294f9588, type: 3}
       propertyPath: sharedProfile
       value: 
-      objectReference: {fileID: 11400000, guid: 5be5f8d612754d34da3d7bad01a71845, type: 2}
+      objectReference: {fileID: 11400000, guid: abd220c46d049894ebeab4bc088060f4, type: 2}
     - target: {fileID: 7691633395738506007, guid: f000c2ecdc998b14b83d795e294f9588, type: 3}
       propertyPath: m_Name
       value: Box Volume
@@ -2140,8 +2140,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 68.18, y: 35.79, z: 1}
-  m_Center: {x: -0.1, y: 10.8, z: 0}
+  m_Size: {x: 50.471825, y: 18.602652, z: 1}
+  m_Center: {x: 8.754086, y: 2.2063246, z: 0}
 --- !u!4 &7640872145497175179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1558478486861782090, guid: f000c2ecdc998b14b83d795e294f9588, type: 3}

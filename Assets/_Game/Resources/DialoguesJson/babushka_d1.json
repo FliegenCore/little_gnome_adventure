@@ -2,24 +2,35 @@
   "Nodes": [
     {
       "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
-      "DialogueName": "Dialogue name",
-      "Text": "Dialogue text.",
+      "DialogueName": "Babushka",
+      "Text": "Hello PIZDUK!",
       "Type": 0,
       "Position": {
-        "x": 278.0,
-        "y": 291.0,
+        "x": 258.0,
+        "y": 119.0,
         "normalized": {
-          "x": 0.690771163,
-          "y": 0.7230734,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
+          "x": 0.908062339,
+          "y": 0.418834955,
+          "normalized": {
+            "x": 0.9080624,
+            "y": 0.418834984,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.00000012
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
         },
-        "magnitude": 402.448761,
-        "sqrMagnitude": 161965.0
+        "magnitude": 284.12146,
+        "sqrMagnitude": 80725.0
       },
       "IsStartNode": true,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
+      "OnStartEvents": [
+        "a_Babushka_body/fint1_0_1",
+        "a_Babushka_emotion/speak_1_1"
+      ],
+      "OnEndEvents": [
+        "a_Babushka_body/wait_0_1"
+      ],
       "ChoiceEvents": [],
       "Choices": [
         "Next dialogue"

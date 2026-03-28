@@ -1,19 +1,26 @@
 
 SHIT.png
-size: 146,47
+size: 153,81
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 149, 32
+  orig: 150, 32
+  offset: 0, 0
+  index: -1
 какашка
   rotate: false
-  xy: 17, 2
+  xy: 17, 36
   size: 127, 43
   orig: 131, 47
   offset: 2, 2
   index: -1
 муха
   rotate: false
-  xy: 2, 32
+  xy: 2, 66
   size: 13, 13
   orig: 17, 17
   offset: 2, 2

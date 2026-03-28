@@ -1,0 +1,20 @@
+
+wrapper.png
+size: 231,39
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow
+  rotate: false
+  xy: 2, 5
+  size: 149, 32
+  orig: 150, 32
+  offset: 0, 0
+  index: -1
+wrapper
+  rotate: false
+  xy: 153, 2
+  size: 76, 35
+  orig: 76, 35
+  offset: 0, 0
+  index: -1

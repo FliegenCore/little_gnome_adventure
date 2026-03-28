@@ -1,13 +1,13 @@
 {
 "skeleton": {
-	"hash": "agghntexvCz1o2s3QJ1wUBMhyMQ",
+	"hash": "KC8u2hR1Pq8i0YZBiDOPfP2qCAM",
 	"spine": "3.8.0",
 	"x": -64.14,
 	"y": -17.37,
 	"width": 145.62,
 	"height": 280.05,
 	"images": "./png/",
-	"audio": "D:/арт Игра про маленького ГНОМА/локации/dream_L1/sapog"
+	"audio": "../../../sound/plant/"
 },
 "bones": [
 	{ "name": "root" },
@@ -104,6 +104,9 @@
 		}
 	}
 ],
+"events": {
+	"rise_flower": { "audio": "rise_flower.mp3" }
+},
 "animations": {
 	"pose1": {
 		"bones": {
@@ -142,12 +145,12 @@
 			"sapog": {
 				"rotate": [
 					{ "angle": -0.38 },
-					{ "time": 0.7333, "angle": 1.02 },
+					{ "time": 0.7333, "angle": 2.32 },
 					{ "time": 1.3333, "angle": -0.38 }
 				],
 				"translate": [
 					{ "y": 63.43 },
-					{ "time": 0.6, "x": 2.7, "y": 62.08 },
+					{ "time": 0.6, "x": -0.1, "y": 62.08 },
 					{ "time": 1.3333, "y": 63.43 }
 				]
 			},
@@ -235,9 +238,9 @@
 	},
 	"pose5flower": {
 		"slots": {
-			"p3": {
+			"p8": {
 				"attachment": [
-					{ "name": "p1" }
+					{ "name": "p2" }
 				]
 			},
 			"p6": {
@@ -245,7 +248,22 @@
 					{ "name": "p2" }
 				]
 			},
-			"p8": {
+			"p3": {
+				"attachment": [
+					{ "name": "p1" }
+				]
+			},
+			"p1": {
+				"attachment": [
+					{ "name": "p1" }
+				]
+			},
+			"flower": {
+				"attachment": [
+					{ "name": "flower" }
+				]
+			},
+			"p4": {
 				"attachment": [
 					{ "name": "p2" }
 				]
@@ -255,14 +273,9 @@
 					{ "name": "p1" }
 				]
 			},
-			"p4": {
+			"light": {
 				"attachment": [
-					{ "name": "p2" }
-				]
-			},
-			"p2": {
-				"attachment": [
-					{ "name": "p2" }
+					{ "name": "light" }
 				]
 			},
 			"p7": {
@@ -270,19 +283,9 @@
 					{ "name": "p1" }
 				]
 			},
-			"light": {
+			"p2": {
 				"attachment": [
-					{ "name": "light" }
-				]
-			},
-			"flower": {
-				"attachment": [
-					{ "name": "flower" }
-				]
-			},
-			"p1": {
-				"attachment": [
-					{ "name": "p1" }
+					{ "name": "p2" }
 				]
 			}
 		},
@@ -429,6 +432,152 @@
 				]
 			}
 		}
+	},
+	"rise_flower": {
+		"slots": {
+			"p8": {
+				"attachment": [
+					{ "time": 1.7, "name": "p2" }
+				]
+			},
+			"p6": {
+				"attachment": [
+					{ "time": 1.7, "name": "p2" }
+				]
+			},
+			"p3": {
+				"attachment": [
+					{ "time": 1.7, "name": "p1" }
+				]
+			},
+			"p1": {
+				"attachment": [
+					{ "time": 1.7, "name": "p1" }
+				]
+			},
+			"flower": {
+				"attachment": [
+					{ "time": 1.3, "name": "flower" }
+				]
+			},
+			"p4": {
+				"attachment": [
+					{ "time": 1.7, "name": "p2" }
+				]
+			},
+			"p5": {
+				"attachment": [
+					{ "time": 1.7, "name": "p1" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "time": 1.5333, "color": "fff0a939" },
+					{ "time": 1.6667, "color": "fff1a97c", "curve": "stepped" },
+					{ "time": 2.3, "color": "fff1a97c" },
+					{ "time": 2.5333, "color": "fff0a990", "curve": "stepped" },
+					{ "time": 3.1667, "color": "fff0a990" },
+					{ "time": 3.3, "color": "fff0a9a7" }
+				],
+				"attachment": [
+					{ "time": 1.5333, "name": "light" }
+				]
+			},
+			"p7": {
+				"attachment": [
+					{ "time": 1.7, "name": "p1" }
+				]
+			},
+			"p2": {
+				"attachment": [
+					{ "time": 1.7, "name": "p2" }
+				]
+			}
+		},
+		"bones": {
+			"sapog": {
+				"rotate": [
+					{ "angle": -0.38 },
+					{ "time": 0.7333, "angle": 2.32 },
+					{ "time": 1.2333, "angle": -0.38, "curve": "stepped" },
+					{ "time": 2, "angle": -0.38 },
+					{ "time": 2.7333, "angle": 2.32 },
+					{ "time": 3.3333, "angle": -0.38 }
+				],
+				"translate": [
+					{ "y": 63.43 },
+					{ "time": 0.6, "x": -0.1, "y": 71.8 },
+					{ "time": 1.1333, "y": 57.6 },
+					{ "time": 1.3, "y": 69.36 },
+					{ "time": 2, "y": 63.43 },
+					{ "time": 2.6, "x": -0.1, "y": 62.08 },
+					{ "time": 3.3333, "y": 63.43, "curve": "stepped" },
+					{ "time": 5.1667, "y": 63.43 }
+				]
+			},
+			"shadow": {
+				"scale": [
+					{ "x": 0.973, "curve": "stepped" },
+					{ "time": 2, "x": 0.973 }
+				]
+			},
+			"pl2": {
+				"scale": [
+					{},
+					{ "time": 0.6667, "x": 1.053, "y": 1.053 },
+					{ "time": 1.5667, "x": 0.925, "y": 0.925 },
+					{ "time": 1.6667, "x": 1.151, "y": 1.151 },
+					{ "time": 2 }
+				],
+				"shear": [
+					{ "x": 1.72 },
+					{ "time": 0.6667, "x": -1.04 },
+					{ "time": 1.2333, "x": 1.72 },
+					{ "time": 1.6667, "x": -1.91 },
+					{ "time": 2, "x": 1.72 },
+					{ "time": 2.6667, "x": -1.04 },
+					{ "time": 3.3333, "x": 1.72 },
+					{ "time": 4.3333, "x": -2.4 },
+					{ "time": 5.1667, "x": 1.72 }
+				]
+			},
+			"pl1": {
+				"rotate": [
+					{ "time": 1.5667 },
+					{ "time": 1.6667, "angle": -7.56 },
+					{ "time": 2 }
+				],
+				"shear": [
+					{},
+					{ "time": 0.6667, "x": 0.97 },
+					{ "time": 1.2333, "curve": "stepped" },
+					{ "time": 2 },
+					{ "time": 2.6667, "x": 0.97 },
+					{ "time": 3.3333 }
+				]
+			},
+			"flower": {
+				"translate": [
+					{ "time": 1.3, "x": -56.65 },
+					{ "time": 1.7 }
+				],
+				"scale": [
+					{ "x": 0.547, "y": 0.251 },
+					{ "time": 1.7 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 1.3,
+				"offsets": [
+					{ "slot": "flower", "offset": -2 }
+				]
+			}
+		],
+		"events": [
+			{ "name": "rise_flower" }
+		]
 	}
 }
 }

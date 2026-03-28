@@ -3,8 +3,8 @@ guid: ec1a9384a994e8e4db9fded0d1280be5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5308186299818193144
-    second: house_outside 1_0
+      213: 450084632567175371
+    second: house_outside_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: house_outside 1_0
+      name: house_outside_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80fcdbd2fa88556b0800000000000000
-      internalID: -5308186299818193144
+      spriteID: bc85703b6950f3600800000000000000
+      internalID: 450084632567175371
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      house_outside 1_0: -5308186299818193144
+      house_outside_0: 450084632567175371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

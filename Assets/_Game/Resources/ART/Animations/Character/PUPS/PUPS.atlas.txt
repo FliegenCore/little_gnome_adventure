@@ -1,0 +1,125 @@
+
+PUPS.png
+size: 1935,1653
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+point
+  rotate: false
+  xy: 1460, 349
+  size: 74, 71
+  orig: 74, 71
+  offset: 0, 0
+  index: -1
+ГВОЗДЬ MAIN
+  rotate: false
+  xy: 1346, 495
+  size: 512, 74
+  orig: 516, 78
+  offset: 2, 2
+  index: -1
+блик
+  rotate: false
+  xy: 1346, 301
+  size: 15, 33
+  orig: 19, 37
+  offset: 2, 2
+  index: -1
+блик2
+  rotate: false
+  xy: 1346, 301
+  size: 15, 33
+  orig: 19, 37
+  offset: 2, 2
+  index: -1
+веко
+  rotate: false
+  xy: 1860, 489
+  size: 73, 80
+  orig: 77, 84
+  offset: 2, 2
+  index: -1
+веко2
+  rotate: false
+  xy: 1860, 489
+  size: 73, 80
+  orig: 77, 84
+  offset: 2, 2
+  index: -1
+заплатка нос
+  rotate: true
+  xy: 890, 166
+  size: 403, 454
+  orig: 403, 454
+  offset: 0, 0
+  index: -1
+заплаька глаз
+  rotate: true
+  xy: 1346, 402
+  size: 91, 112
+  orig: 91, 112
+  offset: 0, 0
+  index: -1
+зрачок
+  rotate: false
+  xy: 1408, 355
+  size: 43, 45
+  orig: 47, 49
+  offset: 2, 2
+  index: -1
+зрачок2
+  rotate: false
+  xy: 1408, 355
+  size: 43, 45
+  orig: 47, 49
+  offset: 2, 2
+  index: -1
+нос
+  rotate: true
+  xy: 1346, 336
+  size: 64, 60
+  orig: 65, 66
+  offset: 1, 6
+  index: -1
+ресницыЛ
+  rotate: true
+  xy: 1408, 306
+  size: 47, 20
+  orig: 51, 24
+  offset: 2, 2
+  index: -1
+ресницыР
+  rotate: true
+  xy: 1460, 422
+  size: 71, 28
+  orig: 75, 32
+  offset: 2, 2
+  index: -1
+тело
+  rotate: false
+  xy: 2, 2
+  size: 886, 567
+  orig: 886, 568
+  offset: 0, 1
+  index: -1
+фон
+  rotate: false
+  xy: 2, 571
+  size: 1920, 1080
+  orig: 1924, 1084
+  offset: 2, 2
+  index: -1
+яблоко
+  rotate: false
+  xy: 1490, 423
+  size: 70, 70
+  orig: 74, 74
+  offset: 2, 2
+  index: -1
+яблоко2
+  rotate: false
+  xy: 1490, 423
+  size: 70, 70
+  orig: 74, 74
+  offset: 2, 2
+  index: -1
