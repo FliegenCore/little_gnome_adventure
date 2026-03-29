@@ -1,0 +1,125 @@
+{
+  "Nodes": [
+    {
+      "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
+      "DialogueName": "Grany",
+      "Text": "Зацвели. \nСпасибо тебе, дорогуша!",
+      "Type": 0,
+      "Position": {
+        "x": 167.0,
+        "y": 276.0,
+        "normalized": {
+          "x": 0.517683268,
+          "y": 0.855572343,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 322.591064,
+        "sqrMagnitude": 104065.0
+      },
+      "IsStartNode": true,
+      "OnStartEvents": [
+        "a_Grany_body/fint1_0_1",
+        "a_Grany_emotion/speak_1_1",
+        "a_Player_eyes/upper_2_1",
+        "a_Grany_head/flower_2_1",
+        "a_Player_emotion/happy_1_1"
+      ],
+      "OnEndEvents": [
+        "a_Grany_body/wait_0_1",
+        "a_Grany_emotion/silence_1_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "0cd02176-2819-4058-92d7-96eed7719e02",
+      "DialogueName": "Player",
+      "Text": "Они красивые.",
+      "Type": 0,
+      "Position": {
+        "x": 568.0,
+        "y": 278.0,
+        "normalized": {
+          "x": 0.898190141,
+          "y": 0.439607143,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 632.3828,
+        "sqrMagnitude": 399908.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Player_emotion/speak_1_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/happy_1_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "21d3e28e-6bc1-489e-b450-ef29c6e6b012",
+      "DialogueName": "Grany",
+      "Text": "Как и ты. Возьми… это тебе пригодится.",
+      "Type": 0,
+      "Position": {
+        "x": 1004.0,
+        "y": 277.0,
+        "normalized": {
+          "x": 0.9639842,
+          "y": 0.265959769,
+          "normalized": {
+            "x": 0.9639841,
+            "y": 0.26595974,
+            "normalized": {
+              "x": 0.963984132,
+              "y": 0.265959769,
+              "magnitude": 1.0,
+              "sqrMagnitude": 1.0
+            },
+            "magnitude": 0.99999994,
+            "sqrMagnitude": 0.9999999
+          },
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 1041.51086,
+        "sqrMagnitude": 1084745.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Grany_body/give_0_0",
+        "a_Grany_emotion/speak_1_1",
+        "granny_complete"
+      ],
+      "OnEndEvents": [
+        "a_Grany_body/end_0_1",
+        "a_Player_emotion/idle_1_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    }
+  ],
+  "Edges": [
+    {
+      "InputNodeId": "0cd02176-2819-4058-92d7-96eed7719e02",
+      "OutputNodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "21d3e28e-6bc1-489e-b450-ef29c6e6b012",
+      "OutputNodeId": "0cd02176-2819-4058-92d7-96eed7719e02",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    }
+  ]
+}
