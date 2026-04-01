@@ -1,8 +1,10 @@
 using _Game.Scripts.GameInitializeSystems;
 using _Game.Scripts.GameStateSystems;
 using _Game.Scripts.Input;
+using _Game.Scripts.Sound;
 using _Game.Scripts.UpdateSystems;
 using Core.Common;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -10,6 +12,9 @@ namespace _Game.Scripts._Installers
 {
     public class BootstrapInstaller : LifetimeScope
     {
+        [SerializeField] private AudioSourceStorage _audioSourceStorage;
+        [SerializeField] private AudioStorageConfig _audioStorageConfig;
+        
         protected override void Awake()
         {
             base.Awake();
@@ -31,6 +36,11 @@ namespace _Game.Scripts._Installers
             builder.RegisterComponentOnNewGameObject<UpdateController>(Lifetime.Singleton).DontDestroyOnLoad().AsSelf();
             builder.RegisterComponentOnNewGameObject<FixedUpdateController>(Lifetime.Singleton).DontDestroyOnLoad().AsSelf();
             builder.Register<GameStateController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<SoundManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.RegisterInstance(_audioStorageConfig).AsSelf().AsImplementedInterfaces();
+            
+            DontDestroyOnLoad(_audioSourceStorage);
+            builder.RegisterInstance(_audioSourceStorage);
             
             builder.RegisterEntryPoint<BootstrapEntryPoint>();
         }

@@ -14,6 +14,7 @@ using _Game.Scripts.RoomSystems;
 using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
 using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
 using _Game.Scripts.RoomSystems.Variants;
+using _Game.Scripts.Sound;
 using Unity.Cinemachine;
 using UnityEngine;
 using VContainer;
@@ -30,6 +31,7 @@ namespace _Game.Scripts._Installers
         [SerializeField] private InspectCamera _inspectCamera;
         [SerializeField] private InventoryView _inventoryView;
         [SerializeField] private ItemConfigs _itemConfigs;
+        
         
         private void Start()
         {

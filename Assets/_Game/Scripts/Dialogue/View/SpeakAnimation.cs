@@ -8,15 +8,13 @@ namespace _Game.Scripts.DialogueSystem.View
     public class SpeakAnimation : MonoBehaviour
     {
         [SerializeField] private AnimationControl _animationControl;
-        [Header("Нужно только для гг, вомзожно еще понадобится для кого то")]
-        [SerializeField] private string _name;
         
+        private string _name;
         private EventBus _eventBus;
 
         public void Construct(EventBus eventBus, string nme)
         {
-            if(_name == "")
-                _name = nme;
+            _name = nme;
             
             _eventBus = eventBus;
             
@@ -31,10 +29,19 @@ namespace _Game.Scripts.DialogueSystem.View
 
             string nme = parameters[0];
             string animationName = parameters[1];
+            
+            if (!_animationControl.HasAnimation(animationName))
+            {
+                Debug.LogWarning("No animation found for " + animationName);
+                
+                return;
+            }
+            
             int layer = int.Parse(parameters[2]);
             int isLoopInt = int.Parse(parameters[3]);
             
             bool isLoop = isLoopInt == 1;
+            
             if (nme != _name)
             {
                 return;

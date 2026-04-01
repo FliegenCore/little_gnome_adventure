@@ -2,7 +2,7 @@
   "Nodes": [
     {
       "NodeId": "238522be-29a7-4972-b6f1-6fafe75cd595",
-      "DialogueName": "Dialogue name",
+      "DialogueName": "Granny",
       "Text": "Умный мальчик. На них я записывала.\nНо… попробуй разбери что я тут понаписала.",
       "Type": 0,
       "Position": {
@@ -19,12 +19,12 @@
       },
       "IsStartNode": false,
       "OnStartEvents": [
-        "a_Grany_emotion/speak_1_1",
-        "a_Grany_body/idle_0_1"
+        "a_Granny_emotion/speak_1_1",
+        "a_Granny_body/idle_0_1"
       ],
       "OnEndEvents": [
-        "a_Grany_body/wait_0_1",
-        "a_Grany_emotion/silence_1_1"
+        "a_Granny_body/wait_0_1",
+        "a_Granny_emotion/silence_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -33,30 +33,30 @@
     },
     {
       "NodeId": "14a7a14a-e3b2-4b21-944a-0db970e0056f",
-      "DialogueName": "Dialogue name",
+      "DialogueName": "Player",
       "Text": "А бумажки?",
       "Type": 0,
       "Position": {
-        "x": 625.0,
+        "x": 615.0,
         "y": 118.0,
         "normalized": {
-          "x": 0.982639968,
-          "y": 0.185522437,
-          "normalized": {
-            "x": 0.98264,
-            "y": 0.185522452,
-            "magnitude": 1.0,
-            "sqrMagnitude": 1.0
-          },
-          "magnitude": 0.99999994,
-          "sqrMagnitude": 0.9999999
+          "x": 0.982086062,
+          "y": 0.188432783,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
         },
-        "magnitude": 636.0417,
-        "sqrMagnitude": 404549.0
+        "magnitude": 626.218,
+        "sqrMagnitude": 392149.0
       },
       "IsStartNode": false,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
+      "OnStartEvents": [
+        "a_Player_emotion/speak_1_1",
+        "a_Player_eyes/upper_2_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/idle_1_1",
+        "a_Player_eyes/up_2_1"
+      ],
       "ChoiceEvents": [],
       "Choices": [
         "Next dialogue"
@@ -64,24 +64,35 @@
     },
     {
       "NodeId": "5c428a78-0546-443d-9dc6-389978a78528",
-      "DialogueName": "Dialogue name",
+      "DialogueName": "Player",
       "Text": "Сейчас все сделаем, бабуся!",
       "Type": 0,
       "Position": {
-        "x": 1387.0,
-        "y": 120.0,
+        "x": 1422.0,
+        "y": 121.0,
         "normalized": {
-          "x": 0.9962782,
-          "y": 0.08619566,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
+          "x": 0.9963992,
+          "y": 0.08478503,
+          "normalized": {
+            "x": 0.9963993,
+            "y": 0.08478504,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
         },
-        "magnitude": 1392.1814,
-        "sqrMagnitude": 1938169.0
+        "magnitude": 1427.13879,
+        "sqrMagnitude": 2036725.0
       },
       "IsStartNode": false,
-      "OnStartEvents": [],
-      "OnEndEvents": [],
+      "OnStartEvents": [
+        "a_Player_emotion/speak_1_1",
+        "a_Player_body/idle_fint/2_0_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/idle_2_1"
+      ],
       "ChoiceEvents": [],
       "Choices": [
         "Next dialogue"
@@ -89,7 +100,7 @@
     },
     {
       "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
-      "DialogueName": "Grany",
+      "DialogueName": "Granny",
       "Text": "Ах, совсем забыла… где какой цветок рос.\nБез порядка они не цветут",
       "Type": 0,
       "Position": {
@@ -112,12 +123,14 @@
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_Grany_body/fint1_0_1",
-        "a_Grany_emotion/speak_1_1"
+        "a_Granny_body/fint1_0_1",
+        "a_Granny_emotion/speak_1_1",
+        "a_Player_emotion/speak_1_1",
+        "a_Player_eyes/up_2_1"
       ],
       "OnEndEvents": [
-        "a_Grany_body/wait_0_1",
-        "a_Grany_emotion/silence_1_1"
+        "a_Granny_body/wait_0_1",
+        "a_Granny_emotion/silence_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [

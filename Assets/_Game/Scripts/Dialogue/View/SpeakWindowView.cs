@@ -10,11 +10,7 @@ namespace _Game.Scripts.DialogueSystem.View
         
         private Sequence _animationSequence;
         
-        private void Awake()
-        {
-            gameObject.SetActive(false);
-        }
-
+        
         public void Hide()
         {
             if(_animationSequence != null)
