@@ -2,7 +2,7 @@
   "Nodes": [
     {
       "NodeId": "238522be-29a7-4972-b6f1-6fafe75cd595",
-      "DialogueName": "Grany",
+      "DialogueName": "Granny",
       "Text": "Умный мальчик. На них я записывала.\nНо… попробуй разбери что я тут понаписала.",
       "Type": 0,
       "Position": {
@@ -19,12 +19,12 @@
       },
       "IsStartNode": false,
       "OnStartEvents": [
-        "a_Grany_emotion/speak_1_1",
-        "a_Grany_body/idle_0_1"
+        "a_Granny_emotion/speak_1_1",
+        "a_Granny_body/idle_0_1"
       ],
       "OnEndEvents": [
-        "a_Grany_body/wait_0_1",
-        "a_Grany_emotion/silence_1_1"
+        "a_Granny_body/wait_0_1",
+        "a_Granny_emotion/silence_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -100,7 +100,7 @@
     },
     {
       "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
-      "DialogueName": "Grany",
+      "DialogueName": "Granny",
       "Text": "Ах, совсем забыла… где какой цветок рос.\nБез порядка они не цветут",
       "Type": 0,
       "Position": {
@@ -123,14 +123,14 @@
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_Grany_body/fint1_0_1",
-        "a_Grany_emotion/speak_1_1",
+        "a_Granny_body/fint1_0_1",
+        "a_Granny_emotion/speak_1_1",
         "a_Player_emotion/speak_1_1",
         "a_Player_eyes/up_2_1"
       ],
       "OnEndEvents": [
-        "a_Grany_body/wait_0_1",
-        "a_Grany_emotion/silence_1_1"
+        "a_Granny_body/wait_0_1",
+        "a_Granny_emotion/silence_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [

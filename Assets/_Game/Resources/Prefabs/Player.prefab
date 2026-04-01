@@ -245,7 +245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationControl: {fileID: 9127604325733127963}
-  _name: 
 --- !u!1 &6846856357699614140
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +270,7 @@ Transform:
   m_GameObject: {fileID: 6846856357699614140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.78, y: 5.28, z: 0}
+  m_LocalPosition: {x: -1.08, y: 5.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -548,7 +547,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4535033461977467981, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3299765909412418170}
   m_SourcePrefab: {fileID: 100100000, guid: e8ed243a752b94a40b1330919218538a, type: 3}
 --- !u!224 &1897285284514089711 stripped
 RectTransform:
@@ -560,12 +562,31 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1916572961005521301, guid: e8ed243a752b94a40b1330919218538a, type: 3}
   m_PrefabInstance: {fileID: 385951086950860262}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4302204900274375083}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b951e56f43c646cf8e49219569122f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4302204900274375083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4535033461977467981, guid: e8ed243a752b94a40b1330919218538a, type: 3}
+  m_PrefabInstance: {fileID: 385951086950860262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3299765909412418170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302204900274375083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2e394bc93f403dbbeebaee6631d221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 1871767642747423403}
+  _dialogueView: {fileID: 2884005342261163287}
 --- !u!114 &4510568765472505507 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4306547434446928709, guid: e8ed243a752b94a40b1330919218538a, type: 3}

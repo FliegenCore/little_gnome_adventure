@@ -2,7 +2,7 @@
   "Nodes": [
     {
       "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
-      "DialogueName": "Grany",
+      "DialogueName": "Granny",
       "Text": "Зацвели. \nСпасибо тебе, дорогуша!",
       "Type": 0,
       "Position": {
@@ -19,15 +19,15 @@
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_Grany_body/fint1_0_1",
-        "a_Grany_emotion/speak_1_1",
+        "a_Granny_body/fint1_0_1",
+        "a_Granny_emotion/speak_1_1",
         "a_Player_eyes/upper_2_1",
-        "a_Grany_head/flower_2_1",
+        "a_Granny_head/flower_2_1",
         "a_Player_emotion/happy_1_1"
       ],
       "OnEndEvents": [
-        "a_Grany_body/wait_0_1",
-        "a_Grany_emotion/silence_1_1"
+        "a_Granny_body/wait_0_1",
+        "a_Granny_emotion/silence_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -65,7 +65,7 @@
     },
     {
       "NodeId": "21d3e28e-6bc1-489e-b450-ef29c6e6b012",
-      "DialogueName": "Grany",
+      "DialogueName": "Granny",
       "Text": "Как и ты. Возьми… это тебе пригодится.",
       "Type": 0,
       "Position": {
@@ -94,12 +94,12 @@
       },
       "IsStartNode": false,
       "OnStartEvents": [
-        "a_Grany_body/give_0_0",
-        "a_Grany_emotion/speak_1_1",
+        "a_Granny_body/give_0_0",
+        "a_Granny_emotion/speak_1_1",
         "granny_complete"
       ],
       "OnEndEvents": [
-        "a_Grany_body/end_0_1",
+        "a_Granny_body/end_0_1",
         "a_Player_emotion/idle_1_1"
       ],
       "ChoiceEvents": [],

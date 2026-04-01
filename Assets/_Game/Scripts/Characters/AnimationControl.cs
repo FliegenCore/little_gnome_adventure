@@ -34,5 +34,15 @@ namespace _Game.Scripts.PlayerSystems.Animations
                 trackEntry.Complete += OnComplete;
             }
         }
+
+        public bool HasAnimation(string animationName)
+        {
+            if (_skeletonAnimation == null || _skeletonAnimation.Skeleton == null)
+                return false;
+
+            var skeletonData = _skeletonAnimation.Skeleton.Data;
+    
+            return skeletonData.FindAnimation(animationName) != null;
+        }
     }
 }

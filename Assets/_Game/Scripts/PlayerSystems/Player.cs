@@ -17,9 +17,10 @@ namespace _Game.Scripts.PlayerSystems
         private readonly Inventory _inventory;
         private readonly Fsm _motionStateMachine;
         private readonly Fsm _playerStateMachine;
-        public readonly PlayerView PlayerView;
-
         private readonly EventBus _eventBus;
+
+        public readonly PlayerView PlayerView;
+        
         
         public Player(
             PlayerModel playerModel, 
@@ -40,22 +41,8 @@ namespace _Game.Scripts.PlayerSystems
             
             _eventBus.Subscribe<SetPlayerStateSignal, Type>(this, SetPlayerState);
             _eventBus.Subscribe<SetPlayerMotionStateSignal, Type>(this, SetPlayerMotionState);
-            
-            _eventBus.Subscribe<DialogueEventSignal, string>(this, DialogueSignal);
         }
 
-        private void DialogueSignal(string eventName)
-        {
-            if (eventName.Contains("playerAnimation_"))
-            {
-                string animationName = eventName.Split("_")[1];
-            
-                Debug.Log(animationName);
-                if(animationName == "fly")
-                    _playerModel.AnimationPlayerModel.InRage.Value = true;
-            }
-        }
-        
         private void SetPlayerState(Type type)
         {
             _playerStateMachine.SetState(type);

@@ -5,8 +5,10 @@ namespace _Game.Scripts.InventorySystem
 {
     public enum ItemId
     {
-        Toy = 0,
-        Apple = 1,
+        Toy,
+        Apple,
+        RedTriangle,
+        
     }
     
     [CreateAssetMenu(fileName = "InventoryItemConfig", menuName = "Hell/Inventory Item Config")]
