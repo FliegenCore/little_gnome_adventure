@@ -48,7 +48,8 @@
       },
       "IsStartNode": false,
       "OnStartEvents": [
-        "a_Ded_emotion/speak_0_1"
+        "a_Ded_emotion/speak_0_1",
+        "a_Player_eyes/up_2_1"
       ],
       "OnEndEvents": [
         "a_Ded_emotion/wait_0_1",
@@ -147,36 +148,6 @@
       ]
     },
     {
-      "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
-      "DialogueName": "Player",
-      "Text": "Дед, ты спишь?",
-      "Type": 0,
-      "Position": {
-        "x": -249.0,
-        "y": 169.0,
-        "normalized": {
-          "x": -0.827420652,
-          "y": 0.5615827,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
-        },
-        "magnitude": 300.9352,
-        "sqrMagnitude": 90562.0
-      },
-      "IsStartNode": true,
-      "OnStartEvents": [
-        "a_Player_emotion/speak_1_1",
-        "a_Ded_body/idle_0_1"
-      ],
-      "OnEndEvents": [
-        "a_Player_emotion/idle_1_1"
-      ],
-      "ChoiceEvents": [],
-      "Choices": [
-        "Next dialogue"
-      ]
-    },
-    {
       "NodeId": "57f303da-f349-47d9-a3c1-6f9eed741544",
       "DialogueName": "Player",
       "Text": "А медаль дадут?",
@@ -227,6 +198,38 @@
         "a_Player_emotion/sad_1_1"
       ],
       "OnEndEvents": [
+        "a_Player_emotion/idle_2_0",
+        ""
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
+      "DialogueName": "Player",
+      "Text": "Дед, ты спишь?",
+      "Type": 0,
+      "Position": {
+        "x": -249.0,
+        "y": 169.0,
+        "normalized": {
+          "x": -0.827420652,
+          "y": 0.5615827,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 300.9352,
+        "sqrMagnitude": 90562.0
+      },
+      "IsStartNode": true,
+      "OnStartEvents": [
+        "a_Player_emotion/speak_1_1",
+        "a_Ded_body/idle_0_1",
+        "a_Player_eyes/forward_2_1"
+      ],
+      "OnEndEvents": [
         "a_Player_emotion/idle_1_1"
       ],
       "ChoiceEvents": [],
@@ -236,6 +239,18 @@
     }
   ],
   "Edges": [
+    {
+      "InputNodeId": "0cd02176-2819-4058-92d7-96eed7719e02",
+      "OutputNodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "21d3e28e-6bc1-489e-b450-ef29c6e6b012",
+      "OutputNodeId": "0cd02176-2819-4058-92d7-96eed7719e02",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
     {
       "InputNodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
       "OutputNodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",

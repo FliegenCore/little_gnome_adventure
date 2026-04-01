@@ -1,35 +1,123 @@
 {
   "Nodes": [
     {
-      "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
-      "DialogueName": "Babushka",
-      "Text": "Hello PIZDUK!",
+      "NodeId": "238522be-29a7-4972-b6f1-6fafe75cd595",
+      "DialogueName": "Dialogue name",
+      "Text": "Умный мальчик. На них я записывала.\nНо… попробуй разбери что я тут понаписала.",
       "Type": 0,
       "Position": {
-        "x": 258.0,
-        "y": 119.0,
+        "x": 1001.0,
+        "y": 118.0,
         "normalized": {
-          "x": 0.908062339,
-          "y": 0.418834955,
+          "x": 0.993123531,
+          "y": 0.1170715,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 1007.931,
+        "sqrMagnitude": 1015925.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Grany_emotion/speak_1_1",
+        "a_Grany_body/idle_0_1"
+      ],
+      "OnEndEvents": [
+        "a_Grany_body/wait_0_1",
+        "a_Grany_emotion/silence_1_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "14a7a14a-e3b2-4b21-944a-0db970e0056f",
+      "DialogueName": "Dialogue name",
+      "Text": "А бумажки?",
+      "Type": 0,
+      "Position": {
+        "x": 625.0,
+        "y": 118.0,
+        "normalized": {
+          "x": 0.982639968,
+          "y": 0.185522437,
           "normalized": {
-            "x": 0.9080624,
-            "y": 0.418834984,
+            "x": 0.98264,
+            "y": 0.185522452,
             "magnitude": 1.0,
-            "sqrMagnitude": 1.00000012
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
+        },
+        "magnitude": 636.0417,
+        "sqrMagnitude": 404549.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "5c428a78-0546-443d-9dc6-389978a78528",
+      "DialogueName": "Dialogue name",
+      "Text": "Сейчас все сделаем, бабуся!",
+      "Type": 0,
+      "Position": {
+        "x": 1387.0,
+        "y": 120.0,
+        "normalized": {
+          "x": 0.9962782,
+          "y": 0.08619566,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 1392.1814,
+        "sqrMagnitude": 1938169.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
+      "DialogueName": "Grany",
+      "Text": "Ах, совсем забыла… где какой цветок рос.\nБез порядка они не цветут",
+      "Type": 0,
+      "Position": {
+        "x": 225.0,
+        "y": 118.0,
+        "normalized": {
+          "x": 0.885600269,
+          "y": 0.464448154,
+          "normalized": {
+            "x": 0.8856003,
+            "y": 0.464448184,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
           },
           "magnitude": 0.99999994,
           "sqrMagnitude": 0.99999994
         },
-        "magnitude": 284.12146,
-        "sqrMagnitude": 80725.0
+        "magnitude": 254.064957,
+        "sqrMagnitude": 64549.0
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_Babushka_body/fint1_0_1",
-        "a_Babushka_emotion/speak_1_1"
+        "a_Grany_body/fint1_0_1",
+        "a_Grany_emotion/speak_1_1"
       ],
       "OnEndEvents": [
-        "a_Babushka_body/wait_0_1"
+        "a_Grany_body/wait_0_1",
+        "a_Grany_emotion/silence_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -37,5 +125,24 @@
       ]
     }
   ],
-  "Edges": []
+  "Edges": [
+    {
+      "InputNodeId": "14a7a14a-e3b2-4b21-944a-0db970e0056f",
+      "OutputNodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "238522be-29a7-4972-b6f1-6fafe75cd595",
+      "OutputNodeId": "14a7a14a-e3b2-4b21-944a-0db970e0056f",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "5c428a78-0546-443d-9dc6-389978a78528",
+      "OutputNodeId": "238522be-29a7-4972-b6f1-6fafe75cd595",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    }
+  ]
 }
