@@ -2,7 +2,7 @@
   "Nodes": [
     {
       "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
-      "DialogueName": "Grany",
+      "DialogueName": "Granny",
       "Text": "Немного выше… или ниже?\nСама запуталась.",
       "Type": 0,
       "Position": {
@@ -25,13 +25,13 @@
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_Grany_body/fint1_0_1",
-        "a_Grany_emotion/speak_1_1",
+        "a_Granny_body/fint1_0_1",
+        "a_Granny_emotion/speak_1_1",
         "a_Player_eyes/upper_2_1"
       ],
       "OnEndEvents": [
-        "a_Grany_body/wait_0_1",
-        "a_Grany_emotion/silence_1_1",
+        "a_Granny_body/wait_0_1",
+        "a_Granny_emotion/silence_1_1",
         "a_Player_body/idle_2_1"
       ],
       "ChoiceEvents": [],
