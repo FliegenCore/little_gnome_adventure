@@ -1,4 +1,3 @@
-using System;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.Input;
@@ -11,7 +10,8 @@ using _Game.Scripts.PlayerSystems.PlayerStates;
 using Core.Common;
 using Game.PlayerSystem;
 using UnityEngine;
-using Object = UnityEngine.Object;
+using VContainer;
+using VContainer.Unity;
 
 namespace _Game.Scripts.PlayerSystems
 {
@@ -24,9 +24,9 @@ namespace _Game.Scripts.PlayerSystems
         private readonly InspectController _inspectController;
         private readonly InventoryFactory _inventoryFactory;
         private readonly IDialogueManager _dialogueManager;
+        private readonly IObjectResolver _resolver; 
 
         private Player _player;
-
         private Inventory _inventory;
         
         public PlayerFactory(
@@ -36,7 +36,8 @@ namespace _Game.Scripts.PlayerSystems
             InputSystem_Actions inputSystemActions,
             InspectController inspectController,
             InventoryFactory inventoryFactory,
-            IDialogueManager dialogueManager)
+            IDialogueManager dialogueManager,
+            IObjectResolver resolver) 
         {
             _dialogueManager    = dialogueManager;
             _inventoryFactory   = inventoryFactory;
@@ -45,6 +46,7 @@ namespace _Game.Scripts.PlayerSystems
             _eventBus           = eventBus;
             _moveDirectionInput = moveDirectionInput;
             _playerConfig       = playerConfig;
+            _resolver           = resolver; 
         }
         
         public Player CreatePlayer()
@@ -59,7 +61,7 @@ namespace _Game.Scripts.PlayerSystems
             
             PlayerModel playerModel = new PlayerModel(transformation, _moveDirectionInput, animationPlayerModel, _playerConfig.MoveSpeed);
             
-            PlayerView playerView = Object.Instantiate(_playerConfig.PlayerViewPrefab, _playerConfig.StartSpawnPosition, Quaternion.identity);
+            PlayerView playerView = _resolver.Instantiate(_playerConfig.PlayerViewPrefab, _playerConfig.StartSpawnPosition, Quaternion.identity);
             playerView.Transformable.Construct(transformation);
             
             playerView.AnimationPlayer.Construct(playerModel.AnimationPlayerModel);
