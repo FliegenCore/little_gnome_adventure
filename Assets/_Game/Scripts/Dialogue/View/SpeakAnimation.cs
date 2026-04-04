@@ -28,6 +28,12 @@ namespace _Game.Scripts.DialogueSystem.View
                 return;
 
             string nme = parameters[0];
+
+            if (nme != _name)
+            {
+                return;
+            }
+            
             string animationName = parameters[1];
             
             if (!_animationControl.HasAnimation(animationName))
@@ -42,10 +48,7 @@ namespace _Game.Scripts.DialogueSystem.View
             
             bool isLoop = isLoopInt == 1;
             
-            if (nme != _name)
-            {
-                return;
-            }
+            
             
             _animationControl.SetAnimation(layer, animationName, isLoop);
         }

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InventorySystem.Factories;
 using _Game.Scripts.PlayerSystems;
@@ -46,6 +48,8 @@ namespace _Game.Scripts.InventorySystem
         private void Initialize()
         {
             _eventBus.Subscribe<SendChooseInventoryIndexSignal, int>(this, SelectInventoryCell);
+            _eventBus.Subscribe<DialogueEventSignal, string>(this, DialogueInventoryEvent);
+            _eventBus.Subscribe<AddItemSignal, ItemId>(this, AddItem);
         }
         
         public void EnableOpenCloseInput()
@@ -57,7 +61,7 @@ namespace _Game.Scripts.InventorySystem
         {
             _inputSystemActions.Player.InventoryOpen.performed -= SetOpen;
         }
-
+        
         public void AddItem(ItemId id)
         {
             Debug.Log($"Add item {id}");
@@ -71,6 +75,17 @@ namespace _Game.Scripts.InventorySystem
         {
             _inventoryModel.ItemModels.Remove((InventoryItemModel)inventoryItem.AbstractInteractableModel);
             _items.Remove(inventoryItem);
+        }
+
+        public void RemoveItemById(ItemId id)
+        {
+            foreach (var item in _items)
+            {
+                if (item.AbstractInteractableModel.Id == id.ToString())
+                {
+                    RemoveItem(item);
+                }
+            }
         }
         
         private void SetOpen(InputAction.CallbackContext _)
@@ -113,7 +128,6 @@ namespace _Game.Scripts.InventorySystem
             if (_items.Count > index)
             {
                 _currentSelectedInventoryItem = _items[index];
-                Debug.Log(_currentSelectedInventoryItem.AbstractInteractableModel.Id);
             }
         }
 
@@ -137,6 +151,8 @@ namespace _Game.Scripts.InventorySystem
             {
                 Disable();
                 itemNeeder.InteractWithItem(id);
+                
+                RemoveItem(_currentSelectedInventoryItem);
             }
         }
 
@@ -152,11 +168,50 @@ namespace _Game.Scripts.InventorySystem
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
         }
 
+        private void DialogueInventoryEvent(string message)
+        {
+            if (!message.Contains("inventory_"))
+            {
+                return;
+            }
+            
+            string[] paraments = GetParams(message);
+            
+            if (paraments[0] == "add")
+            {
+                ItemId id = Enum.Parse<ItemId>(paraments[1]);
+                AddItem(id);
+            }
+            else if (paraments[0] == "remove")
+            {
+                ItemId id = Enum.Parse<ItemId>(paraments[1]);
+                RemoveItemById(id);
+            }
+        }
+        
+        private string[] GetParams(string message)
+        {
+            if (message.Contains("inventory_"))
+            {
+                message = message.Replace("inventory_", "");
+                
+                string[] parameters =  message.Split('_');
+                
+                return parameters;
+            }
+            
+            return null;
+        }
+
         public void Dispose()
         {
             _inputSystemActions?.Dispose();
             _currentSelectedInventoryItem?.Dispose();
             _eventBus.Unsubscribe<SendChooseInventoryIndexSignal>(this);
         }
+    }
+
+    internal class AddItemSignal
+    {
     }
 }

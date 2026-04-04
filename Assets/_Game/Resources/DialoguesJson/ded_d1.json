@@ -240,18 +240,6 @@
   ],
   "Edges": [
     {
-      "InputNodeId": "0cd02176-2819-4058-92d7-96eed7719e02",
-      "OutputNodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
-      "InputPortIndex": 0,
-      "OutputPortIndex": 0
-    },
-    {
-      "InputNodeId": "21d3e28e-6bc1-489e-b450-ef29c6e6b012",
-      "OutputNodeId": "0cd02176-2819-4058-92d7-96eed7719e02",
-      "InputPortIndex": 0,
-      "OutputPortIndex": 0
-    },
-    {
       "InputNodeId": "86207981-f5b7-47a1-b589-4c16b1a2e22d",
       "OutputNodeId": "d41a7203-8dd5-4f75-92c6-0d9891bb36bd",
       "InputPortIndex": 0,

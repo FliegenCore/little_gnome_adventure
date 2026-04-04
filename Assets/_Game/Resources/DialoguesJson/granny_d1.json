@@ -50,48 +50,11 @@
       },
       "IsStartNode": false,
       "OnStartEvents": [
-        "a_Player_emotion/speak_1_1",
-        "a_Player_eyes/upper_2_1"
+        "a_Player_emotion/speak_1_1"
       ],
       "OnEndEvents": [
         "a_Player_emotion/idle_1_1",
         "a_Player_eyes/up_2_1"
-      ],
-      "ChoiceEvents": [],
-      "Choices": [
-        "Next dialogue"
-      ]
-    },
-    {
-      "NodeId": "5c428a78-0546-443d-9dc6-389978a78528",
-      "DialogueName": "Player",
-      "Text": "Сейчас все сделаем, бабуся!",
-      "Type": 0,
-      "Position": {
-        "x": 1422.0,
-        "y": 121.0,
-        "normalized": {
-          "x": 0.9963992,
-          "y": 0.08478503,
-          "normalized": {
-            "x": 0.9963993,
-            "y": 0.08478504,
-            "magnitude": 1.0,
-            "sqrMagnitude": 1.0
-          },
-          "magnitude": 0.99999994,
-          "sqrMagnitude": 0.99999994
-        },
-        "magnitude": 1427.13879,
-        "sqrMagnitude": 2036725.0
-      },
-      "IsStartNode": false,
-      "OnStartEvents": [
-        "a_Player_emotion/speak_1_1",
-        "a_Player_body/idle_fint/2_0_1"
-      ],
-      "OnEndEvents": [
-        "a_Player_emotion/idle_2_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -131,6 +94,41 @@
       "OnEndEvents": [
         "a_Granny_body/wait_0_1",
         "a_Granny_emotion/silence_1_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "5c428a78-0546-443d-9dc6-389978a78528",
+      "DialogueName": "Player",
+      "Text": "Сейчас все сделаем, бабуся!",
+      "Type": 0,
+      "Position": {
+        "x": 1422.0,
+        "y": 121.0,
+        "normalized": {
+          "x": 0.9963992,
+          "y": 0.08478503,
+          "normalized": {
+            "x": 0.9963993,
+            "y": 0.08478504,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 1427.13879,
+        "sqrMagnitude": 2036725.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_Player_emotion/speak_1_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/idle_2_1"
       ],
       "ChoiceEvents": [],
       "Choices": [

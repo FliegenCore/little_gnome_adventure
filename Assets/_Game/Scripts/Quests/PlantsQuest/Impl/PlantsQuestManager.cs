@@ -21,6 +21,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
             _forestLocationsRootView = locationsRootView;
             _eventBus                = eventBus;
             _plants                  = new();
+            
         }
 
         public void Initialize()
@@ -81,6 +82,8 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
                 model.CanInteract.Value = false;
 
                 model.Height.Value = 5;
+                
+                _eventBus.TriggerEvenet<OnFlowersHeightRightSignal>();
             }
         }
 

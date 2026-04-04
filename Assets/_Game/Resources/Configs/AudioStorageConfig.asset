@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a320b83f3fa483c84b8ae0594d0a14c, type: 3}
   m_Name: AudioStorageConfig
   m_EditorClassIdentifier: 
+  AudioMixerGroup: {fileID: -5245840292810213244, guid: ba730911a49909640b5a91c99fdcb4bb, type: 2}
+  _oneShotAudioSourcePrefab: {fileID: 4739920266176404655, guid: df46f0dc6bdbb474e98e84d13d302d6e, type: 3}
   _audioClips:
-    keys: []
-    values:
-    - {fileID: 8300000, guid: 38420da5922f9204a91657b373f0df77, type: 3}
-    - {fileID: 8300000, guid: 99cc403147d3fcd438d2d509b6e4763f, type: 3}
+  - {fileID: 8300000, guid: 38420da5922f9204a91657b373f0df77, type: 3}
+  - {fileID: 8300000, guid: 99cc403147d3fcd438d2d509b6e4763f, type: 3}

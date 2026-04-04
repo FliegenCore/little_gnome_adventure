@@ -68,6 +68,16 @@ namespace Core.Common
                 m_Events[type].Add(listener, action);
             }
         }
+        
+        public void Subscribe<T, U, Q, E,Y>(object listener, Action<U, Q, E,Y> action) where T : class
+        {
+            if (CheckSub<T>(listener))
+            {
+                var type = typeof(T);
+
+                m_Events[type].Add(listener, action);
+            }
+        }
 
         public void Unsubscribe<T>(object listener) where T : class
         {
@@ -161,6 +171,28 @@ namespace Core.Common
                         }
 
                         action.Invoke(arg, arg2, arg3);
+                    }
+                }
+            }
+        }
+        
+        public void TriggerEvenet<T, U, Q, E, Y>(U arg, Q arg2, E arg3, Y arg4)
+        {
+            var type = typeof(T);
+
+            if (m_Events.ContainsKey(type))
+            {
+                if (m_Events.TryGetValue(type, out var events))
+                {
+                    foreach (var myEvent in events)
+                    {
+                        Action<U, Q, E, Y> action = myEvent.Value as Action<U, Q, E, Y>;
+                        if (action == null)
+                        {
+                            Debug.LogError($"u trigger {type}, u not add action");
+                        }
+
+                        action.Invoke(arg, arg2, arg3, arg4);
                     }
                 }
             }

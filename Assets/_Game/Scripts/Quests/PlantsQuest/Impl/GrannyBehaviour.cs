@@ -1,5 +1,7 @@
 using _Game.Scripts.DialogueSystem;
+using _Game.Scripts.InventorySystem;
 using Core.Common;
+using UnityEditor;
 
 namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
 {
@@ -10,6 +12,8 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
         
         public GrannyBehaviour(EventBus eventBus) : base(eventBus)
         {
+            _eventBus.Subscribe<DialogueEventSignal, string>(this, OnItemGive);
+            _eventBus.Subscribe<OnFlowersHeightRightSignal>(this,  OnFlowersPlanted);
         }
 
         public override bool CanInteract()
@@ -46,7 +50,8 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
         {
             if (message == "granny_complete")
             {
-                
+                _eventBus.TriggerEvenet<AddItemSignal, ItemId>(ItemId.RedTriangle);
+                _itemGived = true;
             }
         }
     }

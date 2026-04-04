@@ -6,6 +6,7 @@ namespace _Game.Scripts.Sound
     {
         void FadeBackgroundSoundWithNext(string audioClip);
         void PlayBackground(string audioClipName);
-        void PlayOnPosition(Vector2 position, float radius, string audioClip, bool isLoop);
+        void PlayOnPosition(Transform parent, float radius, string audioClip, bool isLoop);
+        bool HasSound(string audioClipName);
     }
 }

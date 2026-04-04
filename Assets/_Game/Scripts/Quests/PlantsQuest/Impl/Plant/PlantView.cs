@@ -24,7 +24,7 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
             _needCallback = needCallback;
             _currentHeight = currentHeight;
             _canInteract = canInteract;
-            _currentHeight.Subscribe(PlayAnimation);
+            _currentHeight.Subscribe(PlayAnimation).AddTo(gameObject);
         }
 
         private void PlayAnimation(int height)
@@ -32,16 +32,31 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
             string animName = "";
             if (height == 5)
             {
-                animName = $"{HEIGHT_ANIMATION_NAME}{height}flower";
+                animName = "rise_flower";
             }
             else
                 animName = $"{HEIGHT_ANIMATION_NAME}{height}";
-            
-            _animationControl.SetAnimation(0, animName, callback: () =>
+
+
+            if (animName == "rise_flower")
             {
-                if(_needCallback.Value)
-                    _canInteract.Value = true;
-            });
+                _animationControl.SetAnimation(0, animName, isLoop: false, callback: () =>
+                {
+                    if(_needCallback.Value)
+                        _canInteract.Value = true;
+                    
+                    _animationControl.SetAnimation(0, "pose5flower");
+                });
+                
+            }
+            else
+            {
+                _animationControl.SetAnimation(0, animName, callback: () =>
+                {
+                    if(_needCallback.Value)
+                        _canInteract.Value = true;
+                });
+            }
         }
     }
 }
