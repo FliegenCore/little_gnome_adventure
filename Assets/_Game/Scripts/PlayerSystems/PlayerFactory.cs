@@ -76,7 +76,15 @@ namespace _Game.Scripts.PlayerSystems
             
             Fsm playerStateMachine = CreatePlayerStateMachine(playerModel);
 
-            Player player = new Player(playerModel, playerView, motionFsm, playerStateMachine, interactionController, _inventory, _eventBus);
+            Player player = new Player(
+                playerModel,
+                playerView, 
+                motionFsm, 
+                playerStateMachine,
+                interactionController, 
+                _inventory,
+                _eventBus);
+            
             _player = player;
             
             return player;
@@ -94,6 +102,7 @@ namespace _Game.Scripts.PlayerSystems
             playerFsm.AddState(new PlayerBaseState(playerFsm, model, _inventory, _eventBus));
             playerFsm.AddState(new PlayerInventoryState(playerFsm, model, _inventory));
             playerFsm.AddState(new PlayerInspectState(playerFsm, model, _inspectController));
+            playerFsm.AddState(new PlayerDisabledMotionState(playerFsm, model));
             playerFsm.AddState(new PlayerDialogueState(playerFsm, model, _dialogueManager));
      
             playerFsm.SetState<PlayerBaseState>();

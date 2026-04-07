@@ -42,6 +42,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
         private void OnFlowersPlanted()
         {
             _questIsDone = true;
+            _eventBus.TriggerEvenet<DialogueEventSignal, string>("a_Granny_body/end_0_1");
             _eventBus.TriggerEvenet<DialogueEventSignal, string>("a_Granny_head/flower_2_0");
         }
 

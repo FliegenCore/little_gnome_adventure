@@ -1,3 +1,5 @@
+using System;
+using DG.Tweening;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -10,10 +12,24 @@ namespace _Game.Scripts.CameraSystem
         
         private Transform _currentFollowTarget;
         
+        
         private CameraController(CinemachineCamera cinemachineCamera)
         {
             CurrentCinemachineCamera = cinemachineCamera;   
             _cinemachineConfiner2D = CurrentCinemachineCamera.GetComponent<CinemachineConfiner2D>();
+        }
+
+        
+        public void ZoomTo(float newSize, float duration, Action callback)
+        {
+            Tween tween = DOTween.To(
+                () => CurrentCinemachineCamera.Lens.OrthographicSize,
+                x => CurrentCinemachineCamera.Lens.OrthographicSize = x,
+                newSize,
+                duration
+            );
+
+            tween.OnComplete(() => callback?.Invoke());
         }
 
         public void SetFollowTarget(Transform followTarget)

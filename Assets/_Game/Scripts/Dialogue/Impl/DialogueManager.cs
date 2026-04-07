@@ -7,7 +7,6 @@ using _Game.Scripts.PlayerSystems.PlayerStates;
 using Core.Common;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using VContainer.Unity;
 
 namespace _Game.Scripts.DialogueSystem
 {
@@ -70,8 +69,8 @@ namespace _Game.Scripts.DialogueSystem
                 return;
 
             _dialogueIsStarted = true;
-            _allDialogues    = _dialogueProvider.GetDialogue(dialogueName);
-            _currentDialogue = _dialogueProvider.GetStartDialogueData(_allDialogues);
+            _allDialogues      = _dialogueProvider.GetDialogue(dialogueName);
+            _currentDialogue   = _dialogueProvider.GetStartDialogueData(_allDialogues);
 
             if (_currentDialogue != null)
             {

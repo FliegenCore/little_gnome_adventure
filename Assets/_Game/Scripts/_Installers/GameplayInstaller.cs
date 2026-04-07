@@ -1,5 +1,6 @@
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.ChaptersSystem;
+using _Game.Scripts.CutsceneSystem.Impl;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.GameInitializeSystems;
 using _Game.Scripts.Hacks;
@@ -52,7 +53,6 @@ namespace _Game.Scripts._Installers
             builder.RegisterInstance(_cinemachineCamera).AsSelf().AsImplementedInterfaces();
             builder.RegisterInstance(_inventoryView).AsSelf().AsImplementedInterfaces();
             builder.RegisterInstance(_itemConfigs).AsSelf().AsImplementedInterfaces();
-            
             builder.Register<OutlineHintController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CameraController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<PlayerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
@@ -73,6 +73,7 @@ namespace _Game.Scripts._Installers
             builder.Register<InventoryProxy>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DialogueManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CharacterFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<CutsceneManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
 
             RegisterCurrentChapterInitializer(builder);
         }

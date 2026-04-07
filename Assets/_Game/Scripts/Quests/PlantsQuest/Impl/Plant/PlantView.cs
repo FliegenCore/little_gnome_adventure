@@ -11,20 +11,26 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
         private const string HEIGHT_ANIMATION_NAME = "pose";
         
         [SerializeField] private AnimationControl _animationControl;
+        [SerializeField] private Collider2D _collider2D;
 
         private ReactiveProperty<int> _currentHeight;
         private ReactiveProperty<bool> _canInteract;
         private ReactiveProperty<bool> _needCallback;
+        private ReactiveProperty<bool> _enableCollider;
         
         public void Construct(
             ReactiveProperty<int> currentHeight,
             ReactiveProperty<bool> canInteract, 
-            ReactiveProperty<bool> needCallback)
+            ReactiveProperty<bool> needCallback,
+            ReactiveProperty<bool> enableCollider)
         {
             _needCallback = needCallback;
             _currentHeight = currentHeight;
             _canInteract = canInteract;
+            _enableCollider = enableCollider;
+            
             _currentHeight.Subscribe(PlayAnimation).AddTo(gameObject);
+            enableCollider.Subscribe(SetEnableCollider).AddTo(gameObject);
         }
 
         private void PlayAnimation(int height)
@@ -57,6 +63,11 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
                         _canInteract.Value = true;
                 });
             }
+        }
+
+        private void SetEnableCollider(bool enabled)
+        {
+            _collider2D.enabled = enabled;
         }
     }
 }

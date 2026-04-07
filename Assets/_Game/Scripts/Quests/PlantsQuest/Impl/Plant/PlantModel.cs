@@ -9,6 +9,7 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
         public ReactiveProperty<int> Height;
         public ReactiveProperty<bool> CanInteract;
         public ReactiveProperty<bool> NeedCallback;
+        public ReactiveProperty<bool> ColliderIsEnabled;
         public readonly int NeedHeight;
         public readonly int MaxHeight;
         
@@ -19,6 +20,7 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
             int needHeight) : 
             base(contactTriggerProvider, position, id)
         {
+            ColliderIsEnabled =  new ReactiveProperty<bool>(true);
             NeedCallback = new(true);
             CanInteract = new(true);
             Height = new ReactiveProperty<int>(1);
