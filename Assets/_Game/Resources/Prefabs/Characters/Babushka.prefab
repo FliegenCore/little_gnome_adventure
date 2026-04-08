@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 1487700224388224627}
   - component: {fileID: 4901257141750338011}
   - component: {fileID: 8528916797764983769}
+  - component: {fileID: -982064003415233534}
   m_Layer: 0
   m_Name: Babushka
   m_TagString: Untagged
@@ -236,7 +237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationControl: {fileID: 6072830287946265314}
-  _name: 
 --- !u!114 &6072830287946265314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +351,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.517291, y: 6.15804}
   m_EdgeRadius: 0
+--- !u!114 &-982064003415233534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4179789268612284530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eb4e055a754b8988318ee2f85dc5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &919197158340310967
 PrefabInstance:
   m_ObjectHideFlags: 0

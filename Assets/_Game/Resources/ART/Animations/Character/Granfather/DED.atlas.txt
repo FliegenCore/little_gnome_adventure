@@ -1,167 +1,167 @@
 
 DED.png
-size: 1672,586
+size: 1682,586
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 ER
   rotate: false
-  xy: 1267, 302
+  xy: 1213, 57
   size: 52, 43
-  orig: 54, 46
-  offset: 1, 1
+  orig: 52, 44
+  offset: 0, 0
   index: -1
 EYL
   rotate: true
-  xy: 1247, 2
+  xy: 1213, 2
   size: 53, 35
-  orig: 55, 37
-  offset: 1, 1
+  orig: 53, 35
+  offset: 0, 0
   index: -1
 Ear_L
   rotate: false
-  xy: 1531, 18
+  xy: 1522, 20
   size: 40, 40
-  orig: 42, 42
-  offset: 1, 1
+  orig: 40, 40
+  offset: 0, 0
   index: -1
 Ear_R
   rotate: true
-  xy: 1573, 20
+  xy: 1564, 22
   size: 38, 41
-  orig: 40, 43
-  offset: 1, 1
+  orig: 38, 41
+  offset: 0, 0
   index: -1
 L arm
   rotate: true
-  xy: 1513, 180
-  size: 165, 137
-  orig: 165, 137
+  xy: 1511, 182
+  size: 163, 135
+  orig: 163, 135
   offset: 0, 0
   index: -1
 PALKA
   rotate: false
   xy: 1595, 418
   size: 75, 166
-  orig: 77, 168
-  offset: 1, 1
+  orig: 75, 166
+  offset: 0, 0
   index: -1
 R arm
   rotate: false
-  xy: 1321, 15
-  size: 165, 137
-  orig: 165, 137
+  xy: 1319, 17
+  size: 163, 135
+  orig: 163, 135
   offset: 0, 0
   index: -1
 USI
   rotate: true
-  xy: 1213, 100
-  size: 197, 106
-  orig: 197, 106
+  xy: 1213, 102
+  size: 195, 104
+  orig: 195, 104
   offset: 0, 0
   index: -1
 bear
   rotate: true
-  xy: 1513, 60
+  xy: 1511, 62
   size: 118, 128
-  orig: 120, 131
-  offset: 1, 2
+  orig: 118, 129
+  offset: 0, 1
   index: -1
 body
   rotate: false
-  xy: 1321, 154
+  xy: 1319, 154
   size: 190, 191
-  orig: 192, 193
-  offset: 1, 1
+  orig: 190, 191
+  offset: 0, 0
   index: -1
 eye_L
   rotate: false
-  xy: 1488, 18
+  xy: 1267, 60
   size: 41, 40
-  orig: 43, 42
-  offset: 1, 1
+  orig: 41, 40
+  offset: 0, 0
   index: -1
 eye_L_POINT
   rotate: false
-  xy: 1506, 2
+  xy: 1667, 402
   size: 13, 14
-  orig: 15, 16
-  offset: 1, 1
+  orig: 13, 14
+  offset: 0, 0
   index: -1
 eye_R
   rotate: false
-  xy: 1273, 57
+  xy: 1267, 304
   size: 42, 41
-  orig: 44, 43
-  offset: 1, 1
+  orig: 42, 41
+  offset: 0, 0
   index: -1
 eye_RPOINT
-  rotate: true
-  xy: 1488, 2
+  rotate: false
+  xy: 1522, 2
   size: 14, 16
-  orig: 16, 18
-  offset: 1, 1
+  orig: 14, 16
+  offset: 0, 0
   index: -1
 eyebrow_L
   rotate: true
-  xy: 1213, 2
+  xy: 1648, 316
   size: 58, 32
-  orig: 60, 34
-  offset: 1, 1
+  orig: 58, 32
+  offset: 0, 0
   index: -1
 eyebrow_R
-  rotate: false
-  xy: 1213, 62
+  rotate: true
+  xy: 1484, 2
   size: 58, 36
-  orig: 60, 38
-  offset: 1, 1
+  orig: 58, 36
+  offset: 0, 0
   index: -1
 head
   rotate: true
   xy: 1267, 347
   size: 237, 326
-  orig: 239, 328
-  offset: 1, 1
+  orig: 237, 326
+  offset: 0, 0
   index: -1
 main
   rotate: false
   xy: 2, 5
   size: 739, 579
-  orig: 741, 581
-  offset: 1, 1
+  orig: 739, 579
+  offset: 0, 0
   index: -1
 nose
   rotate: true
   xy: 1595, 376
   size: 40, 70
-  orig: 42, 72
-  offset: 1, 1
+  orig: 40, 70
+  offset: 0, 0
   index: -1
 odeyalo
   rotate: false
   xy: 743, 299
   size: 522, 285
-  orig: 524, 287
-  offset: 1, 1
+  orig: 522, 285
+  offset: 0, 0
   index: -1
 podushka
   rotate: false
   xy: 743, 24
   size: 301, 273
-  orig: 303, 275
-  offset: 1, 1
+  orig: 301, 273
+  offset: 0, 0
   index: -1
 soplya
   rotate: false
-  xy: 1488, 82
+  xy: 1484, 82
   size: 23, 70
-  orig: 25, 72
-  offset: 1, 1
+  orig: 23, 70
+  offset: 0, 0
   index: -1
 stupenki
   rotate: false
   xy: 1046, 17
   size: 165, 280
-  orig: 167, 282
-  offset: 1, 1
+  orig: 165, 280
+  offset: 0, 0
   index: -1

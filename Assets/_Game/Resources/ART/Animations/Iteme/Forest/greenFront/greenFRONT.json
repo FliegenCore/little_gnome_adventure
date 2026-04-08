@@ -1,0 +1,111 @@
+{
+"skeleton": {
+	"hash": "0Nk9RIwzO3WK2Nquo0S2nphliEc",
+	"spine": "3.8.0",
+	"x": -109,
+	"y": -13.98,
+	"width": 207,
+	"height": 324,
+	"images": "D:/арт Игра про маленького ГНОМА/локации/forest",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "greenFRONT_1", "bone": "root", "attachment": "greenFRONT_1" },
+	{ "name": "greenFRONT_2", "bone": "root", "attachment": "greenFRONT_2" },
+	{ "name": "greenFRONT_3", "bone": "root", "attachment": "greenFRONT_3" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"greenFRONT_1": {
+				"greenFRONT_1": { "x": 3.06, "y": 150.53, "width": 139, "height": 310 }
+			},
+			"greenFRONT_2": {
+				"greenFRONT_2": { "x": -12.41, "y": 90.41, "width": 99, "height": 180 }
+			},
+			"greenFRONT_3": {
+				"greenFRONT_3": { "x": -5.5, "y": 148.02, "width": 207, "height": 324 }
+			}
+		}
+	}
+],
+"animations": {
+	"green1": {
+		"slots": {
+			"greenFRONT_3": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"greenFRONT_2": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"shear": [
+					{},
+					{ "time": 1.6667, "y": -1.73 },
+					{ "time": 4 }
+				]
+			}
+		}
+	},
+	"green2": {
+		"slots": {
+			"greenFRONT_3": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"greenFRONT_1": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"shear": [
+					{},
+					{ "time": 1.8667, "y": -2.83 },
+					{ "time": 4 },
+					{ "time": 5.5667, "y": -1.61 },
+					{ "time": 6, "y": 0.08 },
+					{ "time": 6.9667, "y": -2.33 },
+					{ "time": 8 }
+				]
+			}
+		}
+	},
+	"green3": {
+		"slots": {
+			"greenFRONT_1": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"greenFRONT_2": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"shear": [
+					{},
+					{ "time": 2.6, "y": -1.57 },
+					{ "time": 5 }
+				]
+			}
+		}
+	}
+}
+}

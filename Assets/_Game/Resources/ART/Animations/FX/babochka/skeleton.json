@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "1tqdl5ix2vEi6poUiU8MIdpYyTA",
+	"hash": "P7yCcyyL+ZtR1niRBuPcBuqEMyM",
 	"spine": "3.8.0",
 	"x": 1558.38,
 	"y": -139.3,
@@ -67,6 +67,9 @@
 		}
 	}
 ],
+"events": {
+	"babochka": { "audio": "babochka.mp3" }
+},
 "animations": {
 	"animation": {
 		"bones": {
@@ -135,7 +138,11 @@
 					{ "time": 3.3333, "position": 1 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "name": "babochka" },
+			{ "time": 1.6667, "name": "babochka" }
+		]
 	}
 }
 }

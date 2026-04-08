@@ -88,7 +88,6 @@
       "OnStartEvents": [
         "a_Granny_body/fint1_0_1",
         "a_Granny_emotion/speak_1_1",
-        "a_Player_emotion/speak_1_1",
         "a_Player_eyes/up_2_1"
       ],
       "OnEndEvents": [
@@ -128,7 +127,8 @@
         "a_Player_emotion/speak_1_1"
       ],
       "OnEndEvents": [
-        "a_Player_emotion/idle_2_1"
+        "a_Player_emotion/idle_2_1",
+        "a_Player_emotion/idle_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [

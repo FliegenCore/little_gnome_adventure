@@ -1,0 +1,41 @@
+
+greenFRONT.png
+size: 1481,498
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bushFRONT_1
+  rotate: false
+  xy: 2, 232
+  size: 1173, 264
+  orig: 1178, 266
+  offset: 2, 0
+  index: -1
+bushFRONT_2
+  rotate: false
+  xy: 2, 2
+  size: 1147, 228
+  orig: 1150, 229
+  offset: 1, 0
+  index: -1
+greenFRONT_1
+  rotate: true
+  xy: 1151, 36
+  size: 139, 308
+  orig: 139, 310
+  offset: 0, 1
+  index: -1
+greenFRONT_2
+  rotate: false
+  xy: 1382, 316
+  size: 97, 180
+  orig: 99, 180
+  offset: 1, 0
+  index: -1
+greenFRONT_3
+  rotate: false
+  xy: 1177, 177
+  size: 203, 319
+  orig: 207, 324
+  offset: 2, 2
+  index: -1

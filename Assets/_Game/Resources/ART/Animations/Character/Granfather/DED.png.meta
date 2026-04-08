@@ -165,45 +165,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -256,9 +217,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1212
-        y: 525
-        width: 34
-        height: 60
+        y: 530
+        width: 37
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,10 +238,10 @@ TextureImporter:
       name: DED_3
       rect:
         serializedVersion: 2
-        x: 1246
-        y: 530
-        width: 37
-        height: 55
+        x: 1318
+        y: 433
+        width: 165
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +260,10 @@ TextureImporter:
       name: DED_4
       rect:
         serializedVersion: 2
-        x: 1321
-        y: 434
-        width: 165
-        height: 137
+        x: 1483
+        y: 525
+        width: 38
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,10 +282,10 @@ TextureImporter:
       name: DED_5
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 569
-        width: 18
-        height: 16
+        x: 1521
+        y: 567
+        width: 16
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,9 +304,9 @@ TextureImporter:
       name: DED_6
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 527
-        width: 43
+        x: 1521
+        y: 525
+        width: 42
         height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -365,10 +326,10 @@ TextureImporter:
       name: DED_7
       rect:
         serializedVersion: 2
-        x: 1505
-        y: 569
-        width: 15
-        height: 16
+        x: 742
+        y: 288
+        width: 303
+        height: 275
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,10 +348,10 @@ TextureImporter:
       name: DED_8
       rect:
         serializedVersion: 2
-        x: 1530
-        y: 527
-        width: 42
-        height: 42
+        x: 1212
+        y: 485
+        width: 54
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,10 +370,10 @@ TextureImporter:
       name: DED_9
       rect:
         serializedVersion: 2
-        x: 742
-        y: 288
-        width: 303
-        height: 275
+        x: 1266
+        y: 485
+        width: 43
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,10 +392,10 @@ TextureImporter:
       name: DED_10
       rect:
         serializedVersion: 2
-        x: 1272
-        y: 487
-        width: 44
-        height: 43
+        x: 1510
+        y: 405
+        width: 130
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,10 +414,10 @@ TextureImporter:
       name: DED_11
       rect:
         serializedVersion: 2
-        x: 1512
-        y: 407
-        width: 130
-        height: 120
+        x: 1563
+        y: 525
+        width: 43
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +436,10 @@ TextureImporter:
       name: DED_12
       rect:
         serializedVersion: 2
-        x: 1572
-        y: 527
-        width: 43
-        height: 40
+        x: 1212
+        y: 288
+        width: 106
+        height: 197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,10 +458,10 @@ TextureImporter:
       name: DED_13
       rect:
         serializedVersion: 2
-        x: 1212
-        y: 487
-        width: 60
-        height: 38
+        x: 1318
+        y: 240
+        width: 192
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,7 +480,7 @@ TextureImporter:
       name: DED_14
       rect:
         serializedVersion: 2
-        x: 1487
+        x: 1483
         y: 433
         width: 25
         height: 72
@@ -541,10 +502,10 @@ TextureImporter:
       name: DED_15
       rect:
         serializedVersion: 2
-        x: 1213
-        y: 289
-        width: 106
-        height: 197
+        x: 742
+        y: 1
+        width: 524
+        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -563,10 +524,10 @@ TextureImporter:
       name: DED_16
       rect:
         serializedVersion: 2
-        x: 1320
+        x: 1266
         y: 240
-        width: 192
-        height: 193
+        width: 44
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -585,10 +546,10 @@ TextureImporter:
       name: DED_17
       rect:
         serializedVersion: 2
-        x: 1513
-        y: 241
-        width: 137
-        height: 165
+        x: 1266
+        y: 1
+        width: 328
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -607,10 +568,10 @@ TextureImporter:
       name: DED_18
       rect:
         serializedVersion: 2
-        x: 742
-        y: 1
-        width: 524
-        height: 287
+        x: 1510
+        y: 240
+        width: 137
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -629,10 +590,10 @@ TextureImporter:
       name: DED_19
       rect:
         serializedVersion: 2
-        x: 1266
-        y: 240
-        width: 54
-        height: 45
+        x: 1647
+        y: 211
+        width: 34
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +612,10 @@ TextureImporter:
       name: DED_20
       rect:
         serializedVersion: 2
-        x: 1266
-        y: 1
-        width: 328
-        height: 239
+        x: 1594
+        y: 169
+        width: 72
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -673,10 +634,10 @@ TextureImporter:
       name: DED_21
       rect:
         serializedVersion: 2
-        x: 1594
-        y: 169
+        x: 1599
+        y: 1
         width: 72
-        height: 42
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -695,10 +656,10 @@ TextureImporter:
       name: DED_22
       rect:
         serializedVersion: 2
-        x: 1599
-        y: 1
-        width: 72
-        height: 168
+        x: 1666
+        y: 169
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

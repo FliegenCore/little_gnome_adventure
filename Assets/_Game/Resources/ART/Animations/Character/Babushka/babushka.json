@@ -1,13 +1,13 @@
 {
 "skeleton": {
-	"hash": "15JmvjBxAhOSFo3eS5EXl0vMBBE",
+	"hash": "ffd8S1yhJyN85DtWndvQJje4JCw",
 	"spine": "3.8.0",
 	"x": -211.34,
 	"y": -9.26,
 	"width": 439,
 	"height": 767.63,
 	"images": "./png/",
-	"audio": "D:/арт Игра про маленького ГНОМА/персонажи для анимации/бабуля"
+	"audio": "./sound/"
 },
 "bones": [
 	{ "name": "root" },
@@ -229,12 +229,19 @@
 		}
 	}
 ],
+"events": {
+	"babu1": { "audio": "babu1.mp3" },
+	"babu2": { "audio": "babu2.mp3" },
+	"babu3": { "audio": "babu3.mp3" },
+	"babu4": { "audio": "babu4.mp3" },
+	"bwait": { "audio": "bwait.mp3" }
+},
 "animations": {
 	"body/end": {
 		"slots": {
-			"rot": {
+			"smile": {
 				"attachment": [
-					{ "name": null }
+					{ "name": "smile" }
 				]
 			},
 			"treugol": {
@@ -242,9 +249,9 @@
 					{ "name": null }
 				]
 			},
-			"smile": {
+			"rot": {
 				"attachment": [
-					{ "name": "smile" }
+					{ "name": null }
 				]
 			}
 		},
@@ -483,9 +490,9 @@
 	},
 	"body/give": {
 		"slots": {
-			"rot": {
+			"smile": {
 				"attachment": [
-					{ "name": null }
+					{ "name": "smile" }
 				]
 			},
 			"treugol": {
@@ -494,9 +501,9 @@
 					{ "time": 3, "color": "ffffff14" }
 				]
 			},
-			"smile": {
+			"rot": {
 				"attachment": [
-					{ "name": "smile" }
+					{ "name": null }
 				]
 			}
 		},
@@ -745,14 +752,36 @@
 		"slots": {
 			"rot": {
 				"attachment": [
-					{ "name": "speak" },
-					{ "time": 0.1, "name": "rot" },
-					{ "time": 0.2333, "name": "speak" },
-					{ "time": 0.3667, "name": "rot" },
-					{ "time": 0.5, "name": "speak" }
+					{ "time": 0.0667, "name": "speak" },
+					{ "time": 0.1667, "name": "rot" },
+					{ "time": 0.3, "name": "speak" },
+					{ "time": 0.6, "name": "rot" },
+					{ "time": 0.7333, "name": "speak" },
+					{ "time": 0.8667, "name": "rot" },
+					{ "time": 0.9333, "name": "speak" },
+					{ "time": 1.2, "name": "rot" },
+					{ "time": 1.4, "name": "speak" },
+					{ "time": 1.6, "name": "rot" },
+					{ "time": 1.6667, "name": "speak" },
+					{ "time": 1.8, "name": "rot" },
+					{ "time": 1.8667, "name": "speak" },
+					{ "time": 2.1, "name": "rot" },
+					{ "time": 2.2, "name": "speak" },
+					{ "time": 2.3333, "name": "rot" },
+					{ "time": 2.4667, "name": "speak" },
+					{ "time": 2.6, "name": "rot" },
+					{ "time": 2.6667, "name": "speak" },
+					{ "time": 3.1333, "name": "rot" },
+					{ "time": 3.2667, "name": "speak" }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "name": "babu1" },
+			{ "time": 0.6667, "name": "babu2" },
+			{ "time": 1.3333, "name": "babu3" },
+			{ "time": 2.4333, "name": "babu4" }
+		]
 	},
 	"body/wait": {
 		"bones": {
@@ -828,7 +857,10 @@
 					{ "time": 5.8333 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "time": 1.1667, "name": "bwait" }
+		]
 	}
 }
 }

@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8157418132137133500}
+  - component: {fileID: -4933536525561562659}
+  - component: {fileID: 1544345064433006735}
   m_Layer: 0
   m_Name: Ded
   m_TagString: Untagged
@@ -33,6 +35,32 @@ Transform:
   - {fileID: 295889293326333967}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4933536525561562659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8062496306643670395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456815eae5504e51981434456e57be3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skeletonAnimation: {fileID: 0}
+  _defaultMixDuration: 0.25
+--- !u!114 &1544345064433006735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8062496306643670395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eb4e055a754b8988318ee2f85dc5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8076584828791352988
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +291,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationControl: {fileID: 6580267275581799500}
-  _name: 
 --- !u!114 &6580267275581799500
 MonoBehaviour:
   m_ObjectHideFlags: 0
