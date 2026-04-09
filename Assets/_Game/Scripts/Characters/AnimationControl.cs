@@ -12,6 +12,7 @@ namespace _Game.Scripts.PlayerSystems.Animations
         
         [SerializeField] private SkeletonAnimation _skeletonAnimation;
         [SerializeField] private float _defaultMixDuration = 0.25f;
+        [SerializeField] private string _startAnimationName;
         
         private Spine.AnimationState _animationState;
         private Coroutine _durationCoroutine;
@@ -22,6 +23,11 @@ namespace _Game.Scripts.PlayerSystems.Animations
             {
                 _skeletonAnimation.Initialize(true);
                 _animationState = _skeletonAnimation.AnimationState;
+            }
+
+            if (_startAnimationName != "")
+            {
+                SetAnimation(0, _startAnimationName);
             }
             
             _animationState.Event += HandleEvent;

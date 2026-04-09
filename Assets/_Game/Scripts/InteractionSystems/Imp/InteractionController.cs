@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.MotionStates;
+using _Game.Scripts.PlayerSystems.PlayerStates;
 using UniRx;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using EventBus = Core.Common.EventBus;
@@ -16,6 +16,7 @@ namespace _Game.Scripts.InteractionSystems
         private AbstractInteractable _currentAbstractInteractable;
         
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
+        private readonly CompositeDisposable _interactableOnPointDisposables = new CompositeDisposable();
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly PlayerModel _playerModel;
         private readonly EventBus _eventBus;
@@ -89,7 +90,30 @@ namespace _Game.Scripts.InteractionSystems
                 return;
             }
             
-            _currentAbstractInteractable.Interact();
+            _interactableOnPointDisposables?.Clear();
+            
+            if (_currentAbstractInteractable.InteractableView.InteractPoint != null)
+            {
+                StopUpdate();
+                
+                _playerModel.AutoMoveTransform = _currentAbstractInteractable.InteractableView.InteractPoint;
+                
+                _playerModel.OnPosition.Subscribe(_ =>
+                {
+                    _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
+                    _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
+                    _currentAbstractInteractable.Interact();
+                    StartUpdate();
+                })
+                .AddTo(_interactableOnPointDisposables);
+                
+                _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
+                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerAutoMoveState));
+            }
+            else
+            {
+                _currentAbstractInteractable.Interact();
+            }
         }
 
         private bool CanInteract()
@@ -125,7 +149,10 @@ namespace _Game.Scripts.InteractionSystems
             if (_updateIsActive)
                 return;
             
-            Observable.EveryUpdate().Subscribe(_ => SelectNearestCurrentInteractables()).AddTo(_disposables);
+            Observable.EveryUpdate()
+                .Subscribe(_ => SelectNearestCurrentInteractables())
+                .AddTo(_disposables);
+            
             _updateIsActive = true;
         }
 
@@ -139,6 +166,7 @@ namespace _Game.Scripts.InteractionSystems
         {
             _playerModel.CanInteract.Unsubscribe(OnCanInteractChanged);
             _eventBus.Unsubscribe<SetCurrentInteractableSignal>(this);
+            _interactableOnPointDisposables?.Dispose();
             _disposables.Dispose();
         }
     }

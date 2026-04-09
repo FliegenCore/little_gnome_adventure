@@ -29,7 +29,6 @@ namespace Game.PlayerSystem
         {
             if (_soundManager.HasSound(e.Data.Name))
             {
-                Debug.Log(_soundManager.HasSound(e.Data.Name));
                 _soundManager.PlayOnPosition(transform, 25, e.Data.Name, false);
             }
         }

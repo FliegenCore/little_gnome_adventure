@@ -1830,6 +1830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd65e348c0b4acf9032a7ded563d471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 707779330179161347}
   <HintSelect>k__BackingField: {fileID: 8501544984377124613}
   <ConnectedDoor>k__BackingField: {fileID: 0}
@@ -1997,6 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd65e348c0b4acf9032a7ded563d471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 8314589567416077760}
   <HintSelect>k__BackingField: {fileID: 2671991697862073062}
   <ConnectedDoor>k__BackingField: {fileID: 0}
@@ -2405,6 +2407,8 @@ GameObject:
   - component: {fileID: 5290290630644613827}
   - component: {fileID: 5747578883681792399}
   - component: {fileID: 7966124801572551428}
+  - component: {fileID: 4174907736845408520}
+  - component: {fileID: 5791313824283964017}
   m_Layer: 0
   m_Name: Spine GameObject (skeleton) (1)
   m_TagString: Untagged
@@ -2515,6 +2519,33 @@ MonoBehaviour:
   _animationName: fly
   loop: 1
   timeScale: 0.35
+--- !u!114 &4174907736845408520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572239835243107129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456815eae5504e51981434456e57be3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skeletonAnimation: {fileID: 7966124801572551428}
+  _defaultMixDuration: 0.25
+  _startAnimationName: fly
+--- !u!114 &5791313824283964017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572239835243107129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eb4e055a754b8988318ee2f85dc5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7631990644323877579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,6 +2858,8 @@ GameObject:
   - component: {fileID: 1528232605470260470}
   - component: {fileID: 2735203514293014557}
   - component: {fileID: 9125684438525471819}
+  - component: {fileID: 8383017214547025077}
+  - component: {fileID: 4976661913179793822}
   m_Layer: 0
   m_Name: Spine GameObject (skeleton)
   m_TagString: Untagged
@@ -2937,6 +2970,33 @@ MonoBehaviour:
   _animationName: fly
   loop: 1
   timeScale: 0.29
+--- !u!114 &8383017214547025077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705232294451840818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456815eae5504e51981434456e57be3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skeletonAnimation: {fileID: 9125684438525471819}
+  _defaultMixDuration: 0.25
+  _startAnimationName: fly
+--- !u!114 &4976661913179793822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8705232294451840818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eb4e055a754b8988318ee2f85dc5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8796029365294511961
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,7 +40,6 @@ namespace _Game.Scripts.Sound
         
         public void PlayOnPosition(Transform parent, float radius, string audioClip, bool isLoop)
         {
-            Debug.Log(audioClip);
             Vector3 worldPos = new Vector3(parent.position.x, parent.position.y, 0f);
             AudioSource audio = UnityEngine.Object.Instantiate(
                 _audioStorageConfig.OneShotAudioSourcePrefab,
