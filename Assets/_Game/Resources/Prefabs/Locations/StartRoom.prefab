@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd65e348c0b4acf9032a7ded563d471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 7144639017937470278}
   <HintSelect>k__BackingField: {fileID: 1850036318758266594}
   <ConnectedDoor>k__BackingField: {fileID: 0}
@@ -2457,6 +2458,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5330465771755268078}
     m_Modifications:
+    - target: {fileID: 6580267275581799500, guid: 9ad7c55cafac9294fbf1ca8143870784, type: 3}
+      propertyPath: _startAnimationName
+      value: body/sleep
+      objectReference: {fileID: 0}
     - target: {fileID: 8062496306643670395, guid: 9ad7c55cafac9294fbf1ca8143870784, type: 3}
       propertyPath: m_Name
       value: Ded
