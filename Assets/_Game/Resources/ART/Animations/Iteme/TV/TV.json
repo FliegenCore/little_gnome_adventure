@@ -1,13 +1,13 @@
 {
 "skeleton": {
-	"hash": "cxDhzi8jdtbPyU1Z9kX2TBgFp7U",
+	"hash": "W73dEpqgO4D3X1Fz/mo0vicwttE",
 	"spine": "3.8.0",
 	"x": -271.24,
 	"y": 0.56,
 	"width": 522,
 	"height": 633,
-	"images": "D:/арт Игра про маленького ГНОМА/локации/deda_room/TV/",
-	"audio": "D:\\арт Игра про маленького ГНОМА\\локации\\deda_room\\TV"
+	"images": "",
+	"audio": "D:/арт Игра про маленького ГНОМА/локации/deda_room/TV"
 },
 "bones": [
 	{ "name": "root" },
@@ -55,14 +55,28 @@
 		}
 	}
 ],
+"events": {
+	"TVded": { "audio": "TVded.wav" }
+},
 "animations": {
 	"idle": {
 		"slots": {
-			"point": {
+			"свет": {
 				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.6667, "color": "ffffff7b" },
-					{ "time": 2, "color": "ffffffff" }
+					{ "color": "dfc8c8ff" },
+					{ "time": 0.3333, "color": "b1d8b2ff" },
+					{ "time": 0.5667, "color": "bfcbdeff" },
+					{ "time": 1, "color": "fefefeff" },
+					{ "time": 1.3333, "color": "decd90ff" },
+					{ "time": 1.6667, "color": "d7b4d9ff" },
+					{ "time": 1.9667, "color": "dfc8c8ff" }
+				]
+			},
+			"point2": {
+				"color": [
+					{ "color": "ffffff55" },
+					{ "time": 1, "color": "ffffffff" },
+					{ "time": 1.9667, "color": "ffffff55" }
 				]
 			},
 			"point3": {
@@ -74,22 +88,11 @@
 					{ "time": 1.8, "color": "ffffffb8" }
 				]
 			},
-			"свет": {
+			"point": {
 				"color": [
-					{ "color": "dfc8c8ff" },
-					{ "time": 0.3333, "color": "b1d8b2ff" },
-					{ "time": 0.5667, "color": "bfcbdeff" },
-					{ "time": 1, "color": "fefefeff" },
-					{ "time": 1.3333, "color": "decd90ff" },
-					{ "time": 1.6667, "color": "d7b4d9ff" },
-					{ "time": 2, "color": "dfc8c8ff" }
-				]
-			},
-			"point2": {
-				"color": [
-					{ "color": "ffffff55" },
-					{ "time": 1, "color": "ffffffff" },
-					{ "time": 2, "color": "ffffff55" }
+					{ "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff7b" },
+					{ "time": 1.9667, "color": "ffffffff" }
 				]
 			}
 		},
@@ -104,19 +107,19 @@
 					{ "time": 1.0667, "x": -9.54, "y": -9.06 },
 					{ "time": 1.2667, "x": 3.95, "y": 11.62 },
 					{ "time": 1.6667, "x": -6.33, "y": 1.1 },
-					{ "time": 2 }
+					{ "time": 1.9667 }
 				]
 			},
 			"point2": {
 				"rotate": [
 					{ "angle": -112.09 },
 					{ "time": 1, "angle": -121.22 },
-					{ "time": 2, "angle": -112.09 }
+					{ "time": 1.9667, "angle": -112.09 }
 				],
 				"translate": [
 					{ "x": -75.17, "y": 48.52, "curve": "stepped" },
 					{ "time": 1, "x": -75.17, "y": 48.52, "curve": "stepped" },
-					{ "time": 2, "x": -75.17, "y": 48.52 }
+					{ "time": 1.9667, "x": -75.17, "y": 48.52 }
 				]
 			},
 			"point": {
@@ -125,7 +128,7 @@
 					{ "time": 0.5, "x": -4.34, "y": -0.05 },
 					{ "time": 1, "x": 2.05, "y": -5.94 },
 					{ "time": 1.5, "x": 6.98, "y": -1.82 },
-					{ "time": 2 }
+					{ "time": 1.9667 }
 				]
 			},
 			"point3": {
@@ -134,16 +137,19 @@
 					{ "time": 1, "angle": 5.1 },
 					{ "time": 1.5, "angle": 15.07 },
 					{ "time": 1.8, "angle": -1.02 },
-					{ "time": 2, "angle": 11.11 }
+					{ "time": 1.9667, "angle": 11.11 }
 				],
 				"translate": [
 					{ "x": 0.24, "y": 103.5 },
 					{ "time": 1, "x": 10.67, "y": 114.88 },
 					{ "time": 1.8, "x": 9.4, "y": 103.04 },
-					{ "time": 2, "x": 0.24, "y": 103.5 }
+					{ "time": 1.9667, "x": 0.24, "y": 103.5 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "name": "TVded" }
+		]
 	}
 }
 }
