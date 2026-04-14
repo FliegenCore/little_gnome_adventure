@@ -1,69 +1,55 @@
 
 sapog.png
-size: 208,504
+size: 298,276
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 flower
   rotate: false
-  xy: 51, 34
+  xy: 255, 92
   size: 40, 182
   orig: 44, 186
   offset: 2, 2
   index: -1
+flowers
+  rotate: true
+  xy: 36, 24
+  size: 127, 103
+  orig: 127, 104
+  offset: 0, 1
+  index: -1
 light
-  rotate: false
-  xy: 93, 14
+  rotate: true
+  xy: 216, 11
   size: 79, 80
   orig: 83, 84
   offset: 2, 2
   index: -1
-p1
-  rotate: false
-  xy: 158, 271
-  size: 32, 80
-  orig: 36, 84
-  offset: 2, 2
-  index: -1
-p2
-  rotate: true
-  xy: 168, 189
-  size: 80, 32
-  orig: 84, 36
-  offset: 2, 2
-  index: -1
 plant1
   rotate: false
-  xy: 93, 96
+  xy: 141, 14
   size: 73, 120
   orig: 77, 125
   offset: 2, 3
   index: -1
 plant2
   rotate: false
-  xy: 51, 218
+  xy: 148, 136
   size: 105, 138
   orig: 109, 142
   offset: 2, 2
   index: -1
 sapog
-  rotate: false
-  xy: 51, 358
+  rotate: true
+  xy: 2, 153
   size: 121, 144
   orig: 125, 148
   offset: 2, 2
   index: -1
 shadow
   rotate: true
-  xy: 174, 353
+  xy: 2, 2
   size: 149, 32
   orig: 150, 32
   offset: 0, 0
-  index: -1
-Слой 2
-  rotate: false
-  xy: 2, 2
-  size: 47, 500
-  orig: 51, 504
-  offset: 2, 2
   index: -1
