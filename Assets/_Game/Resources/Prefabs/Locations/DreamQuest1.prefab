@@ -72,7 +72,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0619607eecb750f4ab3674c6c75ba800, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1881a9276f7349f48ccbcb6fb42db151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 8130491596630170773}
   <HintSelect>k__BackingField: {fileID: 3550163332764202855}
   _animationControl: {fileID: 6324542613315642278}
@@ -217,6 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skeletonAnimation: {fileID: 9096902846607346791}
   _defaultMixDuration: 0.25
+  _startAnimationName: 
 --- !u!210 &1302621226863662923
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -990,6 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd65e348c0b4acf9032a7ded563d471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 860751359799938972}
   <HintSelect>k__BackingField: {fileID: 3804994013885688099}
   <ConnectedDoor>k__BackingField: {fileID: 0}
@@ -1744,6 +1747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skeletonAnimation: {fileID: 6908116558321960640}
   _defaultMixDuration: 0.25
+  _startAnimationName: 
 --- !u!114 &3594053450563357132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,6 +1760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1881a9276f7349f48ccbcb6fb42db151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 8431987193767315527}
   <HintSelect>k__BackingField: {fileID: 9037528451618687134}
   _animationControl: {fileID: 8095115614444789693}
@@ -2171,6 +2176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skeletonAnimation: {fileID: 7315283724637586374}
   _defaultMixDuration: 0.25
+  _startAnimationName: 
 --- !u!114 &1993052184514779362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,6 +2189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1881a9276f7349f48ccbcb6fb42db151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 383216701292606354}
   <HintSelect>k__BackingField: {fileID: 2273458209514875829}
   _animationControl: {fileID: 3894627439725993039}

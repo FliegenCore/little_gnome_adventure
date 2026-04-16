@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "ffd8S1yhJyN85DtWndvQJje4JCw",
+	"hash": "tIJFHkDi5w+NHDUHgDKECIHjND4",
 	"spine": "3.8.0",
 	"x": -211.34,
 	"y": -9.26,
@@ -234,7 +234,8 @@
 	"babu2": { "audio": "babu2.mp3" },
 	"babu3": { "audio": "babu3.mp3" },
 	"babu4": { "audio": "babu4.mp3" },
-	"bwait": { "audio": "bwait.mp3" }
+	"bwait": { "audio": "bwait.mp3" },
+	"rise_flower": { "audio": "rise_flower.mp3" }
 },
 "animations": {
 	"body/end": {
@@ -738,6 +739,179 @@
 				]
 			}
 		}
+	},
+	"body/rise_flower": {
+		"slots": {
+			"smile": {
+				"attachment": [
+					{ "name": "smile" },
+					{ "time": 5.1667, "name": "smile" }
+				]
+			},
+			"treugol": {
+				"attachment": [
+					{ "time": 5.1667, "name": null }
+				]
+			},
+			"rot": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 5.1667, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"flower2": {
+				"translate": [
+					{ "time": 3.3333, "x": 2.98, "y": -0.65, "curve": "stepped" },
+					{ "time": 5.1667, "x": 2.98, "y": -0.65 }
+				],
+				"scale": [
+					{ "time": 3.3333, "x": 3.593, "y": 3.593, "curve": "stepped" },
+					{ "time": 5.1667, "x": 3.593, "y": 3.593 }
+				]
+			},
+			"flower": {
+				"rotate": [
+					{ "time": 3.3333, "angle": -6.49, "curve": "stepped" },
+					{ "time": 5.1667, "angle": -6.49 }
+				],
+				"translate": [
+					{ "time": 3.3333, "x": -31.46, "y": 17.19, "curve": "stepped" },
+					{ "time": 5.1667, "x": -31.46, "y": 17.19 }
+				],
+				"scale": [
+					{ "time": 3.3333, "x": 3.593, "y": 3.593, "curve": "stepped" },
+					{ "time": 5.1667, "x": 3.593, "y": 3.593 }
+				]
+			},
+			"flower3": {
+				"translate": [
+					{ "time": 3.3333, "x": 0.09, "y": -24.52, "curve": "stepped" },
+					{ "time": 5.1667, "x": 0.09, "y": -24.52 }
+				],
+				"scale": [
+					{ "time": 3.3333, "x": 3.593, "y": 3.593, "curve": "stepped" },
+					{ "time": 5.1667, "x": 3.593, "y": 3.593 }
+				]
+			},
+			"Leye2": {
+				"translate": [
+					{},
+					{ "time": 2.4, "x": 4.57, "y": -4.38 },
+					{ "time": 3.1333, "x": 3.85, "y": -6.68 },
+					{ "time": 3.3333, "x": 9.61, "y": -1.18 },
+					{ "time": 3.6667, "x": 8.65, "y": 3.74 },
+					{ "time": 4.2333, "x": 7.87, "y": -5.71 },
+					{ "time": 5.0333, "x": 6.99, "y": -0.86 },
+					{ "time": 5.1667 }
+				]
+			},
+			"hand": {
+				"translate": [
+					{ "x": 122.77, "y": -7.51 },
+					{ "time": 5.1667, "x": 135.58, "y": -10.52 }
+				]
+			},
+			"handR": {
+				"translate": [
+					{ "x": 111.99, "y": 3.04 },
+					{ "time": 5.1667, "x": 130.93, "y": 1.47 }
+				]
+			},
+			"head": {
+				"rotate": [
+					{},
+					{ "time": 3.1333, "angle": 2.52 },
+					{ "time": 3.3333 },
+					{ "time": 3.6667, "angle": -3.06 },
+					{ "time": 4, "angle": 1.17 },
+					{ "time": 4.3333, "angle": -5.09 },
+					{ "time": 5.1667 }
+				],
+				"translate": [
+					{ "time": 3.1333 },
+					{ "time": 3.3333, "x": 4.16, "y": 0.3 }
+				]
+			},
+			"bodyUP": {
+				"rotate": [
+					{},
+					{ "time": 0.5333, "angle": -2.42 },
+					{ "time": 1.1333, "angle": 1.21 },
+					{ "time": 2, "angle": -0.75 },
+					{ "time": 3, "angle": 3.16 },
+					{ "time": 3.3667, "angle": -3.35 },
+					{ "time": 5.1667, "angle": -1.53 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 5.1667 }
+				]
+			},
+			"teug": {
+				"rotate": [
+					{ "angle": -1.57, "curve": "stepped" },
+					{ "time": 5.1667, "angle": -1.57 }
+				]
+			},
+			"hair3": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 5.1667 }
+				]
+			},
+			"Reye2": {
+				"translate": [
+					{},
+					{ "time": 2.4, "x": 4.6, "y": -4.34 },
+					{ "time": 3.1333, "x": 3.9, "y": -6.65 },
+					{ "time": 3.3333, "x": 9.62, "y": -1.11 },
+					{ "time": 3.6667, "x": 8.63, "y": 3.8 },
+					{ "time": 4.2333, "x": 7.91, "y": -5.66 },
+					{ "time": 5.0333, "x": 7, "y": -0.81 },
+					{ "time": 5.1667 }
+				]
+			},
+			"hop": {
+				"rotate": [
+					{ "time": 5.1667, "angle": -2.31 }
+				],
+				"translate": [
+					{ "time": 2.6667 },
+					{ "time": 3.1667, "y": -9.9 },
+					{ "time": 3.6667, "y": 5.94 },
+					{ "time": 5.1667 }
+				]
+			},
+			"vorot": {
+				"scale": [
+					{ "time": 3.3333, "x": 1.172, "y": 1.172, "curve": "stepped" },
+					{ "time": 5.1667, "x": 1.172, "y": 1.172 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 3.3333,
+				"offsets": [
+					{ "slot": "flower", "offset": 23 },
+					{ "slot": "flower3", "offset": 23 },
+					{ "slot": "flower2", "offset": 23 }
+				]
+			},
+			{
+				"time": 5.1667,
+				"offsets": [
+					{ "slot": "flower", "offset": 23 },
+					{ "slot": "flower3", "offset": 23 },
+					{ "slot": "flower2", "offset": 23 }
+				]
+			}
+		],
+		"events": [
+			{ "name": "rise_flower" }
+		]
 	},
 	"emotion/silence": {
 		"slots": {

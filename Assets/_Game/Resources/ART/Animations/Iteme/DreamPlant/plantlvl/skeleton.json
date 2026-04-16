@@ -1,0 +1,109 @@
+{
+"skeleton": {
+	"hash": "EBT8fWJnay4mXPCF1zgN6zC8cF0",
+	"spine": "3.8.0",
+	"x": -26,
+	"y": -12.5,
+	"width": 55,
+	"height": 174.82,
+	"images": "",
+	"audio": "D:/арт Игра про маленького ГНОМА/локации/dream_L1/plantlvl"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 138.04, "rotation": 91.11, "x": -20.64, "y": 4.78 },
+	{ "name": "1", "parent": "bone", "x": 9.26, "y": -21.13 },
+	{ "name": "2", "parent": "bone", "x": 49.52, "y": -21.91 },
+	{ "name": "3", "parent": "bone", "x": 91.38, "y": -23.8 },
+	{ "name": "4", "parent": "bone", "x": 131.66, "y": -24.05 }
+],
+"slots": [
+	{ "name": "LVL", "bone": "bone", "attachment": "LVL" },
+	{ "name": "point", "bone": "1", "color": "ffffff95", "attachment": "point" },
+	{ "name": "point2", "bone": "2", "color": "ffffff95", "attachment": "point" },
+	{ "name": "point3", "bone": "3", "color": "ffffff95", "attachment": "point" },
+	{ "name": "point4", "bone": "4", "color": "ffffff95", "attachment": "point" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"LVL": {
+				"LVL": { "x": 71.25, "y": -24.53, "rotation": -91.11, "width": 32, "height": 154 }
+			},
+			"point": {
+				"point": { "x": 0.03, "y": -1.2, "rotation": -91.11, "width": 55, "height": 54 }
+			},
+			"point2": {
+				"point": { "x": 1.1, "y": -1.22, "rotation": -91.11, "width": 55, "height": 54 }
+			},
+			"point3": {
+				"point": { "x": -1.56, "y": -0.09, "rotation": -91.11, "width": 55, "height": 54 }
+			},
+			"point4": {
+				"point": { "x": -1.57, "y": -0.63, "rotation": -91.11, "width": 55, "height": 54 }
+			}
+		}
+	}
+],
+"animations": {
+	"1": {
+		"slots": {
+			"point2": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"point3": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"point4": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"2": {
+		"slots": {
+			"point3": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"point4": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"3": {
+		"slots": {
+			"point2": {
+				"color": [
+					{ "color": "ffffff95" }
+				]
+			},
+			"point3": {
+				"color": [
+					{ "color": "ffffff95" }
+				]
+			},
+			"point": {
+				"color": [
+					{ "color": "ffffff95" }
+				]
+			},
+			"point4": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"4": {}
+}
+}

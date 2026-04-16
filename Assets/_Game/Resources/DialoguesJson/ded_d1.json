@@ -52,8 +52,7 @@
         "a_Player_eyes/up_2_1"
       ],
       "OnEndEvents": [
-        "a_Ded_emotion/wait_0_1",
-        "a_Ded_body/sleep_0_1"
+        "a_Ded_emotion/wait_0_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -199,7 +198,7 @@
       ],
       "OnEndEvents": [
         "a_Player_emotion/idle_2_0",
-        ""
+        "a_Ded_body/sleep_0_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
