@@ -1197,6 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd65e348c0b4acf9032a7ded563d471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 9129559348080642855}
   <HintSelect>k__BackingField: {fileID: 6017819898716993648}
   <ConnectedDoor>k__BackingField: {fileID: 0}
@@ -2939,7 +2940,7 @@ MonoBehaviour:
   <Doors>k__BackingField:
   - {fileID: 7240938535305884579}
   <SpeakerViews>k__BackingField: []
-  <GirlView>k__BackingField: {fileID: 0}
+  <GirlView>k__BackingField: {fileID: 4107563263446075953}
 --- !u!1 &5763502029250192359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4700,6 +4701,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19a67514b2ae3814e9e89c7807781663, type: 3}
+--- !u!114 &4107563263446075953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1876812866119924196, guid: 19a67514b2ae3814e9e89c7807781663, type: 3}
+  m_PrefabInstance: {fileID: 2525173991791932373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcfd7a2483e9405a807d561e7da4c966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8351782679986875448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5831112878919294957, guid: 19a67514b2ae3814e9e89c7807781663, type: 3}

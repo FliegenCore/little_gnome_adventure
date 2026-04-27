@@ -7,6 +7,7 @@ using VContainer;
 
 namespace _Game.Scripts.DialogueSystem.View
 {
+    [RequireComponent(typeof(SpeakAnimation))]
     public class SpeakerView : MonoBehaviour
     {
         [field: SerializeField] public ECharacters Id { get; private set; }

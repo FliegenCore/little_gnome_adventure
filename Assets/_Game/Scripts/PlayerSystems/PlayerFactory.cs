@@ -104,6 +104,7 @@ namespace _Game.Scripts.PlayerSystems
             playerFsm.AddState(new PlayerInspectState(playerFsm, model, _inspectController));
             playerFsm.AddState(new PlayerDisabledMotionState(playerFsm, model));
             playerFsm.AddState(new PlayerDialogueState(playerFsm, model, _dialogueManager));
+            playerFsm.AddState(new PlayerAutoMoveState(playerFsm, model));
      
             playerFsm.SetState<PlayerBaseState>();
             
@@ -113,6 +114,7 @@ namespace _Game.Scripts.PlayerSystems
         private void FillPlayerMotion(Fsm fsm, PlayerModel model)
         {
             fsm.AddState(new PlayerIdleMotionState(fsm, model));
+            fsm.AddState(new PlayerAutoMoveMotionState(fsm, model));
             fsm.AddState(new PlayerMoveMotionState(fsm, model));
             
             fsm.SetState<PlayerIdleMotionState>();

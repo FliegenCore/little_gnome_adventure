@@ -7,5 +7,6 @@ namespace _Game.Scripts.RoomSystems
     {
         [field: SerializeField] public InspectNightstandView InspectNightstandView { get; private set; }
         [field: SerializeField] public InspectTableView Table { get; private set; }
+        [field: SerializeField] public LobotomyInspectView LobotomyInspectView { get; private set; }
     }
 }

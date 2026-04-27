@@ -15,7 +15,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly InspectCamera _inspectCamera;
         private readonly Dictionary<string, InspectModel> _inspectModels = new Dictionary<string, InspectModel>();
-        private InspectInputHandler _inspectInputHandler;
+        private readonly InspectInputHandler _inspectInputHandler;
         private InspectModel _currentInspectModel;
         
         private InspectController(EventBus eventBus, InputSystem_Actions inputSystemActions, InspectCamera inspectCamera)
@@ -27,7 +27,13 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             
             _eventBus.Subscribe<ShowInspectWindowByIdSignal, string>(this, Show);
         }
-
+        
+        public void AddInspectModel(string id, InspectModel inspectModel)
+        {
+            Debug.Log("Register " + id + " inspect");
+            _inspectModels.Add(id, inspectModel);
+        }
+        
         public void EnableInput()
         {
             _inputSystemActions.Player.Back.performed += Hide;
@@ -39,12 +45,6 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         {
             _inputSystemActions.Player.Back.performed -= Hide;
             _inspectInputHandler.DisableInput();
-        }
-        
-        public void AddInspectModel(string id, InspectModel inspectModel)
-        {
-            Debug.Log("Register " + id + " inspect");
-            _inspectModels.Add(id, inspectModel);
         }
         
         private void Show(string id)

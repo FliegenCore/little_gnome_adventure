@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace _Game.Scripts.DialogueSystem.View
 {
+    [RequireComponent(typeof(AnimationControl))]
     public class SpeakAnimation : MonoBehaviour
     {
         [SerializeField] private AnimationControl _animationControl;

@@ -20,18 +20,18 @@ namespace _Game.Scripts.RoomSystems.Variants
         private readonly ForestRootViewFactory _forestRootViewFactory;
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
-        private readonly ICharacterFactory _characterFactory;
+        private readonly IInteractableFactory _interactableFactory;
         private readonly IPlayerFactory _playerFactory;
         
         public HouseLocationFactory(
             ForestRootViewFactory forestRootViewFactory, 
             EventBus eventBus, 
             IDialogueManager dialogueManager,
-            ICharacterFactory characterFactory,
+            IInteractableFactory interactableFactory,
             IPlayerFactory playerFactory)
         {
             _playerFactory         = playerFactory;
-            _characterFactory      = characterFactory;
+            _interactableFactory      = interactableFactory;
             _dialogueManager       = dialogueManager;
             _forestRootViewFactory = forestRootViewFactory;
             _eventBus              = eventBus;
@@ -74,9 +74,10 @@ namespace _Game.Scripts.RoomSystems.Variants
             return nightstand;
         }
 
-        private Character CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
+        private Interactable CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
         {
-            return _characterFactory.CreateCharacter(id, customBehaviour, nightstandView);
+            return _interactableFactory.CreateInteractable(customBehaviour, nightstandView,
+                new CharacterModel(nightstandView.ContactTriggerProvider, nightstandView.Position, id));
         }
     }
 }

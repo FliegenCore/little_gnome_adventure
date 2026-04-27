@@ -39,7 +39,6 @@ namespace _Game.Scripts.InspectSystem
             
             if (_selectedInteractable != null)
                 _selectedInteractable.AbstractInteractableModel.IsSelected.Value = false;
-
         }
 
         private void Navigate(InputAction.CallbackContext callback)

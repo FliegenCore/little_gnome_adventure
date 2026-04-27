@@ -21,14 +21,16 @@ namespace _Game.Scripts.RoomSystems.Variants
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
-        private readonly ICharacterFactory _characterFactory;
+        private readonly IInteractableFactory _interactableFactory;
         
         public ForestLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
             EventBus eventBus, 
             IDialogueManager dialogueManager, 
-            IPlayerFactory playerFactory)
+            IPlayerFactory playerFactory, 
+            IInteractableFactory interactableFactory)
         {
+            _interactableFactory   = interactableFactory;
             _playerFactory         = playerFactory;
             _dialogueManager       = dialogueManager;
             _forestRootViewFactory = forestRootViewFactory;
@@ -47,8 +49,8 @@ namespace _Game.Scripts.RoomSystems.Variants
                 _dialogueManager,
                 _eventBus);
             
-            //CreateCharacter(nameof(ECharacters.Girl), new GirlBehaviour(_eventBus),
-              //  _forestRootViewFactory.GetLocationsRootView().ForestLocationView.GirlView);
+            CreateCharacter(nameof(ECharacters.Girl), new GirlBehaviour(_eventBus), 
+                  _forestRootViewFactory.GetLocationsRootView().ForestLocationView.GirlView);
             
             _forestRootViewFactory.GetLocationsRootView().StartHouseView.Construct(lampModel);
             fsm.AddState(forestState);
@@ -65,9 +67,10 @@ namespace _Game.Scripts.RoomSystems.Variants
             return nightstand;
         }
         
-        private Character CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
+        private Interactable CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
         {
-            return _characterFactory.CreateCharacter(id, customBehaviour, nightstandView);
+            return _interactableFactory.CreateInteractable(customBehaviour, nightstandView,
+                new CharacterModel(nightstandView.ContactTriggerProvider, nightstandView.Position, id));
         }
     }
 }

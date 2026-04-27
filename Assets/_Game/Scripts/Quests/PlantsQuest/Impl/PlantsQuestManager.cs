@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.CutsceneSystem;
+using _Game.Scripts.PlayerSystems.Animations.Factory;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.Quests.PlantsQuest;
 using _Game.Scripts.Quests.PlantsQuest.Impl;
@@ -21,9 +22,10 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         private readonly CameraController _cameraController;
         private readonly ICutsceneManger _cutsceneManger;
         private readonly IPlayerFactory _playerFactory;
+        private readonly IInteractableFactory _interactableFactory;
         private PlantsCutscene _plantsCutscene; 
             
-        private List<Plant> _plants;
+        private List<Interactable> _plants;
 
         
         public PlantsQuestManager(
@@ -31,8 +33,10 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
             ForestLocationsRootView locationsRootView,
             CameraController cameraController,
             IPlayerFactory playerFactory,
-            ICutsceneManger cutsceneManger)
+            ICutsceneManger cutsceneManger,
+            IInteractableFactory interactableFactory)
         {
+            _interactableFactory     = interactableFactory;
             _cameraController        = cameraController;
             _forestLocationsRootView = locationsRootView;
             _eventBus                = eventBus;
@@ -68,23 +72,27 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
             DreamQuestFirstLocationView dreamQuestFirstLocationView =
                 _forestLocationsRootView.DreamQuestFirstLocationView;
             
-            Plant boot = CreatePlant(dreamQuestFirstLocationView.BootPlant, "Boot", 2);
-            Plant cactus = CreatePlant(dreamQuestFirstLocationView.CactusPlant, "Cactus", 4);
-            Plant column = CreatePlant(dreamQuestFirstLocationView.ColumnPlant, "Column", 3);
+            Interactable boot = CreatePlant(dreamQuestFirstLocationView.BootPlant, "Boot", 2);
+            Interactable cactus = CreatePlant(dreamQuestFirstLocationView.CactusPlant, "Cactus", 4);
+            Interactable column = CreatePlant(dreamQuestFirstLocationView.ColumnPlant, "Column", 3);
 
             _plants.Add(boot);
             _plants.Add(cactus);
             _plants.Add(column);
         }
 
-        private Plant CreatePlant(PlantView plantView, string id, int neededHeight)
+        private Interactable CreatePlant(PlantView plantView, string id, int neededHeight)
         {
             PlantModel plantModels = new PlantModel(plantView.ContactTriggerProvider, plantView.Position, id, neededHeight);
+            
+            Interactable interactable =
+                _interactableFactory.CreateInteractable(new PlantBehaviour(_eventBus, plantModels), plantView,
+                    plantModels);
+            
             plantView.Construct(plantModels.Height, plantModels.CanInteract, plantModels.NeedCallback, plantModels.ColliderIsEnabled);
             plantView.HintSelect.Construct(_eventBus, plantModels.IsSelected);
-            Plant plant = new Plant(plantModels, plantView, _eventBus, new PlantBehaviour(_eventBus, plantModels));
             plantModels.Height.Subscribe(OnHeightChanged).AddTo(_compositeDisposable);
-            return plant;
+            return interactable;
         }
 
         private void OnHeightChanged(int _)

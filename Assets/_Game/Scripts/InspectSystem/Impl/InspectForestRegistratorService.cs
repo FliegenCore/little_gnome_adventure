@@ -35,6 +35,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         {
             RegisterNightstand();
             RegisterTable();
+            RegisterLobotomy();
         }
 
         private void RegisterNightstand()
@@ -56,7 +57,13 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             RegisterInspect("Table", inspectsView.Table);
         }
 
-        private void RegisterInspect(string id, InspectAbstractView view, params AbstractInteractable[] interactables)
+        private void RegisterLobotomy()
+        {
+            InspectsView inspectsView = _forestRootViewFactory.GetLocationsRootView().InspectsView;
+            RegisterInspect("Lobotomy", inspectsView.LobotomyInspectView);
+        }
+
+        public void RegisterInspect(string id, InspectAbstractView view, params AbstractInteractable[] interactables)
         {
             InspectModel inspectModel = new InspectModel(interactables);
             

@@ -11,12 +11,12 @@ namespace _Game.Scripts.PlayerSystems
     {
         public readonly Transformation Transformation;
         public readonly IMoveDirectionInput MoveDirectionInput;
-        public readonly AnimationPlayerModel  AnimationPlayerModel;
+        public readonly AnimationPlayerModel AnimationPlayerModel;
         public readonly Observable<bool> CanInteract;
         public readonly ReactiveCommand OnPosition = new();
         public readonly float MoveSpeed;
         public Transform AutoMoveTransform;
-        
+        public Transform LastInteractableObject;
         
         public PlayerModel(Transformation transformation,
             IMoveDirectionInput moveDirectionInput,

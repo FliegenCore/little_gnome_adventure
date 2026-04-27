@@ -1,5 +1,7 @@
 using _Game.Scripts.InventorySystem;
+using _Game.Scripts.PlayerSystems.InspectSystem;
 using Core.Common;
+using UnityEngine;
 
 namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
 {
@@ -16,7 +18,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
 
         public override void Interact()
         {
-            
+            _eventBus.TriggerEvenet<ShowInspectWindowByIdSignal, string>("Lobotomy");
         }
 
         public void InteractWithItem(ItemId item)

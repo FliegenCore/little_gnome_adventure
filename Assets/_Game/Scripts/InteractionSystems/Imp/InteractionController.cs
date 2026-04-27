@@ -97,6 +97,7 @@ namespace _Game.Scripts.InteractionSystems
                 StopUpdate();
                 
                 _playerModel.AutoMoveTransform = _currentAbstractInteractable.InteractableView.InteractPoint;
+                _playerModel.LastInteractableObject = _currentAbstractInteractable.InteractableView.transform;
                 
                 _playerModel.OnPosition.Subscribe(_ =>
                 {
@@ -107,8 +108,8 @@ namespace _Game.Scripts.InteractionSystems
                 })
                 .AddTo(_interactableOnPointDisposables);
                 
-                _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
                 _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerAutoMoveState));
+                _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
             }
             else
             {

@@ -72,7 +72,7 @@ namespace _Game.Scripts._Installers
             builder.Register<ItemInfoProvider>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InventoryProxy>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DialogueManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<CharacterFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<InteractableFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CutsceneManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
 
             RegisterCurrentChapterInitializer(builder);

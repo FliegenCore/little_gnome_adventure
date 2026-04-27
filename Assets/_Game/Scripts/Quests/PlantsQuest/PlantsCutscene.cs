@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.CutsceneSystem;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.Animations.Impl;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.Quests.PlantsQuest.Impl.Plant;
@@ -20,7 +21,7 @@ namespace _Game.Scripts.Quests.PlantsQuest
         private readonly NightstandView _plantView;
         private readonly PlayerView _playerView;
         private readonly EventBus _eventBus;
-        private readonly List<Plant> _plantsList;
+        private readonly List<Interactable> _plantsList;
         
         
         public PlantsCutscene(
@@ -29,7 +30,7 @@ namespace _Game.Scripts.Quests.PlantsQuest
             NightstandView grannyView, 
             EventBus eventBus,
             PlayerView playerView,
-            List<Plant> plants)
+            List<Interactable> plants)
         {
             _eventBus            = eventBus;
             _cameraController    = cameraController;

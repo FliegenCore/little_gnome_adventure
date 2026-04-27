@@ -11,6 +11,7 @@ using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.RoomSystems.LocationsStates;
 using Core.Common;
+using VContainer;
 
 namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
 {
@@ -20,22 +21,21 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
-        private readonly ICharacterFactory _characterFactory;
+        private readonly IInteractableFactory _interactableFactory;
         private readonly CameraController _cameraController;
         private readonly ICutsceneManger _cutsceneManger;
-
         
         public DreamFirstQuestLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
             EventBus eventBus,
             IDialogueManager dialogueManager,
             IPlayerFactory playerFactory,
-            ICharacterFactory characterFactory,
+            IInteractableFactory interactableFactory,
             CameraController cameraController,
             ICutsceneManger cutsceneManger)
         {
             _cameraController      = cameraController;
-            _characterFactory      = characterFactory;
+            _interactableFactory      = interactableFactory;
             _playerFactory         = playerFactory;
             _dialogueManager       = dialogueManager;
             _forestRootViewFactory = forestRootViewFactory;
@@ -58,12 +58,14 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
             CreateCharacter(nameof(ECharacters.Granny), new GrannyBehaviour(_eventBus),
                 _forestRootViewFactory.GetLocationsRootView().DreamQuestFirstLocationView.GrannyView);
 
+            
             PlantsQuestManager plantsQuestManager = new PlantsQuestManager(
                 _eventBus,
                 _forestRootViewFactory.GetLocationsRootView(), 
                 _cameraController,
                 _playerFactory,
-                _cutsceneManger
+                _cutsceneManger,
+                _interactableFactory
                 );
             
             plantsQuestManager.Initialize();
@@ -71,9 +73,10 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
             return testState;
         }
         
-        private Character CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
+        private Interactable CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
         {
-            return _characterFactory.CreateCharacter(id, customBehaviour, nightstandView);
+            return _interactableFactory.CreateInteractable(customBehaviour, nightstandView, 
+                new CharacterModel(nightstandView.ContactTriggerProvider, nightstandView.Position, id));
         }
     }
 }
