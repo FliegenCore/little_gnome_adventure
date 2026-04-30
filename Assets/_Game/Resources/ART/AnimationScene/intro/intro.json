@@ -1,0 +1,321 @@
+{
+"skeleton": {
+	"hash": "IvHGkI6+p6EZw0VPd3Gl8y2Eg+s",
+	"spine": "3.8.0",
+	"x": -1333.13,
+	"y": -642,
+	"width": 2594.4,
+	"height": 1202,
+	"images": "",
+	"audio": "D:/арт Игра про маленького ГНОМА/animscene/intro"
+},
+"bones": [
+	{ "name": "root" },
+	{
+		"name": "ramka",
+		"parent": "root",
+		"length": 1051.67,
+		"rotation": 90,
+		"x": 959.14,
+		"y": -515.42,
+		"color": "ff03dbff"
+	},
+	{
+		"name": "logo",
+		"parent": "root",
+		"length": 313.76,
+		"rotation": 91.72,
+		"x": -5.28,
+		"y": -69.76,
+		"color": "ffab00ff"
+	},
+	{
+		"name": "cloud1",
+		"parent": "root",
+		"length": 509.42,
+		"rotation": 88.94,
+		"x": -113.75,
+		"y": -897.42,
+		"color": "80dfe6ff"
+	},
+	{
+		"name": "cloudR",
+		"parent": "root",
+		"length": 898.4,
+		"rotation": -179.85,
+		"x": 860.11,
+		"y": -102.77,
+		"color": "78e4e7ff"
+	},
+	{
+		"name": "cloudL",
+		"parent": "root",
+		"length": 804.09,
+		"rotation": 0.34,
+		"x": -877.74,
+		"y": -93.34,
+		"color": "91e7e9ff"
+	},
+	{
+		"name": "morecloud",
+		"parent": "root",
+		"length": 273.54,
+		"rotation": 90.49,
+		"x": 256.46,
+		"y": -722.92,
+		"color": "0055ffff"
+	},
+	{
+		"name": "forest",
+		"parent": "root",
+		"length": 778.27,
+		"rotation": 88.96,
+		"x": -420.29,
+		"y": -652.18,
+		"color": "00ff40ff"
+	},
+	{
+		"name": "forestL",
+		"parent": "forest",
+		"length": 1037.08,
+		"rotation": -52.56,
+		"x": 221.74,
+		"y": 515.8,
+		"color": "00ff40ff"
+	},
+	{
+		"name": "forestR",
+		"parent": "forest",
+		"length": 1106.09,
+		"rotation": 58.4,
+		"x": 279.87,
+		"y": -1254.29,
+		"color": "00ff40ff"
+	}
+],
+"slots": [
+	{ "name": "forestSKY", "bone": "root", "attachment": "forestSKY" },
+	{ "name": "logo", "bone": "logo", "attachment": "logo" },
+	{ "name": "forest", "bone": "forest", "attachment": "forest" },
+	{ "name": "L", "bone": "forestL", "attachment": "L" },
+	{ "name": "R", "bone": "forestR", "attachment": "R" },
+	{ "name": "MOREclouds", "bone": "morecloud", "attachment": "MOREclouds" },
+	{ "name": "cloud1", "bone": "cloud1", "attachment": "cloud1" },
+	{ "name": "cloud2", "bone": "cloudR", "attachment": "cloud2" },
+	{ "name": "cloud3", "bone": "cloudL", "attachment": "cloud3" },
+	{ "name": "ramka", "bone": "ramka", "attachment": "ramka" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"forestSKY": {
+				"forestSKY": { "x": -35.93, "y": -52.12, "scaleX": 4.1164, "scaleY": 4.1164, "width": 635, "height": 264 }
+			},
+			"L": {
+				"L": {
+					"x": 965.37,
+					"y": -195.41,
+					"scaleX": 5.0408,
+					"scaleY": 5.0408,
+					"rotation": -36.4,
+					"width": 368,
+					"height": 213
+				}
+			},
+			"R": {
+				"R": {
+					"x": 869.71,
+					"y": 125.19,
+					"scaleX": 5.0408,
+					"scaleY": 5.0408,
+					"rotation": -147.36,
+					"width": 368,
+					"height": 213
+				}
+			},
+			"cloud1": {
+				"cloud1": {
+					"x": 977.35,
+					"y": -95.67,
+					"scaleX": 5.0408,
+					"scaleY": 5.0408,
+					"rotation": -88.94,
+					"width": 384,
+					"height": 191
+				}
+			},
+			"forest": {
+				"forest": {
+					"x": 615.72,
+					"y": -409.16,
+					"scaleX": 5.0408,
+					"scaleY": 5.0408,
+					"rotation": -88.96,
+					"width": 384,
+					"height": 208
+				}
+			},
+			"cloud3": {
+				"cloud3": {
+					"x": 851.69,
+					"y": -11.66,
+					"scaleX": 5.0408,
+					"scaleY": 5.0408,
+					"rotation": -0.34,
+					"width": 384,
+					"height": 216
+				}
+			},
+			"logo": {
+				"logo": {
+					"x": 149.53,
+					"y": 56.75,
+					"scaleX": 5.0408,
+					"scaleY": 5.0408,
+					"rotation": -91.72,
+					"width": 203,
+					"height": 79
+				}
+			},
+			"MOREclouds": {
+				"MOREclouds": {
+					"x": 731.88,
+					"y": 282.16,
+					"scaleX": 5.0408,
+					"scaleY": 5.0408,
+					"rotation": -90.49,
+					"width": 245,
+					"height": 212
+				}
+			},
+			"ramka": {
+				"ramka": { "x": 515.42, "y": 959.14, "rotation": -90, "width": 1924, "height": 1084 }
+			},
+			"cloud2": {
+				"cloud2": {
+					"x": 767.64,
+					"y": -178.28,
+					"scaleX": 5.0408,
+					"scaleY": 5.0408,
+					"rotation": 179.85,
+					"width": 346,
+					"height": 163
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"logo": {
+				"color": [
+					{ "time": 3.3333, "color": "ffffffff" },
+					{ "time": 5.3333, "color": "ffffff00" }
+				]
+			},
+			"forest": {
+				"color": [
+					{ "time": 5, "color": "ffffffff" },
+					{ "time": 6.6667, "color": "ffffff00" }
+				]
+			},
+			"L": {
+				"color": [
+					{ "time": 5, "color": "ffffffff" },
+					{ "time": 6.6667, "color": "ffffff00" }
+				]
+			},
+			"ramka": {
+				"color": [
+					{ "time": 5, "color": "ffffffff" },
+					{ "time": 6.6667, "color": "ffffff00" }
+				]
+			},
+			"R": {
+				"color": [
+					{ "time": 5, "color": "ffffffff" },
+					{ "time": 6.6667, "color": "ffffff00" }
+				]
+			},
+			"forestSKY": {
+				"color": [
+					{ "time": 5, "color": "ffffffff" },
+					{ "time": 6.6667, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"forest": {
+				"translate": [
+					{ "y": -1656.25 },
+					{ "time": 4, "x": 34.86, "y": -864.43 },
+					{ "time": 5, "x": 34.86, "y": -246.91 }
+				]
+			},
+			"cloud1": {
+				"translate": [
+					{ "y": -524.79 },
+					{ "time": 1.3333, "y": -102.58 },
+					{ "time": 2, "x": 59.36, "y": -102.58 },
+					{ "time": 2.6667, "x": -13.97, "y": 37.1 },
+					{ "time": 3.3333, "x": 58.76, "y": 820.62 }
+				]
+			},
+			"cloudR": {
+				"translate": [
+					{ "y": -524.79 },
+					{ "time": 1.3333, "y": 127.89 },
+					{ "time": 2.6667, "x": 1287.72, "y": 795.65 }
+				]
+			},
+			"cloudL": {
+				"translate": [
+					{ "y": -524.79 },
+					{ "time": 1.3333, "y": 127.89 },
+					{ "time": 2.6667, "x": -954.72, "y": 911.01 }
+				]
+			},
+			"morecloud": {
+				"translate": [
+					{ "x": 7.36, "y": -1227.29 },
+					{ "time": 2.4, "x": 79.37, "y": -1426.38 },
+					{ "time": 5, "x": 79.37, "y": 742.7 }
+				],
+				"scale": [
+					{ "x": 1.531, "y": 1.531 }
+				]
+			},
+			"logo": {
+				"translate": [
+					{ "y": -754.11 },
+					{ "time": 1.3333, "y": -101.43 },
+					{ "time": 2.6667, "x": 8.82, "y": -101.43 },
+					{ "time": 3.3333, "x": 33.06, "y": -101.43 }
+				],
+				"scale": [
+					{ "x": 0.568, "y": 0.568 },
+					{ "time": 1.3333, "x": 0.839, "y": 0.839 },
+					{ "time": 2.6667 },
+					{ "time": 5.3333, "x": 2.402, "y": 2.402 }
+				]
+			},
+			"forestL": {
+				"translate": [
+					{ "time": 4, "x": -475.83, "y": 1241.54 },
+					{ "time": 5, "x": 310.93, "y": 93.07 },
+					{ "time": 6.6667, "x": -251.32, "y": 1848.31 }
+				]
+			},
+			"forestR": {
+				"translate": [
+					{ "time": 4, "x": -379.41, "y": -1047.89 },
+					{ "time": 5, "x": 294.42, "y": -137.94 },
+					{ "time": 6.6667, "x": -431.48, "y": -1746.14 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,76 @@
+
+intro.png
+size: 1930,1512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L
+  rotate: false
+  xy: 1018, 216
+  size: 367, 212
+  orig: 368, 213
+  offset: 0, 0
+  index: -1
+MOREclouds
+  rotate: false
+  xy: 639, 4
+  size: 236, 206
+  orig: 245, 212
+  offset: 5, 4
+  index: -1
+R
+  rotate: false
+  xy: 1018, 2
+  size: 367, 212
+  orig: 368, 213
+  offset: 1, 0
+  index: -1
+cloud1
+  rotate: false
+  xy: 1387, 29
+  size: 384, 189
+  orig: 384, 191
+  offset: 0, 2
+  index: -1
+cloud2
+  rotate: true
+  xy: 1773, 87
+  size: 341, 155
+  orig: 346, 163
+  offset: 5, 3
+  index: -1
+cloud3
+  rotate: false
+  xy: 639, 212
+  size: 377, 216
+  orig: 384, 216
+  offset: 0, 0
+  index: -1
+forest
+  rotate: false
+  xy: 1387, 220
+  size: 384, 208
+  orig: 384, 208
+  offset: 0, 0
+  index: -1
+forestSKY
+  rotate: false
+  xy: 2, 164
+  size: 635, 264
+  orig: 635, 264
+  offset: 0, 0
+  index: -1
+logo
+  rotate: true
+  xy: 877, 7
+  size: 203, 79
+  orig: 203, 79
+  offset: 0, 0
+  index: -1
+ramka
+  rotate: false
+  xy: 2, 430
+  size: 1920, 1080
+  orig: 1924, 1084
+  offset: 2, 2
+  index: -1

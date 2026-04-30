@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1fc8b0e06c9d6054db3aeaf89576bce0
+guid: 681a6a21aab11484788070ab6199b7de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5623194428626525839
-    second: test_0
+      213: -2748280990395090046
+    second: SkyForest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: test_0
+      name: SkyForest_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3173
-        height: 874
+        width: 3938
+        height: 926
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 171a2cac57666f1b0800000000000000
-      internalID: -5623194428626525839
+      spriteID: 28bba8010052cd9d0800000000000000
+      internalID: -2748280990395090046
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      test_0: -5623194428626525839
+      SkyForest_0: -2748280990395090046
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0be181534f5abc446bf478877b4a672d
+guid: 1dbca28efc0a7984ba31788bfaf88e27
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7919386123332049619
-    second: far_0
+      213: -5628431991779095644
+    second: farBUSH_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: far_0
+      name: farBUSH_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3173
-        height: 516
+        width: 3066
+        height: 315
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d25a2af8740b81290800000000000000
-      internalID: -7919386123332049619
+      spriteID: 4ab00979ceac3e1b0800000000000000
+      internalID: -5628431991779095644
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      far_0: -7919386123332049619
+      farBUSH_0: -5628431991779095644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
