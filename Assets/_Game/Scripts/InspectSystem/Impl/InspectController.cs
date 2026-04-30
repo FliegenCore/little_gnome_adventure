@@ -15,40 +15,49 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly InspectCamera _inspectCamera;
         private readonly Dictionary<string, InspectModel> _inspectModels = new Dictionary<string, InspectModel>();
-        private readonly InspectInputHandler _inspectInputHandler;
+        private readonly Dictionary<string, InspectInputHandler> _inputs;
+        private readonly InspectInputHandler _baseInputHandler;
         private InspectModel _currentInspectModel;
+        
+        private string _currentInspectModelId;
         
         private InspectController(EventBus eventBus, InputSystem_Actions inputSystemActions, InspectCamera inspectCamera)
         {
-            _inspectCamera = inspectCamera;
-            _eventBus = eventBus;
+            _inspectCamera      = inspectCamera;
+            _eventBus           = eventBus;
             _inputSystemActions = inputSystemActions;
-            _inspectInputHandler = new InspectInputHandler(inputSystemActions);
+            _baseInputHandler   = new InspectInputHandler(inputSystemActions);
+            _inputs             = new Dictionary<string, InspectInputHandler>();
             
             _eventBus.Subscribe<ShowInspectWindowByIdSignal, string>(this, Show);
         }
         
-        public void AddInspectModel(string id, InspectModel inspectModel)
+        public void AddInspectModel(string id, InspectModel inspectModel, InspectInputHandler inspectInputHandler = null)
         {
             Debug.Log("Register " + id + " inspect");
+            
             _inspectModels.Add(id, inspectModel);
+            if(inspectInputHandler != null)
+                _inputs.Add(id, inspectInputHandler);
+            else
+                _inputs.Add(id, _baseInputHandler);
         }
         
         public void EnableInput()
         {
             _inputSystemActions.Player.Back.performed += Hide;
-            
-            _inspectInputHandler.EnableInput(_currentInspectModel);
+            _inputs[_currentInspectModelId].EnableInput(_currentInspectModel);
         }
 
         public void DisableInput()
         {
             _inputSystemActions.Player.Back.performed -= Hide;
-            _inspectInputHandler.DisableInput();
+            _inputs[_currentInspectModelId].DisableInput();
         }
         
         private void Show(string id)
         {
+            _currentInspectModelId = id;
             _inspectModels[id].IsOpen.Value = true;
             _currentInspectModel = _inspectModels[id];
             
@@ -75,7 +84,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         public void Dispose()
         {
             _eventBus.Unsubscribe<ShowInspectWindowByIdSignal>(this);
-            _inspectInputHandler?.Dispose();
+            _baseInputHandler?.Dispose();
         }
     }
 }

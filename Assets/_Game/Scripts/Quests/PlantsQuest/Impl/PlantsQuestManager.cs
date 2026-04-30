@@ -18,7 +18,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
     {
         private readonly EventBus _eventBus;
         private readonly CompositeDisposable _compositeDisposable = new();
-        private readonly ForestLocationsRootView _forestLocationsRootView;
+        private readonly LocationsRootView _locationsRootView;
         private readonly CameraController _cameraController;
         private readonly ICutsceneManger _cutsceneManger;
         private readonly IPlayerFactory _playerFactory;
@@ -30,7 +30,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         
         public PlantsQuestManager(
             EventBus eventBus,
-            ForestLocationsRootView locationsRootView,
+            LocationsRootView locationsRootView,
             CameraController cameraController,
             IPlayerFactory playerFactory,
             ICutsceneManger cutsceneManger,
@@ -38,7 +38,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         {
             _interactableFactory     = interactableFactory;
             _cameraController        = cameraController;
-            _forestLocationsRootView = locationsRootView;
+            _locationsRootView = locationsRootView;
             _eventBus                = eventBus;
             _playerFactory           = playerFactory;
             _cutsceneManger          = cutsceneManger;
@@ -53,7 +53,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         private void CreateCutscene()
         {
             DreamQuestFirstLocationView dreamQuestFirstLocationView =
-                _forestLocationsRootView.DreamQuestFirstLocationView;
+                _locationsRootView.DreamQuestFirstLocationView;
 
             NightstandView grannyView = dreamQuestFirstLocationView.GrannyView;
             NightstandView centerPlantView = dreamQuestFirstLocationView.BootPlant;
@@ -70,7 +70,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         private void CreatePlants()
         {
             DreamQuestFirstLocationView dreamQuestFirstLocationView =
-                _forestLocationsRootView.DreamQuestFirstLocationView;
+                _locationsRootView.DreamQuestFirstLocationView;
             
             Interactable boot = CreatePlant(dreamQuestFirstLocationView.BootPlant, "Boot", 2);
             Interactable cactus = CreatePlant(dreamQuestFirstLocationView.CactusPlant, "Cactus", 4);

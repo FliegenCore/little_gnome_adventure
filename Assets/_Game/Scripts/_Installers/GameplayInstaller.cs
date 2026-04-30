@@ -66,7 +66,7 @@ namespace _Game.Scripts._Installers
             builder.Register<DreamFirstQuestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<LocationsControllerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<InspectForestRegistratorService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<InspectRegistratorService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InventoryFactoryProvider>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InventoryFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ItemInfoProvider>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();

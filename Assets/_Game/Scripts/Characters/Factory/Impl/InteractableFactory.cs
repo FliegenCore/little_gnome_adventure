@@ -20,7 +20,9 @@ namespace _Game.Scripts.PlayerSystems.Animations.Factory.Impl
             NightstandView nightstandView,
             AbstractInteractableModel abstractInteractableModel)
         {
-            nightstandView.HintSelect.Construct(_eventBus, abstractInteractableModel.IsSelected);
+            if(nightstandView != null)
+                nightstandView.HintSelect.Construct(_eventBus, abstractInteractableModel.IsSelected);
+            
             Interactable interactable = new Interactable(abstractInteractableModel, nightstandView, _eventBus, customBehaviour);
 
             return interactable;

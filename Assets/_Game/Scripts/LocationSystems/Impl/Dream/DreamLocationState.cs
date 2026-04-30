@@ -13,7 +13,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamRoom1
 
         public DreamLocationState(
             Fsm fsm,
-            AbstractLocationModel locationModel,
+            DreamLocationModel locationModel,
             DreamLocationView abstractLocation,
             IDialogueManager dialogueManager,
             EventBus eventBus) : base(fsm, locationModel, abstractLocation, dialogueManager, eventBus)

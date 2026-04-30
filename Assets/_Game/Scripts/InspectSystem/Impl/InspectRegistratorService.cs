@@ -1,3 +1,4 @@
+using _Game.Scripts.InspectSystem;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InteractionSystems.Interactables.Items;
 using _Game.Scripts.InventorySystem;
@@ -7,14 +8,14 @@ using Core.Common;
 
 namespace _Game.Scripts.PlayerSystems.InspectSystem
 {
-    public class InspectForestRegistratorService
+    public class InspectRegistratorService
     {
         private readonly InspectController _inspectController;
         private readonly ForestRootViewFactory _forestRootViewFactory;
         private readonly EventBus _eventBus;
         private readonly InventoryProxy _inventoryProxy;
         
-        public InspectForestRegistratorService(
+        public InspectRegistratorService(
             InspectController inspectController, 
             ForestRootViewFactory forestRootViewFactory,
             EventBus eventBus,
@@ -35,7 +36,6 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         {
             RegisterNightstand();
             RegisterTable();
-            RegisterLobotomy();
         }
 
         private void RegisterNightstand()
@@ -48,7 +48,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             BaseItem toy = CreateInteractableItem(ItemId.Toy, toyView, true);
             BaseItem apple = CreateInteractableItem(ItemId.Apple, appleView, true);
             
-            RegisterInspect("Nightstand", inspectsView.InspectNightstandView, toy, apple);
+            RegisterInspect("Nightstand", inspectsView.InspectNightstandView, null, toy, apple);
         }
 
         private void RegisterTable()
@@ -57,19 +57,14 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             RegisterInspect("Table", inspectsView.Table);
         }
 
-        private void RegisterLobotomy()
-        {
-            InspectsView inspectsView = _forestRootViewFactory.GetLocationsRootView().InspectsView;
-            RegisterInspect("Lobotomy", inspectsView.LobotomyInspectView);
-        }
-
-        public void RegisterInspect(string id, InspectAbstractView view, params AbstractInteractable[] interactables)
+        public void RegisterInspect(string id, InspectAbstractView view, InspectInputHandler inspectInputHandler = null, params AbstractInteractable[] interactables)
         {
             InspectModel inspectModel = new InspectModel(interactables);
             
-            view.Activator.Construct(inspectModel.IsOpen);
+            if(view != null)
+                view.Activator.Construct(inspectModel.IsOpen);
             
-            _inspectController.AddInspectModel(id, inspectModel);
+            _inspectController.AddInspectModel(id, inspectModel, inspectInputHandler);
         }
 
         private BaseItem CreateInteractableItem(ItemId id, BaseItemView view, bool isEnabled)

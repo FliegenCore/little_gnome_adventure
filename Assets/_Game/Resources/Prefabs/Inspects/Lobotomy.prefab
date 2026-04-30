@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5036613859849741760}
   - component: {fileID: 761687295432512366}
   - component: {fileID: 3066748901889175124}
+  - component: {fileID: 1313298960443585682}
   m_Layer: 0
-  m_Name: Spine GameObject (PUPS)
+  m_Name: Pups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,6 +123,21 @@ MonoBehaviour:
   _animationName: pups/idle
   loop: 1
   timeScale: 1
+--- !u!114 &1313298960443585682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668499584721431614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456815eae5504e51981434456e57be3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skeletonAnimation: {fileID: 3066748901889175124}
+  _defaultMixDuration: 0.25
+  _startAnimationName: 
 --- !u!1 &8627427194707419736
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,3 +197,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Activator>k__BackingField: {fileID: 4608722447540068558}
+  <AnimationControl>k__BackingField: {fileID: 1313298960443585682}

@@ -24,7 +24,7 @@ namespace _Game.Scripts.ChaptersSystem
         private readonly ForestRootViewFactory _forestRootViewFactory;
         private readonly LocationsControllerFactory _locationsControllerFactory;
         private readonly UpdateController _updateController;
-        private readonly InspectForestRegistratorService _inspectForestRegistratorService;
+        private readonly InspectRegistratorService _inspectRegistratorService;
         private readonly CameraController _cameraController;
         
         private readonly HouseLocationFactory _houseLocationFactory;
@@ -44,7 +44,7 @@ namespace _Game.Scripts.ChaptersSystem
             TestLocationFactory testLocationFactory,
             LocationsControllerFactory locationsControllerFactory,
             UpdateController updateController,
-            InspectForestRegistratorService inspectForestRegistratorService,
+            InspectRegistratorService inspectRegistratorService,
             CameraController cameraController,
             ForestLocationFactory forestLocationFactory,
             DreamLocationFactory dreamLocationFactory,
@@ -52,7 +52,7 @@ namespace _Game.Scripts.ChaptersSystem
         {
             _testLocationFactory = testLocationFactory;
             _cameraController = cameraController;
-            _inspectForestRegistratorService = inspectForestRegistratorService;
+            _inspectRegistratorService = inspectRegistratorService;
             _updateController = updateController;
             _locationsControllerFactory = locationsControllerFactory;
             _forestRootViewFactory = forestRootViewFactory;
@@ -78,7 +78,7 @@ namespace _Game.Scripts.ChaptersSystem
         
         private void RegisterInspects()
         {
-            _inspectForestRegistratorService.Initialize();
+            _inspectRegistratorService.Initialize();
         }
 
         private void CreateLocation()

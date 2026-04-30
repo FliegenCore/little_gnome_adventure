@@ -7,7 +7,7 @@ namespace _Game.Scripts.RoomSystems
     public class ForestRootViewFactory
     {
         private const string PREFAB_PATH = "Prefabs/Locations/LocationsRoot";
-        private ForestLocationsRootView _forestLocationsRootView;
+        private LocationsRootView _locationsRootView;
         private IObjectResolver _container;
         
         public ForestRootViewFactory(IObjectResolver container)
@@ -15,16 +15,16 @@ namespace _Game.Scripts.RoomSystems
             _container = container;
         }
         
-        public ForestLocationsRootView CreateForestLocationsRootView()
+        public LocationsRootView CreateForestLocationsRootView()
         {
-            ForestLocationsRootView prefab = Resources.Load<ForestLocationsRootView>(PREFAB_PATH);
-            _forestLocationsRootView = _container.Instantiate(prefab);
-            return _forestLocationsRootView;
+            LocationsRootView prefab = Resources.Load<LocationsRootView>(PREFAB_PATH);
+            _locationsRootView = _container.Instantiate(prefab);
+            return _locationsRootView;
         }
 
-        public ForestLocationsRootView GetLocationsRootView()
+        public LocationsRootView GetLocationsRootView()
         {
-            return _forestLocationsRootView;
+            return _locationsRootView;
         }
     }
 }

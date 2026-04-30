@@ -9,17 +9,17 @@ namespace _Game.Scripts.InspectSystem
 {
     public class InspectInputHandler : IDisposable
     {
-        private readonly InputSystem_Actions _inputSystemActions;
+        protected readonly InputSystem_Actions _inputSystemActions;
         
-        private InspectModel _currentInspectModel;
-        private AbstractInteractable _selectedInteractable;
+        protected  InspectModel _currentInspectModel;
+        protected  AbstractInteractable _selectedInteractable;
 
         public InspectInputHandler(InputSystem_Actions inputSystemActions)
         {
             _inputSystemActions = inputSystemActions;
         }
         
-        public void EnableInput(InspectModel inspectModel)
+        public virtual void EnableInput(InspectModel inspectModel)
         {
             _currentInspectModel = inspectModel;
 
@@ -32,7 +32,7 @@ namespace _Game.Scripts.InspectSystem
             _inputSystemActions.Player.Interact.performed += InteractWithSelectedItem;
         }
         
-        public void DisableInput()
+        public virtual void DisableInput()
         {
             _inputSystemActions.UI.Navigate.performed -= Navigate;
             _inputSystemActions.Player.Interact.performed -= InteractWithSelectedItem;
@@ -41,11 +41,11 @@ namespace _Game.Scripts.InspectSystem
                 _selectedInteractable.AbstractInteractableModel.IsSelected.Value = false;
         }
 
-        private void Navigate(InputAction.CallbackContext callback)
+        protected virtual void Navigate(InputAction.CallbackContext callback)
         {
             Vector2 direction = callback.ReadValue<Vector2>();
 
-            if (HasItem())
+            if (HasMoreItem())
             {
                 AbstractInteractable newModel = GetInteractableByDirection(direction);
 
@@ -60,7 +60,7 @@ namespace _Game.Scripts.InspectSystem
             }
         }
 
-        private bool HasItem()
+        protected bool HasMoreItem()
         {
             if (_currentInspectModel.Interactables.Count == 1)
                 return false;
@@ -68,34 +68,40 @@ namespace _Game.Scripts.InspectSystem
             return true;
         }
 
-        private AbstractInteractable GetInteractableByDirection(Vector2 direction)
+        protected AbstractInteractable GetInteractableByDirection(Vector2 direction)
         {
             AbstractInteractable bestCandidate = null;
-            float bestScore = -1f;
+            float bestDistance = float.MaxValue;
+    
+            Vector2 currentPos = _selectedInteractable.AbstractInteractableModel.Position;
     
             foreach (var interactable in _currentInspectModel.Interactables)
             {
                 if (_selectedInteractable == interactable)
                     continue;
-                
+            
                 if(!interactable.AbstractInteractableModel.CanSelected.Value)
                     continue;
+            
+                Vector2 toTarget = interactable.AbstractInteractableModel.Position - currentPos;
         
-                Vector2 toInteractable = (interactable.AbstractInteractableModel.Position - _selectedInteractable.AbstractInteractableModel.Position).normalized;
+                float projection = Vector2.Dot(direction.normalized, toTarget);
+                if (projection <= 0) 
+                    continue;
+            
+                float distance = toTarget.magnitude;
         
-                float dot = Vector2.Dot(direction.normalized, toInteractable);
-        
-                if (dot > bestScore)
+                if (distance < bestDistance)
                 {
-                    bestScore = dot;
+                    bestDistance = distance;
                     bestCandidate = interactable;
                 }
             }
     
-            return bestScore > 0.5f ? bestCandidate : null;
+            return bestCandidate;
         }
 
-        private void InteractWithSelectedItem(InputAction.CallbackContext _)
+        protected virtual void InteractWithSelectedItem(InputAction.CallbackContext _)
         {
             if(_selectedInteractable == null)
                 return;
@@ -106,7 +112,7 @@ namespace _Game.Scripts.InspectSystem
                 SelectFirst();
         }
         
-        private void SelectFirst()
+        protected void SelectFirst()
         {
             bool hasSelectable = false;
             int i = 0;

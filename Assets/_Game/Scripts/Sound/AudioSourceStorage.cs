@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace _Game.Scripts.Sound
 {

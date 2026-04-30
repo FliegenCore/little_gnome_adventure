@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace _Game.Scripts.RoomSystems
 {
-    public class ForestLocationsRootView : MonoBehaviour
+    public class LocationsRootView : MonoBehaviour
     {
         [field: SerializeField] public InspectsView InspectsView { get; private set; }
         [field: SerializeField] public StartHouseView StartHouseView { get; private set; }

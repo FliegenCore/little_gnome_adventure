@@ -70,7 +70,8 @@ namespace _Game.Scripts.DialogueSystem.View
         
         private void OnDestroy()
         {
-            _eventBus.Unsubscribe<DialogueEventSignal>(this);
+            if(_eventBus != null)
+                _eventBus.Unsubscribe<DialogueEventSignal>(this);
         }
     }
 }
