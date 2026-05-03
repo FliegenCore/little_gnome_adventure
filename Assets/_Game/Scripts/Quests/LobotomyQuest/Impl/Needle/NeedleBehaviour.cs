@@ -58,8 +58,9 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl.Needle
             return true;
         }
 
-        public override void Interact()
+        public override void Interact(Action callback)
         {
+            callback?.Invoke();
             if (_lastYDirection > 0)
             {
                 if(_needleModel.Depth.Value + 1 > MAXIMUM_DEPTH)

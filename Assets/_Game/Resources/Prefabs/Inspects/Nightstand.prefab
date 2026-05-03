@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 758609085514392735}
   - component: {fileID: 4926864838525381805}
   - component: {fileID: 7328765789739044403}
+  - component: {fileID: 152954818347460732}
   m_Layer: 0
   m_Name: ToyItem
   m_TagString: Untagged
@@ -220,9 +221,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a912d5093849919bb6b002ef19186b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ContactTriggerProvider>k__BackingField: {fileID: 0}
-  <HintSelect>k__BackingField: {fileID: 0}
-  <AbstractHintSelect>k__BackingField: {fileID: 7328765789739044403}
+  <InteractPoint>k__BackingField: {fileID: 0}
+  <BoxCollider2D>k__BackingField: {fileID: 0}
+  <ContactTriggerProvider>k__BackingField: {fileID: 152954818347460732}
+  <HintSelect>k__BackingField: {fileID: 7328765789739044403}
+  <AnimationControl>k__BackingField: {fileID: 0}
 --- !u!114 &7328765789739044403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +239,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 8983827645217414969}
+--- !u!114 &152954818347460732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109667943738668202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5a7007379842b591317aba246cd306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4243515842147890009
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +262,7 @@ GameObject:
   - component: {fileID: 3171192259222473451}
   - component: {fileID: 8670296752875773405}
   - component: {fileID: 1903503089993282445}
+  - component: {fileID: 263416918281580264}
   m_Layer: 0
   m_Name: AppleItem (1)
   m_TagString: Untagged
@@ -282,9 +298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a912d5093849919bb6b002ef19186b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <InteractPoint>k__BackingField: {fileID: 0}
+  <BoxCollider2D>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 0}
-  <HintSelect>k__BackingField: {fileID: 0}
-  <AbstractHintSelect>k__BackingField: {fileID: 1903503089993282445}
+  <HintSelect>k__BackingField: {fileID: 1903503089993282445}
+  <AnimationControl>k__BackingField: {fileID: 0}
 --- !u!114 &1903503089993282445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +316,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 8869876182414177095}
+--- !u!114 &263416918281580264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243515842147890009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5a7007379842b591317aba246cd306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4862814171269713662
 GameObject:
   m_ObjectHideFlags: 0

@@ -70,9 +70,9 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         private BaseItem CreateInteractableItem(ItemId id, BaseItemView view, bool isEnabled)
         {
             BaseItemModel model = new BaseItemModel(view.ContactTriggerProvider, view.transform.position, id.ToString(), isEnabled);
-            view.AbstractHintSelect.Construct(_eventBus, model.IsSelected);
+            view.HintSelect.Construct(_eventBus, model.IsSelected);
             
-            BaseItem baseItem = new BaseItem(model, view, _eventBus, _inventoryProxy);
+            BaseItem baseItem = new BaseItem(model, view, _eventBus, _inventoryProxy, null);
 
             return baseItem;
         }

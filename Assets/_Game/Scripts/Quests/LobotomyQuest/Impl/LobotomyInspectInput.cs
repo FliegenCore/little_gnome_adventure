@@ -62,7 +62,7 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl
                     if (_selectedInteractable.CustomBehaviour is NeedleBehaviour needleBehaviour)
                     {
                         needleBehaviour.SetDirection((int)direction.y);
-                        needleBehaviour.Interact();
+                        needleBehaviour.Interact(null);
                     }
                 }
             }

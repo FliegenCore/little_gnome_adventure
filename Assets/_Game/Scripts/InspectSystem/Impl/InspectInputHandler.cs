@@ -106,7 +106,7 @@ namespace _Game.Scripts.InspectSystem
             if(_selectedInteractable == null)
                 return;
             
-            _selectedInteractable.Interact();
+            _selectedInteractable.Interact(null);
 
             if(!_selectedInteractable.CanInteract())
                 SelectFirst();

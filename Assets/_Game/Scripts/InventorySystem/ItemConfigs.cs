@@ -9,6 +9,9 @@ namespace _Game.Scripts.InventorySystem
         Apple,
         RedTriangle,
         Needle,
+        Poo,
+        Wrapper,
+        Candy,
     }
     
     [CreateAssetMenu(fileName = "InventoryItemConfig", menuName = "Hell/Inventory Item Config")]

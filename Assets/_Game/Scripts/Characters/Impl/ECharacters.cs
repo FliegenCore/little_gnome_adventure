@@ -7,5 +7,6 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl
         Girl,
         Pig,
         Granny,
+        Hedgehog,
     }
 }

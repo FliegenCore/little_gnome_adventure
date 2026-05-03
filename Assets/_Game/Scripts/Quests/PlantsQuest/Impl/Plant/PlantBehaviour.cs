@@ -21,7 +21,7 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl
             return !_isCompleted && _plantModel.CanInteract.Value;
         }
 
-        public override void Interact()
+        public override void Interact(Action callback)
         {
             _plantModel.CanInteract.Value = false;
             
@@ -33,6 +33,7 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl
                 nextValue++;
 
             _plantModel.Height.Value = nextValue;
+            callback?.Invoke();
         }
         
         private void PlantsQuestComplete()

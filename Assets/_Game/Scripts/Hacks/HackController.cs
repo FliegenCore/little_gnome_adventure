@@ -43,7 +43,7 @@ namespace _Game.Scripts.Hacks
                 
                 if (GUI.Button(new Rect(10, y, 200, 30), door.DoorModel.ConnectedDoorId))
                 {
-                    door.Interact();
+                    door.Interact(null);
                 }
 
                 y += 40;

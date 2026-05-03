@@ -25,7 +25,7 @@ namespace _Game.Scripts.InventorySystem.Factories
             InventoryItemView inventoryItemViewPrefab = Object.Instantiate(itemConfig.ViewPrefab, _inventoryView.Cells[index].transform);
             inventoryItemViewPrefab.SpriteApplyer.Construct(spriteStorage);
             
-            InventoryItem inventoryItem = new InventoryItem(inventoryItemModel, _eventBus, inventoryItemViewPrefab);
+            InventoryItem inventoryItem = new InventoryItem(inventoryItemModel, _eventBus, inventoryItemViewPrefab, id);
 
             return inventoryItem;
         }

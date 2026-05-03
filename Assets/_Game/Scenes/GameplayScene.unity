@@ -1386,6 +1386,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   _forestChapterConfig: {fileID: 11400000, guid: 5a14b04a202cc504b80e7dafc03726b6, type: 2}
+  _mergeItemConfig: {fileID: 11400000, guid: b3309bb0e86ef1b4db727861a44b3d90, type: 2}
   _playerConfig: {fileID: 11400000, guid: 3243bcad6339b2a479db31dfd8233166, type: 2}
   _cinemachineCamera: {fileID: 2057373587}
   _mainCamera: {fileID: 519420031}

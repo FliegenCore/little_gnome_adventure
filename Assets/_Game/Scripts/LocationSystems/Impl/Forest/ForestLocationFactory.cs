@@ -1,5 +1,8 @@
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
+using _Game.Scripts.InteractionSystems.Interactables.Items;
+using _Game.Scripts.InteractionSystems.Interactables.Items.Managers;
+using _Game.Scripts.InventorySystem;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Factory;
 using _Game.Scripts.PlayerSystems.Animations.Impl;
@@ -10,6 +13,7 @@ using _Game.Scripts.PlayerSystems.InspectSystem.InspectWindows;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.Nightstand;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.Quests.LobotomyQuest.Impl;
+using _Game.Scripts.Quests.LobotomyQuest.Impl.Hedgehog;
 using _Game.Scripts.RoomSystems.LocationModels;
 using _Game.Scripts.RoomSystems.LocationModels.Forest;
 using _Game.Scripts.RoomSystems.LocationsStates;
@@ -26,6 +30,8 @@ namespace _Game.Scripts.RoomSystems.Variants
         private readonly IInteractableFactory _interactableFactory;
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly InspectRegistratorService _inspectRegistratorService;
+        private readonly ItemFactory _itemFactory;
+        private readonly InventoryProxy _inventoryProxy;
         
         public ForestLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
@@ -34,8 +40,12 @@ namespace _Game.Scripts.RoomSystems.Variants
             IPlayerFactory playerFactory, 
             IInteractableFactory interactableFactory,
             InputSystem_Actions inputSystemActions,
-            InspectRegistratorService inspectRegistratorService)
+            InspectRegistratorService inspectRegistratorService,
+            InventoryProxy inventoryProxy,
+            ItemFactory itemFactory)
         {
+            _itemFactory               = itemFactory;
+            _inventoryProxy            = inventoryProxy;
             _inspectRegistratorService = inspectRegistratorService;
             _inputSystemActions        = inputSystemActions;
             _interactableFactory       = interactableFactory;
@@ -55,8 +65,15 @@ namespace _Game.Scripts.RoomSystems.Variants
                 _dialogueManager,
                 _eventBus);
             
+            LocationsRootView locationsRootView = _forestRootViewFactory.GetLocationsRootView();
+            
             CreateCharacter(nameof(ECharacters.Girl), new GirlBehaviour(_eventBus), 
-                  _forestRootViewFactory.GetLocationsRootView().ForestLocationView.GirlView);
+                locationsRootView.ForestLocationView.GirlView);
+            CreateCharacter(nameof(ECharacters.Hedgehog), new HedgehogBehaviour(_eventBus, locationsRootView.ForestLocationView.HedgehogView.AnimationControl), 
+                locationsRootView.ForestLocationView.HedgehogView);
+            
+            CreateItem(locationsRootView.ForestLocationView.WrapperItemView, ItemId.Wrapper);
+            CreateItem(locationsRootView.ForestLocationView.PooItemView, ItemId.Poo);
             
             LobotomyManager lobotomyManager = new LobotomyManager(
                 _forestRootViewFactory.GetLocationsRootView(), 
@@ -69,6 +86,11 @@ namespace _Game.Scripts.RoomSystems.Variants
             
             fsm.AddState(forestState);
             return forestState;
+        }
+
+        private BaseItem CreateItem(BaseItemView itemView, ItemId id)
+        {
+            return _itemFactory.CreateItem(itemView, id);
         }
         
         private Interactable CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)

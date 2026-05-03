@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.InteractionSystems;
+using _Game.Scripts.InventorySystem.Configs;
 using _Game.Scripts.InventorySystem.Factories;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
@@ -29,18 +30,21 @@ namespace _Game.Scripts.InventorySystem
         
         private InventoryItem _currentSelectedInventoryItem;
 
+        public InventoryItem SelectedInventoryItem => _currentSelectedInventoryItem;
+        
         public Inventory(InventoryModel inventoryModel, 
             InventoryFactoryProvider inventoryFactoryProvider,
             EventBus eventBus, 
             InputSystem_Actions inputSystemActions,
-            InteractionController interactionController)
+            InteractionController interactionController,
+            MergeItemConfig mergeItemConfig)
         {
             _interactionController    = interactionController;
             _inputSystemActions       = inputSystemActions;
             _eventBus                 = eventBus;
             _inventoryModel           = inventoryModel;   
             _inventoryFactoryProvider = inventoryFactoryProvider;
-            _inventoryInput           = new InventoryInput(inputSystemActions, _eventBus);
+            _inventoryInput           = new InventoryInput(inputSystemActions, _eventBus, this, mergeItemConfig);
 
             Initialize();
         }
@@ -48,6 +52,7 @@ namespace _Game.Scripts.InventorySystem
         private void Initialize()
         {
             _eventBus.Subscribe<SendChooseInventoryIndexSignal, int>(this, SelectInventoryCell);
+            _eventBus.Subscribe<UseItemSignal>(this, UseItem);
             _eventBus.Subscribe<DialogueEventSignal, string>(this, DialogueInventoryEvent);
             _eventBus.Subscribe<AddItemSignal, ItemId>(this, AddItem);
         }
@@ -64,8 +69,6 @@ namespace _Game.Scripts.InventorySystem
         
         public void AddItem(ItemId id)
         {
-            Debug.Log($"Add item {id}");
-            
             InventoryItem inventoryItem = CreateItem(id);
             _inventoryModel.ItemModels.Add((InventoryItemModel)inventoryItem.AbstractInteractableModel);
             _items.Add(inventoryItem);
@@ -75,6 +78,7 @@ namespace _Game.Scripts.InventorySystem
         {
             _inventoryModel.ItemModels.Remove((InventoryItemModel)inventoryItem.AbstractInteractableModel);
             _items.Remove(inventoryItem);
+            inventoryItem.Dispose();
         }
 
         public void RemoveItemById(ItemId id)
@@ -101,14 +105,12 @@ namespace _Game.Scripts.InventorySystem
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerInventoryState));
             
             _inventoryInput.Enable();
-            _inputSystemActions.Player.Interact.performed += UseItem;
             EnableInventory();
         }
 
         private void Disable()
         {
             _inventoryInput.Disable();
-            _inputSystemActions.Player.Interact.performed -= UseItem;
             DisableInventory();
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
         }
@@ -129,9 +131,11 @@ namespace _Game.Scripts.InventorySystem
             {
                 _currentSelectedInventoryItem = _items[index];
             }
+            else
+                _currentSelectedInventoryItem = null;
         }
 
-        private void UseItem(InputAction.CallbackContext _)
+        private void UseItem()
         {
             if (_currentSelectedInventoryItem == null)
                 return;
@@ -209,6 +213,10 @@ namespace _Game.Scripts.InventorySystem
             _currentSelectedInventoryItem?.Dispose();
             _eventBus.Unsubscribe<SendChooseInventoryIndexSignal>(this);
         }
+    }
+
+    internal class UseItemSignal
+    {
     }
 
     internal class AddItemSignal

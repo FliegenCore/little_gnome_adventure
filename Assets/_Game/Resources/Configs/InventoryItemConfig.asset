@@ -25,3 +25,19 @@ MonoBehaviour:
     <Sprite>k__BackingField: {fileID: -2429937046243783905, guid: 49d940c83c2821147bf90b061c22710c, type: 3}
     <ItemnameKey>k__BackingField: item_key
     <ViewPrefab>k__BackingField: {fileID: 3506524998190829140, guid: cd066a7231a2ff94a997be45eb0ed51e, type: 3}
+  - <ItemId>k__BackingField: 6
+    <Sprite>k__BackingField: {fileID: -2757008047180432429, guid: d15d4dbd4c10df64cb50147aa5756e7f, type: 3}
+    <ItemnameKey>k__BackingField: item_key
+    <ViewPrefab>k__BackingField: {fileID: 3506524998190829140, guid: cd066a7231a2ff94a997be45eb0ed51e, type: 3}
+  - <ItemId>k__BackingField: 5
+    <Sprite>k__BackingField: {fileID: -2429937046243783905, guid: 49d940c83c2821147bf90b061c22710c, type: 3}
+    <ItemnameKey>k__BackingField: item_key
+    <ViewPrefab>k__BackingField: {fileID: 3506524998190829140, guid: cd066a7231a2ff94a997be45eb0ed51e, type: 3}
+  - <ItemId>k__BackingField: 3
+    <Sprite>k__BackingField: {fileID: 7378660454788671033, guid: f6ce8faca83a5b94895c0fc6a01e725a, type: 3}
+    <ItemnameKey>k__BackingField: item_key
+    <ViewPrefab>k__BackingField: {fileID: 3506524998190829140, guid: cd066a7231a2ff94a997be45eb0ed51e, type: 3}
+  - <ItemId>k__BackingField: 4
+    <Sprite>k__BackingField: {fileID: 5725184139431673129, guid: c0faf41e9770b06438bc64c7c47ef301, type: 3}
+    <ItemnameKey>k__BackingField: item_key
+    <ViewPrefab>k__BackingField: {fileID: 3506524998190829140, guid: cd066a7231a2ff94a997be45eb0ed51e, type: 3}

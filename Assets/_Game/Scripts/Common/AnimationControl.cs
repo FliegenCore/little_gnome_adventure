@@ -54,6 +54,11 @@ namespace _Game.Scripts.PlayerSystems.Animations
                 trackEntry.Complete += OnComplete;
             }
         }
+
+        public void ResetAnimation(int layer)
+        {
+            _animationState.ClearTrack(layer);
+        }
         
         public bool HasAnimation(string animationName)
         {

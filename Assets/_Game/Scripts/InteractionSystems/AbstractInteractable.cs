@@ -30,7 +30,7 @@ namespace _Game.Scripts.InteractionSystems
             }
         }
 
-        public abstract void Interact();
+        public abstract void Interact(Action callback);
         public abstract bool CanInteract();
         
         protected virtual void OnPlayerCollided(Collider2D collider2D)
@@ -53,7 +53,7 @@ namespace _Game.Scripts.InteractionSystems
             EventBus.TriggerEvenet<RemoveCurrentInteractableSignal, AbstractInteractable>(this);
         }
         
-        public void Dispose()
+        public virtual void Dispose()
         {
             if (AbstractInteractableModel.ContactTriggerProvider != null)
             {

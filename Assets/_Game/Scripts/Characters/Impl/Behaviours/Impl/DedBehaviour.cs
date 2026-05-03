@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.InventorySystem;
 using Core.Common;
@@ -16,8 +17,9 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
             return true;
         }
 
-        public override void Interact()
+        public override void Interact(Action callback)
         {
+            callback?.Invoke();
             _eventBus.TriggerEvenet<StartDialogueSignal, string>("ded_d1");
         }
 

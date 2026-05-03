@@ -1,3 +1,4 @@
+using System;
 using Core.Common;
 
 namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours
@@ -12,6 +13,6 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours
         }
         
         public abstract bool CanInteract();
-        public abstract void Interact();
+        public abstract void Interact(Action callback);
     }
 }

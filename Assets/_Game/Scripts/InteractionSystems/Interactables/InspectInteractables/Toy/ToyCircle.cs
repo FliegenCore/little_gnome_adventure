@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using Core.Common;
 
@@ -13,7 +14,7 @@ namespace _Game.Scripts.InteractionSystems.Interactables.Toy
             
         }
 
-        public override void Interact()
+        public override void Interact(Action callback)
         {
             //надеть на игрушку через эвент бас, похуй
         }

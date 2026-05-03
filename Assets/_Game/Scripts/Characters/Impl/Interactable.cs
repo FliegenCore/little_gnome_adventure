@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
@@ -17,9 +18,9 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl
 
         }
 
-        public override void Interact()
+        public override void Interact(Action callback)
         {
-            CustomBehaviour.Interact();
+            CustomBehaviour.Interact(callback);
         }
 
         public override bool CanInteract()

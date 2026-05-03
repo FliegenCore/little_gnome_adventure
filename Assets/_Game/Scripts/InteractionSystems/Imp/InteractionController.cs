@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.MotionStates;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using UniRx;
@@ -94,6 +95,11 @@ namespace _Game.Scripts.InteractionSystems
             
             if (_currentAbstractInteractable.InteractableView.InteractPoint != null)
             {
+                if (_currentAbstractInteractable.InteractableView.BoxCollider2D != null)
+                {
+                    _currentAbstractInteractable.InteractableView.BoxCollider2D.enabled = false;
+                }
+                
                 StopUpdate();
                 
                 _playerModel.AutoMoveTransform = _currentAbstractInteractable.InteractableView.InteractPoint;
@@ -101,10 +107,23 @@ namespace _Game.Scripts.InteractionSystems
                 
                 _playerModel.OnPosition.Subscribe(_ =>
                 {
+                    if (_currentAbstractInteractable.InteractableView.BoxCollider2D != null)
+                    {
+                        _currentAbstractInteractable.InteractableView.BoxCollider2D.enabled = true;
+                    }
+                    
                     _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
-                    _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
-                    _currentAbstractInteractable.Interact();
-                    StartUpdate();
+                    
+                    Observable.Timer(TimeSpan.FromSeconds(0.25f))
+                        .Subscribe(_ =>
+                        {
+                            _currentAbstractInteractable.Interact(() =>
+                            {
+                                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
+                            });
+                    
+                            StartUpdate();
+                        });
                 })
                 .AddTo(_interactableOnPointDisposables);
                 
@@ -113,7 +132,47 @@ namespace _Game.Scripts.InteractionSystems
             }
             else
             {
-                _currentAbstractInteractable.Interact();
+                _currentAbstractInteractable.Interact(null);
+            }
+        }
+
+        public void InteractWithItem(AbstractInteractable abstractInteractable)
+        {
+            if (abstractInteractable.InteractableView.InteractPoint != null)
+            {
+                if (abstractInteractable.InteractableView.BoxCollider2D != null)
+                {
+                    abstractInteractable.InteractableView.BoxCollider2D.enabled = false;
+                }
+                
+                StopUpdate();
+                
+                _playerModel.AutoMoveTransform = abstractInteractable.InteractableView.InteractPoint;
+                _playerModel.LastInteractableObject = abstractInteractable.InteractableView.transform;
+                
+                _playerModel.OnPosition.Subscribe(_ =>
+                    {
+                        if (abstractInteractable.InteractableView.BoxCollider2D != null)
+                        {
+                            abstractInteractable.InteractableView.BoxCollider2D.enabled = true;
+                        }
+                    
+                        abstractInteractable.Interact(() =>
+                        {
+                            _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
+                            _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
+                        });
+                    
+                        StartUpdate();
+                    })
+                    .AddTo(_interactableOnPointDisposables);
+                
+                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerAutoMoveState));
+                _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
+            }
+            else
+            {
+                abstractInteractable.CustomBehaviour.Interact(null);
             }
         }
 

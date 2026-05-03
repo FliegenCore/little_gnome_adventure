@@ -1,9 +1,7 @@
-using System;
 using _Game.Scripts.PlayerSystems.Animations.Impl;
 using Core.Common;
 using TMPro;
 using UnityEngine;
-using VContainer;
 
 namespace _Game.Scripts.DialogueSystem.View
 {

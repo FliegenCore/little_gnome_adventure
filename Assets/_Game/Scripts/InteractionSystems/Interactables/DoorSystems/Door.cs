@@ -31,7 +31,7 @@ namespace _Game.Scripts.RoomSystems
             DoorView             = doorView;
         }
         
-        public override void Interact()
+        public override void Interact(Action _)
         {
             DoorView connectedDoor = _doorsService.GetViewDoorById(DoorModel.ConnectedDoorId);
             DoorModel modelConnectedDoor = _doorsService.GetModelDoorById(DoorModel.ConnectedDoorId);

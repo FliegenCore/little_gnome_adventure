@@ -10,6 +10,8 @@ namespace _Game.Scripts.PlayerSystems.Animations
 
         private AnimationPlayerModel _animationPlayerModel;
         
+        public AnimationControl AnimationControl => _animationControl;
+        
         public void Construct(AnimationPlayerModel animationPlayerModel)
         {
             _animationPlayerModel = animationPlayerModel;
@@ -42,7 +44,5 @@ namespace _Game.Scripts.PlayerSystems.Animations
             else
                 _animationControl.SetAnimation(0, PlayerAnimationsName.IDLE_ANIMATION_NAME);
         }
-        
-        
     }
 }

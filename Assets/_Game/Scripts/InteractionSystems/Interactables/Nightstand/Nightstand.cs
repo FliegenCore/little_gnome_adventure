@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.Nightstand;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
@@ -16,7 +17,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem.InspectWindows
             _nightstandView = nightstandView;
         }
 
-        public override void Interact()
+        public override void Interact(Action callback)
         {
             EventBus.TriggerEvenet<ShowInspectWindowByIdSignal, string>(_nightstandModel.Id);
         }
