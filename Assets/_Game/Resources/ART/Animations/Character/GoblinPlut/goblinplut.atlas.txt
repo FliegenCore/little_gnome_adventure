@@ -1,0 +1,209 @@
+
+goblinplut.png
+size: 1301,399
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+H1
+  rotate: true
+  xy: 605, 10
+  size: 84, 119
+  orig: 88, 123
+  offset: 2, 2
+  index: -1
+H2
+  rotate: false
+  xy: 1129, 195
+  size: 74, 89
+  orig: 78, 93
+  offset: 2, 2
+  index: -1
+Lbrow
+  rotate: false
+  xy: 759, 9
+  size: 32, 20
+  orig: 36, 25
+  offset: 2, 2
+  index: -1
+Leye
+  rotate: false
+  xy: 1207, 11
+  size: 47, 49
+  orig: 51, 53
+  offset: 2, 2
+  index: -1
+Lpoint
+  rotate: false
+  xy: 793, 8
+  size: 19, 21
+  orig: 23, 25
+  offset: 2, 2
+  index: -1
+Rbrow
+  rotate: false
+  xy: 726, 6
+  size: 31, 23
+  orig: 35, 27
+  offset: 2, 2
+  index: -1
+Reye
+  rotate: true
+  xy: 1153, 14
+  size: 53, 52
+  orig: 57, 56
+  offset: 2, 2
+  index: -1
+Rpoint
+  rotate: false
+  xy: 814, 8
+  size: 19, 21
+  orig: 23, 25
+  offset: 2, 2
+  index: -1
+US1
+  rotate: false
+  xy: 1205, 234
+  size: 94, 50
+  orig: 98, 54
+  offset: 2, 2
+  index: -1
+US2
+  rotate: true
+  xy: 1247, 128
+  size: 104, 49
+  orig: 108, 53
+  offset: 2, 2
+  index: -1
+am2
+  rotate: true
+  xy: 1025, 190
+  size: 135, 50
+  orig: 140, 54
+  offset: 2, 2
+  index: -1
+am2LEFT
+  rotate: true
+  xy: 1077, 190
+  size: 135, 50
+  orig: 140, 54
+  offset: 3, 2
+  index: -1
+arm1
+  rotate: true
+  xy: 302, 18
+  size: 63, 148
+  orig: 67, 152
+  offset: 2, 2
+  index: -1
+arm1LEFT
+  rotate: true
+  xy: 726, 31
+  size: 63, 148
+  orig: 67, 152
+  offset: 2, 2
+  index: -1
+arm3
+  rotate: false
+  xy: 1153, 69
+  size: 71, 64
+  orig: 75, 68
+  offset: 2, 2
+  index: -1
+arm3LEFT
+  rotate: false
+  xy: 1226, 62
+  size: 71, 64
+  orig: 75, 68
+  offset: 2, 2
+  index: -1
+body
+  rotate: false
+  xy: 404, 96
+  size: 348, 301
+  orig: 352, 305
+  offset: 2, 2
+  index: -1
+cap
+  rotate: false
+  xy: 2, 83
+  size: 400, 314
+  orig: 405, 318
+  offset: 3, 2
+  index: -1
+hairchup
+  rotate: false
+  xy: 1153, 286
+  size: 123, 111
+  orig: 127, 115
+  offset: 2, 2
+  index: -1
+head
+  rotate: true
+  xy: 754, 125
+  size: 272, 269
+  orig: 276, 273
+  offset: 2, 2
+  index: -1
+leg1
+  rotate: true
+  xy: 452, 12
+  size: 82, 151
+  orig: 86, 156
+  offset: 2, 2
+  index: -1
+leg2
+  rotate: true
+  xy: 876, 22
+  size: 101, 146
+  orig: 105, 150
+  offset: 2, 2
+  index: -1
+meshok
+  rotate: true
+  xy: 2, 5
+  size: 76, 155
+  orig: 80, 159
+  offset: 2, 2
+  index: -1
+nose
+  rotate: false
+  xy: 1024, 9
+  size: 127, 114
+  orig: 131, 118
+  offset: 2, 2
+  index: -1
+rot
+  rotate: false
+  xy: 1256, 18
+  size: 43, 42
+  orig: 47, 46
+  offset: 2, 2
+  index: -1
+shous1
+  rotate: false
+  xy: 1025, 130
+  size: 109, 58
+  orig: 113, 62
+  offset: 2, 2
+  index: -1
+shous2
+  rotate: false
+  xy: 1136, 135
+  size: 109, 58
+  orig: 113, 62
+  offset: 2, 2
+  index: -1
+uho1
+  rotate: false
+  xy: 159, 2
+  size: 141, 79
+  orig: 145, 83
+  offset: 2, 2
+  index: -1
+uho2
+  rotate: false
+  xy: 1025, 327
+  size: 123, 70
+  orig: 127, 74
+  offset: 2, 2
+  index: -1
