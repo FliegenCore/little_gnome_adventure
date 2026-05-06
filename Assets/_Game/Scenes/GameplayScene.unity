@@ -314,7 +314,7 @@ Camera:
   far clip plane: 1000
   field of view: 44
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1535,7 +1535,7 @@ MonoBehaviour:
   CameraDistance: 5
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: 0.03314006, y: 0.2912971}
+    ScreenPosition: {x: -0.04220843, y: 0.2752854}
     DeadZone:
       Enabled: 0
       Size: {x: 0.2, y: 0.2}
@@ -1576,7 +1576,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 44
-    OrthographicSize: 5
+    OrthographicSize: 6.2
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
