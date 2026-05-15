@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "e2BCoQtLOL3FzBRnNQm8GXc5cj4",
+	"hash": "5C+9frDjKeesZaQAFjFb9leP6Gk",
 	"spine": "3.8.0",
 	"x": -884,
 	"y": -747.97,
@@ -273,19 +273,9 @@
 		}
 	},
 	"selected/2": {
-		"slots": {
-			"point": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			}
-		},
 		"transform": {
-			"гводздь2Selected": [
-				{ "scaleMix": 0, "shearMix": 0 }
-			],
 			"гводздь3Selected": [
-				{ "rotateMix": 0, "translateMix": 0, "scaleMix": 0, "shearMix": 0 }
+				{}
 			]
 		}
 	},
@@ -298,7 +288,18 @@
 	},
 	"pups/final": {
 		"slots": {
+			"rot": {
+				"attachment": [
+					{ "time": 0.3667, "name": "rot" }
+				]
+			},
 			"ГВОЗДЬ MAIN3": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.0667, "color": "ffffff00" }
+				]
+			},
+			"ГВОЗДЬ MAIN": {
 				"color": [
 					{ "color": "ffffffff" },
 					{ "time": 0.0667, "color": "ffffff00" }
@@ -323,17 +324,6 @@
 				"color": [
 					{ "color": "ffffffff" },
 					{ "time": 0.0667, "color": "ffffff00" }
-				]
-			},
-			"ГВОЗДЬ MAIN": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.0667, "color": "ffffff00" }
-				]
-			},
-			"rot": {
-				"attachment": [
-					{ "time": 0.3667, "name": "rot" }
 				]
 			}
 		},
@@ -1613,6 +1603,28 @@
 					{ "curve": 0.183, "c2": 0.11, "c3": 0.75 },
 					{ "time": 1.2667, "angle": -0.88, "curve": 0.25, "c3": 0.8, "c4": 0.92 },
 					{ "time": 3.3333 }
+				]
+			},
+			"R_EYE2": {
+				"translate": [
+					{},
+					{ "time": 1.4667, "x": 1.78, "y": 2.64 },
+					{ "time": 2.7667, "x": 4.47, "y": 0.23 },
+					{ "time": 3.3333 }
+				]
+			},
+			"head3": {
+				"translate": [
+					{ "time": 0.6667 },
+					{ "time": 1.6667, "x": -0.98, "y": 2.52 },
+					{ "time": 3.3333 }
+				]
+			},
+			"head4": {
+				"translate": [
+					{ "time": 1 },
+					{ "time": 1.6667, "x": 6.77, "y": 0.17 },
+					{ "time": 2.3333 }
 				]
 			}
 		}

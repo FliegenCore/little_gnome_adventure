@@ -1,0 +1,20 @@
+
+skeleton.png
+size: 106,153
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+redmushroom
+  rotate: false
+  xy: 36, 58
+  size: 68, 93
+  orig: 69, 94
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 2
+  size: 149, 32
+  orig: 150, 32
+  offset: 0, 0
+  index: -1

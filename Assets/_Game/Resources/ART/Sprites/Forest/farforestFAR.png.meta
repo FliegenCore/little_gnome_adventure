@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7c0f298170ca6844082a17233a9ba4bb
+guid: 76fc9d4f8f499dd4b9440b71e71c668c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6401383099776830429
-    second: farforest1_0
+      213: 4717566754265541291
+    second: farforestFAR_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: farforest1_0
+      name: farforestFAR_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2189
-        height: 959
+        width: 2209
+        height: 983
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 324fc9a9cf7b927a0800000000000000
-      internalID: -6401383099776830429
+      spriteID: baaa030e7f9287140800000000000000
+      internalID: 4717566754265541291
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      farforest1_0: -6401383099776830429
+      farforestFAR_0: 4717566754265541291
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

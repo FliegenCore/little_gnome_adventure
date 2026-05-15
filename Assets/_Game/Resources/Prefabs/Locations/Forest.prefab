@@ -4619,11 +4619,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3785243604400161258, guid: ae67e37678264ed449ee11e55ea77fcd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.196373
+      value: -19.72
       objectReference: {fileID: 0}
     - target: {fileID: 3785243604400161258, guid: ae67e37678264ed449ee11e55ea77fcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3834753
+      value: -2.33
       objectReference: {fileID: 0}
     - target: {fileID: 3785243604400161258, guid: ae67e37678264ed449ee11e55ea77fcd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4784,17 +4784,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wrapper
       objectReference: {fileID: 0}
+    - target: {fileID: 5346397197887718248, guid: d9be2aea73001b547a69707fb5af0a09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5346397197887718248, guid: d9be2aea73001b547a69707fb5af0a09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.12
+      objectReference: {fileID: 0}
     - target: {fileID: 6464910368137858236, guid: d9be2aea73001b547a69707fb5af0a09, type: 3}
       propertyPath: <InteractPoint>k__BackingField
       value: 
       objectReference: {fileID: 6602596584505312306}
     - target: {fileID: 7568745350068835157, guid: d9be2aea73001b547a69707fb5af0a09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.21
+      value: -22.47
       objectReference: {fileID: 0}
     - target: {fileID: 7568745350068835157, guid: d9be2aea73001b547a69707fb5af0a09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.66
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 7568745350068835157, guid: d9be2aea73001b547a69707fb5af0a09, type: 3}
       propertyPath: m_LocalPosition.z
