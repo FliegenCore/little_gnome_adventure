@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InventorySystem.Configs;
@@ -9,9 +8,7 @@ using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using Core.Common;
-using UnityEngine;
 using UnityEngine.InputSystem;
-using VContainer.Unity;
 
 namespace _Game.Scripts.InventorySystem
 {
@@ -25,26 +22,31 @@ namespace _Game.Scripts.InventorySystem
         private readonly EventBus _eventBus;
         private readonly InventoryInput _inventoryInput;
         private readonly InteractionController _interactionController;
-        
         private readonly List<InventoryItem> _items = new List<InventoryItem>();
         
         private InventoryItem _currentSelectedInventoryItem;
 
         public InventoryItem SelectedInventoryItem => _currentSelectedInventoryItem;
-        
-        public Inventory(InventoryModel inventoryModel, 
+
+        public Inventory(InventoryModel inventoryModel,
             InventoryFactoryProvider inventoryFactoryProvider,
-            EventBus eventBus, 
+            EventBus eventBus,
             InputSystem_Actions inputSystemActions,
             InteractionController interactionController,
-            MergeItemConfig mergeItemConfig)
+            MergeItemConfig mergeItemConfig,
+            SelectedItemManager selectedItemManager)
         {
             _interactionController    = interactionController;
             _inputSystemActions       = inputSystemActions;
             _eventBus                 = eventBus;
             _inventoryModel           = inventoryModel;   
             _inventoryFactoryProvider = inventoryFactoryProvider;
-            _inventoryInput           = new InventoryInput(inputSystemActions, _eventBus, this, mergeItemConfig);
+            _inventoryInput           = new InventoryInput(inputSystemActions,
+                _eventBus,
+                this, 
+                mergeItemConfig,
+                selectedItemManager.SelectedItemModel, 
+                _interactionController);
 
             Initialize();
         }
@@ -55,6 +57,7 @@ namespace _Game.Scripts.InventorySystem
             _eventBus.Subscribe<UseItemSignal>(this, UseItem);
             _eventBus.Subscribe<DialogueEventSignal, string>(this, DialogueInventoryEvent);
             _eventBus.Subscribe<AddItemSignal, ItemId>(this, AddItem);
+            _eventBus.Subscribe<RemoveItemSignal, InventoryItem>(this, RemoveItem);
         }
         
         public void EnableOpenCloseInput()
@@ -81,7 +84,7 @@ namespace _Game.Scripts.InventorySystem
             inventoryItem.Dispose();
         }
 
-        public void RemoveItemById(ItemId id)
+        private void RemoveItemById(ItemId id)
         {
             foreach (var item in _items)
             {
@@ -154,9 +157,7 @@ namespace _Game.Scripts.InventorySystem
             if (customBehaviour is IItemNeeder itemNeeder)
             {
                 Disable();
-                itemNeeder.InteractWithItem(id);
-                
-                RemoveItem(_currentSelectedInventoryItem);
+                itemNeeder.InteractWithItem(_currentSelectedInventoryItem);
             }
         }
 
@@ -211,8 +212,17 @@ namespace _Game.Scripts.InventorySystem
         {
             _inputSystemActions?.Dispose();
             _currentSelectedInventoryItem?.Dispose();
+            
             _eventBus.Unsubscribe<SendChooseInventoryIndexSignal>(this);
+            _eventBus.Unsubscribe<UseItemSignal>(this);
+            _eventBus.Unsubscribe<DialogueEventSignal>(this);
+            _eventBus.Unsubscribe<AddItemSignal>(this);
+            _eventBus.Unsubscribe<RemoveItemSignal>(this);
         }
+    }
+
+    internal class RemoveItemSignal
+    {
     }
 
     internal class UseItemSignal

@@ -7,6 +7,7 @@ namespace _Game.Scripts.InventorySystem
 {
     public class InventoryItem : AbstractInteractable
     {
+        public readonly InventoryItemModel InventoryItemModel;
         public readonly InventoryItemView InventoryItemView;
         public readonly ItemId ItemId;
         
@@ -17,6 +18,7 @@ namespace _Game.Scripts.InventorySystem
             ItemId itemId) : 
             base(inventoryItemModel, inventoryItemView, eventBus)
         {
+            InventoryItemModel = inventoryItemModel;
             ItemId = itemId;
             InventoryItemView = inventoryItemView;
         }

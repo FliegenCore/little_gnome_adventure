@@ -35,7 +35,7 @@ namespace _Game.Scripts._Installers
         [SerializeField] private InspectCamera _inspectCamera;
         [SerializeField] private InventoryView _inventoryView;
         [SerializeField] private ItemConfigs _itemConfigs;
-        
+        [SerializeField] private SelectedItemView _selectedItemView;
         
         private void Start()
         {
@@ -54,6 +54,7 @@ namespace _Game.Scripts._Installers
             builder.RegisterInstance(_mergeItemConfig);
             builder.RegisterInstance(_inspectCamera);
             builder.RegisterInstance(_mainCamera);
+            builder.RegisterInstance(_selectedItemView);
             builder.RegisterInstance(_cinemachineCamera).AsSelf().AsImplementedInterfaces();
             builder.RegisterInstance(_inventoryView).AsSelf().AsImplementedInterfaces();
             builder.RegisterInstance(_itemConfigs).AsSelf().AsImplementedInterfaces();

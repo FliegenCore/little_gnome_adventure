@@ -2,7 +2,6 @@ namespace _Game.Scripts.InventorySystem
 {
     public interface IItemNeeder
     {
-        
-        void InteractWithItem(ItemId item);
+        void InteractWithItem(InventoryItem item);
     }
 }

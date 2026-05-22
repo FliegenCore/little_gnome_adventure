@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UniRx;
 using UnityEngine;
@@ -16,13 +18,22 @@ namespace _Game.Scripts.InventorySystem
         
         public CellView[] Cells => _cells;
             
-        public void Construct(ReactiveProperty<bool> isOpen, ReactiveProperty<int> choosedIndex)
+        public void Construct(ReactiveProperty<bool> isOpen, ReactiveProperty<int> choosedIndex, ReactiveCollection<InventoryItem> inventoryItems)
         {
+            
             _isOpen = isOpen;
             _choosedIndex = choosedIndex;
-
+            
+            inventoryItems.ObserveEveryValueChanged(_ => _)
+                .Subscribe(count => Refresh(count.ToList())).AddTo(gameObject);
+            
             _choosedIndex.Subscribe(SelectCell).AddTo(gameObject);
             _isOpen.Subscribe(Open).AddTo(gameObject);
+        }
+
+        private void Refresh(List<InventoryItem> inventory)
+        {
+            
         }
 
         private void Open(bool isOpen)
