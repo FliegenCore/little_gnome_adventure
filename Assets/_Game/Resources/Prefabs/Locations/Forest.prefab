@@ -2940,7 +2940,8 @@ MonoBehaviour:
   <CameraCollider>k__BackingField: {fileID: 9016434920403080932}
   <Doors>k__BackingField:
   - {fileID: 7240938535305884579}
-  <SpeakerViews>k__BackingField: []
+  <SpeakerViews>k__BackingField:
+  - {fileID: 6703776609661316087}
   <GirlView>k__BackingField: {fileID: 4107563263446075953}
   <HedgehogView>k__BackingField: {fileID: 132990111622554149}
   <WrapperItemView>k__BackingField: {fileID: 2001418474470054388}
@@ -4765,6 +4766,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcfd7a2483e9405a807d561e7da4c966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6703776609661316087 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9080278377369131042, guid: 19a67514b2ae3814e9e89c7807781663, type: 3}
+  m_PrefabInstance: {fileID: 2525173991791932373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921ff055df164b4383074698468b32a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8351782679986875448 stripped

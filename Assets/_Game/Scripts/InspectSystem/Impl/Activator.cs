@@ -22,7 +22,8 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
 
         private void OnDestroy()
         {
-            IsOpen.Unsubscribe(SetActive);
+            if(IsOpen != null)
+                IsOpen.Unsubscribe(SetActive);
         }
     }
 }

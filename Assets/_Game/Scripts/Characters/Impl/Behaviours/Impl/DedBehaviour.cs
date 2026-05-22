@@ -23,11 +23,12 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
             _eventBus.TriggerEvenet<StartDialogueSignal, string>("ded_d1");
         }
 
-        public void InteractWithItem(ItemId item)
+        public void InteractWithItem(InventoryItem item)
         {
-            if (item == ItemId.Apple)
+            if (item.ItemId == ItemId.Apple)
             {
                 _eventBus.TriggerEvenet<StartDialogueSignal, string>("ded_d2");
+                _eventBus.TriggerEvenet<RemoveItemSignal, InventoryItem>(item);
                 //start dialogue
             }
         }

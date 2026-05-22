@@ -38,6 +38,34 @@ namespace _Game.Scripts.InteractionSystems
             _eventBus.Subscribe<RemoveCurrentInteractableSignal, AbstractInteractable>(this, RemoveCurrentInteractable);
         }
 
+        public void StartUpdate()
+        {
+            if (_updateIsActive)
+                return;
+            
+            if (_currentAbstractInteractable != null)
+            {
+                _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = true;
+            }
+            
+            Observable.EveryUpdate()
+                .Subscribe(_ => SelectNearestCurrentInteractables())
+                .AddTo(_disposables);
+            
+            _updateIsActive = true;
+        }
+
+        public void StopUpdate()
+        {
+            _disposables.Clear();
+            _updateIsActive = false;
+            
+            if (_currentAbstractInteractable != null)
+            {
+                _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = false;
+            }
+        }
+        
         private void SelectNearestCurrentInteractables()
         {
             AbstractInteractable nearestInteractable = _currentAbstractInteractables[0];
@@ -79,7 +107,7 @@ namespace _Game.Scripts.InteractionSystems
             _inputSystemActions.Player.Interact.performed += Interact;
         }
 
-        private  void Deactivate()
+        private void Deactivate()
         {
             _inputSystemActions.Player.Interact.performed -= Interact;
         }
@@ -204,23 +232,7 @@ namespace _Game.Scripts.InteractionSystems
             }
         }
 
-        private void StartUpdate()
-        {
-            if (_updateIsActive)
-                return;
-            
-            Observable.EveryUpdate()
-                .Subscribe(_ => SelectNearestCurrentInteractables())
-                .AddTo(_disposables);
-            
-            _updateIsActive = true;
-        }
-
-        private void StopUpdate()
-        {
-            _disposables.Clear();
-            _updateIsActive = false;
-        }
+        
         
         public void Dispose()
         {

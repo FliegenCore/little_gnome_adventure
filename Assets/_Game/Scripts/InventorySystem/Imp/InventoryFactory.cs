@@ -15,7 +15,9 @@ namespace _Game.Scripts.InventorySystem
         private readonly InventoryView _inventoryView;
         private readonly EventBus _eventBus;
         private readonly MergeItemConfig _mergeItemConfig;
+        private readonly SelectedItemManager _selectedItemManager;
         
+        private readonly SelectedItemView _selectedItemView;
         private Inventory _inventory;
 
         private InventoryFactory(
@@ -23,13 +25,24 @@ namespace _Game.Scripts.InventorySystem
             EventBus eventBus, 
             InputSystem_Actions inputSystemActions,
             InventoryView inventoryView,
-            MergeItemConfig mergeItemConfig)
+            MergeItemConfig mergeItemConfig,
+            SelectedItemView selectedItemView)
         {
+            _selectedItemView = selectedItemView;
             _mergeItemConfig = mergeItemConfig;
             _inventoryView =  inventoryView;
             _inputSystemActions = inputSystemActions;
             _eventBus = eventBus;
-            _inventoryFactoryProvider = inventoryFactoryProvider; 
+            _inventoryFactoryProvider = inventoryFactoryProvider;
+            _selectedItemManager = CreateSelectedItem();
+        }
+
+        private SelectedItemManager CreateSelectedItem()
+        {
+            SelectedItemModel model = new SelectedItemModel();
+            SelectedItemManager selectedItemManager = new SelectedItemManager(_selectedItemView, model);
+
+            return selectedItemManager;
         }
         
         public Inventory CreateInventory(InteractionController interactionController)
@@ -37,8 +50,15 @@ namespace _Game.Scripts.InventorySystem
             //load data items
             InventoryModel inventoryModel = new InventoryModel(new List<InventoryItemModel>());
             
-            _inventoryView.Construct(inventoryModel.IsOpen, inventoryModel.SelectedIndex);
-            _inventory = new Inventory(inventoryModel, _inventoryFactoryProvider, _eventBus, _inputSystemActions, interactionController, _mergeItemConfig);
+            _inventoryView.Construct(inventoryModel.IsOpen, inventoryModel.SelectedIndex, inventoryModel.InventoryItems);
+            
+            _inventory = new Inventory(inventoryModel, 
+                _inventoryFactoryProvider,
+                _eventBus,
+                _inputSystemActions,
+                interactionController, 
+                _mergeItemConfig,
+                _selectedItemManager);
             
             return _inventory;
         }
