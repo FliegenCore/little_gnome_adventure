@@ -17,6 +17,12 @@ namespace _Game.Scripts.RoomSystems.Variants
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
         
+        private LocationAbstractState _lastCreated;
+        public LocationAbstractState GetLastCreated()
+        {
+            return _lastCreated;
+        }
+        
         public TestLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
             EventBus eventBus,
@@ -41,10 +47,11 @@ namespace _Game.Scripts.RoomSystems.Variants
                     _eventBus);
             
             fsm.AddState(testState);
-
+            _lastCreated = testState;
+            
             return testState;
         }
-
+        
         private Nightstand CreateInteractable(string id, NightstandView view)
         {
             NightstandView nightstandView = view;

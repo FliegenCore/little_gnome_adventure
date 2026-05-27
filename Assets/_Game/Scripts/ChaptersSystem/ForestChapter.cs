@@ -71,14 +71,12 @@ namespace _Game.Scripts.ChaptersSystem
         {
             _forestRootViewFactory.CreateForestLocationsRootView();
             _locationsController = _locationsControllerFactory.Create();
-            //create locations ;
 
             foreach (var locationFactory in _locationFactories)
             {
                 _locationsController.CreateLocation(locationFactory);
             }
             
-            //------------
             _locationsController.LocationsModel.CurrentLocation.Value = typeof(StartHouseState);
             
             _locationsController.Initialize();
@@ -97,11 +95,13 @@ namespace _Game.Scripts.ChaptersSystem
         
         private void CacheAllDoorView()
         {
-            _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().StartHouseView.Doors);
-            _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().ForestLocationView.Doors);
-            _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().TestRoom.Doors);
-            _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().DreamLocationView.Doors);
-            _allDoorsView.AddRange(_forestRootViewFactory.GetLocationsRootView().DreamQuestFirstLocationView.Doors);
+            foreach (var locationFactory in _locationFactories)
+            {
+                foreach (var door in locationFactory.GetLastCreated().AbstractLocationView.Doors)
+                {
+                    _allDoorsView.Add(door);
+                }
+            }
         }
 
         private void CreateDoorConnections()

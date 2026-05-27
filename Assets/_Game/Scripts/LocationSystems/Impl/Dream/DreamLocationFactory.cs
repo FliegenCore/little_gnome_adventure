@@ -13,7 +13,13 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamRoom1
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
-
+        
+        private LocationAbstractState _lastCreated;
+        public LocationAbstractState GetLastCreated()
+        {
+            return _lastCreated;
+        }
+        
         public DreamLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
             EventBus eventBus,
@@ -38,7 +44,8 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamRoom1
                     _eventBus);
 
             fsm.AddState(testState);
-
+            _lastCreated = testState;
+            
             return testState;
         }
 

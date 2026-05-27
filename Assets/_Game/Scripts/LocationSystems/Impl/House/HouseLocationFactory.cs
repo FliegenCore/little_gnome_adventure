@@ -23,6 +23,12 @@ namespace _Game.Scripts.RoomSystems.Variants
         private readonly IInteractableFactory _interactableFactory;
         private readonly IPlayerFactory _playerFactory;
         
+        private LocationAbstractState _lastCreated;
+        public LocationAbstractState GetLastCreated()
+        {
+            return _lastCreated;
+        }
+        
         public HouseLocationFactory(
             ForestRootViewFactory forestRootViewFactory, 
             EventBus eventBus, 
@@ -60,7 +66,8 @@ namespace _Game.Scripts.RoomSystems.Variants
                 _forestRootViewFactory.GetLocationsRootView().StartHouseView.DedView);
             
             fsm.AddState(startHouseState);
-
+            _lastCreated = startHouseState;
+            
             return startHouseState;
         }
 

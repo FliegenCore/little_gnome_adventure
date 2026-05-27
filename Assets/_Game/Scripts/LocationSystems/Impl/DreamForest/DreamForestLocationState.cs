@@ -6,7 +6,7 @@ using Core.Common;
 
 namespace _Game.Scripts.RoomSystems.Impl.DreamForest
 {
-    public class DreamForestLocationState :  LocationAbstractState
+    public class DreamForestLocationState : LocationAbstractState
     {
         public DreamForestLocationState(
             Fsm fsm, AbstractLocationModel locationModel,

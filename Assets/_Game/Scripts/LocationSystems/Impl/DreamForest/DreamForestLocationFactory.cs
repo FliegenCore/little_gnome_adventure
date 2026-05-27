@@ -23,6 +23,12 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         private readonly CameraController _cameraController;
         private readonly ICutsceneManger _cutsceneManger;
         
+        private LocationAbstractState _lastCreated;
+        public LocationAbstractState GetLastCreated()
+        {
+            return _lastCreated;
+        }
+        
         public DreamForestLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
             EventBus eventBus,
@@ -56,7 +62,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
            // CreateCharacter(nameof(ECharacters.Granny), new GrannyBehaviour(_eventBus),
                 //_forestRootViewFactory.GetLocationsRootView().DreamForestLocationView.);
 
-            
+            _lastCreated = dreamForestLocation;
             return dreamForestLocation;
         }
         

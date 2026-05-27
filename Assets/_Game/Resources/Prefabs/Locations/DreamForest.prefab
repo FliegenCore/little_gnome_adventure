@@ -400,8 +400,8 @@ MonoBehaviour:
   <BoxCollider2D>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 5197656175118573541}
   <HintSelect>k__BackingField: {fileID: 8357146369391974403}
-  <ConnectedDoor>k__BackingField: {fileID: 0}
-  <ConnectedLocationView>k__BackingField: {fileID: 0}
+  <ConnectedDoor>k__BackingField: {fileID: 2826409155473078118}
+  <ConnectedLocationView>k__BackingField: {fileID: 3247212834464801418}
   <SpawnTransform>k__BackingField: {fileID: 1139535422035719813}
 --- !u!61 &8548236425870821432
 BoxCollider2D:

@@ -33,6 +33,12 @@ namespace _Game.Scripts.RoomSystems.Variants
         private readonly ItemFactory _itemFactory;
         private readonly InventoryProxy _inventoryProxy;
         
+        private LocationAbstractState _lastCreated;
+        public LocationAbstractState GetLastCreated()
+        {
+            return _lastCreated;
+        }
+        
         public ForestLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
             EventBus eventBus, 
@@ -85,6 +91,7 @@ namespace _Game.Scripts.RoomSystems.Variants
             lobotomyManager.Initialize();
             
             fsm.AddState(forestState);
+            _lastCreated = forestState;
             return forestState;
         }
 

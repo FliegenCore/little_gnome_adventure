@@ -25,6 +25,8 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
         private readonly CameraController _cameraController;
         private readonly ICutsceneManger _cutsceneManger;
         
+        private LocationAbstractState _lastCreated;
+        
         public DreamFirstQuestLocationFactory(
             ForestRootViewFactory forestRootViewFactory,
             EventBus eventBus,
@@ -42,7 +44,12 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
             _eventBus              = eventBus;
             _cutsceneManger        = cutsceneManger;
         }
-
+        
+        public LocationAbstractState GetLastCreated()
+        {
+            return _lastCreated;
+        }
+        
         public LocationAbstractState Create(Fsm fsm)
         {
             DreamQuestFirstLocationModel forestLocationModel = new DreamQuestFirstLocationModel(typeof(DreamQuestFirstLocationState));
@@ -69,10 +76,12 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
                 );
             
             plantsQuestManager.Initialize();
-                
+            _lastCreated = testState;
             return testState;
         }
+
         
+
         private Interactable CreateCharacter(string id, ACustomBehaviour customBehaviour, NightstandView nightstandView)
         {
             return _interactableFactory.CreateInteractable(customBehaviour, nightstandView, 
