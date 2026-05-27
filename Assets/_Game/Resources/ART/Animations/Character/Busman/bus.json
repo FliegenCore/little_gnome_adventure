@@ -1,0 +1,497 @@
+{
+"skeleton": {
+	"hash": "gib01XGoHqFjB8dy9PtgeYKowno",
+	"spine": "3.8.0",
+	"x": -485.08,
+	"y": -13.18,
+	"width": 912.64,
+	"height": 629.31,
+	"images": "./png/",
+	"audio": "D:/арт Игра про маленького ГНОМА/персонажи для анимации/BUS"
+},
+"bones": [
+	{ "name": "root", "x": -7.34, "y": 220.08 },
+	{ "name": "body", "parent": "root", "length": 662.88, "rotation": 0.4, "x": -380.49, "y": -108.72 },
+	{ "name": "L", "parent": "body", "length": 144.87, "rotation": 0.76, "x": 11.44, "y": 170.24 },
+	{ "name": "R", "parent": "body", "length": 153.98, "rotation": -179.3, "x": 341.24, "y": 173.88 },
+	{ "name": "sheya", "parent": "body", "length": 359.78, "rotation": 72.05, "x": 684.17, "y": -6.66 },
+	{ "name": "mask", "parent": "sheya", "length": 71.58, "rotation": -61.51, "x": 237.73, "y": -22.14 },
+	{ "name": "gnome", "parent": "body", "length": 248.2, "rotation": 89.97, "x": 233.53, "y": 29.63 },
+	{ "name": "body2", "parent": "body", "length": 75.47, "rotation": 88.64, "x": 738.81, "y": 12.05 },
+	{ "name": "body3", "parent": "body2", "length": 146.32, "rotation": 58.1, "x": 75.47 },
+	{ "name": "body4", "parent": "body3", "length": 98.18, "rotation": -24.03, "x": 146.32 },
+	{ "name": "body5", "parent": "body4", "length": 105.1, "rotation": -30.03, "x": 98.18 },
+	{ "name": "MSKA", "parent": "body5", "length": 125.07, "rotation": -1.48, "x": 2.83, "y": -18.51 },
+	{ "name": "leg", "parent": "body", "length": 282.72, "rotation": -6.14, "x": -0.08, "y": -36 },
+	{ "name": "body7", "parent": "leg", "length": 326.03, "rotation": -84.38, "x": 282.72 },
+	{ "name": "body8", "parent": "body7", "length": 34.44, "rotation": 0.2, "x": 334.07, "y": -1.12 },
+	{ "name": "targetLEG", "parent": "root", "x": -428.83, "y": -203.65, "color": "ff3f00ff" },
+	{ "name": "leg2", "parent": "body", "length": 282.72, "rotation": -6.14, "x": 493.35, "y": -32.05 },
+	{ "name": "body9", "parent": "leg2", "length": 326.03, "rotation": -84.38, "x": 282.72 },
+	{ "name": "body10", "parent": "body9", "length": 34.44, "rotation": 0.2, "x": 334.07, "y": -1.12 },
+	{ "name": "targetlegFr", "parent": "root", "x": 63.15, "y": -197.89, "color": "ff3f00ff" }
+],
+"slots": [
+	{ "name": "back", "bone": "body", "attachment": "back" },
+	{ "name": "гномик", "bone": "gnome" },
+	{ "name": "sheyaProf", "bone": "sheya" },
+	{ "name": "shezProf2", "bone": "sheya" },
+	{ "name": "Mprof", "bone": "mask" },
+	{ "name": "leg1", "bone": "leg", "attachment": "leg1" },
+	{ "name": "leg2", "bone": "body7", "attachment": "leg2" },
+	{ "name": "leg3", "bone": "body8", "attachment": "leg3" },
+	{ "name": "L", "bone": "L", "attachment": "L" },
+	{ "name": "R", "bone": "R", "attachment": "R" },
+	{ "name": "bus", "bone": "body", "attachment": "bus" },
+	{ "name": "leg4", "bone": "leg2", "attachment": "leg1" },
+	{ "name": "leg5", "bone": "body9", "attachment": "leg2" },
+	{ "name": "leg6", "bone": "body10", "attachment": "leg3" },
+	{ "name": "sheya", "bone": "body2", "attachment": "sheya" },
+	{ "name": "Mfront", "bone": "MSKA", "attachment": "Mfront" }
+],
+"ik": [
+	{
+		"name": "targetLEG",
+		"bones": [ "leg", "body7" ],
+		"target": "targetLEG",
+		"bendPositive": false
+	},
+	{
+		"name": "targetlegFr",
+		"order": 1,
+		"bones": [ "leg2", "body9" ],
+		"target": "targetlegFr",
+		"bendPositive": false
+	}
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"bus": {
+				"bus": { "x": 308.28, "y": 232.02, "rotation": -0.32, "width": 807, "height": 540 }
+			},
+			"L": {
+				"L": { "x": 74.23, "y": 38.52, "rotation": -1.08, "width": 183, "height": 469 }
+			},
+			"shezProf2": {
+				"shezProf2": { "x": 248.67, "y": -6.26, "rotation": -72.37, "width": 232, "height": 485 }
+			},
+			"leg5": {
+				"leg2": { "x": 166.58, "y": 0.7, "rotation": 90.37, "width": 56, "height": 358 }
+			},
+			"R": {
+				"R": { "x": 85.65, "y": -36.48, "rotation": 178.98, "width": 195, "height": 468 }
+			},
+			"leg4": {
+				"leg1": { "x": 141.23, "y": 8.6, "rotation": 6, "width": 332, "height": 109 }
+			},
+			"leg1": {
+				"leg1": { "x": 141.23, "y": 8.6, "rotation": 5.83, "width": 332, "height": 109 }
+			},
+			"leg2": {
+				"leg2": { "x": 166.58, "y": 0.7, "rotation": 90.2, "width": 56, "height": 358 }
+			},
+			"leg3": {
+				"leg3": { "x": 5.51, "y": 0.41, "rotation": 90, "width": 54, "height": 42 }
+			},
+			"Mprof": {
+				"Mprof": { "x": 33.17, "y": 25.96, "rotation": -10.86, "width": 129, "height": 220 }
+			},
+			"back": {
+				"back": { "x": 360, "y": 182.23, "rotation": -0.32, "width": 841, "height": 495 }
+			},
+			"leg6": {
+				"leg3": { "x": 5.51, "y": 0.41, "rotation": 90.17, "width": 54, "height": 42 }
+			},
+			"гномик": {
+				"гномик": { "x": 178.79, "y": -2.02, "rotation": -90.29, "width": 176, "height": 382 }
+			},
+			"sheyaProf": {
+				"sheyaProf": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 36.63, -185.93, -20.62, -5.81, 339.63, 108.69, 396.87, -71.43 ],
+					"hull": 4,
+					"edges": [ 0, 2, 2, 4, 4, 6, 0, 6 ],
+					"width": 189,
+					"height": 378
+				}
+			},
+			"sheya": {
+				"sheya": {
+					"type": "mesh",
+					"uvs": [ 0.29218, 0, 0.45012, 0.08515, 0.46389, 0.32208, 0.52758, 0.40074, 0.62853, 0.43901, 0.75777, 0.488, 0.87426, 0.61371, 1, 0.74941, 1, 0.76067, 0.98392, 0.85115, 0.84344, 0.97046, 0.75442, 1, 0.71963, 1, 0.61838, 0.91619, 0.60754, 0.84467, 0.49372, 0.79418, 0.38592, 0.74636, 0.2074, 0.66716, 0.10519, 0.58762, 0.05641, 0.47709, 0.00627, 0.36347, 0.00573, 0.12711, 0.09018, 0.01232, 0.24474, 0 ],
+					"triangles": [ 10, 11, 13, 11, 12, 13, 9, 10, 14, 10, 13, 14, 9, 14, 8, 14, 6, 8, 14, 15, 6, 15, 5, 6, 15, 4, 5, 15, 16, 4, 6, 7, 8, 16, 3, 4, 16, 17, 3, 17, 18, 3, 3, 19, 2, 3, 18, 19, 2, 23, 1, 23, 2, 19, 23, 19, 20, 22, 23, 21, 23, 0, 1, 23, 20, 21 ],
+					"vertices": [ 1, 10, 139.05, -26.11, 1, 2, 9, 146.84, -116.04, 0.01557, 10, 100.2, -76.11, 0.98443, 3, 8, 174.62, -83.74, 0.05237, 9, 59.94, -64.96, 0.60478, 10, -0.6, -75.38, 0.34285, 3, 8, 138.85, -67.08, 0.42479, 9, 20.49, -64.31, 0.52857, 10, -35.08, -94.56, 0.04664, 3, 8, 102.14, -71.49, 0.85055, 9, -11.24, -83.29, 0.14771, 10, -53.05, -126.87, 0.00174, 2, 8, 55.13, -77.14, 0.98925, 9, -51.87, -107.59, 0.01075, 2, 7, 117.38, -33.26, 0.20006, 8, -6.09, -53.15, 0.79994, 2, 7, 60.46, -75.67, 0.95889, 8, -72.17, -27.25, 0.04111, 2, 7, 55.68, -75.75, 0.96666, 8, -74.77, -23.23, 0.03334, 1, 7, 17.14, -71.16, 1, 1, 7, -34.4, -25.87, 1, 1, 7, -47.49, 3.18, 1, 1, 7, -47.7, 14.63, 1, 2, 7, -12.69, 48.58, 0.95486, 8, -5.35, 100.52, 0.04514, 2, 7, 17.64, 52.7, 0.74782, 8, 14.17, 76.95, 0.25218, 2, 7, 38.41, 90.53, 0.25629, 8, 57.27, 79.3, 0.74371, 3, 7, 58.09, 126.35, 0.06225, 8, 98.08, 81.53, 0.9027, 9, -77.27, 54.82, 0.03504, 3, 7, 90.67, 185.69, 4.4E-4, 8, 165.68, 85.23, 0.46016, 9, -17.03, 85.72, 0.5394, 3, 8, 212.28, 75.15, 0.11977, 9, 29.64, 95.49, 0.88017, 10, -107.14, 48.37, 6.0E-5, 3, 8, 251.29, 44.46, 0.00491, 9, 77.77, 83.35, 0.91779, 10, -59.39, 61.94, 0.0773, 2, 9, 127.24, 70.86, 0.49124, 10, -10.3, 75.9, 0.50876, 2, 9, 211.57, 16.27, 2.0E-5, 10, 90.02, 70.83, 0.99998, 1, 10, 137.29, 40.53, 1, 1, 10, 139.86, -10.52, 1 ],
+					"hull": 24,
+					"edges": [ 0, 46, 0, 2, 2, 4, 4, 6, 14, 16, 16, 18, 18, 20, 20, 22, 22, 24, 24, 26, 26, 28, 34, 36, 40, 42, 42, 44, 44, 46, 32, 34, 10, 12, 12, 14, 28, 30, 30, 32, 36, 38, 38, 40, 6, 8, 8, 10 ],
+					"width": 329,
+					"height": 425
+				}
+			},
+			"Mfront": {
+				"Mfront": { "x": 45.78, "y": 12.45, "rotation": -91.52, "width": 164, "height": 228 }
+			}
+		}
+	}
+],
+"animations": {
+	"idle": {
+		"bones": {
+			"body": {
+				"rotate": [
+					{},
+					{ "time": 1, "angle": -0.54 },
+					{ "time": 4 }
+				]
+			},
+			"body2": {
+				"rotate": [
+					{},
+					{ "time": 1, "angle": -3.82 },
+					{ "time": 4 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 4 }
+				]
+			},
+			"body3": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "angle": -26.3 },
+					{ "time": 1, "angle": -3.82 },
+					{ "time": 2.1667, "angle": 24.98 },
+					{ "time": 3, "angle": 28.29 },
+					{ "time": 4 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 4 }
+				]
+			},
+			"body4": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "angle": 14.84 },
+					{ "time": 1, "angle": -3.82 },
+					{ "time": 1.5, "angle": -20.23 },
+					{ "time": 3, "angle": 16.8 },
+					{ "time": 4 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 4 }
+				]
+			},
+			"body5": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "angle": 13.91 },
+					{ "time": 0.6667, "angle": 18.39 },
+					{ "time": 1, "angle": -3.82 },
+					{ "time": 1.8333, "angle": -13.5 },
+					{ "time": 3, "angle": -19.18 },
+					{ "time": 3.5, "angle": -34.07 },
+					{ "time": 3.6667, "angle": 2.95 },
+					{ "time": 4 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 4 }
+				]
+			}
+		}
+	},
+	"ready": {
+		"slots": {
+			"sheyaProf": {
+				"attachment": [
+					{ "name": "sheyaProf" }
+				]
+			},
+			"sheya": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Mprof": {
+				"attachment": [
+					{ "name": "Mprof" }
+				]
+			},
+			"Mfront": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"shezProf2": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"body": {
+				"rotate": [
+					{},
+					{ "time": 0.5, "angle": -2.38 },
+					{ "time": 1 },
+					{ "time": 1.4667, "angle": -2.97 },
+					{ "time": 2 },
+					{ "time": 2.4, "angle": 3.78 },
+					{ "time": 2.6333, "angle": 0.53 },
+					{ "time": 3 },
+					{ "time": 3.3667, "angle": 3.44 },
+					{ "time": 3.7, "angle": -1.46 },
+					{ "time": 4 }
+				]
+			},
+			"L": {
+				"translate": [
+					{ "x": -71.88, "y": 0.5 }
+				],
+				"scale": [
+					{ "x": 0.498 }
+				]
+			},
+			"R": {
+				"translate": [
+					{ "x": 80.89, "y": 3.03 }
+				],
+				"scale": [
+					{ "x": 0.713 }
+				]
+			},
+			"mask": {
+				"translate": [
+					{ "x": 2.52, "y": -4.65 },
+					{ "time": 0.6667, "x": -19.77, "y": -10.73 },
+					{ "time": 1.0667, "x": 10.76, "y": 5.84 },
+					{ "time": 1.7, "x": -7.15, "y": -3.88 },
+					{ "time": 2.5, "x": 61.66, "y": 11.58 },
+					{ "time": 3, "x": -21.65, "y": -22.33 },
+					{ "time": 3.5, "x": 15.84, "y": -2.68 },
+					{ "time": 4, "x": 2.52, "y": -4.65 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"sheyaProf": {
+					"sheyaProf": [
+						{
+							"offset": 4,
+							"vertices": [ -1.71352, -0.54169, -1.71352, -0.54169 ]
+						},
+						{
+							"time": 0.6333,
+							"offset": 4,
+							"vertices": [ -13.58623, -4.69733, -13.58623, -4.69733 ]
+						},
+						{
+							"time": 1.1,
+							"offset": 4,
+							"vertices": [ 13.66841, 4.29009, 13.66841, 4.29009 ]
+						},
+						{
+							"time": 1.6667,
+							"offset": 4,
+							"vertices": [ -9.67676, -3.8175, -9.67676, -3.8175 ]
+						},
+						{
+							"time": 2.5,
+							"offset": 4,
+							"vertices": [ 53.87415, 13.79811, 53.87415, 13.79811 ]
+						},
+						{
+							"time": 3,
+							"offset": 4,
+							"vertices": [ -22.27446, -7.04291, -22.27446, -7.04291 ]
+						},
+						{
+							"time": 3.5333,
+							"offset": 4,
+							"vertices": [ 11.08368, 3.08164, 11.08368, 3.08164 ]
+						},
+						{
+							"time": 4,
+							"offset": 4,
+							"vertices": [ -1.71352, -0.54169, -1.71352, -0.54169 ]
+						}
+					]
+				}
+			}
+		}
+	},
+	"speak": {
+		"bones": {
+			"body5": {
+				"rotate": [
+					{ "angle": -32.03 },
+					{ "time": 0.1667, "angle": 17.21 },
+					{ "time": 0.5, "angle": -22.91 },
+					{ "time": 0.6667, "angle": 22.3 },
+					{ "time": 1, "angle": -0.6 },
+					{ "time": 1.5, "angle": -16.31 },
+					{ "time": 1.6667, "angle": 24.35 },
+					{ "time": 2, "angle": -32.03 }
+				]
+			},
+			"body4": {
+				"rotate": [
+					{ "angle": 3.54 },
+					{ "time": 1, "angle": -2.99 },
+					{ "time": 2, "angle": 3.54 }
+				]
+			},
+			"body3": {
+				"rotate": [
+					{ "angle": -0.5 },
+					{ "time": 1.1667, "angle": -7.72 },
+					{ "time": 2, "angle": -0.5 }
+				]
+			},
+			"body2": {
+				"translate": [
+					{},
+					{ "time": 1, "x": 1.66, "y": 4.87 },
+					{ "time": 2 }
+				]
+			},
+			"body": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "angle": 0.87 },
+					{ "time": 1.3333, "angle": 2.04 },
+					{ "time": 2 }
+				]
+			}
+		}
+	},
+	"ticket": {
+		"slots": {
+			"sheya": {
+				"attachment": [
+					{ "time": 0.8333, "name": null }
+				]
+			},
+			"shezProf2": {
+				"attachment": [
+					{ "time": 0.8333, "name": "shezProf2" }
+				]
+			}
+		},
+		"bones": {
+			"sheya": {
+				"rotate": [
+					{ "time": 0.8333, "angle": -3.06 },
+					{ "time": 1, "angle": -9.69 }
+				]
+			},
+			"body2": {
+				"rotate": [
+					{},
+					{ "time": 0.8, "angle": -11.51 }
+				],
+				"translate": [
+					{}
+				]
+			},
+			"body3": {
+				"rotate": [
+					{},
+					{ "time": 0.8, "angle": -47.15 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.8, "x": 8.14, "y": -14.35 }
+				]
+			},
+			"body5": {
+				"rotate": [
+					{},
+					{ "time": 0.8, "angle": 0.7 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.8, "x": 43.81, "y": 24.12 }
+				]
+			},
+			"body4": {
+				"rotate": [
+					{},
+					{ "time": 0.8, "angle": 10.75 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.8, "x": -9.22, "y": -18.44 }
+				]
+			},
+			"MSKA": {
+				"rotate": [
+					{ "time": 0.8333, "angle": 36.54 },
+					{ "time": 1.2333, "angle": 48.96 }
+				],
+				"translate": [
+					{ "time": 0.8333 },
+					{ "time": 1.2333, "x": -0.09, "y": -78.58 }
+				]
+			}
+		}
+	},
+	"wait": {
+		"bones": {
+			"body5": {
+				"rotate": [
+					{ "angle": -32.03 },
+					{ "time": 1, "angle": -18.59 },
+					{ "time": 2, "angle": -32.03 }
+				]
+			},
+			"body4": {
+				"rotate": [
+					{ "angle": 3.54 },
+					{ "time": 1, "angle": -7.42 },
+					{ "time": 2, "angle": 3.54 }
+				]
+			},
+			"body3": {
+				"rotate": [
+					{ "angle": 34.27 },
+					{ "time": 1.1667, "angle": 26.67 },
+					{ "time": 2, "angle": 34.27 }
+				]
+			},
+			"body2": {
+				"translate": [
+					{},
+					{ "time": 1, "x": 1.66, "y": 4.87 },
+					{ "time": 2 }
+				]
+			},
+			"body": {
+				"rotate": [
+					{},
+					{ "time": 0.6667, "angle": 0.87 },
+					{ "time": 2 }
+				]
+			},
+			"MSKA": {
+				"rotate": [
+					{},
+					{ "time": 1, "angle": -4.23 },
+					{ "time": 2 }
+				],
+				"translate": [
+					{},
+					{ "time": 1, "x": -4.19, "y": 30.17 },
+					{ "time": 2 }
+				]
+			}
+		}
+	}
+}
+}
