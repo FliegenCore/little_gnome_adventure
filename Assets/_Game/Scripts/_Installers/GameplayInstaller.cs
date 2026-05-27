@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.ChaptersSystem;
 using _Game.Scripts.CutsceneSystem.Impl;
@@ -14,6 +15,7 @@ using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Factory.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
+using _Game.Scripts.RoomSystems.Impl.DreamForest;
 using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
 using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
 using _Game.Scripts.RoomSystems.Variants;
@@ -27,7 +29,6 @@ namespace _Game.Scripts._Installers
 {
     public class GameplayInstaller: LifetimeScope
     {
-        [SerializeField] private ForestChapterConfig _forestChapterConfig;
         [SerializeField] private MergeItemConfig _mergeItemConfig;
         [SerializeField] private PlayerConfig _playerConfig;
         [SerializeField] private CinemachineCamera _cinemachineCamera;
@@ -50,7 +51,6 @@ namespace _Game.Scripts._Installers
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInstance(_playerConfig);
-            builder.RegisterInstance(_forestChapterConfig);
             builder.RegisterInstance(_mergeItemConfig);
             builder.RegisterInstance(_inspectCamera);
             builder.RegisterInstance(_mainCamera);
@@ -64,15 +64,9 @@ namespace _Game.Scripts._Installers
             builder.Register<DoorsService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ItemFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            
-            //locations factory
             builder.Register<ForestRootViewFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<HouseLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<TestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<ForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<DreamLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<DreamFirstQuestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            //---------------
+            
+            ResterLocations(builder);
             
             builder.Register<LocationsControllerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InspectController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
@@ -86,6 +80,33 @@ namespace _Game.Scripts._Installers
             builder.Register<CutsceneManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
 
             RegisterCurrentChapterInitializer(builder);
+        }
+
+        private void ResterLocations(IContainerBuilder builder)
+        {
+            builder.Register<HouseLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<TestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<ForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<DreamLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<DreamFirstQuestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<DreamForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            
+            builder.RegisterBuildCallback(container =>
+            {
+                var factories = new List<ILocationFactory>
+                {
+                    container.Resolve<HouseLocationFactory>(),
+                    container.Resolve<TestLocationFactory>(),
+                    container.Resolve<ForestLocationFactory>(),
+                    container.Resolve<DreamLocationFactory>(),
+                    container.Resolve<DreamFirstQuestLocationFactory>(),
+                    container.Resolve<DreamForestLocationFactory>()
+                };
+        
+                container.Inject(factories);
+                
+                builder.RegisterInstance<IReadOnlyList<ILocationFactory>>(factories);
+            });
         }
 
         private void RegisterCurrentChapterInitializer(IContainerBuilder builder)

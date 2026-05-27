@@ -1,4 +1,5 @@
 using _Game.Scripts.LocationSystems.LocationsView;
+using _Game.Scripts.RoomSystems.Impl.DreamForest;
 using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
 using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
 using _Game.Scripts.RoomSystems.Rooms;
@@ -14,5 +15,6 @@ namespace _Game.Scripts.RoomSystems
         [field: SerializeField] public TestRoom TestRoom { get; private set; }
         [field: SerializeField] public DreamLocationView DreamLocationView { get; private set; }
         [field: SerializeField] public DreamQuestFirstLocationView DreamQuestFirstLocationView { get; private set; }
+        [field: SerializeField] public DreamForestLocationView DreamForestLocationView { get; private set; }
     }
 }

@@ -8,5 +8,8 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl
         Pig,
         Granny,
         Hedgehog,
+        Busman,
+        OgcWoman,
+        McMushroom,
     }
 }

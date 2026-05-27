@@ -19,7 +19,6 @@ namespace _Game.Scripts.ChaptersSystem
     public class ForestChapter: IInitializable
     {
         private readonly DoorFactory _doorFactory;
-        private readonly ForestChapterConfig _forestChapterConfig;
         private readonly IPlayerFactory _playerFactory;
         private readonly ForestRootViewFactory _forestRootViewFactory;
         private readonly LocationsControllerFactory _locationsControllerFactory;
@@ -27,42 +26,29 @@ namespace _Game.Scripts.ChaptersSystem
         private readonly InspectRegistratorService _inspectRegistratorService;
         private readonly CameraController _cameraController;
         
-        private readonly HouseLocationFactory _houseLocationFactory;
-        private readonly ForestLocationFactory _forestLocationFactory;
-        private readonly TestLocationFactory _testLocationFactory;
-        private readonly DreamLocationFactory _dreamLocationFactory;
-        private readonly DreamFirstQuestLocationFactory _dreamFirstQuestLocationFactory;
-        
+        private readonly IReadOnlyList<ILocationFactory> _locationFactories;
+
         private LocationsController _locationsController;
         private List<DoorView> _allDoorsView = new();
         
         public ForestChapter(DoorFactory doorFactory, 
-            ForestChapterConfig forestChapterConfig,
             IPlayerFactory playerFactory,
-            ForestRootViewFactory forestRootViewFactory,
-            HouseLocationFactory houseLocationFactory,
-            TestLocationFactory testLocationFactory,
             LocationsControllerFactory locationsControllerFactory,
             UpdateController updateController,
             InspectRegistratorService inspectRegistratorService,
             CameraController cameraController,
-            ForestLocationFactory forestLocationFactory,
-            DreamLocationFactory dreamLocationFactory,
-            DreamFirstQuestLocationFactory dreamFirstQuestLocationFactory)
+            ForestRootViewFactory forestRootViewFactory,
+            IReadOnlyList<ILocationFactory> locationsFactory
+            )
         {
-            _testLocationFactory = testLocationFactory;
-            _cameraController = cameraController;
-            _inspectRegistratorService = inspectRegistratorService;
-            _updateController = updateController;
+            _forestRootViewFactory      = forestRootViewFactory;
+            _locationFactories          = locationsFactory;
+            _cameraController           = cameraController;
+            _inspectRegistratorService  = inspectRegistratorService;
+            _updateController           = updateController;
             _locationsControllerFactory = locationsControllerFactory;
-            _forestRootViewFactory = forestRootViewFactory;
-            _forestLocationFactory = forestLocationFactory;
-            _playerFactory = playerFactory;
-            _forestChapterConfig = forestChapterConfig;
-            _doorFactory = doorFactory;
-            _houseLocationFactory =  houseLocationFactory;
-            _dreamLocationFactory = dreamLocationFactory;
-            _dreamFirstQuestLocationFactory = dreamFirstQuestLocationFactory;
+            _playerFactory              = playerFactory;
+            _doorFactory                = doorFactory;
         }
         
         public void Initialize()
@@ -86,11 +72,12 @@ namespace _Game.Scripts.ChaptersSystem
             _forestRootViewFactory.CreateForestLocationsRootView();
             _locationsController = _locationsControllerFactory.Create();
             //create locations ;
-            _locationsController.CreateLocation(_houseLocationFactory);
-            _locationsController.CreateLocation(_forestLocationFactory);
-            _locationsController.CreateLocation(_dreamLocationFactory);
-            _locationsController.CreateLocation(_dreamFirstQuestLocationFactory);
-            _locationsController.CreateLocation(_testLocationFactory);
+
+            foreach (var locationFactory in _locationFactories)
+            {
+                _locationsController.CreateLocation(locationFactory);
+            }
+            
             //------------
             _locationsController.LocationsModel.CurrentLocation.Value = typeof(StartHouseState);
             
