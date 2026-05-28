@@ -1,96 +1,96 @@
 
 bus.png
-size: 1898,850
+size: 1564,1043
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 L
-  rotate: true
-  xy: 1292, 176
+  rotate: false
+  xy: 841, 149
   size: 179, 465
   orig: 183, 469
   offset: 2, 2
   index: -1
 Mfront
-  rotate: true
-  xy: 1672, 4
+  rotate: false
+  xy: 1402, 351
   size: 160, 224
   orig: 164, 228
   offset: 2, 2
   index: -1
 Mprof
   rotate: false
-  xy: 1759, 166
+  xy: 1402, 133
   size: 125, 216
   orig: 129, 220
   offset: 2, 2
   index: -1
 R
   rotate: false
-  xy: 1646, 384
+  xy: 1371, 577
   size: 191, 464
   orig: 195, 468
   offset: 2, 2
   index: -1
 back
   rotate: false
-  xy: 807, 357
+  xy: 2, 12
   size: 837, 491
   orig: 841, 495
   offset: 2, 2
   index: -1
 bus
   rotate: false
-  xy: 2, 312
+  xy: 2, 505
   size: 803, 536
   orig: 807, 540
   offset: 2, 2
   index: -1
 leg1
-  rotate: false
-  xy: 485, 14
+  rotate: true
+  xy: 1213, 226
   size: 328, 105
   orig: 332, 109
   offset: 2, 2
   index: -1
 leg2
   rotate: false
-  xy: 1839, 494
+  xy: 1320, 200
   size: 51, 354
   orig: 56, 358
   offset: 3, 2
   index: -1
 leg3
   rotate: false
-  xy: 807, 317
+  xy: 1022, 576
   size: 50, 38
   orig: 54, 42
   offset: 2, 2
   index: -1
 sheya
-  rotate: true
-  xy: 865, 27
+  rotate: false
+  xy: 807, 616
   size: 328, 425
   orig: 329, 425
   offset: 1, 0
   index: -1
 sheyaProf
-  rotate: true
-  xy: 485, 121
+  rotate: false
+  xy: 1022, 176
   size: 189, 378
   orig: 189, 378
   offset: 0, 0
   index: -1
 shezProf2
-  rotate: true
-  xy: 2, 82
-  size: 228, 481
+  rotate: false
+  xy: 1137, 556
+  size: 232, 485
   orig: 232, 485
-  offset: 2, 2
+  offset: 0, 0
   index: -1
 гномик
   rotate: true
-  xy: 1292, 2
+  xy: 1022, 2
   size: 172, 378
   orig: 176, 382
   offset: 2, 2

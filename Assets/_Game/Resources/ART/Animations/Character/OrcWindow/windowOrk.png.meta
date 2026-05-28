@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 8e731b768181a3e489a2c7f52e2dc7d0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8837685434309341791
+    second: windowOrk_0
+  - first:
+      213: -3131965188295323536
+    second: windowOrk_1
+  - first:
+      213: -6498928481959246680
+    second: windowOrk_2
+  - first:
+      213: 6630709299562529911
+    second: windowOrk_3
+  - first:
+      213: 2000265354282480759
+    second: windowOrk_4
+  - first:
+      213: -2265990274619591861
+    second: windowOrk_5
+  - first:
+      213: 4209216377084979060
+    second: windowOrk_6
+  - first:
+      213: 8893571855917451637
+    second: windowOrk_7
+  - first:
+      213: -2569418660021889646
+    second: windowOrk_8
+  - first:
+      213: -8775526528136093309
+    second: windowOrk_9
+  - first:
+      213: 4248817693469630898
+    second: windowOrk_10
+  - first:
+      213: -7348447578072544463
+    second: windowOrk_11
+  - first:
+      213: 9175027175620166757
+    second: windowOrk_12
+  - first:
+      213: 3648165371577583607
+    second: windowOrk_13
+  - first:
+      213: 8281026656613917438
+    second: windowOrk_14
+  - first:
+      213: -7042782431794055941
+    second: windowOrk_15
+  - first:
+      213: 2045940252214938529
+    second: windowOrk_16
+  - first:
+      213: 416363680374095968
+    second: windowOrk_17
+  - first:
+      213: -8503771341482866963
+    second: windowOrk_18
+  - first:
+      213: -7644066251937290016
+    second: windowOrk_19
+  - first:
+      213: -4031643305835326142
+    second: windowOrk_20
+  - first:
+      213: 1433648963144429197
+    second: windowOrk_21
+  - first:
+      213: -2958365845603212322
+    second: windowOrk_22
+  - first:
+      213: -5848836449164149634
+    second: windowOrk_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: windowOrk_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 382
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f52f6a41414c5aa70800000000000000
+      internalID: 8837685434309341791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 350
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07094ce41460984d0800000000000000
+      internalID: -3131965188295323536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_2
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 350
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4862c7afa2fc5a0800000000000000
+      internalID: -6498928481959246680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_3
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 351
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774cd491af2050c50800000000000000
+      internalID: 6630709299562529911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_4
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 350
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774378aedbe52cb10800000000000000
+      internalID: 2000265354282480759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_5
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 315
+        width: 69
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b433fc8d9d59d80e0800000000000000
+      internalID: -2265990274619591861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_6
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 316
+        width: 68
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47728ea5ef32a6a30800000000000000
+      internalID: 4209216377084979060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_7
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 293
+        width: 78
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5790f589b705c6b70800000000000000
+      internalID: 8893571855917451637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_8
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 293
+        width: 78
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29592229757975cd0800000000000000
+      internalID: -2569418660021889646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_9
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 284
+        width: 31
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3816e6d0e11173680800000000000000
+      internalID: -8775526528136093309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_10
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 307
+        width: 38
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1e6a65e25d6fa30800000000000000
+      internalID: 4248817693469630898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_11
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1
+        width: 382
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b086a8cd1150a90800000000000000
+      internalID: -7348447578072544463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_12
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1
+        width: 262
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5644567da9e345f70800000000000000
+      internalID: 9175027175620166757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_13
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 218
+        width: 177
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f743ce9313e0a230800000000000000
+      internalID: 3648165371577583607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_14
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 238
+        width: 112
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef263039edd1ce270800000000000000
+      internalID: 8281026656613917438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_15
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 244
+        width: 63
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4bd8a41b2034e90800000000000000
+      internalID: -7042782431794055941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_16
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 130
+        width: 66
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abc1fcc1d3a46c10800000000000000
+      internalID: 2045940252214938529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_17
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 244
+        width: 40
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0608212bf8837c500800000000000000
+      internalID: 416363680374095968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_18
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 101
+        width: 207
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de644c315098cf980800000000000000
+      internalID: -8503771341482866963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_19
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 101
+        width: 126
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8e9bd6e32dae590800000000000000
+      internalID: -7644066251937290016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_20
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 201
+        width: 49
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2459a9e16c9bc08c0800000000000000
+      internalID: -4031643305835326142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_21
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 172
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ea4dcd22855e310800000000000000
+      internalID: 1433648963144429197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_22
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 1
+        width: 346
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed32c2100f5c1f6d0800000000000000
+      internalID: -2958365845603212322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windowOrk_23
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1
+        width: 85
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7cb63aec32c4dea0800000000000000
+      internalID: -5848836449164149634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      windowOrk_0: 8837685434309341791
+      windowOrk_1: -3131965188295323536
+      windowOrk_10: 4248817693469630898
+      windowOrk_11: -7348447578072544463
+      windowOrk_12: 9175027175620166757
+      windowOrk_13: 3648165371577583607
+      windowOrk_14: 8281026656613917438
+      windowOrk_15: -7042782431794055941
+      windowOrk_16: 2045940252214938529
+      windowOrk_17: 416363680374095968
+      windowOrk_18: -8503771341482866963
+      windowOrk_19: -7644066251937290016
+      windowOrk_2: -6498928481959246680
+      windowOrk_20: -4031643305835326142
+      windowOrk_21: 1433648963144429197
+      windowOrk_22: -2958365845603212322
+      windowOrk_23: -5848836449164149634
+      windowOrk_3: 6630709299562529911
+      windowOrk_4: 2000265354282480759
+      windowOrk_5: -2265990274619591861
+      windowOrk_6: 4209216377084979060
+      windowOrk_7: 8893571855917451637
+      windowOrk_8: -2569418660021889646
+      windowOrk_9: -8775526528136093309
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
