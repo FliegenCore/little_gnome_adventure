@@ -58,6 +58,7 @@ namespace _Game.Scripts.InventorySystem
             _eventBus.Subscribe<DialogueEventSignal, string>(this, DialogueInventoryEvent);
             _eventBus.Subscribe<AddItemSignal, ItemId>(this, AddItem);
             _eventBus.Subscribe<RemoveItemSignal, InventoryItem>(this, RemoveItem);
+            _eventBus.Subscribe<RemoveItemAllItemsWithIdSignal, ItemId>(this, RemoveAllItemById);
         }
         
         public void EnableOpenCloseInput()
@@ -84,13 +85,41 @@ namespace _Game.Scripts.InventorySystem
             inventoryItem.Dispose();
         }
 
-        private void RemoveItemById(ItemId id)
+        public int CheckCount(ItemId id)
         {
+            int count = 0;
+
             foreach (var item in _items)
             {
-                if (item.AbstractInteractableModel.Id == id.ToString())
+                if (item.ItemId == id)
                 {
-                    RemoveItem(item);
+                    count++;
+                }
+            }
+            
+            return count;
+        }
+
+        private void RemoveAllItemById(ItemId id)
+        {
+            for (int i = 0; i < _items.Count; i++)
+            {
+                if (_items[i].AbstractInteractableModel.Id == id.ToString())
+                {
+                    RemoveItem(_items[i]);
+                    i--;
+                }
+            }
+        }
+
+        private void RemoveItemById(ItemId id)
+        {
+            for (int i = 0; i < _items.Count; i++)
+            {
+                if (_items[i].AbstractInteractableModel.Id == id.ToString())
+                {
+                    RemoveItem(_items[i]);
+                    break;
                 }
             }
         }
@@ -148,16 +177,14 @@ namespace _Game.Scripts.InventorySystem
             if (currentInteractable == null)
                 return;
             
-            ItemId id = Enum.Parse<ItemId>(_currentSelectedInventoryItem.AbstractInteractableModel.Id);
-
             ACustomBehaviour customBehaviour = currentInteractable.CustomBehaviour;
             if (customBehaviour == null)
                 return;
 
-            if (customBehaviour is IItemNeeder itemNeeder)
+            if (customBehaviour is IItemNeeder)
             {
                 Disable();
-                itemNeeder.InteractWithItem(_currentSelectedInventoryItem);
+                _interactionController.InteractWithItem(currentInteractable, _currentSelectedInventoryItem);
             }
         }
 
@@ -218,7 +245,12 @@ namespace _Game.Scripts.InventorySystem
             _eventBus.Unsubscribe<DialogueEventSignal>(this);
             _eventBus.Unsubscribe<AddItemSignal>(this);
             _eventBus.Unsubscribe<RemoveItemSignal>(this);
+            _eventBus.Unsubscribe<RemoveItemAllItemsWithIdSignal>(this);
         }
+    }
+
+    internal class RemoveItemAllItemsWithIdSignal
+    {
     }
 
     internal class RemoveItemSignal

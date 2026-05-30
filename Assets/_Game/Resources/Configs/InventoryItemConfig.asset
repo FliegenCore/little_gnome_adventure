@@ -41,3 +41,7 @@ MonoBehaviour:
     <Sprite>k__BackingField: {fileID: 5725184139431673129, guid: c0faf41e9770b06438bc64c7c47ef301, type: 3}
     <ItemnameKey>k__BackingField: item_key
     <ViewPrefab>k__BackingField: {fileID: 3506524998190829140, guid: cd066a7231a2ff94a997be45eb0ed51e, type: 3}
+  - <ItemId>k__BackingField: 7
+    <Sprite>k__BackingField: {fileID: 357749872346554099, guid: 06f3715e72278a7458220d1c99a405b6, type: 3}
+    <ItemnameKey>k__BackingField: item_key
+    <ViewPrefab>k__BackingField: {fileID: 3506524998190829140, guid: cd066a7231a2ff94a997be45eb0ed51e, type: 3}

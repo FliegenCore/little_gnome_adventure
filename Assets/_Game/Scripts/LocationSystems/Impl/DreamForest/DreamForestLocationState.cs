@@ -8,13 +8,17 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
 {
     public class DreamForestLocationState : LocationAbstractState
     {
+        public readonly DreamForestLocationView DreamForestLocationView;
+        
         public DreamForestLocationState(
-            Fsm fsm, AbstractLocationModel locationModel,
-            AbstractLocationView abstractLocation,
+            Fsm fsm, 
+            AbstractLocationModel locationModel,
+            DreamForestLocationView abstractLocation,
             IDialogueManager dialogueManager,
             EventBus eventBus
             ) : base(fsm, locationModel, abstractLocation, dialogueManager, eventBus)
         {
+            DreamForestLocationView = abstractLocation;
         }
     }
 }

@@ -1,5 +1,7 @@
 using _Game.Scripts.Input;
+using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems.Animations;
+using _Game.Scripts.PlayerSystems.Animations.Impl;
 using _Game.Scripts.Utils;
 using Game.PlayerSystem;
 using UniRx;
@@ -16,7 +18,8 @@ namespace _Game.Scripts.PlayerSystems
         public readonly ReactiveCommand OnPosition = new();
         public readonly float MoveSpeed;
         public Transform AutoMoveTransform;
-        public Transform LastInteractableObject;
+        public Transform LastInteractableObjectTransform;
+        public AbstractInteractable LastInteractable;
         
         public PlayerModel(Transformation transformation,
             IMoveDirectionInput moveDirectionInput,

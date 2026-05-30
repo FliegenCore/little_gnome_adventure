@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using _Game.Scripts.InventorySystem;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.MotionStates;
@@ -68,6 +69,12 @@ namespace _Game.Scripts.InteractionSystems
         
         private void SelectNearestCurrentInteractables()
         {
+            if (_currentAbstractInteractables.Count <= 0)
+            {
+                StopUpdate();
+                return;
+            }
+            
             AbstractInteractable nearestInteractable = _currentAbstractInteractables[0];
             Vector2 playerPos = _playerModel.Transformation.Position.Value;
 
@@ -120,6 +127,7 @@ namespace _Game.Scripts.InteractionSystems
             }
             
             _interactableOnPointDisposables?.Clear();
+            StopUpdate();
             
             if (_currentAbstractInteractable.InteractableView.InteractPoint != null)
             {
@@ -128,16 +136,20 @@ namespace _Game.Scripts.InteractionSystems
                     _currentAbstractInteractable.InteractableView.BoxCollider2D.enabled = false;
                 }
                 
-                StopUpdate();
-                
                 _playerModel.AutoMoveTransform = _currentAbstractInteractable.InteractableView.InteractPoint;
-                _playerModel.LastInteractableObject = _currentAbstractInteractable.InteractableView.transform;
+                _playerModel.LastInteractableObjectTransform = _currentAbstractInteractable.InteractableView.transform;
+                _playerModel.LastInteractable = _currentAbstractInteractable;
+                
+                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerAutoMoveState));
+                _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
                 
                 _playerModel.OnPosition.Subscribe(_ =>
                 {
-                    if (_currentAbstractInteractable.InteractableView.BoxCollider2D != null)
+                    AbstractInteractable interactable = _playerModel.LastInteractable;
+                        
+                    if (interactable.InteractableView.BoxCollider2D != null)
                     {
-                        _currentAbstractInteractable.InteractableView.BoxCollider2D.enabled = true;
+                        interactable.InteractableView.BoxCollider2D.enabled = true;
                     }
                     
                     _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
@@ -145,7 +157,7 @@ namespace _Game.Scripts.InteractionSystems
                     Observable.Timer(TimeSpan.FromSeconds(0.25f))
                         .Subscribe(_ =>
                         {
-                            _currentAbstractInteractable.Interact(() =>
+                            interactable.Interact(() =>
                             {
                                 _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
                             });
@@ -155,8 +167,7 @@ namespace _Game.Scripts.InteractionSystems
                 })
                 .AddTo(_interactableOnPointDisposables);
                 
-                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerAutoMoveState));
-                _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
+               
             }
             else
             {
@@ -164,7 +175,7 @@ namespace _Game.Scripts.InteractionSystems
             }
         }
 
-        public void InteractWithItem(AbstractInteractable abstractInteractable)
+        public void InteractWithItem(AbstractInteractable abstractInteractable, InventoryItem item)
         {
             if (abstractInteractable.InteractableView.InteractPoint != null)
             {
@@ -173,30 +184,40 @@ namespace _Game.Scripts.InteractionSystems
                     abstractInteractable.InteractableView.BoxCollider2D.enabled = false;
                 }
                 
+                _interactableOnPointDisposables?.Clear();
                 StopUpdate();
                 
-                _playerModel.AutoMoveTransform = abstractInteractable.InteractableView.InteractPoint;
-                _playerModel.LastInteractableObject = abstractInteractable.InteractableView.transform;
-                
-                _playerModel.OnPosition.Subscribe(_ =>
-                    {
-                        if (abstractInteractable.InteractableView.BoxCollider2D != null)
-                        {
-                            abstractInteractable.InteractableView.BoxCollider2D.enabled = true;
-                        }
-                    
-                        abstractInteractable.Interact(() =>
-                        {
-                            _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
-                            _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
-                        });
-                    
-                        StartUpdate();
-                    })
-                    .AddTo(_interactableOnPointDisposables);
+                _playerModel.AutoMoveTransform = _currentAbstractInteractable.InteractableView.InteractPoint;
+                _playerModel.LastInteractableObjectTransform = _currentAbstractInteractable.InteractableView.transform;
+                _playerModel.LastInteractable = _currentAbstractInteractable;
                 
                 _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerAutoMoveState));
                 _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
+                
+                _playerModel.OnPosition.Subscribe(_ =>
+                {
+                    if (abstractInteractable.InteractableView.BoxCollider2D != null)
+                    {
+                        abstractInteractable.InteractableView.BoxCollider2D.enabled = true;
+                    }
+
+                    if (abstractInteractable.CustomBehaviour is IItemNeeder itemNeeder)
+                    {
+                        _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
+                    
+                        Observable.Timer(TimeSpan.FromSeconds(0.25f))
+                            .Subscribe(_ =>
+                            {
+                                itemNeeder.InteractWithItem(item, () =>
+                                {
+                                    _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
+
+                                });
+                                StartUpdate();
+                            });
+                    }
+                })
+                .AddTo(_interactableOnPointDisposables);
             }
             else
             {
@@ -231,8 +252,6 @@ namespace _Game.Scripts.InteractionSystems
                 StopUpdate();
             }
         }
-
-        
         
         public void Dispose()
         {

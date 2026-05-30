@@ -1,0 +1,89 @@
+{
+  "Nodes": [
+    {
+      "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
+      "DialogueName": "McMushroom",
+      "Text": "ОООО какой кайф",
+      "Type": 0,
+      "Position": {
+        "x": -278.0,
+        "y": 184.0,
+        "normalized": {
+          "x": -0.8338916,
+          "y": 0.5519282,
+          "normalized": {
+            "x": -0.83389163,
+            "y": 0.5519283,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.00000012
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 333.376678,
+        "sqrMagnitude": 111140.0
+      },
+      "IsStartNode": true,
+      "OnStartEvents": [
+        "a_McMushroom_drunkspeak_0_1",
+        "a_Player_eyes/forward_2_1"
+      ],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
+      "DialogueName": "McMushroom",
+      "Text": "Держи билетик за такой подгон!",
+      "Type": 0,
+      "Position": {
+        "x": 154.0,
+        "y": 210.0,
+        "normalized": {
+          "x": 0.591363668,
+          "y": 0.806405067,
+          "normalized": {
+            "x": 0.5913636,
+            "y": 0.806404948,
+            "normalized": {
+              "x": 0.591363668,
+              "y": 0.806405,
+              "magnitude": 1.0,
+              "sqrMagnitude": 1.0
+            },
+            "magnitude": 0.99999994,
+            "sqrMagnitude": 0.9999999
+          },
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 260.415039,
+        "sqrMagnitude": 67816.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "dialogue_skip_disable",
+        "a_McMushroom_drunkticket_0_0_drunk_(dialogue_skip_enable)"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/idle_1_1",
+        "a_McMushroom_drunk_0_1_(dialogue_skip_enable)"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    }
+  ],
+  "Edges": [
+    {
+      "InputNodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
+      "OutputNodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    }
+  ]
+}

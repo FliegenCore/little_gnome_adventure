@@ -22,5 +22,12 @@ namespace _Game.Scripts.InventorySystem
 
             inventory.RemoveItem(inventoryItem);
         }
+
+        public int CheckCount(ItemId id)
+        {
+            Inventory inventory = _inventoryFactory.GetCachedInventory();
+            
+            return inventory.CheckCount(id);
+        }
     }
 }

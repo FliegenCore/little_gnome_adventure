@@ -10,8 +10,7 @@ namespace _Game.Scripts.CutsceneSystem.Impl
         private readonly EventBus _eventBus;
         private ACutscene _lastCutscene;
     
-
-        public CutsceneManager(EventBus eventBus)
+        private CutsceneManager(EventBus eventBus)
         {
             _eventBus = eventBus;
         }

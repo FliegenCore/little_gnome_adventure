@@ -26,13 +26,13 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl.Hedgehog
             //начать диалог
         }
 
-        public void InteractWithItem(InventoryItem item)
+        public void InteractWithItem(InventoryItem item, Action callback)
         {
             if (item.ItemId != ItemId.Candy)
             {
                 return;
             }
-            
+            callback?.Invoke();
             _animationControl.SetAnimation(0, "hand/idle_candy");
             _eventBus.TriggerEvenet<RemoveItemSignal, InventoryItem>(item);
             //

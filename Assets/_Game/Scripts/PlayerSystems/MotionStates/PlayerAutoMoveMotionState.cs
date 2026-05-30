@@ -37,7 +37,7 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
 
             if (Vector2.Distance(_playerModel.Transformation.Position.Value, targetPosition) < 0.1f)
             {
-                Vector2 interactablePos = (Vector2)_playerModel.LastInteractableObject.position -
+                Vector2 interactablePos = (Vector2)_playerModel.LastInteractableObjectTransform.position -
                                           _playerModel.Transformation.Position.Value;
                 
                 Vector3 currentScale = _playerModel.Transformation.Scale.Value; 

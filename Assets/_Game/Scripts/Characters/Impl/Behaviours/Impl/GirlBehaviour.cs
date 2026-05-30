@@ -23,8 +23,9 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl
             _eventBus.TriggerEvenet<ShowInspectWindowByIdSignal, string>("Lobotomy");
         }
 
-        public void InteractWithItem(InventoryItem item)
+        public void InteractWithItem(InventoryItem item, Action callback)
         {
+            callback?.Invoke();
             if (item.ItemId != ItemId.Needle)
             {
                 return;

@@ -376,7 +376,7 @@ Camera:
   far clip plane: 1000
   field of view: 44
   orthographic: 1
-  orthographic size: 6.2
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1621,7 +1621,6 @@ MonoBehaviour:
     TypeName: _Game.Scripts._Installers.BootstrapInstaller
   autoRun: 1
   autoInjectGameObjects: []
-  _forestChapterConfig: {fileID: 11400000, guid: 5a14b04a202cc504b80e7dafc03726b6, type: 2}
   _mergeItemConfig: {fileID: 11400000, guid: b3309bb0e86ef1b4db727861a44b3d90, type: 2}
   _playerConfig: {fileID: 11400000, guid: 3243bcad6339b2a479db31dfd8233166, type: 2}
   _cinemachineCamera: {fileID: 2057373587}
@@ -1813,7 +1812,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 44
-    OrthographicSize: 6.2
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

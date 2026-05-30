@@ -23,6 +23,8 @@ namespace _Game.Scripts.DialogueSystem
         
         private bool _dialogueIsStarted;
 
+        private bool _canContinueDialogue = true;
+
         private DialogueManager(InputSystem_Actions inputSystemActions, EventBus eventBus)
         {
             _eventBus           = eventBus;
@@ -35,6 +37,7 @@ namespace _Game.Scripts.DialogueSystem
         private void Init()
         {
             _eventBus.Subscribe<StartDialogueSignal, string>(this, StartDialogue);
+            _eventBus.Subscribe<DialogueEventSignal, string>(this, HandleDialogueEvent);
         }
 
         public void EnableInput()
@@ -45,6 +48,7 @@ namespace _Game.Scripts.DialogueSystem
         public void DisableInput()
         {
             _inputSystemActions.Player.Interact.performed -= ContinueDialogue;
+            _canContinueDialogue = true;
         }
 
         public void RegisterSpeakerCharacters(params SpeakerView[] speakerViews)
@@ -60,6 +64,19 @@ namespace _Game.Scripts.DialogueSystem
             foreach (var speaker in speakerViews)
             {
                 _speakerViews.Remove(speaker);
+            }
+        }
+
+        private void HandleDialogueEvent(string eventName)
+        {
+            //TODO: доавбить визуальное отображение что нельзя продолжить, например чтобы E пропадала!!!!
+            if (eventName == "dialogue_skip_disable")
+            {
+                _canContinueDialogue = false;
+            }
+            if (eventName == "dialogue_skip_enable")
+            {
+                _canContinueDialogue = true;
             }
         }
 
@@ -112,6 +129,9 @@ namespace _Game.Scripts.DialogueSystem
         
         private void ContinueDialogue(InputAction.CallbackContext _)
         {
+            if (!_canContinueDialogue)
+                return;
+            
             if (TrySelectNextDialogue())
             {
                 ShowCurrentDialogue();

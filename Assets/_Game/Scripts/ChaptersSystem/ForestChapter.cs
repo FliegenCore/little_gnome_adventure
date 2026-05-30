@@ -6,6 +6,7 @@ using _Game.Scripts.GameInitializeSystems;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
+using _Game.Scripts.RoomSystems.Impl.DreamForest;
 using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
 using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
 using _Game.Scripts.RoomSystems.LocationsStates;
@@ -77,7 +78,7 @@ namespace _Game.Scripts.ChaptersSystem
                 _locationsController.CreateLocation(locationFactory);
             }
             
-            _locationsController.LocationsModel.CurrentLocation.Value = typeof(StartHouseState);
+            _locationsController.LocationsModel.CurrentLocation.Value = typeof(DreamForestLocationState);
             
             _locationsController.Initialize();
         }

@@ -1,4 +1,5 @@
 using _Game.Scripts.PlayerSystems.Animations.Impl;
+using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using Core.Common;
 using TMPro;
 using UnityEngine;
