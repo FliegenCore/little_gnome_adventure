@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "qch3Jua57T92GnSslJ/Gyfb9N1A",
+	"hash": "WAh+kIJ6VTetmmFcmdueM5YmTlw",
 	"spine": "3.8.0",
 	"x": -217,
 	"y": -5.79,
@@ -112,9 +112,6 @@
 			"Rbrow": {
 				"Rbrow": { "x": 10.82, "y": 1.23, "rotation": -15.17, "width": 35, "height": 27 }
 			},
-			"arm3LEFT": {
-				"arm3LEFT": { "x": 9.22, "y": -3.96, "rotation": 58.78, "width": 75, "height": 68 }
-			},
 			"ticket": {
 				"ticket": { "x": 15.97, "y": 1.95, "width": 85, "height": 55 }
 			},
@@ -133,8 +130,8 @@
 			"US2": {
 				"US2": { "x": -6.24, "y": 2.51, "rotation": 161.57, "width": 108, "height": 53 }
 			},
-			"arm1": {
-				"arm1": { "x": 50.96, "y": 1.98, "rotation": 98.71, "width": 67, "height": 152 }
+			"nose": {
+				"nose": { "x": 66.88, "y": 5.25, "rotation": 139.37, "width": 131, "height": 118 }
 			},
 			"arm3": {
 				"arm3": { "x": 11.35, "y": 2.17, "rotation": 138.69, "width": 75, "height": 68 }
@@ -151,8 +148,11 @@
 			"arm1LEFT": {
 				"arm1LEFT": { "x": 46.53, "y": 2.3, "rotation": 77.1, "width": 67, "height": 152 }
 			},
-			"1redmushroom": {
-				"1redmushroom": { "x": 28.74, "y": 2.38, "rotation": -89.75, "width": 64, "height": 92 }
+			"arm1": {
+				"arm1": { "x": 50.96, "y": 1.98, "rotation": 98.71, "width": 67, "height": 152 }
+			},
+			"arm3LEFT": {
+				"arm3LEFT": { "x": 9.22, "y": -3.96, "rotation": 58.78, "width": 75, "height": 68 }
 			},
 			"Reye": {
 				"Reye": { "x": 11.66, "y": 14.69, "rotation": -90.87, "width": 57, "height": 56 }
@@ -184,8 +184,8 @@
 			"Lpoint": {
 				"Lpoint": { "x": 0.27, "y": -0.77, "rotation": -93.12, "width": 23, "height": 25 }
 			},
-			"nose": {
-				"nose": { "x": 66.88, "y": 5.25, "rotation": 139.37, "width": 131, "height": 118 }
+			"1redmushroom": {
+				"1redmushroom": { "x": 28.74, "y": 2.38, "rotation": -89.75, "width": 64, "height": 92 }
 			},
 			"uho1": {
 				"uho1": { "x": 69.66, "y": -9.66, "rotation": -17.07, "width": 145, "height": 83 }
@@ -199,6 +199,10 @@
 		}
 	}
 ],
+"events": {
+	"invertargoblin": { "audio": "invertargoblin.mp3" },
+	"ticketgoblin": { "audio": "ticketgoblin.mp3" }
+},
 "animations": {
 	"drunk": {
 		"slots": {
@@ -1111,18 +1115,13 @@
 				]
 			},
 			{
-				"time": 1.6667,
+				"time": 1.2333,
 				"offsets": [
-					{ "slot": "am2LEFT", "offset": 6 },
-					{ "slot": "arm3LEFT", "offset": 6 }
-				]
-			},
-			{
-				"time": 1.7,
-				"offsets": [
-					{ "slot": "ticket", "offset": 22 },
-					{ "slot": "am2LEFT", "offset": 5 },
-					{ "slot": "arm3LEFT", "offset": 5 }
+					{ "slot": "meshok", "offset": 1 },
+					{ "slot": "am2", "offset": 4 },
+					{ "slot": "ticket", "offset": 4 },
+					{ "slot": "arm3", "offset": 4 },
+					{ "slot": "1redmushroom", "offset": -10 }
 				]
 			},
 			{
@@ -1132,6 +1131,10 @@
 					{ "slot": "arm3LEFT", "offset": 6 }
 				]
 			}
+		],
+		"events": [
+			{ "time": 0.3667, "name": "invertargoblin" },
+			{ "time": 1.5, "name": "ticketgoblin" }
 		]
 	},
 	"idle": {
@@ -1768,6 +1771,9 @@
 					{ "slot": "arm3LEFT", "offset": 6 }
 				]
 			}
+		],
+		"events": [
+			{ "time": 0.1333, "name": "ticketgoblin" }
 		]
 	},
 	"speak": {
