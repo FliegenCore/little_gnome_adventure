@@ -4699,6 +4699,7 @@ MonoBehaviour:
   - {fileID: 2826409155473078118}
   <SpeakerViews>k__BackingField:
   - {fileID: 5661642436702808726}
+  <CameraSize>k__BackingField: 6
   <McMushroomView>k__BackingField: {fileID: 9006191551237452781}
   <Mushrooms>k__BackingField:
   - {fileID: 7903371512252553382}

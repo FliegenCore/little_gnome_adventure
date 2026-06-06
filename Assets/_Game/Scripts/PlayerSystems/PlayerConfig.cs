@@ -7,6 +7,7 @@ namespace _Game.Scripts.PlayerSystems
     {
         [field: SerializeField] public PlayerView PlayerViewPrefab { get; private set; }
         [field: SerializeField] public float MoveSpeed { get; private set; }
+        [field: SerializeField] public float RunSpeed { get; private set; }
         [field: SerializeField] public Vector3 StartSpawnPosition { get; private set; }
         [field: SerializeField] public Vector3 StartScale { get; private set; }
     }

@@ -11,25 +11,27 @@ namespace _Game.Scripts.CameraSystem
         private readonly CinemachineConfiner2D _cinemachineConfiner2D;
         
         private Transform _currentFollowTarget;
-        
+
+        private Tween _zoomTween;
         
         private CameraController(CinemachineCamera cinemachineCamera)
         {
             CurrentCinemachineCamera = cinemachineCamera;   
             _cinemachineConfiner2D = CurrentCinemachineCamera.GetComponent<CinemachineConfiner2D>();
         }
-
         
         public void ZoomTo(float newSize, float duration, Action callback)
         {
-            Tween tween = DOTween.To(
+            _zoomTween?.Kill();
+            
+            _zoomTween = DOTween.To(
                 () => CurrentCinemachineCamera.Lens.OrthographicSize,
                 x => CurrentCinemachineCamera.Lens.OrthographicSize = x,
                 newSize,
                 duration
             );
-
-            tween.OnComplete(() => callback?.Invoke());
+            
+            _zoomTween.OnComplete(() => callback?.Invoke());
         }
 
         public void SetFollowTarget(Transform followTarget)

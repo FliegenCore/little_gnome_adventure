@@ -2942,6 +2942,7 @@ MonoBehaviour:
   - {fileID: 7240938535305884579}
   <SpeakerViews>k__BackingField:
   - {fileID: 6703776609661316087}
+  <CameraSize>k__BackingField: 6
   <GirlView>k__BackingField: {fileID: 4107563263446075953}
   <HedgehogView>k__BackingField: {fileID: 132990111622554149}
   <WrapperItemView>k__BackingField: {fileID: 2001418474470054388}

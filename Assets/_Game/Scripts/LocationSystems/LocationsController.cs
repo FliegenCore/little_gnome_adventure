@@ -15,6 +15,8 @@ namespace _Game.Scripts.RoomSystems
         private readonly Fsm _locationsStateMachine;
         private readonly CameraController _cameraController;
         private List<LocationAbstractState> _locationAbstractStates = new();
+
+        public float GetCurrentCameraSize => GetCurrentLocation().AbstractLocationView.CameraSize;
         
         public LocationsController(LocationsModel locationsModel, CameraController cameraController)
         {
@@ -48,6 +50,7 @@ namespace _Game.Scripts.RoomSystems
         {
             _locationsStateMachine.SetState(locationAbstractState);
             _cameraController.SetFollowZone(GetCurrentLocation().AbstractLocationView.CameraCollider);
+            _cameraController.ZoomTo(GetCurrentCameraSize, 0, null);
         }
 
         public LocationAbstractState GetCurrentLocation()

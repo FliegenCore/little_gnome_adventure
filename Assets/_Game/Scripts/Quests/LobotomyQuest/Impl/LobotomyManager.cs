@@ -37,6 +37,7 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl
         {
             CreateNeedles();
             RegisterLobotomy();
+            RegisterInstructionPaper();
         }
 
         private void CreateNeedles()
@@ -63,7 +64,13 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl
         {
             InspectsView inspectsView = _locationsRootView.InspectsView;
             _inspectRegistratorService.RegisterInspect("Lobotomy", inspectsView.LobotomyInspectView, 
-                new LobotomyInspectInput(_inputSystemActions),_needles.ToArray());
+                new LobotomyInspectInput(_inputSystemActions, _eventBus),_needles.ToArray());
+        }
+
+        private void RegisterInstructionPaper()
+        {
+            InspectsView inspectsView = _locationsRootView.InspectsView;
+            _inspectRegistratorService.RegisterInspect("Instruction", inspectsView.InstructionPaper);
         }
     }
 }

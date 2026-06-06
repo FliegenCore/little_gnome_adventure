@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.PlayerSystems.Animations;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
+using Spine.Unity;
 using UniRx;
 using UnityEngine;
 
@@ -12,11 +13,14 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
         
         [SerializeField] private AnimationControl _animationControl;
         [SerializeField] private Collider2D _collider2D;
+        [SerializeField] private SkeletonAnimation _pointsAnimation;
 
         private ReactiveProperty<int> _currentHeight;
         private ReactiveProperty<bool> _canInteract;
         private ReactiveProperty<bool> _needCallback;
         private ReactiveProperty<bool> _enableCollider;
+        
+        private bool _isInitialized;
         
         public void Construct(
             ReactiveProperty<int> currentHeight,
@@ -31,10 +35,30 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
             
             _currentHeight.Subscribe(PlayAnimation).AddTo(gameObject);
             enableCollider.Subscribe(SetEnableCollider).AddTo(gameObject);
+            
+            DisablePoints();
         }
 
+        public void EnablePoints()
+        {
+            _pointsAnimation.gameObject.SetActive(true);
+        }
+
+        public void DisablePoints()
+        {
+            _pointsAnimation.gameObject.SetActive(false);
+        }
+        
         private void PlayAnimation(int height)
         {
+            if (!_isInitialized)
+            {
+                _pointsAnimation.Initialize(false);
+                _isInitialized = true;
+            }
+            
+            _pointsAnimation.AnimationState.SetAnimation(0, height.ToString(), false);
+            
             string animName = "";
             if (height == 5)
             {
@@ -57,7 +81,9 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
             }
             else
             {
-                _animationControl.SetAnimation(0, animName, callback: () =>
+                _animationControl.SetAnimation(0, animName);
+
+                Observable.Timer(TimeSpan.FromSeconds(0.25f)).Subscribe(x => 
                 {
                     if(_needCallback.Value)
                         _canInteract.Value = true;

@@ -48,6 +48,29 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         public void Initialize()
         {
             CreatePlants();
+
+            _locationsRootView.DreamQuestFirstLocationView.FocusTrigger.OnFucused += OnFocus;
+            _locationsRootView.DreamQuestFirstLocationView.FocusTrigger.OnUnfocused += OnUnfocus;
+        }
+
+        private void OnFocus()
+        {
+            foreach (var plants in _plants)
+            {
+                PlantView view = (PlantView)plants.InteractableView;
+                
+                view.EnablePoints();
+            }
+        }
+
+        private void OnUnfocus()
+        {
+            foreach (var plants in _plants)
+            {
+                PlantView view = (PlantView)plants.InteractableView;
+                
+                view.DisablePoints();
+            }
         }
 
         private void CreateCutscene()
@@ -125,6 +148,8 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         public void Dispose()
         {
             _compositeDisposable?.Dispose();
+            _locationsRootView.DreamQuestFirstLocationView.FocusTrigger.OnFucused -= OnFocus;
+            _locationsRootView.DreamQuestFirstLocationView.FocusTrigger.OnUnfocused -= OnUnfocus;
         }
     }
 }

@@ -16,7 +16,6 @@ namespace Game.PlayerSystem
         private void Construct(ISoundManager soundManager)
         {
             _soundManager = soundManager;
-            Debug.Log(name);
         }
 
         private void Start()

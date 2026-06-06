@@ -59,7 +59,13 @@ namespace _Game.Scripts.PlayerSystems
             
             AnimationPlayerModel animationPlayerModel = new AnimationPlayerModel();
             
-            PlayerModel playerModel = new PlayerModel(transformation, _moveDirectionInput, animationPlayerModel, _playerConfig.MoveSpeed);
+            PlayerModel playerModel = new PlayerModel(
+                transformation, 
+                _moveDirectionInput,
+                animationPlayerModel,
+                _playerConfig.MoveSpeed,
+                _playerConfig.RunSpeed
+                );
             
             PlayerView playerView = _resolver.Instantiate(_playerConfig.PlayerViewPrefab, _playerConfig.StartSpawnPosition, Quaternion.identity);
             playerView.Transformable.Construct(transformation);
@@ -114,6 +120,7 @@ namespace _Game.Scripts.PlayerSystems
         private void FillPlayerMotion(Fsm fsm, PlayerModel model)
         {
             fsm.AddState(new PlayerIdleMotionState(fsm, model));
+            fsm.AddState(new PlayerRunMotionState(fsm, model));
             fsm.AddState(new PlayerAutoMoveMotionState(fsm, model));
             fsm.AddState(new PlayerMoveMotionState(fsm, model));
             

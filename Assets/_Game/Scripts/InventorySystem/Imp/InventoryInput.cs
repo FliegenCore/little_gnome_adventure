@@ -55,7 +55,8 @@ namespace _Game.Scripts.InventorySystem
         
         private void ShowSelectedItem()
         {
-            if (_interactionController.CurrentAbstractInteractable == null)
+            if (_interactionController.CurrentAbstractInteractable == null
+                || !_interactionController.CurrentAbstractInteractable.CanInteract())
             {
                 return;
             }

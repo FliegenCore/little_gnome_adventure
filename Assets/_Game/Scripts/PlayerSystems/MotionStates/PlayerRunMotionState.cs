@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace _Game.Scripts.PlayerSystems.MotionStates
 {
-    public class PlayerMoveMotionState : PlayerMotionState
+    public class PlayerRunMotionState: PlayerMotionState
     {
-        public PlayerMoveMotionState(Fsm fsm, PlayerModel playerModel) : base(fsm, playerModel)
+        public PlayerRunMotionState(Fsm fsm, PlayerModel playerModel) : base(fsm, playerModel)
         {
 
         }
@@ -13,7 +13,7 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
         public override void Enter()
         {
             base.Enter();
-            _playerModel.AnimationPlayerModel.IsMove.Value = true;
+            _playerModel.AnimationPlayerModel.IsRun.Value = true;
         }
 
         public override void Update(float deltaTime)
@@ -35,8 +35,9 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
                 return;
             }
     
+            
             Vector2 moveDirection = _playerModel.MoveDirectionInput.GetDirection();
-            _playerModel.Transformation.Direction.Value = moveDirection * _playerModel.MoveSpeed;
+            _playerModel.Transformation.Direction.Value = moveDirection * _playerModel.RunSpeed;
     
             if (moveDirection.x != 0)
             {
@@ -44,10 +45,10 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
                 currentScale.x = Mathf.Abs(currentScale.x) * (moveDirection.x > 0 ? 1 : -1);
                 _playerModel.Transformation.Scale.Value = currentScale;
             }
-            
-            if (_playerModel.MoveDirectionInput.GetIsSprint())
+
+            if (!_playerModel.MoveDirectionInput.GetIsSprint())
             {
-                _fsm.SetState<PlayerRunMotionState>();
+                _fsm.SetState<PlayerMoveMotionState>();
             }
         }
 
@@ -56,7 +57,7 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
             base.Exit();
             
             _playerModel.Transformation.Direction.Value = Vector2.zero;
-            _playerModel.AnimationPlayerModel.IsMove.Value = false;
+            _playerModel.AnimationPlayerModel.IsRun.Value = false;
         }
     }
 }
