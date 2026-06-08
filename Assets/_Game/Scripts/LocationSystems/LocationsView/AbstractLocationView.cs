@@ -10,5 +10,6 @@ namespace _Game.Scripts.RoomSystems
         [field: SerializeField] public PolygonCollider2D CameraCollider { get; private set; }
         [field: SerializeField] public DoorView[] Doors { get; private set; }
         [field: SerializeField] public SpeakerView[] SpeakerViews { get; private set; }
+        [field: SerializeField] public float CameraSize { get; private set; }
     }
 }

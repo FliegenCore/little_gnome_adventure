@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <InteractPoint>k__BackingField: {fileID: 0}
+  <BoxCollider2D>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 7144639017937470278}
   <HintSelect>k__BackingField: {fileID: 1850036318758266594}
   <ConnectedDoor>k__BackingField: {fileID: 0}
@@ -1969,6 +1970,7 @@ MonoBehaviour:
   - {fileID: 79093728790803312}
   <SpeakerViews>k__BackingField:
   - {fileID: 3906797768657687353}
+  <CameraSize>k__BackingField: 5
   <NightstandView>k__BackingField: {fileID: 7425344110027359564}
   <Table>k__BackingField: {fileID: 9076162923448873952}
   <DedView>k__BackingField: {fileID: 2184580489380194691}

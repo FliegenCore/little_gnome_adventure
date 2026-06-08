@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <PlayerViewPrefab>k__BackingField: {fileID: 7389879592338076372, guid: 565c6b57f367b434592e3cd6071e9d9e, type: 3}
   <MoveSpeed>k__BackingField: 3
-  <StartSpawnPosition>k__BackingField: {x: 0.7042619, y: -3.265736, z: 0}
+  <RunSpeed>k__BackingField: 6
+  <StartSpawnPosition>k__BackingField: {x: 0.7042619, y: -1, z: 0}
   <StartScale>k__BackingField: {x: 1, y: 1, z: 1}

@@ -6,6 +6,7 @@ namespace _Game.Scripts.Input
     public interface IMoveDirectionInput
     {
         bool GetCanMove();
+        bool GetIsSprint();
         void SetCanMove(bool canMove);
         Vector2 GetDirection();
     }

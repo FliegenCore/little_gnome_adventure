@@ -17,20 +17,25 @@ namespace _Game.Scripts.PlayerSystems
         public readonly Observable<bool> CanInteract;
         public readonly ReactiveCommand OnPosition = new();
         public readonly float MoveSpeed;
+        public readonly float RunSpeed;
         public Transform AutoMoveTransform;
         public Transform LastInteractableObjectTransform;
         public AbstractInteractable LastInteractable;
         
-        public PlayerModel(Transformation transformation,
+        public PlayerModel(
+            Transformation transformation,
             IMoveDirectionInput moveDirectionInput,
             AnimationPlayerModel animationPlayerModel,
-            float moveSpeed)
+            float moveSpeed,
+            float runSpeed
+            )
         {
-            CanInteract = new Observable<bool>(true);
-            MoveDirectionInput = moveDirectionInput;
+            CanInteract          = new Observable<bool>(true);
+            MoveDirectionInput   = moveDirectionInput;
             AnimationPlayerModel = animationPlayerModel;
-            Transformation = transformation;
-            MoveSpeed = moveSpeed;
+            Transformation       = transformation;
+            MoveSpeed            = moveSpeed;
+            RunSpeed             = runSpeed;
         }
     }
 }

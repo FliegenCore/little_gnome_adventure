@@ -17,18 +17,17 @@ namespace _Game.Scripts.PlayerSystems.Animations
             _animationPlayerModel = animationPlayerModel;
             
             _animationPlayerModel.IsMove.Subscribe(SetMove).AddTo(gameObject);
+            _animationPlayerModel.IsRun.Subscribe(SetRun).AddTo(gameObject);
             _animationPlayerModel.InInventory.Subscribe(SetInventory).AddTo(gameObject);
-            _animationPlayerModel.InRage.Subscribe(SetInRage).AddTo(gameObject);
+            _animationPlayerModel.IsIdle.Subscribe(SetIsIdle).AddTo(gameObject);
         }
 
-        private void SetInRage(bool inRage)
+        private void SetIsIdle(bool isIdle)
         {
-            if (inRage)
-            {
-                _animationControl.SetAnimation(0, PlayerAnimationsName.IN_RAGE_ANIMATION_NAME);
-            }
+            if(isIdle)
+                _animationControl.SetAnimation(0, PlayerAnimationsName.IDLE_ANIMATION_NAME);
         }
-
+       
         private void SetInventory(bool inInventory)
         {
             if(inInventory)
@@ -41,8 +40,12 @@ namespace _Game.Scripts.PlayerSystems.Animations
         {
             if(isMove)
                 _animationControl.SetAnimation(0, PlayerAnimationsName.MOVE_ANIMATION_NAME);
-            else
-                _animationControl.SetAnimation(0, PlayerAnimationsName.IDLE_ANIMATION_NAME);
+        }
+        
+        private void SetRun(bool isRun)
+        {
+            if(isRun)
+                _animationControl.SetAnimation(0, PlayerAnimationsName.RUN_ANIMATION_NAME);
         }
     }
 }

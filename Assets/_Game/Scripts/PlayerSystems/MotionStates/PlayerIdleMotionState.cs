@@ -12,6 +12,7 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
 
         public override void Enter()
         {
+            _playerModel.AnimationPlayerModel.IsIdle.Value = true;
             base.Enter();
         }
 
@@ -21,8 +22,21 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
             
             if (_playerModel.MoveDirectionInput.GetDirection() != Vector2.zero && _playerModel.MoveDirectionInput.GetCanMove())
             {
-                _fsm.SetState<PlayerMoveMotionState>();                
+                if (_playerModel.MoveDirectionInput.GetIsSprint())
+                {
+                    _fsm.SetState<PlayerRunMotionState>();
+                }
+                else
+                {
+                    _fsm.SetState<PlayerMoveMotionState>();
+                }
             }
+        }
+
+        public override void Exit()
+        {
+            _playerModel.AnimationPlayerModel.IsIdle.Value = false;
+            base.Exit();
         }
     }
 }

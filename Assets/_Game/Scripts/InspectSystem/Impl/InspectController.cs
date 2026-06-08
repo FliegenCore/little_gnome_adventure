@@ -17,8 +17,11 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         private readonly Dictionary<string, InspectModel> _inspectModels = new Dictionary<string, InspectModel>();
         private readonly Dictionary<string, InspectInputHandler> _inputs;
         private readonly InspectInputHandler _baseInputHandler;
-        private InspectModel _currentInspectModel;
         
+        private Queue<InspectModel> _inspectModelsQueue = new Queue<InspectModel>();
+        private Queue<string> _inspectNamesQueue = new Queue<string>();
+        
+        private InspectModel _currentInspectModel;
         private string _currentInspectModelId;
         
         private InspectController(EventBus eventBus, InputSystem_Actions inputSystemActions, InspectCamera inspectCamera)
@@ -57,13 +60,31 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         
         private void Show(string id)
         {
+            bool isMultyInspect = false;
+            
+            if (_currentInspectModel != null)
+            {
+                _inspectModelsQueue.Enqueue(_currentInspectModel);
+                _inspectNamesQueue.Enqueue(_currentInspectModelId);
+                
+                DisableInput();
+                isMultyInspect = true;
+            }
+            
             _currentInspectModelId = id;
             _inspectModels[id].IsOpen.Value = true;
             _currentInspectModel = _inspectModels[id];
+
+            if (isMultyInspect)
+            {
+                EnableInput();
+            }
+            else
+            {
+                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerInspectState));
             
-            _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerInspectState));
-            
-            _inspectCamera.gameObject.SetActive(true);
+                _inspectCamera.gameObject.SetActive(true);
+            }
         }
 
         private void Hide(InputAction.CallbackContext _)
@@ -75,6 +96,18 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
 
             _currentInspectModel.IsOpen.Value = false;
             _currentInspectModel = null;
+
+            if (_inspectModelsQueue.Count > 0)
+            {
+                _inspectModelsQueue.Dequeue();
+                string name = _inspectNamesQueue.Dequeue();
+                
+                DisableInput();
+                Show(name);
+                EnableInput();
+                
+                return;
+            }
             
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
 

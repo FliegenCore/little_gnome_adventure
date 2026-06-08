@@ -1135,6 +1135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <InteractPoint>k__BackingField: {fileID: 0}
+  <BoxCollider2D>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 707779330179161347}
   <HintSelect>k__BackingField: {fileID: 8501544984377124613}
   <ConnectedDoor>k__BackingField: {fileID: 0}
@@ -1303,6 +1304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <InteractPoint>k__BackingField: {fileID: 0}
+  <BoxCollider2D>k__BackingField: {fileID: 0}
   <ContactTriggerProvider>k__BackingField: {fileID: 8314589567416077760}
   <HintSelect>k__BackingField: {fileID: 2671991697862073062}
   <ConnectedDoor>k__BackingField: {fileID: 0}
@@ -2185,6 +2187,7 @@ MonoBehaviour:
   - {fileID: 5821217527297237519}
   - {fileID: 5438534346248130024}
   <SpeakerViews>k__BackingField: []
+  <CameraSize>k__BackingField: 5
 --- !u!1 &8843988206856065079
 GameObject:
   m_ObjectHideFlags: 0
