@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 2962052605161024407}
   - component: {fileID: 6155024720563251284}
   - component: {fileID: 1700748277602827515}
+  - component: {fileID: 1501933580562655500}
   m_Layer: 0
   m_Name: GoblinPlut
   m_TagString: Untagged
@@ -325,6 +326,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.82386, y: 4.9075937}
   m_EdgeRadius: 0
+--- !u!114 &1501933580562655500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698951049389179530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eb4e055a754b8988318ee2f85dc5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &660661901319996220
 PrefabInstance:
   m_ObjectHideFlags: 0

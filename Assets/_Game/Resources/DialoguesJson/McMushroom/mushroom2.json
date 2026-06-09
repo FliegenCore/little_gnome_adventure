@@ -3,7 +3,7 @@
     {
       "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
       "DialogueName": "McMushroom",
-      "Text": "Хуль так мало грибов",
+      "Text": "Нет! Нет-нет! Так не годиться",
       "Type": 0,
       "Position": {
         "x": -249.0,
@@ -31,31 +31,25 @@
     {
       "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
       "DialogueName": "McMushroom",
-      "Text": "Мне 3 надо минимум!!!",
+      "Text": "Этого маловато будет для хорошего вечера! Мне 3 надо минимум!!!",
       "Type": 0,
       "Position": {
-        "x": 154.0,
-        "y": 210.0,
+        "x": 162.0,
+        "y": 199.0,
         "normalized": {
-          "x": 0.591363668,
-          "y": 0.806405067,
+          "x": 0.6313259,
+          "y": 0.7755176,
           "normalized": {
-            "x": 0.5913636,
-            "y": 0.806404948,
-            "normalized": {
-              "x": 0.591363668,
-              "y": 0.806405,
-              "magnitude": 1.0,
-              "sqrMagnitude": 1.0
-            },
-            "magnitude": 0.99999994,
-            "sqrMagnitude": 0.9999999
+            "x": 0.63132596,
+            "y": 0.775517642,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.00000012
           },
-          "magnitude": 1.00000012,
-          "sqrMagnitude": 1.00000012
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
         },
-        "magnitude": 260.415039,
-        "sqrMagnitude": 67816.0
+        "magnitude": 256.6028,
+        "sqrMagnitude": 65845.0
       },
       "IsStartNode": false,
       "OnStartEvents": [],
