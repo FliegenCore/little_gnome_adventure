@@ -1,0 +1,49 @@
+{
+"skeleton": {
+	"hash": "/jUez7BKLDgWk/PPbrAfYe3xhKk",
+	"spine": "3.8.0",
+	"x": -960,
+	"y": -540,
+	"width": 1920,
+	"height": 1080,
+	"images": "",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "ramka", "parent": "root", "x": -2.89, "y": -3.76 }
+],
+"slots": [
+	{ "name": "RAMKA", "bone": "ramka", "attachment": "RAMKA" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"RAMKA": {
+				"RAMKA": { "x": 2.89, "y": 3.76, "width": 1920, "height": 1080 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"ramka": {
+				"rotate": [
+					{},
+					{ "time": 1.3333, "angle": -0.31 },
+					{ "time": 2.6667 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.6667, "x": 16.18, "y": -8.09 },
+					{ "time": 1.3333, "x": 16.24, "y": 12.66 },
+					{ "time": 2, "x": -10.07, "y": 3.43 },
+					{ "time": 2.6667 }
+				]
+			}
+		}
+	}
+}
+}
