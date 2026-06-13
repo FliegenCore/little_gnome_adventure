@@ -15,6 +15,7 @@ namespace _Game.Scripts.PlayerSystems
         public readonly IMoveDirectionInput MoveDirectionInput;
         public readonly AnimationPlayerModel AnimationPlayerModel;
         public readonly Observable<bool> CanInteract;
+        public readonly Observable<bool> IsActive;
         public readonly ReactiveCommand OnPosition = new();
         public readonly float MoveSpeed;
         public readonly float RunSpeed;
@@ -31,6 +32,7 @@ namespace _Game.Scripts.PlayerSystems
             )
         {
             CanInteract          = new Observable<bool>(true);
+            IsActive             = new Observable<bool>(true);
             MoveDirectionInput   = moveDirectionInput;
             AnimationPlayerModel = animationPlayerModel;
             Transformation       = transformation;

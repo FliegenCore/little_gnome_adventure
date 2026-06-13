@@ -20,6 +20,16 @@ namespace _Game.Scripts.FSM
             return default;
         }
 
+        public bool Equals<T>() where T : FsmAbstractState
+        {
+            if(_currentState.GetType() == typeof(T))
+            {
+                return true;
+            }
+            
+            return false;
+        }
+        
         public FsmAbstractState GetState(Type stateType)
         {
             return _states.GetValueOrDefault(stateType);
@@ -30,9 +40,10 @@ namespace _Game.Scripts.FSM
             _states.Add(state.GetType(), state);
         }
 
-        public void SetState(Type type)
+        public void SetState(Type type, Action callback = null)
         {
             var stateType = type;
+            
             if (_currentState != null && _currentState.GetType() == stateType)
             {
                 return;
@@ -41,13 +52,18 @@ namespace _Game.Scripts.FSM
             if (_states.TryGetValue(stateType, out FsmAbstractState stateToSet))
             {
                 _currentState?.Exit();
-            
                 _currentState = stateToSet;
+                
+                if (_currentState is INotifyCallbackState notifyCallbackState)
+                {
+                    notifyCallbackState.SetCallback(callback);
+                }
+                
                 _currentState.Enter();
             }
         }
         
-        public void SetState<T>() where T : FsmAbstractState
+        public void SetState<T>(Action callback = null) where T : FsmAbstractState
         {
             var stateType = typeof(T);
 
@@ -56,13 +72,7 @@ namespace _Game.Scripts.FSM
                 return;
             }
 
-            if (_states.TryGetValue(stateType, out FsmAbstractState stateToSet))
-            {
-                _currentState?.Exit();
-            
-                _currentState = stateToSet;
-                _currentState.Enter();
-            }
+            SetState(stateType, callback);
         }
 
         public void Update(float deltaTime)

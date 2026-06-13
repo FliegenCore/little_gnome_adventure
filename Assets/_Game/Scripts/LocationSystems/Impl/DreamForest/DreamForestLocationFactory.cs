@@ -76,7 +76,9 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
                     _inventoryProxy, 
                     _cutsceneManger,
                     dreamForestLocation,
-                    _itemFactory);
+                    _itemFactory,
+                    _playerFactory,
+                    _cameraController);
 
             mushroomQuestManager.Initialize();
             

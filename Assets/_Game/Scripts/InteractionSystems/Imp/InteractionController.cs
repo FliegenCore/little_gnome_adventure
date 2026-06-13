@@ -166,7 +166,6 @@ namespace _Game.Scripts.InteractionSystems
                         });
                 })
                 .AddTo(_interactableOnPointDisposables);
-                
                
             }
             else

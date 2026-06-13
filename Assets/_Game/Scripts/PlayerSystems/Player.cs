@@ -11,15 +11,14 @@ namespace _Game.Scripts.PlayerSystems
 {
     public class Player : IUpdateListener, ITeleportable, IDisposable
     {
-        private readonly PlayerModel _playerModel;
         private readonly Inventory _inventory;
         private readonly Fsm _motionStateMachine;
         private readonly Fsm _playerStateMachine;
         private readonly EventBus _eventBus;
 
+        public readonly PlayerModel PlayerModel;
         public readonly InteractionController InteractionController;
         public readonly PlayerView PlayerView;
-        
         
         public Player(
             PlayerModel playerModel, 
@@ -33,7 +32,7 @@ namespace _Game.Scripts.PlayerSystems
             _inventory = inventory;
             _eventBus = eventBus;
             InteractionController = interactionController;
-            _playerModel = playerModel;
+            PlayerModel = playerModel;
             PlayerView = playerView;
             _motionStateMachine = motionStateMachine;
             _playerStateMachine = playerStateMachine;
@@ -41,7 +40,6 @@ namespace _Game.Scripts.PlayerSystems
             _eventBus.Subscribe<SetPlayerStateSignal, Type>(this, SetPlayerState);
             _eventBus.Subscribe<SetPlayerMotionStateSignal, Type>(this, SetPlayerMotionState);
         }
-
         
         private void SetPlayerState(Type type)
         {
@@ -60,7 +58,7 @@ namespace _Game.Scripts.PlayerSystems
 
         public void Teleport(Vector2 position)
         {
-            _playerModel.Transformation.Position.Value = position;
+            PlayerModel.Transformation.Position.Value = position;
         }
 
         public void Dispose()

@@ -91,6 +91,8 @@ namespace _Game.Scripts.PlayerSystems
                 _inventory,
                 _eventBus);
             
+            player.PlayerView.Activator.Construct(playerModel.IsActive);
+            
             _player = player;
             
             return player;
