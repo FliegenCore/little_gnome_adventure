@@ -28,14 +28,15 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl.Hedgehog
 
         public void InteractWithItem(InventoryItem item, Action callback)
         {
+            callback?.Invoke();
+            
             if (item.ItemId != ItemId.Candy)
             {
                 return;
             }
-            callback?.Invoke();
+            
             _animationControl.SetAnimation(0, "hand/idle_candy");
             _eventBus.TriggerEvenet<RemoveItemSignal, InventoryItem>(item);
-            //
             //начать диалог, потом отдать конфетку
         }
     }
