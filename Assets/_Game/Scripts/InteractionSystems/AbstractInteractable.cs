@@ -55,16 +55,16 @@ namespace _Game.Scripts.InteractionSystems
         
         public virtual void Dispose()
         {
+            if(InteractableView != null)
+                InteractableView.gameObject.SetActive(false);
+            AbstractInteractableModel.IsSelected.Value = false;
+            AbstractInteractableModel.CanSelected.Value = false;
+            
             if (AbstractInteractableModel.ContactTriggerProvider != null)
             {
                 AbstractInteractableModel.ContactTriggerProvider.OnEnter -= OnPlayerCollided;
                 AbstractInteractableModel.ContactTriggerProvider.OnExit -= OnPlayerExit;
             }
-            
-            if(InteractableView != null)
-                InteractableView.gameObject.SetActive(false);
-            AbstractInteractableModel.IsSelected.Value = false;
-            AbstractInteractableModel.CanSelected.Value = false;
         }
     }
 }

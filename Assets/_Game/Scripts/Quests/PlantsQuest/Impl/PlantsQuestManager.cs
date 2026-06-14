@@ -75,6 +75,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
 
         private void CreateCutscene()
         {
+            _locationsRootView.DreamQuestFirstLocationView.FocusTrigger.gameObject.SetActive(false);
             DreamQuestFirstLocationView dreamQuestFirstLocationView =
                 _locationsRootView.DreamQuestFirstLocationView;
 
@@ -87,7 +88,8 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
                 grannyView, 
                 _eventBus, 
                 _playerFactory.GetPlayer().PlayerView, 
-                _plants);
+                _plants
+                );
         }
 
         private void CreatePlants()

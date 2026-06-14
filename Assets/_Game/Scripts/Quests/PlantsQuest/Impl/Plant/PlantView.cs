@@ -56,8 +56,9 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl.Plant
                 _pointsAnimation.Initialize(false);
                 _isInitialized = true;
             }
-            
-            _pointsAnimation.AnimationState.SetAnimation(0, height.ToString(), false);
+
+            if(height < 5)
+                _pointsAnimation.AnimationState.SetAnimation(0, height.ToString(), false);
             
             string animName = "";
             if (height == 5)

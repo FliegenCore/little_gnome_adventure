@@ -8,8 +8,6 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl
     public class PlantBehaviour : ACustomBehaviour
     {
         private readonly PlantModel _plantModel;
-        private bool _isCompleted;
-        
         
         public PlantBehaviour(EventBus eventBus, PlantModel plantModel) : base(eventBus)
         {
@@ -18,13 +16,11 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl
 
         public override bool CanInteract()
         {
-            return !_isCompleted && _plantModel.CanInteract.Value;
+            return _plantModel.CanInteract.Value;
         }
 
         public override void Interact(Action callback)
         {
-            _plantModel.CanInteract.Value = false;
-            
             int nextValue = _plantModel.Height.Value;
 
             if (nextValue == _plantModel.MaxHeight)
@@ -33,12 +29,6 @@ namespace _Game.Scripts.Quests.PlantsQuest.Impl
                 nextValue++;
 
             _plantModel.Height.Value = nextValue;
-            callback?.Invoke();
-        }
-        
-        private void PlantsQuestComplete()
-        {
-            _isCompleted = true;
         }
     }
 }

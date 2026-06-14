@@ -154,7 +154,7 @@ namespace _Game.Scripts.InteractionSystems
                     
                     _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
                     
-                    Observable.Timer(TimeSpan.FromSeconds(0.25f))
+                    Observable.Timer(TimeSpan.FromSeconds(0.15f))
                         .Subscribe(_ =>
                         {
                             interactable.Interact(() =>
@@ -171,6 +171,7 @@ namespace _Game.Scripts.InteractionSystems
             else
             {
                 _currentAbstractInteractable.Interact(null);
+                StartUpdate();
             }
         }
 
@@ -204,7 +205,7 @@ namespace _Game.Scripts.InteractionSystems
                     {
                         _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
                     
-                        Observable.Timer(TimeSpan.FromSeconds(0.25f))
+                        Observable.Timer(TimeSpan.FromSeconds(0.15f))
                             .Subscribe(_ =>
                             {
                                 itemNeeder.InteractWithItem(item, () =>
@@ -221,6 +222,7 @@ namespace _Game.Scripts.InteractionSystems
             else
             {
                 abstractInteractable.CustomBehaviour.Interact(null);
+                StartUpdate();
             }
         }
 
@@ -234,6 +236,9 @@ namespace _Game.Scripts.InteractionSystems
 
         private void SetCurrentInteractable(AbstractInteractable abstractInteractable)
         {
+            if (!abstractInteractable.InteractableView.gameObject.activeInHierarchy)
+                return;
+            
             _currentAbstractInteractables.Add(abstractInteractable);
 
             StartUpdate();

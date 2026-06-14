@@ -23,14 +23,14 @@ namespace _Game.Scripts.Quests.PlantsQuest
         private readonly EventBus _eventBus;
         private readonly List<Interactable> _plantsList;
         
-        
         public PlantsCutscene(
             CameraController cameraController, 
             NightstandView plantView, 
             NightstandView grannyView, 
             EventBus eventBus,
             PlayerView playerView,
-            List<Interactable> plants)
+            List<Interactable> plants
+            )
         {
             _eventBus            = eventBus;
             _cameraController    = cameraController;
@@ -46,14 +46,19 @@ namespace _Game.Scripts.Quests.PlantsQuest
         {
             _cameraController.SetFollowTarget(_plantView.transform);
             
-            _cameraController.ZoomTo(4f, 3f, () =>
+            foreach (var plant in _plantsList)
+            {
+                PlantModel model = (PlantModel)plant.AbstractInteractableModel;
+                model.NeedCallback.Value = false;
+                model.CanInteract.Value = false;
+                model.ColliderIsEnabled.Value = false;
+            }
+            
+            _cameraController.ZoomTo(4f, 1f, () =>
             {
                 foreach (var plant in _plantsList)
                 {
                     PlantModel model = (PlantModel)plant.AbstractInteractableModel;
-                    model.NeedCallback.Value = false;
-                    model.CanInteract.Value = false;
-                    model.ColliderIsEnabled.Value = false;
                     model.Height.Value = 5;
                 }
                 
