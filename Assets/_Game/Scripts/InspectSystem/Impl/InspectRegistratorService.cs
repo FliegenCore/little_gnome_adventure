@@ -11,20 +11,20 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
     public class InspectRegistratorService
     {
         private readonly InspectController _inspectController;
-        private readonly ForestRootViewFactory _forestRootViewFactory;
+        private readonly RootViewFactory _rootViewFactory;
         private readonly EventBus _eventBus;
         private readonly InventoryProxy _inventoryProxy;
         
         public InspectRegistratorService(
             InspectController inspectController, 
-            ForestRootViewFactory forestRootViewFactory,
+            RootViewFactory rootViewFactory,
             EventBus eventBus,
             InventoryProxy inventoryProxy)
         {
             _inventoryProxy = inventoryProxy;
             _eventBus = eventBus;
             _inspectController = inspectController;
-            _forestRootViewFactory = forestRootViewFactory;
+            _rootViewFactory = rootViewFactory;
         }
 
         public void Initialize()
@@ -40,7 +40,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
 
         private void RegisterNightstand()
         {
-            InspectsView inspectsView = _forestRootViewFactory.GetLocationsRootView().InspectsView;
+            InspectsView inspectsView = _rootViewFactory.GetLocationsRootView().InspectsView;
 
             BaseItemView toyView = inspectsView.InspectNightstandView.Toy;
             BaseItemView appleView = inspectsView.InspectNightstandView.Apple;
@@ -53,7 +53,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
 
         private void RegisterTable()
         {
-            InspectsView inspectsView = _forestRootViewFactory.GetLocationsRootView().InspectsView;
+            InspectsView inspectsView = _rootViewFactory.GetLocationsRootView().InspectsView;
             RegisterInspect("Table", inspectsView.Table);
         }
 

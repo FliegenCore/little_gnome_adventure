@@ -4,13 +4,13 @@ using VContainer.Unity;
 
 namespace _Game.Scripts.RoomSystems
 {
-    public class ForestRootViewFactory
+    public class RootViewFactory
     {
         private const string PREFAB_PATH = "Prefabs/Locations/LocationsRoot";
         private LocationsRootView _locationsRootView;
         private IObjectResolver _container;
         
-        public ForestRootViewFactory(IObjectResolver container)
+        public RootViewFactory(IObjectResolver container)
         {
             _container = container;
         }

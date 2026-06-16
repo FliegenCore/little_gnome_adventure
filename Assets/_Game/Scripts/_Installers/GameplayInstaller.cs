@@ -11,10 +11,12 @@ using _Game.Scripts.InteractionSystems.Interactables.Items.Managers;
 using _Game.Scripts.InventorySystem;
 using _Game.Scripts.InventorySystem.Configs;
 using _Game.Scripts.InventorySystem.Factories;
+using _Game.Scripts.MiniGames.CloudsRunner.Hand;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Factory.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
+using _Game.Scripts.RoomSystems.Impl.CloudsRunner;
 using _Game.Scripts.RoomSystems.Impl.DreamForest;
 using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
 using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
@@ -64,7 +66,8 @@ namespace _Game.Scripts._Installers
             builder.Register<DoorsService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ItemFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
-            builder.Register<ForestRootViewFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<RootViewFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<GnomeHandFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             
             ResterLocations(builder);
             
@@ -90,6 +93,7 @@ namespace _Game.Scripts._Installers
             builder.Register<DreamLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DreamFirstQuestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DreamForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<CloudsRunnerLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             
             builder.RegisterBuildCallback(container =>
             {
@@ -100,7 +104,8 @@ namespace _Game.Scripts._Installers
                     container.Resolve<ForestLocationFactory>(),
                     container.Resolve<DreamLocationFactory>(),
                     container.Resolve<DreamFirstQuestLocationFactory>(),
-                    container.Resolve<DreamForestLocationFactory>()
+                    container.Resolve<DreamForestLocationFactory>(),
+                    container.Resolve<CloudsRunnerLocationFactory>()
                 };
         
                 container.Inject(factories);

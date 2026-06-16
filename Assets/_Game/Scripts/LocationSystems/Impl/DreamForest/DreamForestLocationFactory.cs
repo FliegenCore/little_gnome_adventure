@@ -18,7 +18,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
 {
     public class DreamForestLocationFactory : ILocationFactory
     {
-        private readonly ForestRootViewFactory _forestRootViewFactory;
+        private readonly RootViewFactory _rootViewFactory;
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
@@ -35,7 +35,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         }
         
         public DreamForestLocationFactory(
-            ForestRootViewFactory forestRootViewFactory,
+            RootViewFactory rootViewFactory,
             EventBus eventBus,
             IDialogueManager dialogueManager,
             IPlayerFactory playerFactory,
@@ -52,7 +52,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             _interactableFactory   = interactableFactory;
             _playerFactory         = playerFactory;
             _dialogueManager       = dialogueManager;
-            _forestRootViewFactory = forestRootViewFactory;
+            _rootViewFactory = rootViewFactory;
             _eventBus              = eventBus;
             _cutsceneManger        = cutsceneManger;
         }
@@ -64,7 +64,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             DreamForestLocationState dreamForestLocation =
                 new DreamForestLocationState(fsm,
                     forestLocationModel,
-                    _forestRootViewFactory.GetLocationsRootView().DreamForestLocationView,
+                    _rootViewFactory.GetLocationsRootView().DreamForestLocationView,
                     _dialogueManager,
                     _eventBus);
             fsm.AddState(dreamForestLocation);

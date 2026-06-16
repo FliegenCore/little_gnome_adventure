@@ -23,7 +23,7 @@ namespace _Game.Scripts.RoomSystems.Variants
 {
     public class ForestLocationFactory : ILocationFactory
     {
-        private readonly ForestRootViewFactory _forestRootViewFactory;
+        private readonly RootViewFactory _rootViewFactory;
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
@@ -40,7 +40,7 @@ namespace _Game.Scripts.RoomSystems.Variants
         }
         
         public ForestLocationFactory(
-            ForestRootViewFactory forestRootViewFactory,
+            RootViewFactory rootViewFactory,
             EventBus eventBus, 
             IDialogueManager dialogueManager, 
             IPlayerFactory playerFactory, 
@@ -57,7 +57,7 @@ namespace _Game.Scripts.RoomSystems.Variants
             _interactableFactory       = interactableFactory;
             _playerFactory             = playerFactory;
             _dialogueManager           = dialogueManager;
-            _forestRootViewFactory     = forestRootViewFactory;
+            _rootViewFactory     = rootViewFactory;
             _eventBus                  = eventBus;
         }
         
@@ -67,11 +67,11 @@ namespace _Game.Scripts.RoomSystems.Variants
             
             ForestState forestState = new ForestState(fsm, 
                 forestLocationModel,
-                _forestRootViewFactory.GetLocationsRootView().ForestLocationView, 
+                _rootViewFactory.GetLocationsRootView().ForestLocationView, 
                 _dialogueManager,
                 _eventBus);
             
-            LocationsRootView locationsRootView = _forestRootViewFactory.GetLocationsRootView();
+            LocationsRootView locationsRootView = _rootViewFactory.GetLocationsRootView();
             
             CreateCharacter(nameof(ECharacters.Girl), new GirlBehaviour(_eventBus), 
                 locationsRootView.ForestLocationView.GirlView);
@@ -82,7 +82,7 @@ namespace _Game.Scripts.RoomSystems.Variants
             CreateItem(locationsRootView.ForestLocationView.PooItemView, ItemId.Poo);
             
             LobotomyManager lobotomyManager = new LobotomyManager(
-                _forestRootViewFactory.GetLocationsRootView(), 
+                _rootViewFactory.GetLocationsRootView(), 
                 _interactableFactory,
                 _inputSystemActions,
                 _eventBus,

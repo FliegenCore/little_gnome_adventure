@@ -17,7 +17,7 @@ namespace _Game.Scripts.RoomSystems.Variants
 {
     public class HouseLocationFactory : ILocationFactory
     {
-        private readonly ForestRootViewFactory _forestRootViewFactory;
+        private readonly RootViewFactory _rootViewFactory;
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IInteractableFactory _interactableFactory;
@@ -30,7 +30,7 @@ namespace _Game.Scripts.RoomSystems.Variants
         }
         
         public HouseLocationFactory(
-            ForestRootViewFactory forestRootViewFactory, 
+            RootViewFactory rootViewFactory, 
             EventBus eventBus, 
             IDialogueManager dialogueManager,
             IInteractableFactory interactableFactory,
@@ -39,7 +39,7 @@ namespace _Game.Scripts.RoomSystems.Variants
             _playerFactory         = playerFactory;
             _interactableFactory      = interactableFactory;
             _dialogueManager       = dialogueManager;
-            _forestRootViewFactory = forestRootViewFactory;
+            _rootViewFactory = rootViewFactory;
             _eventBus              = eventBus;
         }
         
@@ -47,8 +47,8 @@ namespace _Game.Scripts.RoomSystems.Variants
         {
             LampModel lampModel = new LampModel(0.6f, 1.6f);
             
-            var nightstand = CreateInteractable("Nightstand", _forestRootViewFactory.GetLocationsRootView().StartHouseView.NightstandView);
-            CreateInteractable("Table", _forestRootViewFactory.GetLocationsRootView().StartHouseView.Table);
+            var nightstand = CreateInteractable("Nightstand", _rootViewFactory.GetLocationsRootView().StartHouseView.NightstandView);
+            CreateInteractable("Table", _rootViewFactory.GetLocationsRootView().StartHouseView.Table);
             
             StartHouseLocationModel startHouseLocationModel = new StartHouseLocationModel(typeof(StartHouseState),
                 lampModel, nightstand);
@@ -56,14 +56,14 @@ namespace _Game.Scripts.RoomSystems.Variants
             StartHouseState startHouseState = 
                 new StartHouseState(fsm,
                     startHouseLocationModel,
-                    _forestRootViewFactory.GetLocationsRootView().StartHouseView,
+                    _rootViewFactory.GetLocationsRootView().StartHouseView,
                     _dialogueManager,
                     _eventBus);
             
-            _forestRootViewFactory.GetLocationsRootView().StartHouseView.Construct(lampModel);
+            _rootViewFactory.GetLocationsRootView().StartHouseView.Construct(lampModel);
 
             CreateCharacter(nameof(ECharacters.Ded), new DedBehaviour(_eventBus),
-                _forestRootViewFactory.GetLocationsRootView().StartHouseView.DedView);
+                _rootViewFactory.GetLocationsRootView().StartHouseView.DedView);
             
             fsm.AddState(startHouseState);
             _lastCreated = startHouseState;

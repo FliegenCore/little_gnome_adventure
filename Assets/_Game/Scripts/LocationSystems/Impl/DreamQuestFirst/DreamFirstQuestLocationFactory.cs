@@ -17,7 +17,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
 {
     public class DreamFirstQuestLocationFactory : ILocationFactory
     {
-        private readonly ForestRootViewFactory _forestRootViewFactory;
+        private readonly RootViewFactory _rootViewFactory;
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
@@ -28,7 +28,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
         private LocationAbstractState _lastCreated;
         
         public DreamFirstQuestLocationFactory(
-            ForestRootViewFactory forestRootViewFactory,
+            RootViewFactory rootViewFactory,
             EventBus eventBus,
             IDialogueManager dialogueManager,
             IPlayerFactory playerFactory,
@@ -40,7 +40,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
             _interactableFactory      = interactableFactory;
             _playerFactory         = playerFactory;
             _dialogueManager       = dialogueManager;
-            _forestRootViewFactory = forestRootViewFactory;
+            _rootViewFactory = rootViewFactory;
             _eventBus              = eventBus;
             _cutsceneManger        = cutsceneManger;
         }
@@ -57,18 +57,18 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
             DreamQuestFirstLocationState testState =
                 new DreamQuestFirstLocationState(fsm,
                     forestLocationModel,
-                    _forestRootViewFactory.GetLocationsRootView().DreamQuestFirstLocationView,
+                    _rootViewFactory.GetLocationsRootView().DreamQuestFirstLocationView,
                     _dialogueManager,
                     _eventBus);
 
             fsm.AddState(testState);
             CreateCharacter(nameof(ECharacters.Granny), new GrannyBehaviour(_eventBus),
-                _forestRootViewFactory.GetLocationsRootView().DreamQuestFirstLocationView.GrannyView);
+                _rootViewFactory.GetLocationsRootView().DreamQuestFirstLocationView.GrannyView);
 
             
             PlantsQuestManager plantsQuestManager = new PlantsQuestManager(
                 _eventBus,
-                _forestRootViewFactory.GetLocationsRootView(), 
+                _rootViewFactory.GetLocationsRootView(), 
                 _cameraController,
                 _playerFactory,
                 _cutsceneManger,

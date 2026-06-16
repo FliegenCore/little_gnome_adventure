@@ -9,7 +9,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamRoom1
 {
     public class DreamLocationFactory : ILocationFactory
     {
-        private readonly ForestRootViewFactory _forestRootViewFactory;
+        private readonly RootViewFactory _rootViewFactory;
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
@@ -21,14 +21,14 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamRoom1
         }
         
         public DreamLocationFactory(
-            ForestRootViewFactory forestRootViewFactory,
+            RootViewFactory rootViewFactory,
             EventBus eventBus,
             IDialogueManager dialogueManager,
             IPlayerFactory playerFactory)
         {
             _playerFactory = playerFactory;
             _dialogueManager = dialogueManager;
-            _forestRootViewFactory = forestRootViewFactory;
+            _rootViewFactory = rootViewFactory;
             _eventBus = eventBus;
         }
 
@@ -39,7 +39,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamRoom1
             DreamLocationState testState =
                 new DreamLocationState(fsm,
                     forestLocationModel,
-                    _forestRootViewFactory.GetLocationsRootView().DreamLocationView,
+                    _rootViewFactory.GetLocationsRootView().DreamLocationView,
                     _dialogueManager,
                     _eventBus);
 

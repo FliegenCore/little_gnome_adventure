@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 namespace _Game.Scripts.Input
 {
     public class MoveDirectionInput : IMoveDirectionInput
     {
+        public event Action JumpEvent;
+        
         private InputSystem_Actions _inputSystemActions;
         
         private bool _canMove;
@@ -16,6 +19,7 @@ namespace _Game.Scripts.Input
             
             _inputSystemActions.Player.Sprint.started += _ => SetIsSprint(true);
             _inputSystemActions.Player.Sprint.canceled += _ => SetIsSprint(false);
+            _inputSystemActions.Player.Jump.canceled += _ => JumpEvent?.Invoke();
         }
 
         public bool GetCanMove()

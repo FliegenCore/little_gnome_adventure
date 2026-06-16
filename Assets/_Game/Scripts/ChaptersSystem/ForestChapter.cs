@@ -21,7 +21,7 @@ namespace _Game.Scripts.ChaptersSystem
     {
         private readonly DoorFactory _doorFactory;
         private readonly IPlayerFactory _playerFactory;
-        private readonly ForestRootViewFactory _forestRootViewFactory;
+        private readonly RootViewFactory _rootViewFactory;
         private readonly LocationsControllerFactory _locationsControllerFactory;
         private readonly UpdateController _updateController;
         private readonly InspectRegistratorService _inspectRegistratorService;
@@ -38,11 +38,11 @@ namespace _Game.Scripts.ChaptersSystem
             UpdateController updateController,
             InspectRegistratorService inspectRegistratorService,
             CameraController cameraController,
-            ForestRootViewFactory forestRootViewFactory,
+            RootViewFactory rootViewFactory,
             IReadOnlyList<ILocationFactory> locationsFactory
             )
         {
-            _forestRootViewFactory      = forestRootViewFactory;
+            _rootViewFactory      = rootViewFactory;
             _locationFactories          = locationsFactory;
             _cameraController           = cameraController;
             _inspectRegistratorService  = inspectRegistratorService;
@@ -70,7 +70,7 @@ namespace _Game.Scripts.ChaptersSystem
 
         private void CreateLocation()
         {
-            _forestRootViewFactory.CreateForestLocationsRootView();
+            _rootViewFactory.CreateForestLocationsRootView();
             _locationsController = _locationsControllerFactory.Create();
 
             foreach (var locationFactory in _locationFactories)

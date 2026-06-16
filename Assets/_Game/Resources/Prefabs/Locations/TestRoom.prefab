@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 6065646166623191021}
   - component: {fileID: 5750237643691082813}
   m_Layer: 0
-  m_Name: "\u043E\u0431\u043B\u043E\u043A\u0430"
+  m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

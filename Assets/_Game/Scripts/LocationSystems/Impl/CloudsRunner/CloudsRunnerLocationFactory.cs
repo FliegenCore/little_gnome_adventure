@@ -1,16 +1,13 @@
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.PlayerSystems;
-using _Game.Scripts.PlayerSystems.InspectSystem.InspectWindows;
-using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.Nightstand;
-using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.RoomSystems.LocationModels.Test;
 using _Game.Scripts.RoomSystems.LocationsStates;
 using Core.Common;
 
-namespace _Game.Scripts.RoomSystems.Variants
+namespace _Game.Scripts.RoomSystems.Impl.CloudsRunner
 {
-    public class TestLocationFactory : ILocationFactory
+    public class CloudsRunnerLocationFactory : ILocationFactory
     {
         private readonly RootViewFactory _rootViewFactory;
         private readonly EventBus _eventBus;
@@ -23,7 +20,7 @@ namespace _Game.Scripts.RoomSystems.Variants
             return _lastCreated;
         }
         
-        public TestLocationFactory(
+        public CloudsRunnerLocationFactory(
             RootViewFactory rootViewFactory,
             EventBus eventBus,
             IDialogueManager dialogueManager,
@@ -37,12 +34,12 @@ namespace _Game.Scripts.RoomSystems.Variants
         
         public LocationAbstractState Create(Fsm fsm)
         {
-            TestLocationModel forestLocationModel = new TestLocationModel(typeof(TestLocState));
+            CloudsRunnerLocationModel forestLocationModel = new CloudsRunnerLocationModel(typeof(CloudsRunnerLocationState));
             
-            TestLocState testState = 
-                new TestLocState(fsm,
+            CloudsRunnerLocationState testState = 
+                new CloudsRunnerLocationState(fsm,
                     forestLocationModel,
-                    _rootViewFactory.GetLocationsRootView().TestRoom,
+                    _rootViewFactory.GetLocationsRootView().RunnerLocationView,
                     _dialogueManager,
                     _eventBus);
             
@@ -51,15 +48,6 @@ namespace _Game.Scripts.RoomSystems.Variants
             
             return testState;
         }
-        
-        private Nightstand CreateInteractable(string id, NightstandView view)
-        {
-            NightstandView nightstandView = view;
-            NightstandModel nightstandModel = new NightstandModel(nightstandView.transform.position,id, nightstandView.ContactTriggerProvider);
-            nightstandView.HintSelect.Construct(_eventBus, nightstandModel.IsSelected);
-            Nightstand nightstand = new Nightstand(_eventBus, nightstandModel, nightstandView);
-            
-            return nightstand;
-        }
+
     }
 }
