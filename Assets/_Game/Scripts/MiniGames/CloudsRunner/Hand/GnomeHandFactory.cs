@@ -36,7 +36,7 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand
             
             Transformation transformation = new Transformation(position, Vector3.one);
             MoveDirectionInput moveDirectionInput = new MoveDirectionInput(_inputSystemActions);
-            GnomeHandModel gnomeHandModel = new GnomeHandModel(transformation, moveDirectionInput);
+            GnomeHandModel gnomeHandModel = new GnomeHandModel(transformation, moveDirectionInput, 5);
             GnomeHandView gnomeHandView = _locationsRootView.RunnerLocationView.GnomeHandView;
             
             gnomeHandView.Transformable.Construct(transformation);
