@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b8ad683032c26f6409996cd69b3984fd
+guid: 73a6567944117c642aa37a2df59e4280
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4948839777299501131
-    second: forest11_0
+      213: -4369595169105588381
+    second: farforestFAR2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: forest11_0
+      name: farforestFAR2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 6228
-        height: 982
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        width: 3808
+        height: 1619
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b409240be8fcda440800000000000000
-      internalID: 4948839777299501131
+      spriteID: 36fc23548541c53c0800000000000000
+      internalID: -4369595169105588381
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6f7fab42ad7690641ae2b6d463e8a5b5
+    spriteID: 27f2943a8afc1884e8538564ba750f6a
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      forest11_0: 4948839777299501131
+      farforestFAR2_0: -4369595169105588381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
