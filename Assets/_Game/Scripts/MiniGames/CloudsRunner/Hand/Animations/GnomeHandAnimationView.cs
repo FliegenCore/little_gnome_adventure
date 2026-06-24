@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace _Game.Scripts.MiniGames.CloudsRunner.Hand.Animations
 {
+    [RequireComponent(typeof(AnimationControl))]
     public class GnomeHandAnimationView : MonoBehaviour
     {
         [SerializeField] private AnimationControl _animationControl;

@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 683750843109950333}
   - component: {fileID: 8705409249189459139}
   - component: {fileID: 6070114934074522982}
+  - component: {fileID: 9220556104993214340}
+  - component: {fileID: 5375898917844329724}
   m_Layer: 0
   m_Name: GnomeHand
   m_TagString: Untagged
@@ -175,6 +177,7 @@ MonoBehaviour:
   <ContactTriggerProvider>k__BackingField: {fileID: 683750843109950333}
   <Activator>k__BackingField: {fileID: 515993961649374316}
   <Transformable>k__BackingField: {fileID: 6271110792994670704}
+  <GnomeHandAnimationView>k__BackingField: {fileID: 5375898917844329724}
   <JumpAnimationCurve>k__BackingField:
     serializedVersion: 2
     m_Curve:
@@ -318,3 +321,31 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9475808, y: 1.3760272}
   m_EdgeRadius: 0
+--- !u!114 &9220556104993214340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4163724536856622966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456815eae5504e51981434456e57be3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skeletonAnimation: {fileID: 8415893400221864754}
+  _defaultMixDuration: 0.25
+  _startAnimationName: walk
+--- !u!114 &5375898917844329724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4163724536856622966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0fc59db4bf942ba9761e818ecc6856c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationControl: {fileID: 9220556104993214340}
