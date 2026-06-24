@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 namespace _Game.Scripts.DialogueSystem.View
@@ -9,6 +10,9 @@ namespace _Game.Scripts.DialogueSystem.View
         private const float _size = 0.001501502f;
         
         private Sequence _animationSequence;
+        
+        [field: SerializeField] public TMP_Text RealText { get; private set; }
+        [field: SerializeField] public TMP_Text FakeText { get; private set; }
         
         
         public void Hide()

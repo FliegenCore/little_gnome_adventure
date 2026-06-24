@@ -43,6 +43,9 @@ namespace Game.PlayerSystem
         
         private void OnDestroy()
         {
+            if (_transformation == null)
+                return;
+            
             _transformation.Direction.Unsubscribe(SetDirection);
             _transformation.Scale.Unsubscribe(SetScale);
             _transformation.Position.Unsubscribe(SetPosition);

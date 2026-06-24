@@ -1,5 +1,6 @@
 using _Game.Scripts.FSM;
 using _Game.Scripts.Input;
+using _Game.Scripts.MiniGames.CloudsRunner.Hand.Animations;
 using _Game.Scripts.MiniGames.CloudsRunner.Hand.States;
 using _Game.Scripts.RoomSystems;
 using _Game.Scripts.UpdateSystems;
@@ -12,7 +13,6 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand
     {
         private readonly UpdateController _updateController;
         private readonly RootViewFactory _rootViewFactory;
-        private readonly LocationsRootView _locationsRootView;
         private readonly InputSystem_Actions _inputSystemActions;
 
         private GnomeHand _cachedHand;
@@ -26,18 +26,31 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand
             _inputSystemActions = inputSystemActions;
             _rootViewFactory    = rootViewFactory;
             _updateController   = updateController;
-            _locationsRootView  = _rootViewFactory.GetLocationsRootView();
         }
 
         public GnomeHand Create(Vector2 position)
         {
             if (_cachedHand != null)
+            {
+                _cachedHand.HandModel.Transformation.Position.Value = position;
+                
                 return _cachedHand;
+            }
             
             Transformation transformation = new Transformation(position, Vector3.one);
             MoveDirectionInput moveDirectionInput = new MoveDirectionInput(_inputSystemActions);
-            GnomeHandModel gnomeHandModel = new GnomeHandModel(transformation, moveDirectionInput, 5);
-            GnomeHandView gnomeHandView = _locationsRootView.RunnerLocationView.GnomeHandView;
+            GnomeHandView gnomeHandView = _rootViewFactory.GetLocationsRootView().RunnerLocationView.GnomeHandView;
+
+            GnomeHandAnimationModel animationModel = new GnomeHandAnimationModel();
+            
+            gnomeHandView.GnomeHandAnimationView.Construct(animationModel);
+                
+            GnomeHandModel gnomeHandModel = new GnomeHandModel(
+                transformation,
+                moveDirectionInput, 
+                gnomeHandView.JumpAnimationCurve, 
+                animationModel,
+                5);
             
             gnomeHandView.Transformable.Construct(transformation);
             

@@ -212,7 +212,7 @@ namespace Game.CustomEditorWindws
                     string lastPath = EditorPrefs.GetString("DialogueWindow_LastPath", "");
                     if (!string.IsNullOrEmpty(lastPath) && File.Exists(lastPath))
                     {
-                        Debug.Log($"Restoring last opened file: {lastPath}");
+                        Debug.Log($"{nameof(DialogueWindow)} Restoring last opened file: {lastPath}");
                         LoadGraph(lastPath);
                     }
                     else

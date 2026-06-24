@@ -39,6 +39,7 @@ namespace _Game.Scripts.PlayerSystems
             
             _eventBus.Subscribe<SetPlayerStateSignal, Type>(this, SetPlayerState);
             _eventBus.Subscribe<SetPlayerMotionStateSignal, Type>(this, SetPlayerMotionState);
+            _eventBus.Subscribe<SetPlayerActiveSignal, bool>(this, SetActive);
         }
         
         private void SetPlayerState(Type type)
@@ -59,6 +60,11 @@ namespace _Game.Scripts.PlayerSystems
         public void Teleport(Vector2 position)
         {
             PlayerModel.Transformation.Position.Value = position;
+        }
+
+        private void SetActive(bool isActive)
+        {
+            PlayerModel.IsActive.Value = isActive;
         }
 
         public void Dispose()

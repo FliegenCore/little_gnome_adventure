@@ -1,5 +1,6 @@
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
+using _Game.Scripts.MiniGames.CloudsRunner;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.RoomSystems.LocationModels.Test;
 using _Game.Scripts.RoomSystems.LocationsStates;
@@ -13,6 +14,7 @@ namespace _Game.Scripts.RoomSystems.Impl.CloudsRunner
         private readonly EventBus _eventBus;
         private readonly IDialogueManager _dialogueManager;
         private readonly IPlayerFactory _playerFactory;
+        private readonly CloudsRunnerInitializer _cloudsRunnerInitializer;
         
         private LocationAbstractState _lastCreated;
         public LocationAbstractState GetLastCreated()
@@ -24,12 +26,15 @@ namespace _Game.Scripts.RoomSystems.Impl.CloudsRunner
             RootViewFactory rootViewFactory,
             EventBus eventBus,
             IDialogueManager dialogueManager,
-            IPlayerFactory playerFactory)
+            IPlayerFactory playerFactory,
+            CloudsRunnerInitializer cloudsRunnerInitializer
+            )
         {
-            _playerFactory         = playerFactory;
-            _dialogueManager       = dialogueManager;
-            _rootViewFactory = rootViewFactory;
-            _eventBus              = eventBus;
+            _cloudsRunnerInitializer = cloudsRunnerInitializer;
+            _playerFactory           = playerFactory;
+            _dialogueManager         = dialogueManager;
+            _rootViewFactory         = rootViewFactory;
+            _eventBus                = eventBus;
         }
         
         public LocationAbstractState Create(Fsm fsm)
@@ -41,7 +46,8 @@ namespace _Game.Scripts.RoomSystems.Impl.CloudsRunner
                     forestLocationModel,
                     _rootViewFactory.GetLocationsRootView().RunnerLocationView,
                     _dialogueManager,
-                    _eventBus);
+                    _eventBus,
+                    _cloudsRunnerInitializer);
             
             fsm.AddState(testState);
             _lastCreated = testState;

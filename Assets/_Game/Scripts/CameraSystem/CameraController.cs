@@ -33,7 +33,7 @@ namespace _Game.Scripts.CameraSystem
             
             _zoomTween.OnComplete(() => callback?.Invoke());
         }
-
+        
         public void SetFollowTarget(Transform followTarget)
         {
             _currentFollowTarget = followTarget;

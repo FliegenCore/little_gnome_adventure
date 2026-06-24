@@ -37,7 +37,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         
         public void AddInspectModel(string id, InspectModel inspectModel, InspectInputHandler inspectInputHandler = null)
         {
-            Debug.Log("Register " + id + " inspect");
+            Debug.Log($"{nameof(InspectController)} Register " + id + " inspect");
             
             _inspectModels.Add(id, inspectModel);
             if(inspectInputHandler != null)

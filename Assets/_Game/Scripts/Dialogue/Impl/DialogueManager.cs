@@ -1,10 +1,13 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using _Game.Scripts.DialogueSystem.View;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.MotionStates;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using Core.Common;
+using UniRx;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,12 +19,16 @@ namespace _Game.Scripts.DialogueSystem
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly EventBus _eventBus;
         
+        private CompositeDisposable _writeDisposable;
         private List<DialogueData> _allDialogues;
         private DialogueData _currentDialogue;
         private List<SpeakerView> _speakerViews = new();
         private SpeakerView _currentSpeakerView;
         
         private bool _dialogueIsStarted;
+        private bool _dialogueIsWriteEnd;
+        
+        private string _currentDialogueText;
 
         private bool _canContinueDialogue = true;
 
@@ -97,9 +104,10 @@ namespace _Game.Scripts.DialogueSystem
                 _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
             }
             else 
-                Debug.LogError($"{nameof(DialogueManager)} has not dialogue by name{dialogueName}");
+                Debug.LogError($"{nameof(DialogueManager)} has not dialogue by name {dialogueName}");
         }
 
+        
         private void ShowCurrentDialogue()
         {
             if (_currentDialogue.OnStartEvents.Count > 0)
@@ -113,22 +121,62 @@ namespace _Game.Scripts.DialogueSystem
             if (_currentSpeakerView != null)
             {
                 _currentSpeakerView.SetDialogue(string.Empty);
+                _currentSpeakerView.SetFakeDialogue(string.Empty);
                 _currentSpeakerView.HideDialogueWindow();
             }
-            
+
             _currentSpeakerView = GetSpeakerCharacter(_currentDialogue.Name);
             
             if (_currentSpeakerView == null)
                 return;
             
+            _dialogueIsWriteEnd = false;
             string dialogueText = _currentDialogue.Text; //todo: получить перевод 
-            _currentSpeakerView.SetDialogue(dialogueText);
+            
+            _currentDialogueText = dialogueText;
+
+            _writeDisposable = new CompositeDisposable();
             
             _currentSpeakerView.ShowDialogueWindow();
+            
+            _currentSpeakerView.SetFakeDialogue(dialogueText);
+            
+            Observable.FromCoroutine(WriteDialogue)
+                .Subscribe()
+                .AddTo(_writeDisposable);
+        }
+
+        private IEnumerator WriteDialogue()
+        {
+            var sb = new StringBuilder();
+            char[] letters = _currentDialogueText.ToCharArray();
+
+            for (int i = 0; i < letters.Length; i++)
+            {
+                sb.Append(letters[i]);
+                _currentSpeakerView.SetDialogue(sb.ToString());
+                yield return new WaitForSeconds(0.05f);
+            }
+
+            SkipWrite();
+        }
+
+        private void SkipWrite()
+        {
+            _writeDisposable?.Dispose();
+            _dialogueIsWriteEnd = true;
+            _currentSpeakerView.SetDialogue(_currentDialogueText);
         }
         
         private void ContinueDialogue(InputAction.CallbackContext _)
         {
+            if (!_dialogueIsWriteEnd)
+            {
+                SkipWrite();
+
+                return;
+            }
+            
             if (!_canContinueDialogue)
                 return;
             
@@ -147,6 +195,7 @@ namespace _Game.Scripts.DialogueSystem
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
             
             _currentSpeakerView.SetDialogue(string.Empty);
+            _currentSpeakerView.SetFakeDialogue(string.Empty);
             _currentSpeakerView.HideDialogueWindow();
             _dialogueIsStarted = false;
             

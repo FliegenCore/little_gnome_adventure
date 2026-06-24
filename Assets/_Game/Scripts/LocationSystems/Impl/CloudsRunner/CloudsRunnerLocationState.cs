@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
+using _Game.Scripts.MiniGames.CloudsRunner;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.MotionStates;
 using _Game.Scripts.PlayerSystems.PlayerStates;
@@ -12,13 +13,18 @@ namespace _Game.Scripts.RoomSystems.Impl.CloudsRunner
 {
     public class CloudsRunnerLocationState : LocationAbstractState
     {
-        public CloudsRunnerLocationState(Fsm fsm, 
+        private readonly CloudsRunnerInitializer _cloudsRunnerInitializer;
+        
+        public CloudsRunnerLocationState(
+            Fsm fsm, 
             CloudsRunnerLocationModel locationModel, 
             CloudsRunnerLocationView abstractLocation,
             IDialogueManager dialogueManager, 
-            EventBus eventBus) : base(fsm, locationModel, abstractLocation, dialogueManager, eventBus)
+            EventBus eventBus,
+            CloudsRunnerInitializer cloudsRunnerInitializer
+            ) : base(fsm, locationModel, abstractLocation, dialogueManager, eventBus)
         {
-            
+            _cloudsRunnerInitializer = cloudsRunnerInitializer;
         }
 
         public override void Enter()
@@ -26,6 +32,8 @@ namespace _Game.Scripts.RoomSystems.Impl.CloudsRunner
             base.Enter();
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerDisabledMotionState));
             _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
+            
+            _cloudsRunnerInitializer.Initialize(); //временно тут
             //disable player camera set camera follow
         }
 

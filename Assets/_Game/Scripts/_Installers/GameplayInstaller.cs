@@ -11,6 +11,7 @@ using _Game.Scripts.InteractionSystems.Interactables.Items.Managers;
 using _Game.Scripts.InventorySystem;
 using _Game.Scripts.InventorySystem.Configs;
 using _Game.Scripts.InventorySystem.Factories;
+using _Game.Scripts.MiniGames.CloudsRunner;
 using _Game.Scripts.MiniGames.CloudsRunner.Hand;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Factory.Impl;
@@ -46,7 +47,7 @@ namespace _Game.Scripts._Installers
             if (hackController != null)
             {
                 Container.InjectGameObject(hackController.gameObject);
-                Debug.Log("Injected dependencies into HackController");
+                Debug.Log($"{nameof(GameplayInstaller)} Injected dependencies into HackController");
             }
         }
         
@@ -68,6 +69,7 @@ namespace _Game.Scripts._Installers
             builder.Register<ItemFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<RootViewFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<GnomeHandFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<CloudsRunnerInitializer>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             
             ResterLocations(builder);
             

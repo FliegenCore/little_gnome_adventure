@@ -9,7 +9,14 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand.States
         {
             
         }
+        
+        public override void Enter()
+        {
+            base.Enter();
 
+            _handModel.AnimationModel.IsMoveAnimation.Value = true;
+        }
+        
         public override void Update(float deltaTime)
         {
             base.Update(deltaTime);
@@ -29,7 +36,8 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand.States
                 return;
             }
     
-            Vector2 moveDirection = _handModel.MoveDirectionInput.GetDirection();
+            Vector2 moveDirection = new Vector2(_handModel.MoveDirectionInput.GetDirection().x, 0);
+            
             _handModel.Transformation.Direction.Value = moveDirection * _handModel.MoveSpeed;
     
             if (moveDirection.x != 0)
@@ -38,6 +46,13 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand.States
                 currentScale.x = Mathf.Abs(currentScale.x) * (moveDirection.x > 0 ? 1 : -1);
                 _handModel.Transformation.Scale.Value = currentScale;
             }
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            _handModel.AnimationModel.IsMoveAnimation.Value = false;
+
         }
     }
 }

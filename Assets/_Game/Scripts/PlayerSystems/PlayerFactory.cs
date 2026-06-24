@@ -1,3 +1,4 @@
+using _Game.Scripts.CameraSystem;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.Input;
@@ -24,7 +25,8 @@ namespace _Game.Scripts.PlayerSystems
         private readonly InspectController _inspectController;
         private readonly InventoryFactory _inventoryFactory;
         private readonly IDialogueManager _dialogueManager;
-        private readonly IObjectResolver _resolver; 
+        private readonly IObjectResolver _resolver;
+        private readonly CameraController _cameraController; 
 
         private Player _player;
         private Inventory _inventory;
@@ -37,8 +39,11 @@ namespace _Game.Scripts.PlayerSystems
             InspectController inspectController,
             InventoryFactory inventoryFactory,
             IDialogueManager dialogueManager,
-            IObjectResolver resolver) 
+            IObjectResolver resolver,
+            CameraController cameraController
+            )
         {
+            _cameraController   = cameraController;
             _dialogueManager    = dialogueManager;
             _inventoryFactory   = inventoryFactory;
             _inspectController  = inspectController;
@@ -80,7 +85,7 @@ namespace _Game.Scripts.PlayerSystems
             InteractionController interactionController = new InteractionController(_inputSystemActions, playerModel, _eventBus);
             _inventory = _inventoryFactory.CreateInventory(interactionController);
             
-            Fsm playerStateMachine = CreatePlayerStateMachine(playerModel);
+            Fsm playerStateMachine = CreatePlayerStateMachine(playerModel, playerView);
 
             Player player = new Player(
                 playerModel,
@@ -103,14 +108,14 @@ namespace _Game.Scripts.PlayerSystems
             return _player;
         }
 
-        private Fsm CreatePlayerStateMachine(PlayerModel model)
+        private Fsm CreatePlayerStateMachine(PlayerModel model, PlayerView playerView)
         {
             Fsm playerFsm = new Fsm();
             
-            playerFsm.AddState(new PlayerBaseState(playerFsm, model, _inventory, _eventBus));
+            playerFsm.AddState(new PlayerBaseState(playerFsm, model, _inventory, _eventBus, _cameraController, playerView));
             playerFsm.AddState(new PlayerInventoryState(playerFsm, model, _inventory));
             playerFsm.AddState(new PlayerInspectState(playerFsm, model, _inspectController));
-            playerFsm.AddState(new PlayerDisabledMotionState(playerFsm, model));
+            playerFsm.AddState(new PlayerDisabledMotionState(playerFsm, model, _cameraController));
             playerFsm.AddState(new PlayerDialogueState(playerFsm, model, _dialogueManager));
             playerFsm.AddState(new PlayerAutoMoveState(playerFsm, model));
      

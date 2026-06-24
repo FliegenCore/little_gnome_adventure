@@ -23,7 +23,7 @@ namespace _Game.Scripts.RoomSystems
         
         public void Create(string id, string connectionId, DoorView view)
         {
-            Debug.Log($"Creating door {id} with connetction id {connectionId}" );
+            Debug.Log($"{nameof(DoorFactory)} Creating door {id} with connetction id {connectionId}" );
             DoorModel doorModel = new DoorModel(view.ContactTriggerProvider, id, view.SpawnTransform.transform.position, connectionId);
             
             Door door = new Door(

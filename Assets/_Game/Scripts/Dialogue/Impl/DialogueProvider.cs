@@ -26,7 +26,7 @@ namespace _Game.Scripts.DialogueSystem
                     string key = dialogueFile.name;
                     _dialogueJsons[key] = dialogueFile;
                 
-                    Debug.Log($"Загружен диалог из Resources: {key}");
+                    Debug.Log($"{nameof(DialogueProvider)} Загружен диалог из Resources: {key}");
                 }
             
                 Debug.Log($"Всего загружено диалогов из Resources: {_dialogueJsons.Count}");

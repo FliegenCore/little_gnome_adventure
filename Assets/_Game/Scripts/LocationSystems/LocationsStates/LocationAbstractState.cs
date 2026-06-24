@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using _Game.Scripts.CameraSystem;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.DialogueSystem.View;
 using _Game.Scripts.FSM;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.MotionStates;
+using _Game.Scripts.PlayerSystems.PlayerStates;
 using _Game.Scripts.RoomSystems.LocationModels;
 using _Game.Scripts.RoomSystems.Rooms;
 using Core.Common;
@@ -25,9 +28,10 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
             AbstractLocationModel locationModel,
             AbstractLocationView abstractLocation,
             IDialogueManager dialogueManager,
-            EventBus eventBus) : base(fsm)
+            EventBus eventBus
+            ) : base(fsm)
         {
-            LocationModel = locationModel;
+            LocationModel        = locationModel;
             _eventBus            = eventBus;
             _dialogueManager     = dialogueManager;
             AbstractLocationView = abstractLocation;
@@ -46,6 +50,10 @@ namespace _Game.Scripts.RoomSystems.LocationsStates
             _dialogueManager.RegisterSpeakerCharacters(speakerViews.ToArray());
             
             AbstractLocationView.gameObject.SetActive(true);
+            
+            _eventBus.TriggerEvenet<SetPlayerActiveSignal, bool>(true);
+            _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
+            _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
         }
 
         public override void Exit()
