@@ -144,13 +144,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465793586067481954}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.97, y: -1.5800002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.32354316, w: 0.9462135}
+  m_LocalPosition: {x: 0.8699999, y: 2.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6226560639736983064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 37.755}
 --- !u!212 &1817655433722183129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -766,13 +766,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3125614400796947293}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.28, y: -0.8600001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.050342426, w: 0.9987321}
+  m_LocalPosition: {x: -11, y: -0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6226560639736983064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.771}
 --- !u!212 &8487875591251920971
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1622,7 +1622,7 @@ Transform:
   m_GameObject: {fileID: 8946949399464688163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.98, y: -0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2133,11 +2133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2954668581670298824, guid: a1398dd1e767eaa46a7412f647679936, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.12
+      value: -0.864
       objectReference: {fileID: 0}
     - target: {fileID: 2954668581670298824, guid: a1398dd1e767eaa46a7412f647679936, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 2954668581670298824, guid: a1398dd1e767eaa46a7412f647679936, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2178,6 +2178,22 @@ PrefabInstance:
     - target: {fileID: 4163724536856622966, guid: a1398dd1e767eaa46a7412f647679936, type: 3}
       propertyPath: m_Name
       value: GnomeHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070114934074522982, guid: a1398dd1e767eaa46a7412f647679936, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6932296
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070114934074522982, guid: a1398dd1e767eaa46a7412f647679936, type: 3}
+      propertyPath: m_Size.y
+      value: 0.77456665
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070114934074522982, guid: a1398dd1e767eaa46a7412f647679936, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.3215911
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070114934074522982, guid: a1398dd1e767eaa46a7412f647679936, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.4266343
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
