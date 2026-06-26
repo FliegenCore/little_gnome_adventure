@@ -6,6 +6,7 @@ using _Game.Scripts.DialogueSystem.View;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.MotionStates;
 using _Game.Scripts.PlayerSystems.PlayerStates;
+using _Game.Scripts.Sound;
 using Core.Common;
 using UniRx;
 using UnityEngine;
@@ -15,9 +16,15 @@ namespace _Game.Scripts.DialogueSystem
 {
     public class DialogueManager : IDialogueManager, IDisposable
     {
+        private const string AUDIO_CLIP_NAME = "TypeEffect";
+
+        private const int MIN_AUDIO_INDEX = 0;
+        private const int MAX_AUDIO_INDEX = 7;
+        
         private readonly DialogueProvider _dialogueProvider;
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly EventBus _eventBus;
+        private readonly ISoundManager _soundManager;
         
         private CompositeDisposable _writeDisposable;
         private List<DialogueData> _allDialogues;
@@ -32,8 +39,13 @@ namespace _Game.Scripts.DialogueSystem
 
         private bool _canContinueDialogue = true;
 
-        private DialogueManager(InputSystem_Actions inputSystemActions, EventBus eventBus)
+        private DialogueManager(
+            InputSystem_Actions inputSystemActions,
+            EventBus eventBus,
+            ISoundManager soundManager
+            )
         {
+            _soundManager       = soundManager;
             _eventBus           = eventBus;
             _inputSystemActions = inputSystemActions;
             _dialogueProvider   = new DialogueProvider();
@@ -153,12 +165,22 @@ namespace _Game.Scripts.DialogueSystem
 
             for (int i = 0; i < letters.Length; i++)
             {
+                PlayWriteAudio();
                 sb.Append(letters[i]);
                 _currentSpeakerView.SetDialogue(sb.ToString());
                 yield return new WaitForSeconds(0.05f);
             }
 
             SkipWrite();
+        }
+
+        private void PlayWriteAudio()
+        {
+            int index = UnityEngine.Random.Range(MIN_AUDIO_INDEX, MAX_AUDIO_INDEX);
+
+            string audioName = $"{AUDIO_CLIP_NAME}{index}";
+
+            _soundManager.PlayEffectOnBackground(null, audioName, false);
         }
 
         private void SkipWrite()

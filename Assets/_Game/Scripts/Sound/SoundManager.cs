@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Core.Common;
+using UniRx;
 using UnityEngine;
 
 namespace _Game.Scripts.Sound
@@ -13,12 +14,19 @@ namespace _Game.Scripts.Sound
         private readonly EventBus _eventBus;
         private Dictionary<string, AudioClip> _audioClipDictionary;
         
-        private SoundManager(EventBus eventBus, AudioStorageConfig audioStorageConfig, AudioSourceStorage audioSourceStorage)
+        private readonly List<AudioSource> _audioClipsPool;
+        
+        private SoundManager(
+            EventBus eventBus,
+            AudioStorageConfig audioStorageConfig, 
+            AudioSourceStorage audioSourceStorage
+            )
         {
             _audioSourceStorage  = audioSourceStorage;
             _audioStorageConfig  =  audioStorageConfig;
             _eventBus            = eventBus;
             _audioClipDictionary = _audioStorageConfig.AudioClips.ToDictionary(clip => clip.name, clip => clip);
+            _audioClipsPool = new List<AudioSource>();
             
             Initialize();
         }
@@ -41,11 +49,9 @@ namespace _Game.Scripts.Sound
         public void PlayOnPosition(Transform parent, float radius, string audioClip, bool isLoop)
         {
             Vector3 worldPos = new Vector3(parent.position.x, parent.position.y, 0f);
-            AudioSource audio = UnityEngine.Object.Instantiate(
-                _audioStorageConfig.OneShotAudioSourcePrefab,
-                worldPos, 
-                Quaternion.identity,
-                parent);
+
+            AudioSource audio = CreateAudioClip(parent, worldPos);
+            
             audio.outputAudioMixerGroup = _audioStorageConfig.AudioMixerGroup;
             audio.clip = _audioClipDictionary[audioClip];
             audio.loop = isLoop;
@@ -59,8 +65,52 @@ namespace _Game.Scripts.Sound
     
             if (!isLoop)
             {
-                UnityEngine.Object.Destroy(audio.gameObject, audio.clip.length);
+                Observable.Timer(TimeSpan.FromSeconds(audio.clip.length))
+                    .Subscribe(_ => ReturnAudioClipInPool(audio));
             }
+        }
+
+        public void PlayEffectOnBackground(Transform parent, string audioClip, bool isLoop)
+        {
+            AudioSource audio = CreateAudioClip(parent, Vector2.zero);
+            
+            audio.outputAudioMixerGroup = _audioStorageConfig.AudioMixerGroup;
+            audio.clip = _audioClipDictionary[audioClip];
+            audio.loop = isLoop;
+            audio.Play();
+            
+            if (!isLoop)
+            {
+                Observable.Timer(TimeSpan.FromSeconds(audio.clip.length))
+                    .Subscribe(_ => ReturnAudioClipInPool(audio));
+            }
+        }
+
+        private AudioSource CreateAudioClip(Transform parent, Vector2 worldPos)
+        {
+            AudioSource audio;
+            
+            if (_audioClipsPool.Count > 0)
+            {
+                AudioSource source = _audioClipsPool.First();
+                _audioClipsPool.Remove(source);
+                audio = source;
+            }
+            else
+            {
+                audio = UnityEngine.Object.Instantiate(
+                    _audioStorageConfig.OneShotAudioSourcePrefab,
+                    worldPos,
+                    Quaternion.identity,
+                    parent); 
+            }
+
+            return audio;
+        }
+        
+        private void ReturnAudioClipInPool(AudioSource audio)
+        {
+            _audioClipsPool.Add(audio);
         }
 
         public bool HasSound(string audioClipName)
