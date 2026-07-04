@@ -1,0 +1,103 @@
+{
+  "Nodes": [
+    {
+      "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
+      "DialogueName": "Player",
+      "Text": "Какое инетесрное место...",
+      "Type": 0,
+      "Position": {
+        "x": 225.0,
+        "y": 118.0,
+        "normalized": {
+          "x": 0.885600269,
+          "y": 0.464448154,
+          "normalized": {
+            "x": 0.8856003,
+            "y": 0.464448184,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 254.064957,
+        "sqrMagnitude": 64549.0
+      },
+      "IsStartNode": true,
+      "OnStartEvents": [
+        "a_Player_emotion/speak_1_1"
+      ],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "14a7a14a-e3b2-4b21-944a-0db970e0056f",
+      "DialogueName": "Player",
+      "Text": "Тут я еще не бывал.",
+      "Type": 0,
+      "Position": {
+        "x": 615.0,
+        "y": 118.0,
+        "normalized": {
+          "x": 0.982086062,
+          "y": 0.188432783,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 626.218,
+        "sqrMagnitude": 392149.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "64c9c9ce-80e3-4905-88ac-8fdf8724a2b5",
+      "DialogueName": "Player",
+      "Text": "Наверное...",
+      "Type": 0,
+      "Position": {
+        "x": 967.0,
+        "y": 118.0,
+        "normalized": {
+          "x": 0.992636859,
+          "y": 0.121128388,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 974.173,
+        "sqrMagnitude": 949013.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [
+        "a_Player_emotion/idle_1_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    }
+  ],
+  "Edges": [
+    {
+      "InputNodeId": "14a7a14a-e3b2-4b21-944a-0db970e0056f",
+      "OutputNodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    },
+    {
+      "InputNodeId": "64c9c9ce-80e3-4905-88ac-8fdf8724a2b5",
+      "OutputNodeId": "14a7a14a-e3b2-4b21-944a-0db970e0056f",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    }
+  ]
+}

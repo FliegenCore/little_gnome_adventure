@@ -10,13 +10,13 @@ namespace _Game.Scripts.Quests.MushroomQuest.Busman.States
     {
         private readonly Fsm _busmanMachine;
 
-        private readonly ICutsceneManger _cutsceneManger;
+        private readonly ICutsceneManager _cutsceneManager;
 
         private readonly ACutscene _cutscene;
         
-        public BusmanBehaviour(EventBus eventBus, Fsm fsm, ICutsceneManger cutsceneManger, ACutscene cutscene) : base(eventBus)
+        public BusmanBehaviour(EventBus eventBus, Fsm fsm, ICutsceneManager cutsceneManager, ACutscene cutscene) : base(eventBus)
         {
-            _cutsceneManger = cutsceneManger;
+            _cutsceneManager = cutsceneManager;
             _busmanMachine  = fsm;
             _cutscene       = cutscene;
         }
@@ -28,7 +28,7 @@ namespace _Game.Scripts.Quests.MushroomQuest.Busman.States
 
         public override void Interact(Action callback)
         {
-            _cutsceneManger.Play(_cutscene);
+            _cutsceneManager.Play(_cutscene);
         }
     }
 }

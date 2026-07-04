@@ -21,7 +21,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
         private readonly EventBus _eventBus;
         private readonly IInteractableFactory _interactableFactory;
         private readonly InventoryProxy _inventoryProxy;
-        private readonly ICutsceneManger _cutsceneManger;
+        private readonly ICutsceneManager _cutsceneManager;
         private readonly DreamForestLocationState _dreamForestLocationState;
         private readonly ItemFactory _itemFactory;
         private readonly IPlayerFactory _playerFactory;
@@ -31,7 +31,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
             IInteractableFactory interactableFactory,
             EventBus eventBus,
             InventoryProxy inventoryProxy,
-            ICutsceneManger cutsceneManger,
+            ICutsceneManager cutsceneManager,
             DreamForestLocationState dreamForestLocationState,
             ItemFactory itemFactory,
             IPlayerFactory playerFactory,
@@ -45,7 +45,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
             _eventBus                 = eventBus;
             _inventoryProxy           = inventoryProxy;
             _interactableFactory      = interactableFactory;            
-            _cutsceneManger           = cutsceneManger;
+            _cutsceneManager           = cutsceneManager;
         }
 
         public void Initialize()
@@ -85,7 +85,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
             
             CreateCharacter(
                 nameof(ECharacters.Busman), 
-                new BusmanBehaviour(_eventBus, busmanInitializer.Fsm, _cutsceneManger, gnomeEnterInBusCutscene),
+                new BusmanBehaviour(_eventBus, busmanInitializer.Fsm, _cutsceneManager, gnomeEnterInBusCutscene),
                 busmanView);
         }
         

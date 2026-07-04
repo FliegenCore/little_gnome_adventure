@@ -10,5 +10,6 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         [field: SerializeField] public NightstandView McMushroomView { get; private set; }
         [field: SerializeField] public BaseItemView[] Mushrooms { get; private set; }
         [field: SerializeField] public BusmanView BusmanView { get; private set; }
+        [field: SerializeField] public Transform StartMovePoint { get; private set; }
     }
 }

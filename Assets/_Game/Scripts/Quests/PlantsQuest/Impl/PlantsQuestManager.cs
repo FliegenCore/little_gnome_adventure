@@ -20,7 +20,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         private readonly CompositeDisposable _compositeDisposable = new();
         private readonly LocationsRootView _locationsRootView;
         private readonly CameraController _cameraController;
-        private readonly ICutsceneManger _cutsceneManger;
+        private readonly ICutsceneManager _cutsceneManager;
         private readonly IPlayerFactory _playerFactory;
         private readonly IInteractableFactory _interactableFactory;
         private PlantsCutscene _plantsCutscene; 
@@ -33,7 +33,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
             LocationsRootView locationsRootView,
             CameraController cameraController,
             IPlayerFactory playerFactory,
-            ICutsceneManger cutsceneManger,
+            ICutsceneManager cutsceneManager,
             IInteractableFactory interactableFactory)
         {
             _interactableFactory     = interactableFactory;
@@ -41,7 +41,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
             _locationsRootView = locationsRootView;
             _eventBus                = eventBus;
             _playerFactory           = playerFactory;
-            _cutsceneManger          = cutsceneManger;
+            _cutsceneManager          = cutsceneManager;
             _plants                  = new();
         }
 
@@ -144,7 +144,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl.Impl
         {
             CreateCutscene();
 
-            _cutsceneManger.Play(_plantsCutscene);
+            _cutsceneManager.Play(_plantsCutscene);
         }
 
         public void Dispose()

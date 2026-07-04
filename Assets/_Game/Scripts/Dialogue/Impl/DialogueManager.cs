@@ -46,15 +46,14 @@ namespace _Game.Scripts.DialogueSystem
             InputSystem_Actions inputSystemActions,
             EventBus eventBus,
             ISoundManager soundManager,
-            NonSkipDialogueHandler nonSkipDialogueHandler,
             SpeakersProvider speakersProvider
             )
         {
-            _nonSkipDialogueHandler = nonSkipDialogueHandler;
             _speakersProvider       = speakersProvider;
             _soundManager           = soundManager;
             _eventBus               = eventBus;
             _inputSystemActions     = inputSystemActions;
+            _nonSkipDialogueHandler = new NonSkipDialogueHandler(_eventBus, _speakersProvider, this);
             _dialogueProvider       = new DialogueProvider();
             _dialogueWriter         = new DialogueWriter();
             
@@ -64,6 +63,7 @@ namespace _Game.Scripts.DialogueSystem
         private void Init()
         {
             _eventBus.Subscribe<StartDialogueSignal, string>(this, StartDialogue);
+            _eventBus.Subscribe<StartNonSkipDialogueSignal, string>(this, StartNonSkipDialogue);
             _eventBus.Subscribe<DialogueEventSignal, string>(this, HandleDialogueEvent);
             _dialogueWriter.OnLetterWrited += PlayWriteAudio;
         }
@@ -125,9 +125,9 @@ namespace _Game.Scripts.DialogueSystem
         private void StartNonSkipDialogue(string dialogueName)
         {
             List<DialogueData> allDates  = _dialogueProvider.GetDialogue(dialogueName);
-            DialogueData currentDialogue = _dialogueProvider.GetStartDialogueData(_allDialogues);
+            DialogueData currentDialogue = _dialogueProvider.GetStartDialogueData(allDates);
             
-            if (_currentDialogue != null)
+            if (currentDialogue != null)
             {
                 _nonSkipDialogueHandler.StartDialogue(allDates, currentDialogue);
             }
@@ -156,15 +156,12 @@ namespace _Game.Scripts.DialogueSystem
                 return;
             
             _dialogueIsWriteEnd = false;
+            
             string dialogueText = _currentDialogue.Text; //todo: получить перевод 
             
             _currentDialogueText = dialogueText;
 
             _writeDisposable = new CompositeDisposable();
-            
-            _currentSpeakerView.ShowDialogueWindow();
-            
-            _currentSpeakerView.SetFakeDialogue(dialogueText);
             
             _dialogueWriter.SetCurrentText(dialogueText, _currentSpeakerView);
             
@@ -173,7 +170,7 @@ namespace _Game.Scripts.DialogueSystem
                 .AddTo(_writeDisposable);
         }
 
-        private void PlayWriteAudio()
+        public void PlayWriteAudio()
         {
             int index = UnityEngine.Random.Range(MIN_AUDIO_INDEX, MAX_AUDIO_INDEX);
 
@@ -253,10 +250,11 @@ namespace _Game.Scripts.DialogueSystem
 
         public void Dispose()
         {
-            _inputSystemActions.Player.Interact.performed -= ContinueDialogue;
             _eventBus.Unsubscribe<StartDialogueSignal>(this);
             _eventBus.Unsubscribe<DialogueEventSignal>(this);
-            _dialogueWriter.OnLetterWrited -= PlayWriteAudio;
+            _eventBus.Unsubscribe<StartNonSkipDialogueSignal>(this);
+            //_dialogueWriter.OnLetterWrited -= PlayWriteAudio;
+            _nonSkipDialogueHandler?.Dispose();
         }
     }
 }

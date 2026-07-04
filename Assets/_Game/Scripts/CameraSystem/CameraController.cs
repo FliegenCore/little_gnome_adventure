@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using UniRx;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -45,6 +46,21 @@ namespace _Game.Scripts.CameraSystem
         public void SetFollowZone(PolygonCollider2D zone)
         {
             _cinemachineConfiner2D.BoundingShape2D = zone;
+            _cinemachineConfiner2D.InvalidateBoundingShapeCache();
+    
+            Observable.Timer(TimeSpan.FromSeconds(0.01f))
+                .Subscribe(_ => ForceRebuildBounds())
+                .AddTo(_cinemachineConfiner2D);
+        }
+
+        private void ForceRebuildBounds()
+        {
+            _cinemachineConfiner2D.InvalidateBoundingShapeCache();
+            var temp = _cinemachineConfiner2D.BoundingShape2D;
+            _cinemachineConfiner2D.BoundingShape2D = null;
+            _cinemachineConfiner2D.InvalidateBoundingShapeCache();
+            _cinemachineConfiner2D.BoundingShape2D = temp;
+            _cinemachineConfiner2D.InvalidateBoundingShapeCache();
         }
 
         public void SetFollowSpeed(float speed)

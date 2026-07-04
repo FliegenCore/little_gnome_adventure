@@ -23,7 +23,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
         private readonly IPlayerFactory _playerFactory;
         private readonly IInteractableFactory _interactableFactory;
         private readonly CameraController _cameraController;
-        private readonly ICutsceneManger _cutsceneManger;
+        private readonly ICutsceneManager _cutsceneManager;
         
         private LocationAbstractState _lastCreated;
         
@@ -34,7 +34,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
             IPlayerFactory playerFactory,
             IInteractableFactory interactableFactory,
             CameraController cameraController,
-            ICutsceneManger cutsceneManger)
+            ICutsceneManager cutsceneManager)
         {
             _cameraController      = cameraController;
             _interactableFactory      = interactableFactory;
@@ -42,7 +42,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
             _dialogueManager       = dialogueManager;
             _rootViewFactory = rootViewFactory;
             _eventBus              = eventBus;
-            _cutsceneManger        = cutsceneManger;
+            _cutsceneManager        = cutsceneManager;
         }
         
         public LocationAbstractState GetLastCreated()
@@ -71,7 +71,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamQuestFirst
                 _rootViewFactory.GetLocationsRootView(), 
                 _cameraController,
                 _playerFactory,
-                _cutsceneManger,
+                _cutsceneManager,
                 _interactableFactory
                 );
             

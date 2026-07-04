@@ -8,6 +8,7 @@ using _Game.Scripts.PlayerSystems.Animations;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.PlayerSystems.MotionStates;
 using _Game.Scripts.PlayerSystems.PlayerStates;
+using _Game.Scripts.RoomSystems;
 using Core.Common;
 using Game.PlayerSystem;
 using UnityEngine;
@@ -18,6 +19,8 @@ namespace _Game.Scripts.PlayerSystems
 {
     public class PlayerFactory : IPlayerFactory
     {
+        private const string START_SPAWN_DOOOR_ID = "DreamForest Enter";
+        
         private readonly PlayerConfig _playerConfig;
         private readonly IMoveDirectionInput _moveDirectionInput;
         private readonly InputSystem_Actions _inputSystemActions;
@@ -26,7 +29,8 @@ namespace _Game.Scripts.PlayerSystems
         private readonly InventoryFactory _inventoryFactory;
         private readonly IDialogueManager _dialogueManager;
         private readonly IObjectResolver _resolver;
-        private readonly CameraController _cameraController; 
+        private readonly CameraController _cameraController;
+        private readonly DoorsService _doorsService;
 
         private Player _player;
         private Inventory _inventory;
@@ -40,9 +44,11 @@ namespace _Game.Scripts.PlayerSystems
             InventoryFactory inventoryFactory,
             IDialogueManager dialogueManager,
             IObjectResolver resolver,
-            CameraController cameraController
+            CameraController cameraController,
+            DoorsService doorsService
             )
         {
+            _doorsService       = doorsService;
             _cameraController   = cameraController;
             _dialogueManager    = dialogueManager;
             _inventoryFactory   = inventoryFactory;
@@ -57,8 +63,8 @@ namespace _Game.Scripts.PlayerSystems
         public Player CreatePlayer()
         {
             Transformation transformation = null;
-           
             //if no data
+            Door startDoorSpawn = _doorsService.GetDoorById(START_SPAWN_DOOOR_ID);
             transformation = new Transformation(_playerConfig.StartSpawnPosition, _playerConfig.StartScale);
             //else load position
             
@@ -100,6 +106,8 @@ namespace _Game.Scripts.PlayerSystems
             
             _player = player;
             
+            startDoorSpawn.Interact(null);
+            
             return player;
         }
 
@@ -117,7 +125,7 @@ namespace _Game.Scripts.PlayerSystems
             playerFsm.AddState(new PlayerInspectState(playerFsm, model, _inspectController));
             playerFsm.AddState(new PlayerDisabledMotionState(playerFsm, model, _cameraController));
             playerFsm.AddState(new PlayerDialogueState(playerFsm, model, _dialogueManager));
-            playerFsm.AddState(new PlayerAutoMoveState(playerFsm, model));
+            playerFsm.AddState(new PlayerNoneState(playerFsm, model));
      
             playerFsm.SetState<PlayerBaseState>();
             

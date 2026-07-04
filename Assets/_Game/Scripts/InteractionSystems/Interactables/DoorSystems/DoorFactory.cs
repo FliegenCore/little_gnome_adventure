@@ -32,7 +32,7 @@ namespace _Game.Scripts.RoomSystems
                 view, 
                 _doorsService, 
                 _locationsControllerFactory.Get().LocationsModel,
-                _playerFactory.GetPlayer(),
+                _playerFactory,
                 _locationsControllerFactory.Get());
             
             view.HintSelect.Construct(_eventBus, doorModel.IsSelected);

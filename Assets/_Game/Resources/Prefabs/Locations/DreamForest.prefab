@@ -322,8 +322,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 66.26, y: 12.1}
-      - {x: -31.277943, y: 12.1}
-      - {x: -31.640396, y: -5.118413}
+      - {x: -27.9, y: 12.1}
+      - {x: -27.9, y: -5.118413}
       - {x: 66.698364, y: -5.4521084}
   m_UseDelaunayMesh: 0
 --- !u!1 &804255083719429471
@@ -713,7 +713,7 @@ Transform:
   m_GameObject: {fileID: 1190476953769939290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.93, y: 0.55999994, z: 0}
+  m_LocalPosition: {x: -17.91, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5002,6 +5002,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7609317969239086261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 714608084431260762}
+  m_Layer: 0
+  m_Name: MovePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &714608084431260762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609317969239086261}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7, y: -1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6278762764197716151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7630791607779584454
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,6 +6253,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3595623178596523569}
+  - {fileID: 714608084431260762}
   - {fileID: 8413880374758620808}
   - {fileID: 4506702092389650683}
   - {fileID: 2942721127316938432}
@@ -6261,6 +6293,7 @@ MonoBehaviour:
   - {fileID: 4642499347564277776}
   - {fileID: 1742163963576850539}
   <BusmanView>k__BackingField: {fileID: 3037168217627778683}
+  <StartMovePoint>k__BackingField: {fileID: 714608084431260762}
 --- !u!1 &9040679036519874379
 GameObject:
   m_ObjectHideFlags: 0

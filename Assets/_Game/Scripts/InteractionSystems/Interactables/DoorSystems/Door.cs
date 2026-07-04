@@ -11,7 +11,7 @@ namespace _Game.Scripts.RoomSystems
         public readonly DoorModel DoorModel;
         public readonly DoorView DoorView;
         private readonly DoorsService _doorsService;
-        private readonly ITeleportable _teleportable;
+        private readonly IPlayerFactory _playerFactory;
         private readonly LocationsModel _locationsModel;
         private readonly LocationsController _locationsController;
         
@@ -20,12 +20,12 @@ namespace _Game.Scripts.RoomSystems
             DoorView doorView, 
             DoorsService doorsService, 
             LocationsModel locationsModel,
-            ITeleportable teleportable,
+            IPlayerFactory playerFactory,
             LocationsController locationsController) : base(doorModel,doorView, eventBus)
         {
             _locationsController = locationsController;
             _locationsModel      = locationsModel;
-            _teleportable        = teleportable;
+            _playerFactory        = playerFactory;
             _doorsService        =  doorsService;
             DoorModel            = doorModel;
             DoorView             = doorView;
@@ -41,7 +41,7 @@ namespace _Game.Scripts.RoomSystems
                 //do fast fade
                 _locationsModel.CurrentLocation.Value =
                     _locationsController.GetLocationByView(connectedDoor.ConnectedLocationView).GetType();
-                _teleportable.Teleport(modelConnectedDoor.Position);
+                _playerFactory.GetPlayer().Teleport(modelConnectedDoor.Position);
             }
         }
 

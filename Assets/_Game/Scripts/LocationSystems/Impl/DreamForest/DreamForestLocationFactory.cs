@@ -1,5 +1,6 @@
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.CutsceneSystem;
+using _Game.Scripts.CutsceneSystem.Impl;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.InteractionSystems.Interactables.Items.Managers;
@@ -11,6 +12,7 @@ using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.Quests.MushroomQuest;
+using _Game.Scripts.Quests.StartGameQuest;
 using _Game.Scripts.RoomSystems.LocationsStates;
 using Core.Common;
 
@@ -24,7 +26,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         private readonly IPlayerFactory _playerFactory;
         private readonly IInteractableFactory _interactableFactory;
         private readonly CameraController _cameraController;
-        private readonly ICutsceneManger _cutsceneManger;
+        private readonly ICutsceneManager _cutsceneManager;
         private readonly InventoryProxy _inventoryProxy;
         private readonly ItemFactory _itemFactory;
         
@@ -41,7 +43,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             IPlayerFactory playerFactory,
             IInteractableFactory interactableFactory,
             CameraController cameraController,
-            ICutsceneManger cutsceneManger,
+            ICutsceneManager cutsceneManager,
             InventoryProxy inventoryProxy,
             ItemFactory itemFactory
             )
@@ -52,21 +54,29 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             _interactableFactory   = interactableFactory;
             _playerFactory         = playerFactory;
             _dialogueManager       = dialogueManager;
-            _rootViewFactory = rootViewFactory;
+            _rootViewFactory       = rootViewFactory;
             _eventBus              = eventBus;
-            _cutsceneManger        = cutsceneManger;
+            _cutsceneManager       = cutsceneManager;
         }
         
         public LocationAbstractState Create(Fsm fsm)
         {
             DreamForestLocationModel forestLocationModel = new DreamForestLocationModel(typeof(DreamForestLocationState));
 
+            StartCutscene startCutscene = new StartCutscene(
+                _eventBus,
+                _playerFactory,
+                _rootViewFactory.GetLocationsRootView().DreamForestLocationView.StartMovePoint);
+                
             DreamForestLocationState dreamForestLocation =
                 new DreamForestLocationState(fsm,
                     forestLocationModel,
                     _rootViewFactory.GetLocationsRootView().DreamForestLocationView,
                     _dialogueManager,
-                    _eventBus);
+                    _eventBus,
+                    startCutscene, 
+                    _cutsceneManager
+                    );
             fsm.AddState(dreamForestLocation);
             
             MushroomQuestManager mushroomQuestManager =
@@ -74,7 +84,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
                     _interactableFactory,
                     _eventBus,
                     _inventoryProxy, 
-                    _cutsceneManger,
+                    _cutsceneManager,
                     dreamForestLocation,
                     _itemFactory,
                     _playerFactory,

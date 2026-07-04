@@ -2,9 +2,9 @@ using _Game.Scripts.FSM;
 
 namespace _Game.Scripts.PlayerSystems.PlayerStates
 {
-    public class PlayerAutoMoveState : PlayerState
+    public class PlayerNoneState : PlayerState
     {
-        public PlayerAutoMoveState(Fsm fsm, PlayerModel playerModel) : base(fsm, playerModel)
+        public PlayerNoneState(Fsm fsm, PlayerModel playerModel) : base(fsm, playerModel)
         {
         }
 

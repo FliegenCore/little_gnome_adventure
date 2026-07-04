@@ -34,7 +34,7 @@ namespace Game.PlayerSystem
 
         private void OnDestroy()
         {
-            _animationControl.UnsubscribeOnEvents(HandleEvent);
+            _animationControl?.UnsubscribeOnEvents(HandleEvent);
         }
     }
 }

@@ -20,6 +20,7 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
         public override void Exit()
         {
             _playerModel.AnimationPlayerModel.IsMove.Value = false;
+            _playerModel.Transformation.Direction.Value = Vector2.zero;
         }
 
         public override void Update(float deltaTime)
@@ -37,13 +38,17 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
 
             if (Vector2.Distance(_playerModel.Transformation.Position.Value, targetPosition) < 0.1f)
             {
-                Vector2 interactablePos = (Vector2)_playerModel.LastInteractableObjectTransform.position -
-                                          _playerModel.Transformation.Position.Value;
+                if (_playerModel.LastInteractableObjectTransform != null)
+                {
+                    Vector2 interactablePos = (Vector2)_playerModel.LastInteractableObjectTransform.position -
+                                              _playerModel.Transformation.Position.Value;
                 
-                Vector3 currentScale = _playerModel.Transformation.Scale.Value; 
-                currentScale.x = Mathf.Abs(currentScale.x) * (interactablePos.x > 0 ? 1 : -1);
+                    Vector3 currentScale = _playerModel.Transformation.Scale.Value; 
+                    currentScale.x = Mathf.Abs(currentScale.x) * (interactablePos.x > 0 ? 1 : -1);
                 
-                _playerModel.Transformation.Scale.Value = currentScale;
+                    _playerModel.Transformation.Scale.Value = currentScale;
+                }
+                
                 _playerModel.OnPosition.Execute();
                 _playerModel.Transformation.Direction.Value = Vector2.zero;
             }

@@ -55,10 +55,11 @@ namespace _Game.Scripts.ChaptersSystem
         public void Initialize()
         {
             CreateLocation();
-            CreatePlayer();
-            TieCamera();
             CacheAllDoorView();
             CreateDoorConnections();
+            SetStartLocation();
+            CreatePlayer();
+            TieCamera();
             RegisterInspects();
             RegisterUpdates();
         }
@@ -77,21 +78,24 @@ namespace _Game.Scripts.ChaptersSystem
             {
                 _locationsController.CreateLocation(locationFactory);
             }
-            
-            _locationsController.Initialize();
-
-            _locationsController.LocationsModel.CurrentLocation.Value = typeof(DreamForestLocationState);
         }
         
         private void CreatePlayer()
         {
             _playerFactory.CreatePlayer();
         }
+
+        private void SetStartLocation()
+        {
+            _locationsController.Initialize();
+
+            //_locationsController.LocationsModel.CurrentLocation.Value = typeof(DreamForestLocationState);
+        }
         
         private void TieCamera()
         {
             _cameraController.SetFollowTarget(_playerFactory.GetPlayer().PlayerView.transform);
-            _cameraController.SetFollowZone(_locationsController.GetCurrentLocation().AbstractLocationView.CameraCollider);
+           // _cameraController.SetFollowZone(_locationsController.GetCurrentLocation().AbstractLocationView.CameraCollider);
         }
         
         private void CacheAllDoorView()

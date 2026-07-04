@@ -140,7 +140,7 @@ namespace _Game.Scripts.InteractionSystems
                 _playerModel.LastInteractableObjectTransform = _currentAbstractInteractable.InteractableView.transform;
                 _playerModel.LastInteractable = _currentAbstractInteractable;
                 
-                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerAutoMoveState));
+                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerNoneState));
                 _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
                 
                 _playerModel.OnPosition.Subscribe(_ =>
@@ -191,7 +191,7 @@ namespace _Game.Scripts.InteractionSystems
                 _playerModel.LastInteractableObjectTransform = _currentAbstractInteractable.InteractableView.transform;
                 _playerModel.LastInteractable = _currentAbstractInteractable;
                 
-                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerAutoMoveState));
+                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerNoneState));
                 _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerAutoMoveMotionState));
                 
                 _playerModel.OnPosition.Subscribe(_ =>
