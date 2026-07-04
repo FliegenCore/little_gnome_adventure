@@ -77,6 +77,7 @@ namespace _Game.Scripts.Sound
             audio.outputAudioMixerGroup = _audioStorageConfig.AudioMixerGroup;
             audio.clip = _audioClipDictionary[audioClip];
             audio.loop = isLoop;
+            audio.spatialBlend = 0f;
             audio.Play();
             
             if (!isLoop)

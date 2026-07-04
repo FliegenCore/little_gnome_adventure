@@ -17,7 +17,7 @@ using VContainer.Unity;
 
 namespace _Game.Scripts.ChaptersSystem
 {
-    public class ForestChapter: IInitializable
+    public class LocationsInitializer: IInitializable
     {
         private readonly DoorFactory _doorFactory;
         private readonly IPlayerFactory _playerFactory;
@@ -32,7 +32,7 @@ namespace _Game.Scripts.ChaptersSystem
         private LocationsController _locationsController;
         private List<DoorView> _allDoorsView = new();
         
-        public ForestChapter(DoorFactory doorFactory, 
+        public LocationsInitializer(DoorFactory doorFactory, 
             IPlayerFactory playerFactory,
             LocationsControllerFactory locationsControllerFactory,
             UpdateController updateController,
@@ -78,9 +78,9 @@ namespace _Game.Scripts.ChaptersSystem
                 _locationsController.CreateLocation(locationFactory);
             }
             
-            _locationsController.LocationsModel.CurrentLocation.Value = typeof(DreamForestLocationState);
-            
             _locationsController.Initialize();
+
+            _locationsController.LocationsModel.CurrentLocation.Value = typeof(DreamForestLocationState);
         }
         
         private void CreatePlayer()

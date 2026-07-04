@@ -81,6 +81,8 @@ namespace _Game.Scripts._Installers
             builder.Register<ItemInfoProvider>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InventoryProxy>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DialogueManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<SpeakersProvider>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<NonSkipDialogueHandler>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InteractableFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CutsceneManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
 
@@ -118,7 +120,7 @@ namespace _Game.Scripts._Installers
 
         private void RegisterCurrentChapterInitializer(IContainerBuilder builder)
         {
-            builder.Register<ForestChapter>(Lifetime.Singleton).AsImplementedInterfaces();
+            builder.Register<LocationsInitializer>(Lifetime.Singleton).AsImplementedInterfaces();
         }
     }
 }

@@ -25,6 +25,9 @@ namespace _Game.Scripts.DialogueSystem
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly EventBus _eventBus;
         private readonly ISoundManager _soundManager;
+        private readonly NonSkipDialogueHandler _nonSkipDialogueHandler;
+        private readonly SpeakersProvider _speakersProvider;
+        private readonly DialogueWriter _dialogueWriter;
         
         private CompositeDisposable _writeDisposable;
         private List<DialogueData> _allDialogues;
@@ -42,14 +45,19 @@ namespace _Game.Scripts.DialogueSystem
         private DialogueManager(
             InputSystem_Actions inputSystemActions,
             EventBus eventBus,
-            ISoundManager soundManager
+            ISoundManager soundManager,
+            NonSkipDialogueHandler nonSkipDialogueHandler,
+            SpeakersProvider speakersProvider
             )
         {
-            _soundManager       = soundManager;
-            _eventBus           = eventBus;
-            _inputSystemActions = inputSystemActions;
-            _dialogueProvider   = new DialogueProvider();
-
+            _nonSkipDialogueHandler = nonSkipDialogueHandler;
+            _speakersProvider       = speakersProvider;
+            _soundManager           = soundManager;
+            _eventBus               = eventBus;
+            _inputSystemActions     = inputSystemActions;
+            _dialogueProvider       = new DialogueProvider();
+            _dialogueWriter         = new DialogueWriter();
+            
             Init();
         }
 
@@ -57,6 +65,7 @@ namespace _Game.Scripts.DialogueSystem
         {
             _eventBus.Subscribe<StartDialogueSignal, string>(this, StartDialogue);
             _eventBus.Subscribe<DialogueEventSignal, string>(this, HandleDialogueEvent);
+            _dialogueWriter.OnLetterWrited += PlayWriteAudio;
         }
 
         public void EnableInput()
@@ -72,18 +81,12 @@ namespace _Game.Scripts.DialogueSystem
 
         public void RegisterSpeakerCharacters(params SpeakerView[] speakerViews)
         {
-            foreach (var speaker in speakerViews)
-            {
-                _speakerViews.Add(speaker);
-            }
+            _speakersProvider.RegisterSpeakerCharacters(speakerViews);
         }
 
         public void UnregisterSpeakerCharacters(List<SpeakerView> speakerViews)
         {
-            foreach (var speaker in speakerViews)
-            {
-                _speakerViews.Remove(speaker);
-            }
+            _speakersProvider.UnregisterSpeakerCharacters(speakerViews);
         }
 
         private void HandleDialogueEvent(string eventName)
@@ -98,7 +101,7 @@ namespace _Game.Scripts.DialogueSystem
                 _canContinueDialogue = true;
             }
         }
-
+        
         private void StartDialogue(string dialogueName)
         {
             if (_dialogueIsStarted)
@@ -107,7 +110,7 @@ namespace _Game.Scripts.DialogueSystem
             _dialogueIsStarted = true;
             _allDialogues      = _dialogueProvider.GetDialogue(dialogueName);
             _currentDialogue   = _dialogueProvider.GetStartDialogueData(_allDialogues);
-
+            
             if (_currentDialogue != null)
             {
                 ShowCurrentDialogue();
@@ -119,7 +122,17 @@ namespace _Game.Scripts.DialogueSystem
                 Debug.LogError($"{nameof(DialogueManager)} has not dialogue by name {dialogueName}");
         }
 
-        
+        private void StartNonSkipDialogue(string dialogueName)
+        {
+            List<DialogueData> allDates  = _dialogueProvider.GetDialogue(dialogueName);
+            DialogueData currentDialogue = _dialogueProvider.GetStartDialogueData(_allDialogues);
+            
+            if (_currentDialogue != null)
+            {
+                _nonSkipDialogueHandler.StartDialogue(allDates, currentDialogue);
+            }
+        }
+
         private void ShowCurrentDialogue()
         {
             if (_currentDialogue.OnStartEvents.Count > 0)
@@ -137,7 +150,7 @@ namespace _Game.Scripts.DialogueSystem
                 _currentSpeakerView.HideDialogueWindow();
             }
 
-            _currentSpeakerView = GetSpeakerCharacter(_currentDialogue.Name);
+            _currentSpeakerView = _speakersProvider.GetSpeakerCharacter(_currentDialogue.Name);
             
             if (_currentSpeakerView == null)
                 return;
@@ -153,25 +166,11 @@ namespace _Game.Scripts.DialogueSystem
             
             _currentSpeakerView.SetFakeDialogue(dialogueText);
             
-            Observable.FromCoroutine(WriteDialogue)
+            _dialogueWriter.SetCurrentText(dialogueText, _currentSpeakerView);
+            
+            Observable.FromCoroutine(() => _dialogueWriter.WriteDialogue(SkipWrite))
                 .Subscribe()
                 .AddTo(_writeDisposable);
-        }
-
-        private IEnumerator WriteDialogue()
-        {
-            var sb = new StringBuilder();
-            char[] letters = _currentDialogueText.ToCharArray();
-
-            for (int i = 0; i < letters.Length; i++)
-            {
-                PlayWriteAudio();
-                sb.Append(letters[i]);
-                _currentSpeakerView.SetDialogue(sb.ToString());
-                yield return new WaitForSeconds(0.05f);
-            }
-
-            SkipWrite();
         }
 
         private void PlayWriteAudio()
@@ -211,7 +210,7 @@ namespace _Game.Scripts.DialogueSystem
                 StopDialogue();
             }
         }
-
+        
         private void StopDialogue()
         {
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
@@ -252,22 +251,12 @@ namespace _Game.Scripts.DialogueSystem
             return true;
         }
 
-        private SpeakerView GetSpeakerCharacter(string speakerName)
-        {
-            foreach (var speakerView in _speakerViews)
-            {
-                if (speakerView.Id.ToString() == speakerName)
-                    return speakerView;
-            }
-
-            Debug.LogError($"{nameof(DialogueManager)} has not speaker by name {speakerName}");
-            return null;
-        }
-
         public void Dispose()
         {
             _inputSystemActions.Player.Interact.performed -= ContinueDialogue;
             _eventBus.Unsubscribe<StartDialogueSignal>(this);
+            _eventBus.Unsubscribe<DialogueEventSignal>(this);
+            _dialogueWriter.OnLetterWrited -= PlayWriteAudio;
         }
     }
 }

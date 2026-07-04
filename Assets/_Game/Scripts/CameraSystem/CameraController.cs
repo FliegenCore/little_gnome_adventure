@@ -9,6 +9,7 @@ namespace _Game.Scripts.CameraSystem
     {
         public readonly CinemachineCamera CurrentCinemachineCamera;
         private readonly CinemachineConfiner2D _cinemachineConfiner2D;
+        private CinemachinePositionComposer _cinemachinePositionComposer;
         
         private Transform _currentFollowTarget;
 
@@ -44,6 +45,14 @@ namespace _Game.Scripts.CameraSystem
         public void SetFollowZone(PolygonCollider2D zone)
         {
             _cinemachineConfiner2D.BoundingShape2D = zone;
+        }
+
+        public void SetFollowSpeed(float speed)
+        {
+            if(_cinemachinePositionComposer == null)
+                _cinemachinePositionComposer =_cinemachineConfiner2D.GetComponent<CinemachinePositionComposer>();
+            
+            _cinemachinePositionComposer.Damping = new Vector3(speed, speed, speed);
         }
     }
 }
