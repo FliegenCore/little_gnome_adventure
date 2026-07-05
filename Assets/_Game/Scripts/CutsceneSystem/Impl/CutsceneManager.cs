@@ -43,6 +43,7 @@ namespace _Game.Scripts.CutsceneSystem.Impl
         {
             if (_activeCutscene is ISkipableCutscene skipableCutscene)
             {
+                _activeCutscene = null;
                 skipableCutscene.Skip();
                 _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
             }
