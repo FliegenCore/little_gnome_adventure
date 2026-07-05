@@ -7,6 +7,7 @@ using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.MotionStates;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using _Game.Scripts.Quests.MushroomQuest.Busman.States;
+using _Game.Scripts.Sound;
 using Core.Common;
 using UniRx;
 using UnityEngine;
@@ -20,15 +21,18 @@ namespace _Game.Scripts.Quests.MushroomQuest.Cutscenes
         private readonly Transform _busFollowPoint;
         private readonly Fsm _busMachine;
         private readonly CameraController _cameraController;
+        private readonly ISoundManager _soundManager;
         
         public GnomeEnterInBusCutscene(
             EventBus eventBus, 
             IPlayerFactory playerFactory, 
             Transform busFollowPoint,
             Fsm busMachine,
-            CameraController cameraController
+            CameraController cameraController,
+            ISoundManager soundManager
             )
         {
+            _soundManager     = soundManager;
             _cameraController = cameraController;
             _eventBus         = eventBus;
             _playerFactory    = playerFactory;
@@ -42,10 +46,16 @@ namespace _Game.Scripts.Quests.MushroomQuest.Cutscenes
             
             _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
             _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerDisabledMotionState));
-
+            
             Observable.Timer(TimeSpan.FromSeconds(0.1f))
                 .Subscribe(_ =>
                 {
+                    Observable.Timer(TimeSpan.FromSeconds(0.1f))
+                        .Subscribe(_ =>
+                        {
+                            _soundManager.PlayOnPosition(_busFollowPoint, 20, "BusJump", false);
+                        });
+                    
                     player.PlayerView.AnimationPlayer.AnimationControl.SetAnimation(0, "body/come_in_bus", false, OnPlayerJumpEnd);
                 });
         }

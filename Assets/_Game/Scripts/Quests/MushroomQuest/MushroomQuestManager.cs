@@ -12,6 +12,7 @@ using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.Quests.MushroomQuest.Busman.States;
 using _Game.Scripts.Quests.MushroomQuest.Cutscenes;
 using _Game.Scripts.RoomSystems.Impl.DreamForest;
+using _Game.Scripts.Sound;
 using Core.Common;
 
 namespace _Game.Scripts.Quests.MushroomQuest
@@ -26,6 +27,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
         private readonly ItemFactory _itemFactory;
         private readonly IPlayerFactory _playerFactory;
         private readonly CameraController _cameraController;
+        private readonly ISoundManager _soundManager;
         
         public MushroomQuestManager(
             IInteractableFactory interactableFactory,
@@ -35,9 +37,11 @@ namespace _Game.Scripts.Quests.MushroomQuest
             DreamForestLocationState dreamForestLocationState,
             ItemFactory itemFactory,
             IPlayerFactory playerFactory,
-            CameraController cameraController
+            CameraController cameraController,
+            ISoundManager soundManager
             )
         {
+            _soundManager = soundManager;
             _cameraController         = cameraController;
             _playerFactory            = playerFactory;
             _itemFactory              = itemFactory;
@@ -81,7 +85,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
             busmanInitializer.Initialize(busmanView.AnimationControl);
 
             GnomeEnterInBusCutscene gnomeEnterInBusCutscene = 
-                new GnomeEnterInBusCutscene(_eventBus, _playerFactory, busmanView.CameraFollowPoint, busmanInitializer.Fsm, _cameraController);
+                new GnomeEnterInBusCutscene(_eventBus, _playerFactory, busmanView.CameraFollowPoint, busmanInitializer.Fsm, _cameraController, _soundManager);
             
             CreateCharacter(
                 nameof(ECharacters.Busman), 

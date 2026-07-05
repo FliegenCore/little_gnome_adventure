@@ -94,6 +94,8 @@ namespace _Game.Scripts.Sound
             if (_audioClipsPool.Count > 0)
             {
                 AudioSource source = _audioClipsPool.First();
+                source.gameObject.transform.SetParent(parent);
+                source.gameObject.transform.position = worldPos;
                 _audioClipsPool.Remove(source);
                 audio = source;
             }

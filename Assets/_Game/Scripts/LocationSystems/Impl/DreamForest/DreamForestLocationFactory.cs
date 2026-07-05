@@ -14,6 +14,7 @@ using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.Quests.MushroomQuest;
 using _Game.Scripts.Quests.StartGameQuest;
 using _Game.Scripts.RoomSystems.LocationsStates;
+using _Game.Scripts.Sound;
 using Core.Common;
 
 namespace _Game.Scripts.RoomSystems.Impl.DreamForest
@@ -29,6 +30,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         private readonly ICutsceneManager _cutsceneManager;
         private readonly InventoryProxy _inventoryProxy;
         private readonly ItemFactory _itemFactory;
+        private readonly ISoundManager _soundManager;
         
         private LocationAbstractState _lastCreated;
         public LocationAbstractState GetLastCreated()
@@ -45,9 +47,11 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             CameraController cameraController,
             ICutsceneManager cutsceneManager,
             InventoryProxy inventoryProxy,
-            ItemFactory itemFactory
+            ItemFactory itemFactory,
+            ISoundManager soundManager
             )
         {
+            _soundManager          = soundManager;
             _itemFactory           = itemFactory;
             _inventoryProxy        = inventoryProxy;
             _cameraController      = cameraController;
@@ -88,7 +92,9 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
                     dreamForestLocation,
                     _itemFactory,
                     _playerFactory,
-                    _cameraController);
+                    _cameraController,
+                    _soundManager
+                    );
 
             mushroomQuestManager.Initialize();
             
