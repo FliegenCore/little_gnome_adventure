@@ -19,7 +19,7 @@ namespace _Game.Scripts.Input
             
             _inputSystemActions.Player.Sprint.started += _ => SetIsSprint(true);
             _inputSystemActions.Player.Sprint.canceled += _ => SetIsSprint(false);
-            _inputSystemActions.Player.Jump.canceled += _ => JumpEvent?.Invoke();
+            _inputSystemActions.Player.Jump.started += _ => JumpEvent?.Invoke();
         }
 
         public bool GetCanMove()

@@ -10,6 +10,9 @@ namespace _Game.Scripts.FSM
         
         private Dictionary<Type, FsmAbstractState> _states = new();
 
+        public FsmAbstractState CurrentState => _currentState;
+      
+
         public T GetState<T>() where T : FsmAbstractState
         {
             if(_states.TryGetValue(typeof(T), out FsmAbstractState state))
@@ -19,7 +22,7 @@ namespace _Game.Scripts.FSM
             
             return default;
         }
-
+        
         public bool Equals<T>() where T : FsmAbstractState
         {
             if(_currentState.GetType() == typeof(T))

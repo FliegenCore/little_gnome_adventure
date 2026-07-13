@@ -53,6 +53,11 @@ namespace _Game.Scripts.CameraSystem
                 .AddTo(_cinemachineConfiner2D);
         }
 
+        public void SetPosition(Vector3 position)
+        {
+            CurrentCinemachineCamera.transform.position = position;
+        }
+
         private void ForceRebuildBounds()
         {
             _cinemachineConfiner2D.InvalidateBoundingShapeCache();

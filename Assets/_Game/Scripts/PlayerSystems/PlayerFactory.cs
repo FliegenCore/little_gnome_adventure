@@ -100,7 +100,9 @@ namespace _Game.Scripts.PlayerSystems
                 playerStateMachine,
                 interactionController, 
                 _inventory,
-                _eventBus);
+                _eventBus,
+                _cameraController
+                );
             
             player.PlayerView.Activator.Construct(playerModel.IsActive);
             

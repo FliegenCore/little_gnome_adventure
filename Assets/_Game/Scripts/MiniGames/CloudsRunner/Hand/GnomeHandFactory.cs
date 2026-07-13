@@ -44,19 +44,26 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand
             GnomeHandAnimationModel animationModel = new GnomeHandAnimationModel();
             
             gnomeHandView.GnomeHandAnimationView.Construct(animationModel);
-                
+
+            GroundChecker groundChecker = new GroundChecker(gnomeHandView.ContactColliderProvider, gnomeHandView.ContactTriggerProvider);
+            
             GnomeHandModel gnomeHandModel = new GnomeHandModel(
                 transformation,
                 moveDirectionInput, 
-                gnomeHandView.JumpAnimationCurve, 
                 animationModel,
-                5);
+                groundChecker,
+                5,
+                gnomeHandView.JumpDuration,
+                gnomeHandView.JumpHeight);
             
             gnomeHandView.Transformable.Construct(transformation);
             
             Fsm fsm = CreateFsm(gnomeHandModel);
             
-            GnomeHand hand = new GnomeHand(gnomeHandModel, gnomeHandView, fsm);
+            GnomeHand hand = new GnomeHand(
+                gnomeHandModel,
+                gnomeHandView,
+                fsm);
             
             _updateController.AddListener(hand);
             
@@ -70,9 +77,9 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand
             Fsm fsm = new Fsm();
             
             fsm.AddState(new GnomeHandIdleState(fsm, model));
-            fsm.AddState(new GnomeHandJumpState(fsm, model));
             fsm.AddState(new GnomeHandMoveState(fsm, model));
-            
+            fsm.AddState(new GnomeHandAirState(fsm, model));
+            fsm.AddState(new GnomeHandJumpState(fsm, model));
             fsm.SetState<GnomeHandIdleState>();
             
             return fsm;

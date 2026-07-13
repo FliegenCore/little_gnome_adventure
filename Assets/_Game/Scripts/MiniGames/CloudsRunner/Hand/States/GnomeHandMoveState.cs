@@ -7,52 +7,64 @@ namespace _Game.Scripts.MiniGames.CloudsRunner.Hand.States
     {
         public GnomeHandMoveState(Fsm fsm, GnomeHandModel handModel) : base(fsm, handModel)
         {
-            
         }
         
         public override void Enter()
         {
             base.Enter();
-
+            
             _handModel.AnimationModel.IsMoveAnimation.Value = true;
+            
+            _handModel.MoveDirectionInput.JumpEvent += OnJump;
+            _handModel.GroundChecker.OnGroundChange += OnGroundChanged;
         }
         
         public override void Update(float deltaTime)
         {
             base.Update(deltaTime);
             
-            if (!_handModel.MoveDirectionInput.GetCanMove())
-            {
-                _handModel.Transformation.Direction.Value = Vector2.zero;
-                _fsm.SetState<GnomeHandIdleState>();
-                return;
-            }
-
-            if (_handModel.MoveDirectionInput.GetDirection() == Vector2.zero)
-            {
-                _fsm.SetState<GnomeHandIdleState>();
-                _handModel.Transformation.Direction.Value = Vector2.zero;
-        
-                return;
-            }
-    
-            Vector2 moveDirection = new Vector2(_handModel.MoveDirectionInput.GetDirection().x, 0);
+            Vector2 currentDirection = _handModel.Transformation.Direction.Value;
             
-            _handModel.Transformation.Direction.Value = moveDirection * _handModel.MoveSpeed;
-    
-            if (moveDirection.x != 0)
+            float targetX = _handModel.MoveDirectionInput.GetDirection().x * _handModel.MoveSpeed;
+            
+            if (_handModel.MoveDirectionInput.GetDirection() == Vector2.zero || 
+                !_handModel.MoveDirectionInput.GetCanMove())
             {
-                Vector3 currentScale = _handModel.Transformation.Scale.Value; 
-                currentScale.x = Mathf.Abs(currentScale.x) * (moveDirection.x > 0 ? 1 : -1);
-                _handModel.Transformation.Scale.Value = currentScale;
+                currentDirection.x = 0;
+                _handModel.Transformation.Direction.Value = currentDirection;
+                _fsm.SetState<GnomeHandIdleState>();
+                return;
             }
+            
+            currentDirection.x = targetX;
+            _handModel.Transformation.Direction.Value = currentDirection;
         }
 
         public override void Exit()
         {
             base.Exit();
+            
             _handModel.AnimationModel.IsMoveAnimation.Value = false;
+            
+            _handModel.MoveDirectionInput.JumpEvent -= OnJump;
+            _handModel.GroundChecker.OnGroundChange -= OnGroundChanged;
+        }
 
+        private void OnJump()
+        {
+            if (_handModel.GroundChecker.OnGround)
+            {
+                _fsm.SetState<GnomeHandJumpState>();
+            }
+        }
+
+        private void OnGroundChanged(bool isGround)
+        {
+            if (!isGround)
+            {
+                _handModel.CurrentJumpVelocity.Value = -0.5f;
+                _fsm.SetState<GnomeHandAirState>();
+            }
         }
     }
 }

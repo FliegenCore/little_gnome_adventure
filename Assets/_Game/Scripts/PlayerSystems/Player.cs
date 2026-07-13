@@ -1,4 +1,5 @@
 using System;
+using _Game.Scripts.CameraSystem;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.InteractionSystems;
@@ -12,6 +13,7 @@ namespace _Game.Scripts.PlayerSystems
     public class Player : IUpdateListener, ITeleportable, IDisposable
     {
         private readonly Inventory _inventory;
+        private readonly CameraController _cameraController;
         private readonly Fsm _motionStateMachine;
         private readonly Fsm _playerStateMachine;
         private readonly EventBus _eventBus;
@@ -27,15 +29,18 @@ namespace _Game.Scripts.PlayerSystems
             Fsm playerStateMachine, 
             InteractionController interactionController,
             Inventory inventory,
-            EventBus eventBus)
+            EventBus eventBus,
+            CameraController cameraController
+            )
         {
-            _inventory = inventory;
-            _eventBus = eventBus;
+            _inventory            = inventory;
+            _eventBus             = eventBus;
             InteractionController = interactionController;
-            PlayerModel = playerModel;
-            PlayerView = playerView;
-            _motionStateMachine = motionStateMachine;
-            _playerStateMachine = playerStateMachine;
+            PlayerModel           = playerModel;
+            PlayerView            = playerView;
+            _motionStateMachine   = motionStateMachine;
+            _playerStateMachine   = playerStateMachine;
+            _cameraController     = cameraController;
             
             _eventBus.Subscribe<SetPlayerStateSignal, Type>(this, SetPlayerState);
             _eventBus.Subscribe<SetPlayerMotionStateSignal, Type>(this, SetPlayerMotionState);
@@ -60,6 +65,7 @@ namespace _Game.Scripts.PlayerSystems
         public void Teleport(Vector2 position)
         {
             PlayerModel.Transformation.Position.Value = position;
+            _cameraController.SetPosition(new Vector3(position.x, position.y, -5f));
         }
 
         private void SetActive(bool isActive)
