@@ -8,11 +8,13 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
     {
         public readonly IReadOnlyList<AbstractInteractable> Interactables;
         public readonly Observable<bool> IsOpen;
+        public readonly bool CanClose;
         
-        public InspectModel(params AbstractInteractable[] interactables)
+        public InspectModel(bool canClose = true, params AbstractInteractable[] interactables)
         {
             Interactables = new List<AbstractInteractable>(interactables);
-            IsOpen = new Observable<bool>(false);   
+            IsOpen = new Observable<bool>(false);
+            CanClose = canClose;
         }
     }
 }

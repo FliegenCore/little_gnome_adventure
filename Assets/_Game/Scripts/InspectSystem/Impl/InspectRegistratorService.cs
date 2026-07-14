@@ -48,7 +48,7 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             BaseItem toy = CreateInteractableItem(ItemId.Toy, toyView, true);
             BaseItem apple = CreateInteractableItem(ItemId.Apple, appleView, true);
             
-            RegisterInspect("Nightstand", inspectsView.InspectNightstandView, null, toy, apple);
+            RegisterInspect("Nightstand", inspectsView.InspectNightstandView, true, null, toy, apple);
         }
 
         private void RegisterTable()
@@ -57,14 +57,19 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             RegisterInspect("Table", inspectsView.Table);
         }
 
-        public void RegisterInspect(string id, InspectAbstractView view, InspectInputHandler inspectInputHandler = null, params AbstractInteractable[] interactables)
+        public void RegisterInspect(string id, InspectAbstractView view, bool isClosable = true, InspectInputHandler inspectInputHandler = null, params AbstractInteractable[] interactables)
         {
-            InspectModel inspectModel = new InspectModel(interactables);
+            InspectModel inspectModel = new InspectModel(isClosable, interactables);
             
             if(view != null)
                 view.Activator.Construct(inspectModel.IsOpen);
             
             _inspectController.AddInspectModel(id, inspectModel, inspectInputHandler);
+        }
+
+        public void RegisterNotClosableInspects(string id, InspectAbstractView view, InspectInputHandler inspectInputHandler = null, params AbstractInteractable[] interactables)
+        {
+            RegisterInspect(id, view, false, inspectInputHandler, interactables);
         }
 
         private BaseItem CreateInteractableItem(ItemId id, BaseItemView view, bool isEnabled)

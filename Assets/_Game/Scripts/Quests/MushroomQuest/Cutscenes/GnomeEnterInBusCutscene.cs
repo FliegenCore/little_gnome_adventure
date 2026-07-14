@@ -2,8 +2,9 @@ using System;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.CutsceneSystem;
 using _Game.Scripts.FSM;
-using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.InspectSystem;
+using _Game.Scripts.PlayerSystems.InspectSystem.ViewVariants;
 using _Game.Scripts.PlayerSystems.MotionStates;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using _Game.Scripts.Quests.MushroomQuest.Busman.States;
@@ -22,6 +23,7 @@ namespace _Game.Scripts.Quests.MushroomQuest.Cutscenes
         private readonly Fsm _busMachine;
         private readonly CameraController _cameraController;
         private readonly ISoundManager _soundManager;
+        private readonly InspectAnimationView _busmanJumpAnimationInspect;
         
         public GnomeEnterInBusCutscene(
             EventBus eventBus, 
@@ -29,15 +31,17 @@ namespace _Game.Scripts.Quests.MushroomQuest.Cutscenes
             Transform busFollowPoint,
             Fsm busMachine,
             CameraController cameraController,
-            ISoundManager soundManager
+            ISoundManager soundManager,
+            InspectAnimationView busmanJumpAnimationInspect
             )
         {
-            _soundManager     = soundManager;
-            _cameraController = cameraController;
-            _eventBus         = eventBus;
-            _playerFactory    = playerFactory;
-            _busFollowPoint   = busFollowPoint;
-            _busMachine       = busMachine;
+            _busmanJumpAnimationInspect = busmanJumpAnimationInspect;
+            _soundManager               = soundManager;
+            _cameraController           = cameraController;
+            _eventBus                   = eventBus;
+            _playerFactory              = playerFactory;
+            _busFollowPoint             = busFollowPoint;
+            _busMachine                 = busMachine;
         }
 
         public override void Play(Action _)
@@ -68,7 +72,18 @@ namespace _Game.Scripts.Quests.MushroomQuest.Cutscenes
             _cameraController.ZoomTo(7, 0.25f, null);
             playerModel.IsActive.Value = false;
             
-            _busMachine.SetState<BusmanGnomeEnterState>();
+            _busMachine.SetState<BusmanGnomeEnterState>(OnBusmanLeft);
+        }
+
+        private void OnBusmanLeft()
+        {
+            _busmanJumpAnimationInspect.AnimationControl.SetAnimation(0, "2", callback: OnBusmanFlyAnimationEnd);
+            _eventBus.TriggerEvenet<ShowInspectWindowByIdSignal, string>(MushroomQuestManager.BUSMAN_JUMP_INSPECT_ANIMATION);
+        }
+
+        private void OnBusmanFlyAnimationEnd()
+        {
+            //_eventBus.TriggerEvenet<HideCurrentInspectWindowSignal>(); //TODO: переключить руму
         }
     }
 }

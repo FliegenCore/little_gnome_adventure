@@ -9,5 +9,6 @@ namespace _Game.Scripts.RoomSystems
         [field: SerializeField] public InspectTableView Table { get; private set; }
         [field: SerializeField] public LobotomyInspectView LobotomyInspectView { get; private set; }
         [field: SerializeField] public InspectEmptyView InstructionPaper { get; private set; }
+        [field: SerializeField] public InspectAnimationView BusJumpAnimation { get; private set; }
     }
 }

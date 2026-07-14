@@ -91,7 +91,7 @@ namespace _Game.Scripts.PlayerSystems
             InteractionController interactionController = new InteractionController(_inputSystemActions, playerModel, _eventBus);
             _inventory = _inventoryFactory.CreateInventory(interactionController);
             
-            Fsm playerStateMachine = CreatePlayerStateMachine(playerModel, playerView);
+            Fsm playerStateMachine = CreatePlayerStateMachine(playerModel, playerView, interactionController);
 
             Player player = new Player(
                 playerModel,
@@ -118,11 +118,11 @@ namespace _Game.Scripts.PlayerSystems
             return _player;
         }
 
-        private Fsm CreatePlayerStateMachine(PlayerModel model, PlayerView playerView)
+        private Fsm CreatePlayerStateMachine(PlayerModel model, PlayerView playerView, InteractionController interactionController)
         {
             Fsm playerFsm = new Fsm();
             
-            playerFsm.AddState(new PlayerBaseState(playerFsm, model, _inventory, _eventBus, _cameraController, playerView));
+            playerFsm.AddState(new PlayerBaseState(playerFsm, model, _inventory, _eventBus, _cameraController, playerView, interactionController));
             playerFsm.AddState(new PlayerInventoryState(playerFsm, model, _inventory));
             playerFsm.AddState(new PlayerInspectState(playerFsm, model, _inspectController));
             playerFsm.AddState(new PlayerDisabledMotionState(playerFsm, model, _cameraController));

@@ -9,7 +9,7 @@ namespace _Game.Scripts.PlayerSystems.Animations.Impl
         Granny,
         Hedgehog,
         Busman,
-        OgcWoman,
+        OrcWoman,
         McMushroom,
     }
 }

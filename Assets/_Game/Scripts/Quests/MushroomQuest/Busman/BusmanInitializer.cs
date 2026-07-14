@@ -24,9 +24,8 @@ namespace _Game.Scripts.Quests.MushroomQuest.Busman.States
             fsm.AddState(new BusmanDoorOpenState(fsm, _busmanAnimation));
             fsm.AddState(new BusmanGnomeEnterState(fsm, _busmanAnimation));
             fsm.AddState(new BusmanIdleState(fsm, _busmanAnimation));
-            fsm.AddState(new BusmanStandState(fsm, _busmanAnimation));
             
-            fsm.SetState<BusmanDoorOpenState>();
+            fsm.SetState<BusmanIdleState>();
         }
     }
 }

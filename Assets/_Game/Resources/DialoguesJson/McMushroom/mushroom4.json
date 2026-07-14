@@ -70,7 +70,8 @@
       ],
       "OnEndEvents": [
         "a_Player_emotion/idle_1_1",
-        "a_McMushroom_drunk_0_1_(dialogue_skip_enable)"
+        "a_McMushroom_drunk_0_1_(dialogue_skip_enable)",
+        "inventory_add_Ticket"
       ],
       "ChoiceEvents": [],
       "Choices": [

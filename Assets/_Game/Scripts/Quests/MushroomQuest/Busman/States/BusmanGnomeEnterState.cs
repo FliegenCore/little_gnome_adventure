@@ -17,7 +17,6 @@ namespace _Game.Scripts.Quests.MushroomQuest.Busman.States
         {
             _animationControl.SetAnimation(0, "gnomecome", false, () =>
             {
-                _animationControl.SetAnimation(0, "stand");
                 _callback?.Invoke();
             });
         }

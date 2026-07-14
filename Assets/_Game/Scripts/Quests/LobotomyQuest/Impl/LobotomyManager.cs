@@ -63,7 +63,7 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl
         private void RegisterLobotomy()
         {
             InspectsView inspectsView = _locationsRootView.InspectsView;
-            _inspectRegistratorService.RegisterInspect("Lobotomy", inspectsView.LobotomyInspectView, 
+            _inspectRegistratorService.RegisterInspect("Lobotomy", inspectsView.LobotomyInspectView,true,
                 new LobotomyInspectInput(_inputSystemActions, _eventBus),_needles.ToArray());
         }
 

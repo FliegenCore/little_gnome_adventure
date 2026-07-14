@@ -13,6 +13,7 @@ namespace _Game.Scripts.InventorySystem
         Wrapper,
         Candy,
         Mushroom,
+        Ticket
     }
     
     [CreateAssetMenu(fileName = "InventoryItemConfig", menuName = "Hell/Inventory Item Config")]

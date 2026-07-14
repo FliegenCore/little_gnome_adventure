@@ -10,6 +10,7 @@ using _Game.Scripts.PlayerSystems.Animations.Factory;
 using _Game.Scripts.PlayerSystems.Animations.Impl;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours.Impl;
+using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using _Game.Scripts.Quests.MushroomQuest;
 using _Game.Scripts.Quests.StartGameQuest;
@@ -31,6 +32,8 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         private readonly InventoryProxy _inventoryProxy;
         private readonly ItemFactory _itemFactory;
         private readonly ISoundManager _soundManager;
+        private readonly InspectRegistratorService _inspectRegistratorService;
+        private readonly CameraControllerHelper _cameraControllerHelper;
         
         private LocationAbstractState _lastCreated;
         public LocationAbstractState GetLastCreated()
@@ -38,7 +41,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             return _lastCreated;
         }
         
-        public DreamForestLocationFactory(
+        private DreamForestLocationFactory(
             RootViewFactory rootViewFactory,
             EventBus eventBus,
             IDialogueManager dialogueManager,
@@ -48,19 +51,23 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             ICutsceneManager cutsceneManager,
             InventoryProxy inventoryProxy,
             ItemFactory itemFactory,
-            ISoundManager soundManager
+            ISoundManager soundManager,
+            InspectRegistratorService inspectRegistratorService ,
+            CameraControllerHelper cameraControllerHelper
             )
         {
-            _soundManager          = soundManager;
-            _itemFactory           = itemFactory;
-            _inventoryProxy        = inventoryProxy;
-            _cameraController      = cameraController;
-            _interactableFactory   = interactableFactory;
-            _playerFactory         = playerFactory;
-            _dialogueManager       = dialogueManager;
-            _rootViewFactory       = rootViewFactory;
-            _eventBus              = eventBus;
-            _cutsceneManager       = cutsceneManager;
+            _cameraControllerHelper    = cameraControllerHelper;
+            _inspectRegistratorService = inspectRegistratorService;
+            _soundManager              = soundManager;
+            _itemFactory               = itemFactory;
+            _inventoryProxy            = inventoryProxy;
+            _cameraController          = cameraController;
+            _interactableFactory       = interactableFactory;
+            _playerFactory             = playerFactory;
+            _dialogueManager           = dialogueManager;
+            _rootViewFactory           = rootViewFactory;
+            _eventBus                  = eventBus;
+            _cutsceneManager           = cutsceneManager;
         }
         
         public LocationAbstractState Create(Fsm fsm)
@@ -93,7 +100,10 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
                     _itemFactory,
                     _playerFactory,
                     _cameraController,
-                    _soundManager
+                    _soundManager,
+                    _inspectRegistratorService,
+                    _rootViewFactory.GetLocationsRootView().InspectsView.BusJumpAnimation,
+                    _cameraControllerHelper
                     );
 
             mushroomQuestManager.Initialize();

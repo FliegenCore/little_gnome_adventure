@@ -33,11 +33,12 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             _inputs             = new Dictionary<string, InspectInputHandler>();
             
             _eventBus.Subscribe<ShowInspectWindowByIdSignal, string>(this, Show);
+            _eventBus.Subscribe<HideCurrentInspectWindowSignal>(this, Hide);
         }
         
         public void AddInspectModel(string id, InspectModel inspectModel, InspectInputHandler inspectInputHandler = null)
         {
-            Debug.Log($"{nameof(InspectController)} Register " + id + " inspect");
+            Debug.Log($"[{nameof(InspectController)}] Register " + id + " inspect");
             
             _inspectModels.Add(id, inspectModel);
             if(inspectInputHandler != null)
@@ -87,13 +88,11 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             }
         }
 
-        private void Hide(InputAction.CallbackContext _)
+        private void Hide()
         {
             if (_currentInspectModel == null)
-            {
                 return;
-            }
-
+            
             _currentInspectModel.IsOpen.Value = false;
             _currentInspectModel = null;
 
@@ -114,8 +113,19 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             _inspectCamera.gameObject.SetActive(false);
         }
 
+        private void Hide(InputAction.CallbackContext _)
+        {
+            if (!_currentInspectModel.CanClose)
+            {
+                return;
+            }
+
+            Hide();
+        }
+
         public void Dispose()
         {
+            _eventBus.Unsubscribe<HideCurrentInspectWindowSignal>(this);
             _eventBus.Unsubscribe<ShowInspectWindowByIdSignal>(this);
             _baseInputHandler?.Dispose();
         }

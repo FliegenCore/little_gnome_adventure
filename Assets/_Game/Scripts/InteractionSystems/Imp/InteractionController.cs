@@ -17,7 +17,7 @@ namespace _Game.Scripts.InteractionSystems
         private List<AbstractInteractable> _currentAbstractInteractables =  new List<AbstractInteractable>();
         private AbstractInteractable _currentAbstractInteractable;
         
-        private readonly CompositeDisposable _disposables = new CompositeDisposable();
+        private CompositeDisposable _disposables = new CompositeDisposable();
         private readonly CompositeDisposable _interactableOnPointDisposables = new CompositeDisposable();
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly PlayerModel _playerModel;
@@ -48,7 +48,8 @@ namespace _Game.Scripts.InteractionSystems
             {
                 _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = true;
             }
-            
+
+            _disposables = new CompositeDisposable();
             Observable.EveryUpdate()
                 .Subscribe(_ => SelectNearestCurrentInteractables())
                 .AddTo(_disposables);
@@ -58,7 +59,7 @@ namespace _Game.Scripts.InteractionSystems
 
         public void StopUpdate()
         {
-            _disposables.Clear();
+            _disposables?.Dispose();
             _updateIsActive = false;
             
             if (_currentAbstractInteractable != null)
@@ -160,9 +161,8 @@ namespace _Game.Scripts.InteractionSystems
                             interactable.Interact(() =>
                             {
                                 _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
+                                StartUpdate();
                             });
-                    
-                            StartUpdate();
                         });
                 })
                 .AddTo(_interactableOnPointDisposables);
@@ -177,6 +177,11 @@ namespace _Game.Scripts.InteractionSystems
 
         public void InteractWithItem(AbstractInteractable abstractInteractable, InventoryItem item)
         {
+            if (!abstractInteractable.CanInteract())
+            {
+                return;
+            }
+            
             if (abstractInteractable.InteractableView.InteractPoint != null)
             {
                 if (abstractInteractable.InteractableView.BoxCollider2D != null)
@@ -211,9 +216,8 @@ namespace _Game.Scripts.InteractionSystems
                                 itemNeeder.InteractWithItem(item, () =>
                                 {
                                     _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
-
+                                    StartUpdate();
                                 });
-                                StartUpdate();
                             });
                     }
                 })

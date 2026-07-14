@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.FSM;
+using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InventorySystem;
 using _Game.Scripts.PlayerSystems.MotionStates;
 using Core.Common;
@@ -14,6 +15,7 @@ namespace _Game.Scripts.PlayerSystems.PlayerStates
         private readonly EventBus _eventBus;
         private readonly CameraController _cameraController;
         private readonly PlayerView _playerView;
+        private readonly InteractionController _interactionController;
         
         public PlayerBaseState(
             Fsm fsm, 
@@ -21,17 +23,20 @@ namespace _Game.Scripts.PlayerSystems.PlayerStates
             Inventory inventory,
             EventBus eventBus,
             CameraController cameraController,
-            PlayerView playerView
+            PlayerView playerView,
+            InteractionController interactionController
             ) : base(fsm, playerModel)
         {
-            _playerView        = playerView;
-            _cameraController  = cameraController;
-            _eventBus          = eventBus;
-            _inventory         = inventory;
+            _interactionController = interactionController;
+            _playerView            = playerView;
+            _cameraController      = cameraController;
+            _eventBus              = eventBus;
+            _inventory             = inventory;
         }
 
         public override void Enter()
         {
+            _interactionController.StartUpdate();
             _cameraController.SetFollowTarget(_playerView.transform);
             _playerModel.MoveDirectionInput.SetCanMove(true);
             _playerModel.CanInteract.Value = true;
@@ -44,6 +49,7 @@ namespace _Game.Scripts.PlayerSystems.PlayerStates
             _playerModel.MoveDirectionInput.SetCanMove(false);
             _playerModel.CanInteract.Value = false;
             _inventory.DisableOpenCloseInput();
+            _interactionController.StopUpdate();
         }
     }
 }

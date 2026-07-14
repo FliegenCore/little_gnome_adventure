@@ -94,6 +94,7 @@ Transform:
   - {fileID: 5517445687493731972}
   - {fileID: 6436786176044107022}
   - {fileID: 7323944496235957310}
+  - {fileID: 135647984879692506}
   m_Father: {fileID: 6368458148237311094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7322653323673480104
@@ -112,6 +113,7 @@ MonoBehaviour:
   <Table>k__BackingField: {fileID: 6724657917620797324}
   <LobotomyInspectView>k__BackingField: {fileID: 3370481208128514291}
   <InstructionPaper>k__BackingField: {fileID: 4860599157430999343}
+  <BusJumpAnimation>k__BackingField: {fileID: 2926975958258857309}
 --- !u!1001 &520748595488247767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -889,6 +891,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2406546053412865682, guid: 650f5d53af4e09240bfb6a2b51fecc0c, type: 3}
   m_PrefabInstance: {fileID: 6664415726434696864}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6997386339839608225
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4294551027665652015}
+    m_Modifications:
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698781738628421859, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_Name
+      value: BusmanJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698781738628421859, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+--- !u!4 &135647984879692506 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6988002031194599291, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+  m_PrefabInstance: {fileID: 6997386339839608225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2926975958258857309 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5297641555458207996, guid: adb3eb3cb56635e469bd09f88629cdce, type: 3}
+  m_PrefabInstance: {fileID: 6997386339839608225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5da4f92f04477ab80a9abc31e0fa37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7467196254054049537
 PrefabInstance:
   m_ObjectHideFlags: 0

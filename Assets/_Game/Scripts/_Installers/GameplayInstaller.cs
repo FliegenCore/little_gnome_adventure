@@ -63,6 +63,7 @@ namespace _Game.Scripts._Installers
             builder.RegisterInstance(_itemConfigs).AsSelf().AsImplementedInterfaces();
             builder.Register<OutlineHintController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CameraController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<CameraControllerHelper>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<PlayerFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorsService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
