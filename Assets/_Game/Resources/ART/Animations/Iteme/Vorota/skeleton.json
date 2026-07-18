@@ -1,0 +1,129 @@
+{
+"skeleton": {
+	"hash": "qMcF2y533JciL7P/3V2j4sMoTe4",
+	"spine": "3.8.0",
+	"x": -228.58,
+	"y": -56.81,
+	"width": 492,
+	"height": 993.55,
+	"images": "",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 435.6, "rotation": -89.83, "x": -3.48, "y": 443.99 },
+	{ "name": "bone2", "parent": "root", "length": 162.54, "rotation": -13.64, "x": -80.83, "y": 4.52 }
+],
+"slots": [
+	{ "name": "vorota", "bone": "bone", "attachment": "vorota" },
+	{ "name": "shadow", "bone": "bone2", "attachment": "shadow" },
+	{ "name": "RAMdel", "bone": "root", "attachment": "RAMdel" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"RAMdel": {
+				"RAMdel": { "x": 17.42, "y": 445.24, "width": 492, "height": 983 }
+			},
+			"shadow": {
+				"shadow": { "x": 84.01, "y": 3.57, "rotation": 13.64, "width": 299, "height": 90 }
+			},
+			"vorota": {
+				"vorota": { "x": 222.01, "y": 5.3, "rotation": 89.83, "width": 347, "height": 510 }
+			}
+		}
+	}
+],
+"events": {
+	"event_vorotaopen": {}
+},
+"animations": {
+	"idle": {
+		"slots": {
+			"RAMdel": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{}
+				]
+			}
+		}
+	},
+	"idleopen": {
+		"slots": {
+			"RAMdel": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"shadow": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "y": 398.76 }
+				],
+				"scale": [
+					{ "x": 0.8 }
+				],
+				"shear": [
+					{ "y": 6.44 }
+				]
+			}
+		}
+	},
+	"open": {
+		"slots": {
+			"RAMdel": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"shadow": {
+				"color": [
+					{ "time": 0.5333, "color": "ffffffff" },
+					{ "time": 0.8667, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "y": -5.44 },
+					{ "time": 0.1667, "y": 8.17 },
+					{ "time": 0.3333 },
+					{ "time": 0.5333, "y": -5.02 },
+					{ "time": 1.1333, "y": 416.91 },
+					{ "time": 1.3333, "y": 363.65 },
+					{ "time": 1.5333, "y": 373.35 },
+					{ "time": 1.8667, "y": 409.65 },
+					{ "time": 2.3333, "y": 398.76 },
+					{ "time": 4, "y": 373.35 },
+					{ "time": 4.3333, "y": 398.76 }
+				],
+				"scale": [
+					{ "time": 0.5333 },
+					{ "time": 1.1333, "x": 0.8 }
+				],
+				"shear": [
+					{ "time": 0.5333 },
+					{ "time": 1.1333, "y": 6.44 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 1.1333, "name": "event_vorotaopen" }
+		]
+	}
+}
+}

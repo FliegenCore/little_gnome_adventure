@@ -1,138 +1,145 @@
 
 windowOrk.png
-size: 1459,378
+size: 1085,521
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 back
-  rotate: false
-  xy: 384, 29
+  rotate: true
+  xy: 369, 139
   size: 380, 347
   orig: 387, 351
   offset: 3, 2
   index: -1
 body
   rotate: false
-  xy: 1028, 278
+  xy: 718, 421
   size: 344, 98
   orig: 348, 102
   offset: 2, 2
   index: -1
 brow
-  rotate: true
-  xy: 1386, 27
+  rotate: false
+  xy: 581, 2
   size: 66, 29
   orig: 72, 34
   offset: 3, 3
   index: -1
 brow2
-  rotate: true
-  xy: 1417, 12
+  rotate: false
+  xy: 812, 4
   size: 58, 36
   orig: 65, 41
   offset: 4, 3
   index: -1
+cup
+  rotate: true
+  xy: 581, 33
+  size: 104, 103
+  orig: 104, 103
+  offset: 0, 0
+  index: -1
 eye
   rotate: false
-  xy: 1028, 2
+  xy: 872, 97
   size: 200, 60
   orig: 204, 64
   offset: 2, 2
   index: -1
 eyepoint
-  rotate: false
-  xy: 384, 6
+  rotate: true
+  xy: 1062, 273
   size: 146, 21
   orig: 150, 25
   offset: 2, 2
   index: -1
 hair1
-  rotate: false
-  xy: 1235, 178
+  rotate: true
+  xy: 87, 13
   size: 124, 98
   orig: 128, 102
   offset: 2, 2
   index: -1
 hair2
   rotate: false
-  xy: 1028, 161
+  xy: 187, 22
   size: 205, 115
   orig: 209, 119
   offset: 2, 2
   index: -1
 hand
   rotate: true
-  xy: 1028, 64
+  xy: 686, 42
   size: 95, 175
   orig: 99, 179
   offset: 2, 2
   index: -1
 head
-  rotate: false
-  xy: 766, 34
+  rotate: true
+  xy: 718, 159
   size: 260, 342
   orig: 265, 346
   offset: 2, 2
   index: -1
 nose
   rotate: false
-  xy: 532, 14
+  xy: 187, 7
   size: 30, 13
   orig: 34, 17
   offset: 2, 2
   index: -1
 rot1
-  rotate: false
-  xy: 1235, 86
+  rotate: true
+  xy: 489, 27
   size: 110, 90
   orig: 114, 94
   offset: 2, 2
   index: -1
 rot2
   rotate: true
-  xy: 1361, 135
+  xy: 394, 25
   size: 112, 93
   orig: 116, 98
   offset: 2, 3
   index: -1
 ticket
   rotate: true
-  xy: 1374, 249
+  xy: 2, 10
   size: 127, 83
   orig: 131, 87
   offset: 2, 2
   index: -1
 uho
   rotate: false
-  xy: 1230, 5
+  xy: 872, 16
   size: 76, 79
   orig: 80, 83
   offset: 2, 2
   index: -1
 uho2
   rotate: false
-  xy: 1308, 5
+  xy: 950, 16
   size: 76, 79
   orig: 80, 83
   offset: 2, 2
   index: -1
 veko
   rotate: false
-  xy: 1347, 95
+  xy: 686, 2
   size: 61, 38
   orig: 65, 42
   offset: 2, 2
   index: -1
 veko2
-  rotate: true
-  xy: 1417, 72
+  rotate: false
+  xy: 749, 2
   size: 61, 38
   orig: 65, 42
   offset: 2, 2
   index: -1
 window
-  rotate: false
-  xy: 2, 11
+  rotate: true
+  xy: 2, 139
   size: 380, 365
   orig: 380, 365
   offset: 0, 0

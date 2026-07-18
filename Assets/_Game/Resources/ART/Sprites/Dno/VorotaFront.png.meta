@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b9c1c24db7940643bf4c870d9c0cdd6
+guid: f8f4538f26d492541815305a89ee9289
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6203625939277730471
-    second: dnoSky_0
+      213: -6709993019279578122
+    second: VorotaFront_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,14 +100,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dnoSky_0
+      name: VorotaFront_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 4000
-        height: 1600
-      alignment: 6
+        width: 1056
+        height: 1365
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95da3f1931b48e9a0800000000000000
-      internalID: -6203625939277730471
+      spriteID: 6fb6d7866e051e2a0800000000000000
+      internalID: -6709993019279578122
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d4d4409f6d5e24041850d6bb450d9bfb
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dnoSky_0: -6203625939277730471
+      VorotaFront_0: -6709993019279578122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

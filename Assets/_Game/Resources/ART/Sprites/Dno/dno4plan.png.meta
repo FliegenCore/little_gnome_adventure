@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b9c1c24db7940643bf4c870d9c0cdd6
+guid: 4f42987349493b34298733e91044d204
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6203625939277730471
-    second: dnoSky_0
+      213: -4744852140989639801
+    second: dno4plan_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,14 +100,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dnoSky_0
+      name: dno4plan_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 4000
-        height: 1600
-      alignment: 6
+        width: 566
+        height: 858
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95da3f1931b48e9a0800000000000000
-      internalID: -6203625939277730471
+      spriteID: 7839f88fd16e62eb0800000000000000
+      internalID: -4744852140989639801
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d4d4409f6d5e24041850d6bb450d9bfb
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dnoSky_0: -6203625939277730471
+      dno4plan_0: -4744852140989639801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

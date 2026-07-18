@@ -1,0 +1,121 @@
+{
+"skeleton": {
+	"hash": "2HdOJt9bQ+1QSZeJI/K63HgqfBc",
+	"spine": "3.8.0",
+	"x": -337.54,
+	"y": -112.8,
+	"width": 655,
+	"height": 237.99,
+	"images": "",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 105.14, "rotation": -61.56, "x": -6.31, "y": 69.62 },
+	{ "name": "bone2", "parent": "bone", "length": 73.96, "rotation": -89.83, "x": 116.25, "y": 7.49 }
+],
+"slots": [
+	{ "name": "telo", "bone": "root", "attachment": "telo" },
+	{ "name": "paper", "bone": "bone2", "attachment": "paper" },
+	{ "name": "hand", "bone": "bone", "attachment": "hand" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"paper": {
+				"paper": { "x": 32.09, "y": 0.22, "rotation": 166.45, "width": 146, "height": 102 }
+			},
+			"hand": {
+				"hand": { "x": 56.95, "y": 2.97, "rotation": 61.56, "width": 80, "height": 117 }
+			},
+			"telo": {
+				"telo": { "x": -10.04, "y": 37.69, "width": 655, "height": 175 }
+			}
+		}
+	}
+],
+"animations": {
+	"idle": {
+		"bones": {
+			"bone2": {
+				"shear": [
+					{},
+					{ "time": 0.8333, "x": 8.81 },
+					{ "time": 2 }
+				]
+			}
+		}
+	},
+	"idle2": {
+		"slots": {
+			"paper": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "angle": -14.94 }
+				]
+			}
+		}
+	},
+	"take": {
+		"slots": {
+			"paper": {
+				"color": [
+					{ "time": 1.1667, "color": "ffffffff" },
+					{ "time": 1.3333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "angle": 9.56 },
+					{ "time": 0.5667 },
+					{ "time": 0.7, "angle": 10.99 },
+					{ "time": 1, "curve": "stepped" },
+					{ "time": 1.3333 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0.6667 },
+					{ "time": 1, "angle": 109.29 },
+					{ "time": 1.3333, "angle": 156.38 }
+				],
+				"translate": [
+					{ "time": 0.6667 },
+					{ "time": 0.8333, "x": -101.58, "y": 108.55 },
+					{ "time": 1, "x": -285.98, "y": 149.67 },
+					{ "time": 1.3333, "x": 132.04, "y": -71.52 }
+				],
+				"scale": [
+					{ "time": 0.8333 },
+					{ "time": 1, "x": 1.381, "y": 1.381 }
+				],
+				"shear": [
+					{},
+					{ "time": 0.3333, "y": 14.88 },
+					{ "time": 0.6667, "y": 0.72 },
+					{ "time": 1, "x": 13.24, "y": -21.89 },
+					{ "time": 1.3333, "x": -16.22, "y": 8.64 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 1,
+				"offsets": [
+					{ "slot": "paper", "offset": 1 }
+				]
+			}
+		]
+	}
+}
+}
