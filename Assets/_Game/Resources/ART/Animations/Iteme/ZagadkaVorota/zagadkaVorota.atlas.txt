@@ -1,0 +1,48 @@
+
+zagadkaVorota.png
+size: 1205,727
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BACK
+  rotate: false
+  xy: 734, 241
+  size: 469, 484
+  orig: 475, 488
+  offset: 3, 2
+  index: -1
+BAZA
+  rotate: false
+  xy: 2, 2
+  size: 730, 723
+  orig: 734, 728
+  offset: 2, 3
+  index: -1
+P1
+  rotate: false
+  xy: 734, 49
+  size: 121, 81
+  orig: 125, 85
+  offset: 2, 2
+  index: -1
+P2
+  rotate: true
+  xy: 857, 74
+  size: 56, 46
+  orig: 60, 50
+  offset: 2, 2
+  index: -1
+PS1
+  rotate: false
+  xy: 734, 132
+  size: 176, 107
+  orig: 216, 134
+  offset: 23, 15
+  index: -1
+PS2
+  rotate: false
+  xy: 912, 167
+  size: 72, 72
+  orig: 91, 95
+  offset: 11, 10
+  index: -1
