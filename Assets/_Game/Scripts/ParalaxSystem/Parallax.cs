@@ -5,7 +5,7 @@ namespace _Game.Scripts.ParalaxSystem
 {
     public class Parallax : MonoBehaviour
     {
-        [SerializeField, Range(0f, 1f)] private float _parallaxStrength;
+        [SerializeField, Range(-1f, 1f)] private float _parallaxStrength;
         
         private Camera _camera;
         private Vector3 _startPosition;
