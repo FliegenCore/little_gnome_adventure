@@ -1,62 +1,21 @@
 {
   "Nodes": [
     {
-      "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
-      "DialogueName": "McMushroom",
-      "Text": "Ой, извини, я наверное тебя напугал",
-      "Type": 0,
-      "Position": {
-        "x": 154.0,
-        "y": 210.0,
-        "normalized": {
-          "x": 0.591363668,
-          "y": 0.806405067,
-          "normalized": {
-            "x": 0.5913636,
-            "y": 0.806404948,
-            "normalized": {
-              "x": 0.591363668,
-              "y": 0.806405,
-              "magnitude": 1.0,
-              "sqrMagnitude": 1.0
-            },
-            "magnitude": 0.99999994,
-            "sqrMagnitude": 0.9999999
-          },
-          "magnitude": 1.00000012,
-          "sqrMagnitude": 1.00000012
-        },
-        "magnitude": 260.415039,
-        "sqrMagnitude": 67816.0
-      },
-      "IsStartNode": false,
-      "OnStartEvents": [
-        "a_McMushroom_speak_0_1"
-      ],
-      "OnEndEvents": [
-        "a_Player_emotion/idle_1_1"
-      ],
-      "ChoiceEvents": [],
-      "Choices": [
-        "Next dialogue"
-      ]
-    },
-    {
       "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
       "DialogueName": "McMushroom",
-      "Text": "ЧЕЛОВЕК!",
+      "Text": "Эй, мелкий! Стой, у меня твой билет",
       "Type": 0,
       "Position": {
-        "x": -249.0,
-        "y": 169.0,
+        "x": -365.0,
+        "y": 204.0,
         "normalized": {
-          "x": -0.827420652,
-          "y": 0.5615827,
+          "x": -0.872913539,
+          "y": 0.487874955,
           "magnitude": 1.0,
           "sqrMagnitude": 1.0
         },
-        "magnitude": 300.9352,
-        "sqrMagnitude": 90562.0
+        "magnitude": 418.139923,
+        "sqrMagnitude": 174841.0
       },
       "IsStartNode": true,
       "OnStartEvents": [
@@ -72,19 +31,19 @@
     {
       "NodeId": "3b7b4b02-2e57-4ad2-9aa6-691777916704",
       "DialogueName": "McMushroom",
-      "Text": "Есть чё? ",
+      "Text": "Топай уже! ТРИ ГРИБА! Я ЖДУ!",
       "Type": 0,
       "Position": {
-        "x": 517.0,
-        "y": 261.0,
+        "x": 578.0,
+        "y": 215.0,
         "normalized": {
-          "x": 0.8926938,
-          "y": 0.450663626,
+          "x": 0.93725884,
+          "y": 0.348634362,
           "magnitude": 1.0,
-          "sqrMagnitude": 0.99999994
+          "sqrMagnitude": 1.0
         },
-        "magnitude": 579.145935,
-        "sqrMagnitude": 335410.0
+        "magnitude": 616.691956,
+        "sqrMagnitude": 380309.0
       },
       "IsStartNode": false,
       "OnStartEvents": [
@@ -92,6 +51,35 @@
       ],
       "OnEndEvents": [
         "a_McMushroom_idle"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
+      "DialogueName": "McMushroom",
+      "Text": "Не, Это особенный билет для приключений Я отдам тебе его в обмен на три красных гриба!",
+      "Type": 0,
+      "Position": {
+        "x": -21.0,
+        "y": 214.0,
+        "normalized": {
+          "x": -0.09766174,
+          "y": 0.995219648,
+          "magnitude": 1.0,
+          "sqrMagnitude": 0.99999994
+        },
+        "magnitude": 215.027908,
+        "sqrMagnitude": 46237.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [
+        "a_McMushroom_speak_0_1"
+      ],
+      "OnEndEvents": [
+        "a_Player_emotion/idle_1_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
