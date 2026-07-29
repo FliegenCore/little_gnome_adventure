@@ -1,4 +1,5 @@
 using _Game.Scripts.PlayerSystems.InspectSystem.ViewVariants;
+using _Game.Scripts.Quests.ClanDoorQuest.Gates;
 using UnityEngine;
 
 namespace _Game.Scripts.RoomSystems
@@ -10,6 +11,6 @@ namespace _Game.Scripts.RoomSystems
         [field: SerializeField] public LobotomyInspectView LobotomyInspectView { get; private set; }
         [field: SerializeField] public InspectEmptyView InstructionPaper { get; private set; }
         [field: SerializeField] public InteractableAnimationView BusJumpInteractableAnimation { get; private set; }
-        [field: SerializeField] public InteractableAnimationView GatesPassword { get; private set; }
+        [field: SerializeField] public HellGatesPasswordInspectView GatesPassword { get; private set; }
     }
 }

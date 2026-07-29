@@ -25,11 +25,6 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates
         {
             _currentInspectModel = inspectModel;
 
-            if (_currentInspectModel.Interactables.Count <= 0)
-                return;
-            
-            SelectFirst();
-            
             _inputSystemActions.UI.Navigate.performed += Navigate;
             _inputSystemActions.Player.Interact.performed += Interact;
         }
@@ -53,26 +48,28 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates
         {
             Vector2 direction = callback.ReadValue<Vector2>();
             
+            int index = _hellGatesPasswordModel.CurrentIndex.Value;
+            
             if (direction.x != 0)
             {
                 if (direction.x > 0)
                 {
-                    SetCurrentIndex(_hellGatesPasswordModel.CurrentIndex.Value + 1);
+                    SetCurrentIndex(index + 1);
                 }
                 else
                 {
-                    SetCurrentIndex(_hellGatesPasswordModel.CurrentIndex.Value - 1);
+                    SetCurrentIndex(index - 1);
                 }
             }
             else if (direction.y != 0)
             {
-                if (direction.y > 0)
+                if (direction.y < 0)
                 {
-                    SetCurrentIndex(_hellGatesPasswordModel.CurrentIndex.Value + 3);
+                    SetCurrentIndex(index + 3);
                 }
                 else
                 {
-                    SetCurrentIndex(_hellGatesPasswordModel.CurrentIndex.Value - 3);
+                    SetCurrentIndex(index - 3);
                 }
             }
         }
@@ -83,7 +80,7 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates
             {
                 _hellGatesPasswordModel.CurrentIndex.Value = 0;
             }
-            if (index > 8)
+            else if (index > 8)
             {
                 _hellGatesPasswordModel.CurrentIndex.Value = 8;
             }

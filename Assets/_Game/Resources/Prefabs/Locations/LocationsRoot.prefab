@@ -117,7 +117,7 @@ MonoBehaviour:
   <LobotomyInspectView>k__BackingField: {fileID: 3370481208128514291}
   <InstructionPaper>k__BackingField: {fileID: 4860599157430999343}
   <BusJumpInteractableAnimation>k__BackingField: {fileID: 2926975958258857309}
-  <GatesPassword>k__BackingField: {fileID: 5320580745490792863}
+  <GatesPassword>k__BackingField: {fileID: 1032660230132160059}
 --- !u!1001 &520748595488247767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -803,6 +803,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4294551027665652015}
     m_Modifications:
+    - target: {fileID: 1713262928615725115, guid: 0514412892e1f7145affda630282cc92, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 25936fbc058e66c489842bf00e3875de, type: 2}
     - target: {fileID: 2484971495682339048, guid: 0514412892e1f7145affda630282cc92, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -847,20 +851,43 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellGatesPassword
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2905291841746503536, guid: 0514412892e1f7145affda630282cc92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379934071072101570, guid: 0514412892e1f7145affda630282cc92, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b8165c5a4cfb22a4b929ab67aa1b8bbb, type: 2}
+    m_RemovedComponents:
+    - {fileID: 793542105732296559, guid: 0514412892e1f7145affda630282cc92, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2905291841746503536, guid: 0514412892e1f7145affda630282cc92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1032660230132160059}
   m_SourcePrefab: {fileID: 100100000, guid: 0514412892e1f7145affda630282cc92, type: 3}
---- !u!114 &5320580745490792863 stripped
+--- !u!114 &6029274445878003947 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 793542105732296559, guid: 0514412892e1f7145affda630282cc92, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1259051320432141851, guid: 0514412892e1f7145affda630282cc92, type: 3}
   m_PrefabInstance: {fileID: 4815831967280803568}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7675521491246131584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5da4f92f04477ab80a9abc31e0fa37, type: 3}
+  m_Script: {fileID: 11500000, guid: 456815eae5504e51981434456e57be3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6060380988427503711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1643683911055615663, guid: 0514412892e1f7145affda630282cc92, type: 3}
+  m_PrefabInstance: {fileID: 4815831967280803568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675521491246131584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d21dddbde184bebb85b0be7415035cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &6965135408944635416 stripped
@@ -868,6 +895,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2484971495682339048, guid: 0514412892e1f7145affda630282cc92, type: 3}
   m_PrefabInstance: {fileID: 4815831967280803568}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7675521491246131584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2905291841746503536, guid: 0514412892e1f7145affda630282cc92, type: 3}
+  m_PrefabInstance: {fileID: 4815831967280803568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1032660230132160059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675521491246131584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa60660af4b54bb49b637252c79e54c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Activator>k__BackingField: {fileID: 6060380988427503711}
+  _animationControl: {fileID: 6029274445878003947}
 --- !u!1001 &6664415726434696864
 PrefabInstance:
   m_ObjectHideFlags: 0

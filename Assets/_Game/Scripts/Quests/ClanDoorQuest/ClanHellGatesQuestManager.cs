@@ -50,13 +50,14 @@ namespace _Game.Scripts.Quests.ClanDoorQuest
 
         private void CreateGatesQuestInspect()
         {
-            InteractableAnimationView interactableAnimationView = _locationsRootView.InspectsView.GatesPassword;
-            
+            HellGatesPasswordInspectView interactableAnimationView = _locationsRootView.InspectsView.GatesPassword;
+           
             HellGatesPasswordModel hellGatesPasswordModel = new HellGatesPasswordModel(
                 null, 
                 Vector2.zero, 
                 nameof(HellGatesPasswordModel));
             
+            interactableAnimationView.Construct(hellGatesPasswordModel);
             
             HellGatesPasswordInput hellGatesPasswordInput = new HellGatesPasswordInput(
                 _inputSystemActions,
