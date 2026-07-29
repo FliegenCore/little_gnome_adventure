@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: zagadkaVorota_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 97b98f7efa00b6d459fc5f5a090d670c, type: 2}
+  - {fileID: 11400000, guid: 80e62be2d44d6ac4b8c3fc3f4702e546, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 097f372d90b69bc4895dd383e5315996, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: edfb493f21545cf44bd8ce6a1dd0a0ea, type: 3}
   skeletonDataModifiers: []
   fromAnimation: []
   toAnimation: []

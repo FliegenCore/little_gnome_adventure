@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: zagadkaVorota_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: a16105920387ed5409eea6767461cc9f, type: 3}
+  atlasFile: {fileID: 4900000, guid: 1e1eb090d1a345b4a8279010dcb4b0c0, type: 3}
   materials:
-  - {fileID: 2100000, guid: d941783be50027242b16c17a88fd278a, type: 2}
+  - {fileID: 2100000, guid: 25936fbc058e66c489842bf00e3875de, type: 2}
