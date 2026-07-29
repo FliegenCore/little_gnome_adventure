@@ -21,6 +21,7 @@ using _Game.Scripts.RoomSystems.Impl.CloudsRunner;
 using _Game.Scripts.RoomSystems.Impl.DreamForest;
 using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
 using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
+using _Game.Scripts.RoomSystems.Impl.FuckingHellWithGates;
 using _Game.Scripts.RoomSystems.Variants;
 using _Game.Scripts.Sound;
 using Unity.Cinemachine;
@@ -94,6 +95,7 @@ namespace _Game.Scripts._Installers
             builder.Register<HouseLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<TestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<FuckingHellWithGatesLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DreamLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DreamFirstQuestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DreamForestLocationFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
@@ -106,6 +108,7 @@ namespace _Game.Scripts._Installers
                     container.Resolve<HouseLocationFactory>(),
                     container.Resolve<TestLocationFactory>(),
                     container.Resolve<ForestLocationFactory>(),
+                    container.Resolve<FuckingHellWithGatesLocationFactory>(),
                     container.Resolve<DreamLocationFactory>(),
                     container.Resolve<DreamFirstQuestLocationFactory>(),
                     container.Resolve<DreamForestLocationFactory>(),

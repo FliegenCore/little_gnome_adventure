@@ -23,7 +23,7 @@ namespace _Game.Scripts.Quests.MushroomQuest.Cutscenes
         private readonly Fsm _busMachine;
         private readonly CameraController _cameraController;
         private readonly ISoundManager _soundManager;
-        private readonly InspectAnimationView _busmanJumpAnimationInspect;
+        private readonly InteractableAnimationView _busmanJumpInteractableAnimation;
         
         public GnomeEnterInBusCutscene(
             EventBus eventBus, 
@@ -32,10 +32,10 @@ namespace _Game.Scripts.Quests.MushroomQuest.Cutscenes
             Fsm busMachine,
             CameraController cameraController,
             ISoundManager soundManager,
-            InspectAnimationView busmanJumpAnimationInspect
+            InteractableAnimationView busmanJumpInteractableAnimation
             )
         {
-            _busmanJumpAnimationInspect = busmanJumpAnimationInspect;
+            _busmanJumpInteractableAnimation = busmanJumpInteractableAnimation;
             _soundManager               = soundManager;
             _cameraController           = cameraController;
             _eventBus                   = eventBus;
@@ -77,7 +77,7 @@ namespace _Game.Scripts.Quests.MushroomQuest.Cutscenes
 
         private void OnBusmanLeft()
         {
-            _busmanJumpAnimationInspect.AnimationControl.SetAnimation(0, "2", callback: OnBusmanFlyAnimationEnd);
+            _busmanJumpInteractableAnimation.AnimationControl.SetAnimation(0, "2", callback: OnBusmanFlyAnimationEnd);
             _eventBus.TriggerEvenet<ShowInspectWindowByIdSignal, string>(MushroomQuestManager.BUSMAN_JUMP_INSPECT_ANIMATION);
         }
 

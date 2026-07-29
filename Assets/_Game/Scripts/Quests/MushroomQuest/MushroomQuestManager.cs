@@ -34,7 +34,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
         private readonly CameraController _cameraController;
         private readonly ISoundManager _soundManager;
         private readonly InspectRegistratorService _inspectRegistratorService;
-        private readonly InspectAnimationView _busmanJumpAnimation;
+        private readonly InteractableAnimationView _busmanJumpInteractableAnimation;
         private readonly CameraControllerHelper _cameraControllerHelper;
 
         private BusmanInitializer _busmanInitializer;
@@ -50,12 +50,12 @@ namespace _Game.Scripts.Quests.MushroomQuest
             CameraController cameraController,
             ISoundManager soundManager,
             InspectRegistratorService inspectRegistratorService,
-            InspectAnimationView busmanJumpAnimationInspect,
+            InteractableAnimationView busmanJumpInteractableAnimation,
             CameraControllerHelper cameraControllerHelper
             )
         {
             _cameraControllerHelper    = cameraControllerHelper;
-            _busmanJumpAnimation       = busmanJumpAnimationInspect;
+            _busmanJumpInteractableAnimation       = busmanJumpInteractableAnimation;
             _inspectRegistratorService = inspectRegistratorService;
             _soundManager              = soundManager;
             _cameraController          = cameraController;
@@ -138,7 +138,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
                     _busmanInitializer.Fsm, 
                     _cameraController,
                     _soundManager,
-                    _busmanJumpAnimation
+                    _busmanJumpInteractableAnimation
                     );
             
             CreateCharacter(
@@ -155,7 +155,7 @@ namespace _Game.Scripts.Quests.MushroomQuest
         
         private void RegisterBusmanJumpAnimationInspect()
         {
-            _inspectRegistratorService.RegisterInspect(BUSMAN_JUMP_INSPECT_ANIMATION, _busmanJumpAnimation);
+            _inspectRegistratorService.RegisterInspect(BUSMAN_JUMP_INSPECT_ANIMATION, _busmanJumpInteractableAnimation);
         }
     }
 }

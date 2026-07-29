@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace _Game.Scripts.PlayerSystems.InspectSystem.ViewVariants
 {
-    public class InspectAnimationView : InspectEmptyView
+    public class InteractableAnimationView : InspectEmptyView
     {
         [field: SerializeField] public AnimationControl AnimationControl { get; private set; }
     }

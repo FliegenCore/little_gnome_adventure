@@ -102,7 +102,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
                     _cameraController,
                     _soundManager,
                     _inspectRegistratorService,
-                    _rootViewFactory.GetLocationsRootView().InspectsView.BusJumpAnimation,
+                    _rootViewFactory.GetLocationsRootView().InspectsView.BusJumpInteractableAnimation,
                     _cameraControllerHelper
                     );
 
