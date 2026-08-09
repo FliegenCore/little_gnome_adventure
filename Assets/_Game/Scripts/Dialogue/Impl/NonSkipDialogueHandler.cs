@@ -143,7 +143,6 @@ namespace _Game.Scripts.DialogueSystem
 
         public void Dispose()
         {
-            _dialogueManager?.Dispose();
             _writeDisposable?.Dispose();
             _dialogueWriter.OnLetterWrited -= _dialogueManager.PlayWriteAudio;
         }

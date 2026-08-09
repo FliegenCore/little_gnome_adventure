@@ -41,7 +41,7 @@ namespace _Game.Scripts.Hacks
                 
                 drowedNames.Add(door.DoorModel.ConnectedDoorId);
                 
-                if (GUI.Button(new Rect(10, y, 200, 30), door.DoorModel.ConnectedDoorId))
+                if (GUI.Button(new Rect(10, y, 500, 30), door.DoorModel.ConnectedDoorId))
                 {
                     door.Interact(null);
                 }
@@ -49,14 +49,26 @@ namespace _Game.Scripts.Hacks
                 y += 40;
             }
         }
-
-        private void PerformDebugFunction()
+        
+        private Vector2 GetScreenRatio()
         {
-            if (_doorsService != null)
+            int width = Screen.width;
+            int height = Screen.height;
+
+            int gcd = FindGCD(width, height);
+
+            return new Vector2(width / gcd, height / gcd);
+        }
+        
+        private int FindGCD(int a, int b)
+        {
+            while (b != 0)
             {
-                // Пример использования _doorsService
-                Debug.Log("Doors service is available");
+                int temp = b;
+                b = a % b;
+                a = temp;
             }
+            return a;
         }
 #endif
     }

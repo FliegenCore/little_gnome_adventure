@@ -2,6 +2,7 @@ using _Game.Scripts.InspectSystem;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.Quests.LobotomyQuest.Impl.Needle;
+using _Game.Scripts.RoomSystems.InputInfoSystem;
 using Core.Common;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,11 +11,11 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl
 {
     public class LobotomyInspectInput : InspectInputHandler
     {
-        private readonly EventBus _eventBus;
-        
-        public LobotomyInspectInput(InputSystem_Actions inputSystemActions, EventBus eventBus) : base(inputSystemActions)
+        public LobotomyInspectInput(
+            InputSystem_Actions inputSystemActions,
+            EventBus eventBus
+            ) : base(inputSystemActions, eventBus)
         {
-            _eventBus = eventBus;
         }
         
         public override void EnableInput(InspectModel inspectModel)
@@ -23,6 +24,13 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl
 
             if (_currentInspectModel.Interactables.Count <= 0)
                 return;
+
+            InputInfoGroup group1 = new InputInfoGroup("перемещение", EKeyIndex.A, EKeyIndex.D);
+            InputInfoGroup group2 = new InputInfoGroup("глубина", EKeyIndex.S, EKeyIndex.W);
+            InputInfoGroup group3 = new InputInfoGroup("подсказка", EKeyIndex.E);
+            InputInfoGroup group4 = new InputInfoGroup("выход", EKeyIndex.Esc);
+            
+            _eventBus.TriggerEvenet<ShowInputInfoViewSignal, InputInfoGroup[]>(new[] { group4, group3, group2, group1 });
             
             SelectFirst();
             
@@ -34,6 +42,8 @@ namespace _Game.Scripts.Quests.LobotomyQuest.Impl
         {
             _inputSystemActions.UI.Navigate.performed -= Navigate;
             _inputSystemActions.Player.Interact.performed -= Interact;
+            
+            _eventBus.TriggerEvenet<HideInputInfoViewSignal>();
             
             if (_selectedInteractable != null)
                 _selectedInteractable.AbstractInteractableModel.IsSelected.Value = false;

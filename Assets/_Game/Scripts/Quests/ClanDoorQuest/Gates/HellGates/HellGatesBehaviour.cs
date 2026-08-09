@@ -7,14 +7,19 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates
 {
     public class HellGatesBehaviour : ACustomBehaviour
     {
-        public HellGatesBehaviour(EventBus eventBus) : base(eventBus)
+        private readonly HellGatesModel _hellGatesModel;
+        
+        public HellGatesBehaviour(
+            EventBus eventBus,
+            HellGatesModel hellGatesModel
+        ) : base(eventBus)
         {
-            
+            _hellGatesModel = hellGatesModel;
         }
 
         public override bool CanInteract()
         {
-            return true;
+            return _hellGatesModel.CanInteract;
         }
 
         public override void Interact(Action callback)

@@ -2,6 +2,8 @@ using System;
 using System.Linq;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
+using _Game.Scripts.RoomSystems.InputInfoSystem;
+using Core.Common;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,12 +12,14 @@ namespace _Game.Scripts.InspectSystem
     public class InspectInputHandler : IDisposable
     {
         protected readonly InputSystem_Actions _inputSystemActions;
+        protected readonly EventBus _eventBus;
         
         protected  InspectModel _currentInspectModel;
         protected  AbstractInteractable _selectedInteractable;
 
-        public InspectInputHandler(InputSystem_Actions inputSystemActions)
+        public InspectInputHandler(InputSystem_Actions inputSystemActions, EventBus eventBus)
         {
+            _eventBus = eventBus;
             _inputSystemActions = inputSystemActions;
         }
         
@@ -23,9 +27,18 @@ namespace _Game.Scripts.InspectSystem
         {
             _currentInspectModel = inspectModel;
 
-            if (_currentInspectModel.Interactables.Count <= 0)
-                return;
+            InputInfoGroup exitGroup = new InputInfoGroup("выход", EKeyIndex.Esc);
             
+            if (_currentInspectModel.Interactables.Count <= 0)
+            {
+                _eventBus.TriggerEvenet<ShowInputInfoViewSignal, InputInfoGroup[]>(new [] {exitGroup});
+                return;
+            }
+            
+            InputInfoGroup moveGroup = new InputInfoGroup("перемещение", EKeyIndex.A, EKeyIndex.W,EKeyIndex.D, EKeyIndex.S);
+            InputInfoGroup eGroup = new InputInfoGroup("использовать", EKeyIndex.E);
+            
+            _eventBus.TriggerEvenet<ShowInputInfoViewSignal, InputInfoGroup[]>(new [] {moveGroup, exitGroup, eGroup});
             SelectFirst();
             
             _inputSystemActions.UI.Navigate.performed += Navigate;
@@ -34,6 +47,7 @@ namespace _Game.Scripts.InspectSystem
         
         public virtual void DisableInput()
         {
+            _eventBus.TriggerEvenet<HideInputInfoViewSignal>();
             _inputSystemActions.UI.Navigate.performed -= Navigate;
             _inputSystemActions.Player.Interact.performed -= InteractWithSelectedItem;
             
@@ -72,7 +86,8 @@ namespace _Game.Scripts.InspectSystem
         {
             AbstractInteractable bestCandidate = null;
             float bestDistance = float.MaxValue;
-    
+            if (_selectedInteractable == null)
+                return null;
             Vector2 currentPos = _selectedInteractable.AbstractInteractableModel.Position;
     
             foreach (var interactable in _currentInspectModel.Interactables)

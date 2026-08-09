@@ -2692,6 +2692,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1184213581
       objectReference: {fileID: 0}
+    - target: {fileID: 8745695217602173081, guid: fa157e7409b985346a5b6822734e7b6f, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745695217602173081, guid: fa157e7409b985346a5b6822734e7b6f, type: 3}
+      propertyPath: _animationName
+      value: idle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

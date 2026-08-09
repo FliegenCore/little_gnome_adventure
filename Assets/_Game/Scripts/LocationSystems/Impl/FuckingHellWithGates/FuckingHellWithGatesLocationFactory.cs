@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
 using _Game.Scripts.InteractionSystems.Interactables.Items.Managers;
@@ -10,7 +11,7 @@ using Core.Common;
 
 namespace _Game.Scripts.RoomSystems.Impl.FuckingHellWithGates
 {
-    public class FuckingHellWithGatesLocationFactory : ILocationFactory
+    public class FuckingHellWithGatesLocationFactory : ILocationFactory, IDisposable
     {
         private readonly RootViewFactory _rootViewFactory;
         private readonly EventBus _eventBus;
@@ -22,6 +23,8 @@ namespace _Game.Scripts.RoomSystems.Impl.FuckingHellWithGates
         private readonly ItemFactory _itemFactory;
         
         private LocationAbstractState _lastCreated;
+
+        private ClanHellGatesQuestManager _clanHellGatesQuestManager;
         
 
         public LocationAbstractState GetLastCreated()
@@ -72,7 +75,7 @@ namespace _Game.Scripts.RoomSystems.Impl.FuckingHellWithGates
 
         private void CreateQuest()
         {
-            ClanHellGatesQuestManager clanHellGatesQuestManager = new ClanHellGatesQuestManager(
+            _clanHellGatesQuestManager = new ClanHellGatesQuestManager(
                 _eventBus,
                 _inspectRegistratorService,
                 _rootViewFactory,
@@ -81,7 +84,12 @@ namespace _Game.Scripts.RoomSystems.Impl.FuckingHellWithGates
                 _itemFactory
                 );
             
-            clanHellGatesQuestManager.Initialize();
+            _clanHellGatesQuestManager.Initialize();
+        }
+
+        public void Dispose()
+        {
+            _clanHellGatesQuestManager?.Dispose();
         }
     }
 }

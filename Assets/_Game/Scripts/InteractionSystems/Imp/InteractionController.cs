@@ -46,7 +46,10 @@ namespace _Game.Scripts.InteractionSystems
             
             if (_currentAbstractInteractable != null)
             {
-                _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = true;
+                if (_currentAbstractInteractable.AbstractInteractableModel.CanSelected.Value)
+                    _currentAbstractInteractable.AbstractInteractableModel.IsSelected.Value = true;
+                else
+                    _currentAbstractInteractable = null;
             }
 
             _disposables = new CompositeDisposable();
@@ -84,6 +87,9 @@ namespace _Game.Scripts.InteractionSystems
                 if(nearestInteractable == abstractInteractable)
                     continue;
                 
+                if(!nearestInteractable.AbstractInteractableModel.CanSelected.Value)
+                   continue;
+                   
                 Vector2 itemPos = abstractInteractable.AbstractInteractableModel.Position;
                 
                 float currentItemDistance = Vector2.Distance(playerPos, nearestInteractable.AbstractInteractableModel.Position);

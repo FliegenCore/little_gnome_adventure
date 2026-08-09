@@ -29,11 +29,12 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             _inspectCamera      = inspectCamera;
             _eventBus           = eventBus;
             _inputSystemActions = inputSystemActions;
-            _baseInputHandler   = new InspectInputHandler(inputSystemActions);
+            _baseInputHandler   = new InspectInputHandler(inputSystemActions, eventBus);
             _inputs             = new Dictionary<string, InspectInputHandler>();
             
             _eventBus.Subscribe<ShowInspectWindowByIdSignal, string>(this, Show);
-            _eventBus.Subscribe<HideCurrentInspectWindowSignal>(this, Hide);
+            _eventBus.Subscribe<HideInspectWindowWithAcitvePlayerSignal>(this, HideWithActivePlayer);
+            _eventBus.Subscribe<HideInspectWindowSignal>(this, Hide);
         }
         
         public void AddInspectModel(string id, InspectModel inspectModel, InspectInputHandler inspectInputHandler = null)
@@ -49,13 +50,13 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
         
         public void EnableInput()
         {
-            _inputSystemActions.Player.Back.performed += Hide;
+            _inputSystemActions.Player.Back.performed += HideInput;
             _inputs[_currentInspectModelId].EnableInput(_currentInspectModel);
         }
 
         public void DisableInput()
         {
-            _inputSystemActions.Player.Back.performed -= Hide;
+            _inputSystemActions.Player.Back.performed -= HideInput;
             _inputs[_currentInspectModelId].DisableInput();
         }
         
@@ -108,25 +109,32 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
                 return;
             }
             
-            _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
-
             _inspectCamera.gameObject.SetActive(false);
         }
 
-        private void Hide(InputAction.CallbackContext _)
+        private void HideWithActivePlayer()
+        {
+            if (_inspectModelsQueue.Count <= 0)
+                _eventBus.TriggerEvenet<SetPlayerStateSignal, Type>(typeof(PlayerBaseState));
+            
+            Hide();
+        }
+
+        private void HideInput(InputAction.CallbackContext _)
         {
             if (!_currentInspectModel.CanClose)
             {
                 return;
             }
 
-            Hide();
+            HideWithActivePlayer();
         }
 
         public void Dispose()
         {
-            _eventBus.Unsubscribe<HideCurrentInspectWindowSignal>(this);
+            _eventBus.Unsubscribe<HideInspectWindowWithAcitvePlayerSignal>(this);
             _eventBus.Unsubscribe<ShowInspectWindowByIdSignal>(this);
+            _eventBus.Unsubscribe<HideInspectWindowSignal>(this);
             _baseInputHandler?.Dispose();
         }
     }

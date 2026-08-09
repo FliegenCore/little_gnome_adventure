@@ -8,7 +8,10 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates
     {
         public readonly ReactiveProperty<int> CurrentIndex = new ReactiveProperty<int>(0);
         public readonly ReactiveProperty<int> WritedCount = new ReactiveProperty<int>(0);
-        public readonly ReactiveProperty<string> CurrentPassword = new ReactiveProperty<string>();
+        public readonly ReactiveProperty<string> CurrentPassword = new ReactiveProperty<string>(string.Empty);
+        public readonly Subject<Unit> PressButton = new Subject<Unit>();
+        public bool PublicWriteLock = false;
+        public bool CanWrite = true;
         
         public HellGatesPasswordModel(
             IContactTriggerProvider contactTriggerProvider,

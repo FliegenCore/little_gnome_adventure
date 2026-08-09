@@ -19,6 +19,9 @@ namespace _Game.Scripts.PlayerSystems.Animations
 
         private void Awake()
         {
+            if (_skeletonAnimation == null)
+                return;
+            
             if (_animationState == null)
             {
                 _skeletonAnimation.Initialize(true);
@@ -87,7 +90,8 @@ namespace _Game.Scripts.PlayerSystems.Animations
 
         private void OnDestroy()
         {
-            _animationState.Event -= HandleEvent;
+            if(_animationState != null)
+                _animationState.Event -= HandleEvent;
         }
     }
 }

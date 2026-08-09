@@ -9,9 +9,12 @@ namespace _Game.Scripts.InventorySystem
         [SerializeField] private Image _image;
 
         private SpriteStorage _spriteStorage;
+
+        private Vector2 _spriteSize;
         
-        public void Construct(SpriteStorage spriteStorage)
+        public void Construct(SpriteStorage spriteStorage, Vector2 spriteSize = default)
         {
+            _spriteSize = spriteSize;
             _spriteStorage = spriteStorage;
             
             _spriteStorage.Sprite.Subscribe(SetSprite);
@@ -20,7 +23,11 @@ namespace _Game.Scripts.InventorySystem
         private void SetSprite(Sprite sprite)
         {
             _image.sprite = sprite;
-            _image.SetNativeSize();
+            
+            if (_spriteSize == default)
+                _image.SetNativeSize();
+            else
+                _image.rectTransform.sizeDelta = new Vector2(_spriteSize.x, _spriteSize.y);
         }
 
         private void OnDestroy()

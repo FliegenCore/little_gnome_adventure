@@ -3,7 +3,6 @@ using _Game.Scripts.CameraSystem;
 using _Game.Scripts.ChaptersSystem;
 using _Game.Scripts.CutsceneSystem.Impl;
 using _Game.Scripts.DialogueSystem;
-using _Game.Scripts.GameInitializeSystems;
 using _Game.Scripts.Hacks;
 using _Game.Scripts.InspectSystem.Camera;
 using _Game.Scripts.InteractionSystems.HintSystem;
@@ -22,8 +21,8 @@ using _Game.Scripts.RoomSystems.Impl.DreamForest;
 using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
 using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
 using _Game.Scripts.RoomSystems.Impl.FuckingHellWithGates;
+using _Game.Scripts.RoomSystems.InputInfoSystem;
 using _Game.Scripts.RoomSystems.Variants;
-using _Game.Scripts.Sound;
 using Unity.Cinemachine;
 using UnityEngine;
 using VContainer;
@@ -35,12 +34,14 @@ namespace _Game.Scripts._Installers
     {
         [SerializeField] private MergeItemConfig _mergeItemConfig;
         [SerializeField] private PlayerConfig _playerConfig;
+        [SerializeField] private InputInfoConfig _inputInfoConfig;
         [SerializeField] private CinemachineCamera _cinemachineCamera;
         [SerializeField] private Camera _mainCamera;
         [SerializeField] private InspectCamera _inspectCamera;
         [SerializeField] private InventoryView _inventoryView;
         [SerializeField] private ItemConfigs _itemConfigs;
         [SerializeField] private SelectedItemView _selectedItemView;
+        [SerializeField] private InputInfoView _inputInfoView;
         
         private void Start()
         {
@@ -55,10 +56,12 @@ namespace _Game.Scripts._Installers
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInstance(_playerConfig);
+            builder.RegisterInstance(_inputInfoConfig);
             builder.RegisterInstance(_mergeItemConfig);
             builder.RegisterInstance(_inspectCamera);
             builder.RegisterInstance(_mainCamera);
             builder.RegisterInstance(_selectedItemView);
+            builder.RegisterInstance(_inputInfoView);
             builder.RegisterInstance(_cinemachineCamera).AsSelf().AsImplementedInterfaces();
             builder.RegisterInstance(_inventoryView).AsSelf().AsImplementedInterfaces();
             builder.RegisterInstance(_itemConfigs).AsSelf().AsImplementedInterfaces();
@@ -70,6 +73,7 @@ namespace _Game.Scripts._Installers
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ItemFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<RootViewFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<InputInfoManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<GnomeHandFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CloudsRunnerInitializer>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             

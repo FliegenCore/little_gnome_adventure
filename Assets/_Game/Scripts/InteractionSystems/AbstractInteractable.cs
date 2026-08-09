@@ -3,6 +3,7 @@ using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
 using Core.Common;
+using UniRx;
 using UnityEngine;
 
 namespace _Game.Scripts.InteractionSystems
@@ -28,6 +29,15 @@ namespace _Game.Scripts.InteractionSystems
                 AbstractInteractableModel.ContactTriggerProvider.OnEnter += OnPlayerCollided;
                 AbstractInteractableModel.ContactTriggerProvider.OnExit += OnPlayerExit;
             }
+
+            AbstractInteractableModel.CanSelected
+                .Subscribe(StopSelect);
+        }
+
+        private void StopSelect(bool canSelect)
+        {
+            if(!canSelect)
+                EventBus.TriggerEvenet<RemoveCurrentInteractableSignal, AbstractInteractable>(this);
         }
 
         public abstract void Interact(Action callback);
@@ -40,7 +50,8 @@ namespace _Game.Scripts.InteractionSystems
                 return;
             }
             
-            EventBus.TriggerEvenet<SetCurrentInteractableSignal, AbstractInteractable>(this);
+            if(AbstractInteractableModel.CanSelected.Value)
+                EventBus.TriggerEvenet<SetCurrentInteractableSignal, AbstractInteractable>(this);
         }
 
         protected virtual void OnPlayerExit(Collider2D collider2D)

@@ -33,6 +33,18 @@ namespace _Game.Scripts.InteractionSystems.Interactables.Items
             if (_isTaked)
                 return;
 
+            _isTaked = true;
+            _inventoryProxy.AddItem(Enum.Parse<ItemId>(AbstractInteractableModel.Id));
+            AbstractInteractableModel.CanSelected.Value = false;
+            if (_baseItemView.AnimationControl != null && _baseItemView.AnimationControl.HasAnimation("take"))
+            {
+                _baseItemView.AnimationControl.SetAnimation(0, "take", false, Dispose);
+            }
+            else
+            {
+                Dispose();
+            }
+            
             if (_playerFactory != null)
             {
                 AnimationControl animationControl = _playerFactory.GetPlayer().PlayerView.AnimationPlayer.AnimationControl;
@@ -43,17 +55,6 @@ namespace _Game.Scripts.InteractionSystems.Interactables.Items
                         animationControl.ResetAnimation(1);
                         callback?.Invoke();
                     });
-            }
-            
-            _isTaked = true;
-            _inventoryProxy.AddItem(Enum.Parse<ItemId>(AbstractInteractableModel.Id));
-            if (_baseItemView.AnimationControl != null && _baseItemView.AnimationControl.HasAnimation("take"))
-            {
-                _baseItemView.AnimationControl.SetAnimation(0, "take", false, Dispose);
-            }
-            else
-            {
-                Dispose();
             }
         }
 

@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 using _Game.Scripts.DialogueSystem.View;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.MotionStates;
@@ -253,7 +251,7 @@ namespace _Game.Scripts.DialogueSystem
             _eventBus.Unsubscribe<StartDialogueSignal>(this);
             _eventBus.Unsubscribe<DialogueEventSignal>(this);
             _eventBus.Unsubscribe<StartNonSkipDialogueSignal>(this);
-            //_dialogueWriter.OnLetterWrited -= PlayWriteAudio;
+            _dialogueWriter.OnLetterWrited -= PlayWriteAudio;
             _nonSkipDialogueHandler?.Dispose();
         }
     }
