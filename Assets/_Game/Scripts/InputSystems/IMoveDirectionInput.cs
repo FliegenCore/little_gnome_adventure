@@ -7,6 +7,7 @@ namespace _Game.Scripts.Input
     public interface IMoveDirectionInput
     {
         event Action JumpEvent;
+        event Action OnStartPlayerMoved;
         
         bool GetCanMove();
         bool GetIsSprint();

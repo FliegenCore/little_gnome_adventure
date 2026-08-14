@@ -6,11 +6,13 @@ namespace _Game.Scripts.Input
     public class MoveDirectionInput : IMoveDirectionInput
     {
         public event Action JumpEvent;
-        
+        public event Action OnStartPlayerMoved;
+
         private InputSystem_Actions _inputSystemActions;
         
         private bool _canMove;
         private bool _isSprint;
+        private bool _isMove;
         
         public MoveDirectionInput(InputSystem_Actions inputSystemActions)
         {
@@ -44,6 +46,14 @@ namespace _Game.Scripts.Input
 
         public Vector2 GetDirection()
         {
+            if (_inputSystemActions.Player.Move.ReadValue<Vector2>() != Vector2.zero && !_isMove)
+            {
+                OnStartPlayerMoved?.Invoke();
+                _isMove = true;
+            }
+            else if(_inputSystemActions.Player.Move.ReadValue<Vector2>() == Vector2.zero && _isMove)
+                _isMove = false;
+            
             return _inputSystemActions.Player.Move.ReadValue<Vector2>();
         }
     }

@@ -26,6 +26,7 @@ namespace _Game.Scripts.DialogueSystem
         private readonly NonSkipDialogueHandler _nonSkipDialogueHandler;
         private readonly SpeakersProvider _speakersProvider;
         private readonly DialogueWriter _dialogueWriter;
+        private readonly DialogueModel _dialogueModel;
         
         private CompositeDisposable _writeDisposable;
         private List<DialogueData> _allDialogues;
@@ -39,19 +40,22 @@ namespace _Game.Scripts.DialogueSystem
         private string _currentDialogueText;
 
         private bool _canContinueDialogue = true;
+        private string _currentDialogueName;
 
         private DialogueManager(
             InputSystem_Actions inputSystemActions,
             EventBus eventBus,
             ISoundManager soundManager,
-            SpeakersProvider speakersProvider
+            SpeakersProvider speakersProvider,
+            DialogueModel dialogueModel
             )
         {
+            _dialogueModel          = dialogueModel;
             _speakersProvider       = speakersProvider;
             _soundManager           = soundManager;
             _eventBus               = eventBus;
             _inputSystemActions     = inputSystemActions;
-            _nonSkipDialogueHandler = new NonSkipDialogueHandler(_eventBus, _speakersProvider, this);
+            _nonSkipDialogueHandler = new NonSkipDialogueHandler(_eventBus, _speakersProvider, this, _dialogueModel);
             _dialogueProvider       = new DialogueProvider();
             _dialogueWriter         = new DialogueWriter();
             
@@ -98,13 +102,16 @@ namespace _Game.Scripts.DialogueSystem
             {
                 _canContinueDialogue = true;
             }
+
+            _dialogueModel.SkipIsEnabled.Value = _canContinueDialogue;
         }
         
         private void StartDialogue(string dialogueName)
         {
             if (_dialogueIsStarted)
                 return;
-
+            
+            _currentDialogueName = dialogueName;
             _dialogueIsStarted = true;
             _allDialogues      = _dialogueProvider.GetDialogue(dialogueName);
             _currentDialogue   = _dialogueProvider.GetStartDialogueData(_allDialogues);
@@ -127,7 +134,7 @@ namespace _Game.Scripts.DialogueSystem
             
             if (currentDialogue != null)
             {
-                _nonSkipDialogueHandler.StartDialogue(allDates, currentDialogue);
+                _nonSkipDialogueHandler.StartDialogue(allDates, currentDialogue, dialogueName);
             }
         }
 
@@ -222,6 +229,8 @@ namespace _Game.Scripts.DialogueSystem
                     _eventBus.TriggerEvenet<DialogueEventSignal, string>(endEventName);
                 }
             }
+            
+            _dialogueModel.OnDialogueEnd.OnNext(_currentDialogueName);
         }
 
         private bool TrySelectNextDialogue()

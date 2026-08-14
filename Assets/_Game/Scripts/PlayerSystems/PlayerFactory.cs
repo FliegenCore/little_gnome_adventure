@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
@@ -19,6 +20,7 @@ namespace _Game.Scripts.PlayerSystems
 {
     public class PlayerFactory : IPlayerFactory
     {
+        private event Action<Player> _onPlayerCreated;
         private const string START_SPAWN_DOOOR_ID = "DreamForest Enter";
         
         private readonly PlayerConfig _playerConfig;
@@ -110,12 +112,22 @@ namespace _Game.Scripts.PlayerSystems
             
             startDoorSpawn.Interact(null);
             
+            _onPlayerCreated?.Invoke(_player);
+            
             return player;
         }
 
         public Player GetPlayer()
         {
             return _player;
+        }
+
+        public void Subscribe(Action<Player> onPlayerCreated)
+        {
+            if(_player != null)
+                onPlayerCreated(_player);
+            else
+                _onPlayerCreated += onPlayerCreated;
         }
 
         private Fsm CreatePlayerStateMachine(PlayerModel model, PlayerView playerView, InteractionController interactionController)

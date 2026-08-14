@@ -29,7 +29,7 @@ namespace _Game.Scripts.InspectSystem
 
             InputInfoGroup exitGroup = new InputInfoGroup("выход", EKeyIndex.Esc);
             
-            if (_currentInspectModel.Interactables.Count <= 0)
+            if (!HasMoreItem())
             {
                 _eventBus.TriggerEvenet<ShowInputInfoViewSignal, InputInfoGroup[]>(new [] {exitGroup});
                 return;
@@ -76,10 +76,20 @@ namespace _Game.Scripts.InspectSystem
 
         protected bool HasMoreItem()
         {
-            if (_currentInspectModel.Interactables.Count == 1)
+            if (_currentInspectModel.Interactables.Count == 0)
                 return false;
             
-            return true;
+            int count = 0;
+
+            foreach (var interactable in _currentInspectModel.Interactables)
+            {
+                if (interactable.AbstractInteractableModel.CanSelected.Value)
+                {
+                    count++;
+                }
+            }
+
+            return count > 0;
         }
 
         protected AbstractInteractable GetInteractableByDirection(Vector2 direction)
@@ -123,6 +133,13 @@ namespace _Game.Scripts.InspectSystem
             
             _selectedInteractable.Interact(null);
 
+            if (!HasMoreItem())
+            {
+                InputInfoGroup exitGroup = new InputInfoGroup("выход", EKeyIndex.Esc);
+            
+                _eventBus.TriggerEvenet<ShowInputInfoViewSignal, InputInfoGroup[]>(new [] {exitGroup});
+            }
+            
             if(!_selectedInteractable.CanInteract())
                 SelectFirst();
         }

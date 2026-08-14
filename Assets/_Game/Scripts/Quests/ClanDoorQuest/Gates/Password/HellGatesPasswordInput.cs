@@ -28,7 +28,7 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates
             _currentInspectModel = inspectModel;
 
             InputInfoGroup moveGroup =
-                new InputInfoGroup("перемещение", EKeyIndex.A, EKeyIndex.D, EKeyIndex.W, EKeyIndex.S);
+                new InputInfoGroup("перемещение", EKeyIndex.W, EKeyIndex.A, EKeyIndex.S, EKeyIndex.D);
             
             InputInfoGroup escapeGroup =
                 new InputInfoGroup("выход", EKeyIndex.Esc);
@@ -41,7 +41,14 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates
             _inputSystemActions.UI.Navigate.performed += Navigate;
             _inputSystemActions.Player.Interact.performed += Interact;
         }
-        
+
+        public override void DisableInput()
+        {
+            _eventBus.TriggerEvenet<HideInputInfoViewSignal>();
+            _inputSystemActions.UI.Navigate.performed -= Navigate;
+            _inputSystemActions.Player.Interact.performed -= Interact;
+        }
+
         private void Interact(InputAction.CallbackContext callback)
         {
             if (!_hellGatesPasswordModel.CanWrite || _hellGatesPasswordModel.PublicWriteLock)

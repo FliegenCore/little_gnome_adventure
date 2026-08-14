@@ -49,7 +49,7 @@ namespace _Game.Scripts.InteractionSystems.Interactables.Items
             {
                 AnimationControl animationControl = _playerFactory.GetPlayer().PlayerView.AnimationPlayer.AnimationControl;
                 
-                animationControl.SetAnimation(1, "body/take", false,
+                animationControl.SetAnimation(0, "body/take", false,
                     () =>
                     {
                         animationControl.ResetAnimation(1);

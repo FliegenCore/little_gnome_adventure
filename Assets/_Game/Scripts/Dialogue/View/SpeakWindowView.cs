@@ -1,7 +1,10 @@
 using System;
 using DG.Tweening;
 using TMPro;
+using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
+using VContainer;
 
 namespace _Game.Scripts.DialogueSystem.View
 {
@@ -13,7 +16,25 @@ namespace _Game.Scripts.DialogueSystem.View
         
         [field: SerializeField] public TMP_Text RealText { get; private set; }
         [field: SerializeField] public TMP_Text FakeText { get; private set; }
+
+        [SerializeField] private Image _enableSkipButtonImage; 
+        [SerializeField] private Image _disabledSkipButtonImage; 
+
+        private DialogueModel _dialogueModel;
         
+        [Inject]
+        private void Construct(DialogueModel dialogueModel)
+        {
+            _dialogueModel = dialogueModel;
+
+            _dialogueModel.SkipIsEnabled.Subscribe(SetActiveSkipButtonImage).AddTo(gameObject);
+        }
+
+        private void SetActiveSkipButtonImage(bool isEnabled)
+        {
+            _enableSkipButtonImage.gameObject.SetActive(isEnabled);
+            _disabledSkipButtonImage.gameObject.SetActive(!isEnabled);
+        }
         
         public void Hide()
         {

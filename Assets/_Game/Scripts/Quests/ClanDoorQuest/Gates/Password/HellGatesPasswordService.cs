@@ -1,12 +1,10 @@
 using System;
 using _Game.Scripts.PlayerSystems;
-using _Game.Scripts.PlayerSystems.Animations;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using _Game.Scripts.Quests.ClanDoorQuest.Gates.Signals;
 using Core.Common;
 using UniRx;
-using UnityEngine;
 
 namespace _Game.Scripts.Quests.ClanDoorQuest.Gates
 {

@@ -9,6 +9,7 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates.View
     public class HellGatesView : NightstandView
     {
         [field: SerializeField] public AnimationControl AnimationControl { get; private set; }
+        [field: SerializeField] public Collider2D GatesCollider { get; private set; }
         
         private Subject<Action> _openDoor;
         
@@ -25,6 +26,7 @@ namespace _Game.Scripts.Quests.ClanDoorQuest.Gates.View
         {
             AnimationControl.SetAnimation(0, "open", false, () =>
             {
+                GatesCollider.gameObject.SetActive(false);
                 callback?.Invoke();
                 AnimationControl.SetAnimation(0, "idleopen", false);
             });

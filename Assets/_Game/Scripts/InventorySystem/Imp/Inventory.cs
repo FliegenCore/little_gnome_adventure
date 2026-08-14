@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InventorySystem.Configs;
@@ -8,6 +9,7 @@ using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.PlayerStates;
 using Core.Common;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace _Game.Scripts.InventorySystem
@@ -59,6 +61,10 @@ namespace _Game.Scripts.InventorySystem
             _eventBus.Subscribe<AddItemSignal, ItemId>(this, AddItem);
             _eventBus.Subscribe<RemoveItemSignal, InventoryItem>(this, RemoveItem);
             _eventBus.Subscribe<RemoveItemAllItemsWithIdSignal, ItemId>(this, RemoveAllItemById);
+            //var device = InputSystem.devices.FirstOrDefault(d => d.wasUpdatedThisFrame);
+            //int inputIndex = _inputSystemActions.Player.InventoryOpen.GetBindingIndexForControl(device);
+            
+            //Debug.Log(_inputSystemActions.Player.InventoryOpen.GetBindingDisplayString(inputIndex));
         }
         
         public void EnableOpenCloseInput()

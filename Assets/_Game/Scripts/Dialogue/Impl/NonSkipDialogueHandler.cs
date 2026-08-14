@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using _Game.Scripts.DialogueSystem.View;
-using Core.Common;
 using UniRx;
+using Unity.VisualScripting;
 using UnityEngine;
+using EventBus = Core.Common.EventBus;
 
 namespace _Game.Scripts.DialogueSystem
 {
@@ -12,6 +13,7 @@ namespace _Game.Scripts.DialogueSystem
         private readonly DialogueWriter _dialogueWriter;
         private readonly EventBus _eventBus;
         private readonly DialogueManager _dialogueManager;
+        private readonly DialogueModel _dialogueModel;
         
         private CompositeDisposable _writeDisposable;
         private IReadOnlyList<DialogueData> _allDatas;
@@ -19,18 +21,21 @@ namespace _Game.Scripts.DialogueSystem
         private bool _dialogueIsStart;
         private SpeakersProvider _speakersProvider;
         private SpeakerView _currentSpeakerView;
-
+        private string _currentDialogueName;
+        
         private string _currentDialogueText;
         
         public NonSkipDialogueHandler(
             EventBus eventBus,
             SpeakersProvider speakersProvider,
-            DialogueManager dialogueManager
+            DialogueManager dialogueManager,
+            DialogueModel dialogueModel
             )
         {
+            _dialogueModel    = dialogueModel;
             _eventBus         = eventBus;
             _speakersProvider = speakersProvider;
-            _dialogueManager = dialogueManager;
+            _dialogueManager  = dialogueManager;
             _dialogueWriter   = new DialogueWriter();
             Init();
         }
@@ -40,8 +45,9 @@ namespace _Game.Scripts.DialogueSystem
             _dialogueWriter.OnLetterWrited += _dialogueManager.PlayWriteAudio;
         }
         
-        public void StartDialogue(IReadOnlyList<DialogueData> dates, DialogueData currentDialogue)
+        public void StartDialogue(IReadOnlyList<DialogueData> dates, DialogueData currentDialogue, string dialogueName)
         {
+            _currentDialogueName = dialogueName;
             _allDatas = dates;
             _dialogueIsStart = true;
             _currentDialogue = currentDialogue;
@@ -76,7 +82,7 @@ namespace _Game.Scripts.DialogueSystem
             _writeDisposable = new CompositeDisposable();
             
             _dialogueWriter.SetCurrentText(dialogueText, _currentSpeakerView);
-            
+            _dialogueModel.SkipIsEnabled.Value = false;
             Observable.FromCoroutine(() => _dialogueWriter.WriteDialogue(ContinueDialogue))
                 .Subscribe()
                 .AddTo(_writeDisposable);
@@ -139,6 +145,9 @@ namespace _Game.Scripts.DialogueSystem
                     _eventBus.TriggerEvenet<DialogueEventSignal, string>(endEventName);
                 }
             }
+            
+            _dialogueModel.OnDialogueEnd.OnNext(_currentDialogueName);
+            _dialogueModel.SkipIsEnabled.Value = true;
         }
 
         public void Dispose()

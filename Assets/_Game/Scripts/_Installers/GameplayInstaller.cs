@@ -4,6 +4,7 @@ using _Game.Scripts.ChaptersSystem;
 using _Game.Scripts.CutsceneSystem.Impl;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.Hacks;
+using _Game.Scripts.HintsSystem;
 using _Game.Scripts.InspectSystem.Camera;
 using _Game.Scripts.InteractionSystems.HintSystem;
 using _Game.Scripts.InteractionSystems.Interactables.Items.Managers;
@@ -15,6 +16,7 @@ using _Game.Scripts.MiniGames.CloudsRunner.Hand;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Factory.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem;
+using _Game.Scripts.Quests.StartGameQuest;
 using _Game.Scripts.RoomSystems;
 using _Game.Scripts.RoomSystems.Impl.CloudsRunner;
 using _Game.Scripts.RoomSystems.Impl.DreamForest;
@@ -40,8 +42,10 @@ namespace _Game.Scripts._Installers
         [SerializeField] private InspectCamera _inspectCamera;
         [SerializeField] private InventoryView _inventoryView;
         [SerializeField] private ItemConfigs _itemConfigs;
+        [SerializeField] private GameHintsConfig _gameHintsConfig;
         [SerializeField] private SelectedItemView _selectedItemView;
         [SerializeField] private InputInfoView _inputInfoView;
+        [SerializeField] private GameHintView _gameHintView;
         
         private void Start()
         {
@@ -62,9 +66,11 @@ namespace _Game.Scripts._Installers
             builder.RegisterInstance(_mainCamera);
             builder.RegisterInstance(_selectedItemView);
             builder.RegisterInstance(_inputInfoView);
+            builder.RegisterInstance(_gameHintView);
             builder.RegisterInstance(_cinemachineCamera).AsSelf().AsImplementedInterfaces();
             builder.RegisterInstance(_inventoryView).AsSelf().AsImplementedInterfaces();
             builder.RegisterInstance(_itemConfigs).AsSelf().AsImplementedInterfaces();
+            builder.RegisterInstance(_gameHintsConfig).AsSelf().AsImplementedInterfaces();
             builder.Register<OutlineHintController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CameraController>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CameraControllerHelper>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
@@ -72,10 +78,14 @@ namespace _Game.Scripts._Installers
             builder.Register<DoorsService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<DoorFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<ItemFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<PlayerMoveListener>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<MoveHintDisabler>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<RootViewFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<InputInfoManager>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<GnomeHandFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             builder.Register<CloudsRunnerInitializer>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<DialogueModel>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+            builder.Register<GameHintsService>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
             
             ResterLocations(builder);
             

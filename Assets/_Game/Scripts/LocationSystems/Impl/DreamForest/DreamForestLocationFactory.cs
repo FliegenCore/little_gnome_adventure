@@ -34,6 +34,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         private readonly ISoundManager _soundManager;
         private readonly InspectRegistratorService _inspectRegistratorService;
         private readonly CameraControllerHelper _cameraControllerHelper;
+        private readonly DialogueModel _dialogueModel;
         
         private LocationAbstractState _lastCreated;
         public LocationAbstractState GetLastCreated()
@@ -53,9 +54,11 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             ItemFactory itemFactory,
             ISoundManager soundManager,
             InspectRegistratorService inspectRegistratorService ,
-            CameraControllerHelper cameraControllerHelper
+            CameraControllerHelper cameraControllerHelper,
+            DialogueModel dialogueModel
             )
         {
+            _dialogueModel             = dialogueModel;
             _cameraControllerHelper    = cameraControllerHelper;
             _inspectRegistratorService = inspectRegistratorService;
             _soundManager              = soundManager;
@@ -77,7 +80,9 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             StartCutscene startCutscene = new StartCutscene(
                 _eventBus,
                 _playerFactory,
-                _rootViewFactory.GetLocationsRootView().DreamForestLocationView.StartMovePoint);
+                _rootViewFactory.GetLocationsRootView().DreamForestLocationView.StartMovePoint,
+                _dialogueModel
+                );
                 
             DreamForestLocationState dreamForestLocation =
                 new DreamForestLocationState(fsm,
