@@ -8,6 +8,7 @@ using _Game.Scripts.InventorySystem.Factories;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.Animations.Impl.Behaviours;
 using _Game.Scripts.PlayerSystems.PlayerStates;
+using _Game.Scripts.Sound;
 using Core.Common;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -25,6 +26,7 @@ namespace _Game.Scripts.InventorySystem
         private readonly InventoryInput _inventoryInput;
         private readonly InteractionController _interactionController;
         private readonly List<InventoryItem> _items = new List<InventoryItem>();
+        private readonly ISoundManager _soundManager;
         
         private InventoryItem _currentSelectedInventoryItem;
 
@@ -36,8 +38,11 @@ namespace _Game.Scripts.InventorySystem
             InputSystem_Actions inputSystemActions,
             InteractionController interactionController,
             MergeItemConfig mergeItemConfig,
-            SelectedItemManager selectedItemManager)
+            SelectedItemManager selectedItemManager,
+            ISoundManager soundManager
+            )
         {
+            _soundManager             = soundManager;
             _interactionController    = interactionController;
             _inputSystemActions       = inputSystemActions;
             _eventBus                 = eventBus;
@@ -171,6 +176,9 @@ namespace _Game.Scripts.InventorySystem
             }
             else
                 _currentSelectedInventoryItem = null;
+
+            _soundManager.PlayEffectOnBackground(null, "item-selection-sound", false);
+            _inventoryModel.SelectedInventoryItem.Value = _currentSelectedInventoryItem;
         }
 
         private void UseItem()

@@ -2604,6 +2604,7 @@ MonoBehaviour:
   - {fileID: 147550975}
   - {fileID: 563107476}
   - {fileID: 1095436699}
+  _itemNameText: {fileID: 1120413767}
 --- !u!1001 &8417807547657614537
 PrefabInstance:
   m_ObjectHideFlags: 0

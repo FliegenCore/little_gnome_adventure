@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using TMPro;
 using UniRx;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace _Game.Scripts.InventorySystem
         [SerializeField] private SelectorView _selectorView;
         [SerializeField] private RectTransform _inventoryBackground;
         [SerializeField] private CellView[] _cells;
+        [SerializeField] private TMP_Text _itemNameText;
 
         private Sequence _openAnimationSequence;
         private ReactiveProperty<bool> _isOpen;
@@ -18,22 +20,27 @@ namespace _Game.Scripts.InventorySystem
         
         public CellView[] Cells => _cells;
             
-        public void Construct(ReactiveProperty<bool> isOpen, ReactiveProperty<int> choosedIndex, ReactiveCollection<InventoryItem> inventoryItems)
+        public void Construct(ReactiveProperty<bool> isOpen, ReactiveProperty<int> choosedIndex, ReactiveProperty<InventoryItem> selectedInventoryItem)
         {
-            
             _isOpen = isOpen;
             _choosedIndex = choosedIndex;
             
-            inventoryItems.ObserveEveryValueChanged(_ => _)
-                .Subscribe(count => Refresh(count.ToList())).AddTo(gameObject);
-            
+            selectedInventoryItem.Subscribe(OnSelectedItem).AddTo(gameObject);
             _choosedIndex.Subscribe(SelectCell).AddTo(gameObject);
             _isOpen.Subscribe(Open).AddTo(gameObject);
         }
 
-        private void Refresh(List<InventoryItem> inventory)
+        private void OnSelectedItem(InventoryItem inventoryItem)
         {
-            
+            if (inventoryItem == null)
+            {
+                SetTitleText(string.Empty);
+            }
+            else
+            {
+                string itemName = inventoryItem.ItemId.ToString();
+                SetTitleText(itemName);
+            }
         }
 
         private void Open(bool isOpen)
@@ -53,7 +60,7 @@ namespace _Game.Scripts.InventorySystem
 
         private void SetTitleText(string title)
         {
-            
+            _itemNameText.text = title;
         }
         
         private void Show()

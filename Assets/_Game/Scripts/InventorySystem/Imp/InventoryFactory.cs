@@ -4,6 +4,7 @@ using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.InventorySystem.Configs;
 using _Game.Scripts.InventorySystem.Factories;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.Sound;
 using Core.Common;
 
 namespace _Game.Scripts.InventorySystem
@@ -19,6 +20,7 @@ namespace _Game.Scripts.InventorySystem
         
         private readonly SelectedItemView _selectedItemView;
         private Inventory _inventory;
+        private ISoundManager _audioManager;
 
         private InventoryFactory(
             InventoryFactoryProvider inventoryFactoryProvider,
@@ -26,13 +28,16 @@ namespace _Game.Scripts.InventorySystem
             InputSystem_Actions inputSystemActions,
             InventoryView inventoryView,
             MergeItemConfig mergeItemConfig,
-            SelectedItemView selectedItemView)
+            SelectedItemView selectedItemView,
+            ISoundManager soundManager
+            )
         {
-            _selectedItemView = selectedItemView;
-            _mergeItemConfig = mergeItemConfig;
-            _inventoryView =  inventoryView;
-            _inputSystemActions = inputSystemActions;
-            _eventBus = eventBus;
+            _audioManager             = soundManager;
+            _selectedItemView         = selectedItemView;
+            _mergeItemConfig          = mergeItemConfig;
+            _inventoryView            = inventoryView;
+            _inputSystemActions       = inputSystemActions;
+            _eventBus                 = eventBus;
             _inventoryFactoryProvider = inventoryFactoryProvider;
             _selectedItemManager = CreateSelectedItem();
         }
@@ -50,7 +55,7 @@ namespace _Game.Scripts.InventorySystem
             //load data items
             InventoryModel inventoryModel = new InventoryModel(new List<InventoryItemModel>());
             
-            _inventoryView.Construct(inventoryModel.IsOpen, inventoryModel.SelectedIndex, inventoryModel.InventoryItems);
+            _inventoryView.Construct(inventoryModel.IsOpen, inventoryModel.SelectedIndex, inventoryModel.SelectedInventoryItem);
             
             _inventory = new Inventory(inventoryModel, 
                 _inventoryFactoryProvider,
@@ -58,7 +63,9 @@ namespace _Game.Scripts.InventorySystem
                 _inputSystemActions,
                 interactionController, 
                 _mergeItemConfig,
-                _selectedItemManager);
+                _selectedItemManager,
+                _audioManager
+                );
             
             return _inventory;
         }
