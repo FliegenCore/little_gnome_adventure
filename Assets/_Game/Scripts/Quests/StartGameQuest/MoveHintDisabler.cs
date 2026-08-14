@@ -28,6 +28,8 @@ namespace _Game.Scripts.Quests.StartGameQuest
             {
                 _eventBus.TriggerEvenet<HideGameHintSignal>();
             });
+            
+            _playerMoveListener.OnPlayerMoved -= DisableMoveHint;
         }
     }
 }
