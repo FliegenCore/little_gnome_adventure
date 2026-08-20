@@ -1,0 +1,125 @@
+
+WhiteRabbit.png
+size: 586,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+SHINEbody
+  rotate: false
+  xy: 2, 72
+  size: 199, 195
+  orig: 250, 250
+  offset: 29, 39
+  index: -1
+SHINEhead
+  rotate: false
+  xy: 350, 138
+  size: 133, 129
+  orig: 231, 228
+  offset: 54, 53
+  index: -1
+SHINEhvost
+  rotate: true
+  xy: 485, 173
+  size: 94, 99
+  orig: 125, 139
+  offset: 17, 18
+  index: -1
+SHINEuho
+  rotate: true
+  xy: 340, 30
+  size: 106, 121
+  orig: 146, 166
+  offset: 13, 28
+  index: -1
+body
+  rotate: false
+  xy: 203, 148
+  size: 145, 119
+  orig: 149, 123
+  offset: 2, 2
+  index: -1
+eye
+  rotate: false
+  xy: 194, 15
+  size: 53, 50
+  orig: 57, 54
+  offset: 2, 2
+  index: -1
+head
+  rotate: true
+  xy: 485, 66
+  size: 105, 98
+  orig: 109, 102
+  offset: 2, 2
+  index: -1
+hvost
+  rotate: true
+  xy: 463, 29
+  size: 35, 50
+  orig: 39, 54
+  offset: 2, 2
+  index: -1
+leg1
+  rotate: false
+  xy: 249, 18
+  size: 41, 47
+  orig: 45, 51
+  offset: 2, 2
+  index: -1
+leg2
+  rotate: false
+  xy: 292, 18
+  size: 41, 47
+  orig: 45, 51
+  offset: 2, 2
+  index: -1
+leg4
+  rotate: false
+  xy: 292, 18
+  size: 41, 47
+  orig: 45, 51
+  offset: 2, 2
+  index: -1
+leg3
+  rotate: true
+  xy: 203, 67
+  size: 79, 135
+  orig: 215, 216
+  offset: 57, 5
+  index: -1
+nose
+  rotate: false
+  xy: 463, 119
+  size: 16, 17
+  orig: 21, 21
+  offset: 2, 2
+  index: -1
+point
+  rotate: false
+  xy: 515, 37
+  size: 28, 27
+  orig: 32, 31
+  offset: 2, 2
+  index: -1
+rot
+  rotate: false
+  xy: 249, 2
+  size: 18, 14
+  orig: 22, 18
+  offset: 2, 2
+  index: -1
+uho1
+  rotate: true
+  xy: 2, 3
+  size: 67, 94
+  orig: 71, 98
+  offset: 2, 2
+  index: -1
+uho2
+  rotate: true
+  xy: 98, 3
+  size: 67, 94
+  orig: 71, 98
+  offset: 2, 2
+  index: -1
