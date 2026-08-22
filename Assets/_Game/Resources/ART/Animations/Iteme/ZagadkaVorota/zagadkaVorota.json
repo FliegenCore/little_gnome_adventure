@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "on6Xw94XywJUTcmEvqfRJrsCCX0",
+	"hash": "TTmrlUsDOpFGFB0Iame/xNNFULE",
 	"spine": "3.8.0",
 	"x": -372,
 	"y": -362,
@@ -179,9 +179,36 @@
 	},
 	"bar/bar1": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
 			"P4": {
 				"color": [
 					{ "color": "ffffff00" }
+				]
+			},
+			"PS2": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.5, "color": "ffffffe9" },
+					{ "time": 1, "color": "ffffffff" }
 				]
 			},
 			"PS4": {
@@ -189,17 +216,7 @@
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS7": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS6": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"P7": {
+			"PS3": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
@@ -214,29 +231,12 @@
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS2": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.5, "color": "ffffffe9" },
-					{ "time": 1, "color": "ffffffff" }
-				]
-			},
-			"P2": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS3": {
+			"PS7": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
 			},
-			"P5": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS5": {
+			"PS6": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
@@ -245,16 +245,43 @@
 		"bones": {
 			"root": {
 				"rotate": [
-					{}
+					{ "angle": 1.48 }
 				]
 			}
 		}
 	},
 	"bar/bar2": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
 			"P4": {
 				"color": [
 					{ "color": "ffffff00" }
+				]
+			},
+			"PS2": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.5, "color": "ffffffe9" },
+					{ "time": 1, "color": "ffffffff" }
 				]
 			},
 			"PS4": {
@@ -262,19 +289,9 @@
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS7": {
+			"PS3": {
 				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS6": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"P7": {
-				"color": [
-					{ "color": "ffffff00" }
+					{ "color": "ffffffff" }
 				]
 			},
 			"P3": {
@@ -287,29 +304,12 @@
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS2": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.5, "color": "ffffffe9" },
-					{ "time": 1, "color": "ffffffff" }
-				]
-			},
-			"P2": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS3": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"P5": {
+			"PS7": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS5": {
+			"PS6": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
@@ -325,9 +325,36 @@
 	},
 	"bar/bar3": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
 			"P4": {
 				"color": [
 					{ "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"PS2": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.5, "color": "ffffffe9" },
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
@@ -338,19 +365,9 @@
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
-			"PS7": {
+			"PS3": {
 				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS6": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"P7": {
-				"color": [
-					{ "color": "ffffff00" }
+					{ "color": "ffffffff" }
 				]
 			},
 			"P3": {
@@ -363,29 +380,12 @@
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS2": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.5, "color": "ffffffe9" },
-					{ "time": 1, "color": "ffffffff" }
-				]
-			},
-			"P2": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS3": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"P5": {
+			"PS7": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS5": {
+			"PS6": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
@@ -394,16 +394,43 @@
 		"bones": {
 			"root": {
 				"rotate": [
-					{ "angle": 0.3 }
+					{ "angle": 0.98 }
 				]
 			}
 		}
 	},
 	"bar/bar4": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
 			"P4": {
 				"color": [
 					{ "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"PS2": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.5, "color": "ffffffe9" },
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
@@ -414,19 +441,9 @@
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
-			"PS7": {
+			"PS3": {
 				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS6": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"P7": {
-				"color": [
-					{ "color": "ffffff00" }
+					{ "color": "ffffffff" }
 				]
 			},
 			"P3": {
@@ -439,47 +456,57 @@
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS2": {
+			"PS7": {
 				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.5, "color": "ffffffe9" },
-					{ "time": 1, "color": "ffffffff" }
+					{ "color": "ffffff00" }
 				]
 			},
-			"P2": {
+			"PS6": {
 				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS3": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"P5": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS5": {
-				"color": [
-					{ "color": "ffffffff" }
+					{ "color": "ffffff00" }
 				]
 			}
 		},
 		"bones": {
 			"root": {
 				"rotate": [
-					{ "angle": 0.5 }
+					{ "angle": -0.13 }
 				]
 			}
 		}
 	},
 	"bar/bar5": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
 			"P4": {
 				"color": [
 					{ "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"PS2": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.5, "color": "ffffffe9" },
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
@@ -490,21 +517,9 @@
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
-			"PS7": {
+			"PS3": {
 				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS6": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.5, "color": "fffffff0" },
-					{ "time": 1, "color": "ffffffff" }
-				]
-			},
-			"P7": {
-				"color": [
-					{ "color": "ffffff00" }
+					{ "color": "ffffffff" }
 				]
 			},
 			"P3": {
@@ -519,47 +534,59 @@
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
-			"PS2": {
+			"PS7": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"PS6": {
 				"color": [
 					{ "color": "ffffffff" },
-					{ "time": 0.5, "color": "ffffffe9" },
+					{ "time": 0.5, "color": "fffffff0" },
 					{ "time": 1, "color": "ffffffff" }
-				]
-			},
-			"P2": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS3": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"P5": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS5": {
-				"color": [
-					{ "color": "ffffffff" }
 				]
 			}
 		},
 		"bones": {
 			"root": {
 				"rotate": [
-					{ "angle": 0.2 }
+					{ "angle": -3.07 }
 				]
 			}
 		}
 	},
 	"bar/bar6": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
 			"P4": {
 				"color": [
 					{ "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"PS2": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.5, "color": "ffffffe9" },
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
@@ -570,19 +597,7 @@
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
-			"PS7": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS6": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.5, "color": "fffffff0" },
-					{ "time": 1, "color": "ffffffff" }
-				]
-			},
-			"P7": {
+			"PS3": {
 				"color": [
 					{ "color": "ffffffff" }
 				]
@@ -599,31 +614,16 @@
 					{ "time": 1, "color": "ffffffff" }
 				]
 			},
-			"PS2": {
+			"PS7": {
+				"color": [
+					{ "color": "ffffffff" }
+				]
+			},
+			"PS6": {
 				"color": [
 					{ "color": "ffffffff" },
-					{ "time": 0.5, "color": "ffffffe9" },
+					{ "time": 0.5, "color": "fffffff0" },
 					{ "time": 1, "color": "ffffffff" }
-				]
-			},
-			"P2": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS3": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"P5": {
-				"color": [
-					{ "color": "ffffffff" }
-				]
-			},
-			"PS5": {
-				"color": [
-					{ "color": "ffffffff" }
 				]
 			}
 		},
@@ -637,10 +637,40 @@
 	},
 	"bar/barError": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ff0000ff" },
+					{ "time": 0.3, "color": "ffffff00" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ff5656e4" },
+					{ "time": 0.4667, "color": "ffffff00" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ff0000ff" },
+					{ "time": 0.7, "color": "ffffff00" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ff0000ff" },
+					{ "time": 0.4667, "color": "ffffff00" }
+				]
+			},
 			"P4": {
 				"color": [
 					{ "color": "ff0000ff" },
 					{ "time": 0.5333, "color": "ffffff00" }
+				]
+			},
+			"PS2": {
+				"color": [
+					{ "color": "ff5656e4" },
+					{ "time": 0.7, "color": "ffffff00" }
 				]
 			},
 			"PS4": {
@@ -649,22 +679,15 @@
 					{ "time": 0.5333, "color": "ffffff00" }
 				]
 			},
-			"PS7": {
-				"color": [
-					{ "color": "ff5656e4" },
-					{ "time": 0.3, "color": "ffffff00" }
+			"PS1": {
+				"attachment": [
+					{ "name": "PS1" }
 				]
 			},
-			"PS6": {
+			"PS3": {
 				"color": [
 					{ "color": "ff5656e4" },
-					{ "time": 0.3667, "color": "ffffff00" }
-				]
-			},
-			"P7": {
-				"color": [
-					{ "color": "ff0000ff" },
-					{ "time": 0.3, "color": "ffffff00" }
+					{ "time": 0.6333, "color": "ffffff00" }
 				]
 			},
 			"P3": {
@@ -679,34 +702,16 @@
 					{ "time": 0.3667, "color": "ffffff00" }
 				]
 			},
-			"PS2": {
+			"PS7": {
 				"color": [
 					{ "color": "ff5656e4" },
-					{ "time": 0.7, "color": "ffffff00" }
+					{ "time": 0.3, "color": "ffffff00" }
 				]
 			},
-			"P2": {
-				"color": [
-					{ "color": "ff0000ff" },
-					{ "time": 0.7, "color": "ffffff00" }
-				]
-			},
-			"PS3": {
+			"PS6": {
 				"color": [
 					{ "color": "ff5656e4" },
-					{ "time": 0.6333, "color": "ffffff00" }
-				]
-			},
-			"P5": {
-				"color": [
-					{ "color": "ff0000ff" },
-					{ "time": 0.4667, "color": "ffffff00" }
-				]
-			},
-			"PS5": {
-				"color": [
-					{ "color": "ff5656e4" },
-					{ "time": 0.4667, "color": "ffffff00" }
+					{ "time": 0.3667, "color": "ffffff00" }
 				]
 			}
 		},
@@ -722,11 +727,46 @@
 	},
 	"bar/barGood": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "1aff00ff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "17ff00ff" },
+					{ "time": 0.6667, "color": "17ff0000" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "1aff00ff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "1aff00ff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				]
+			},
 			"P4": {
 				"color": [
 					{ "color": "ffffffff" },
 					{ "time": 0.2, "color": "1aff00ff" },
 					{ "time": 0.6667, "color": "ffffff00" }
+				]
+			},
+			"PS2": {
+				"color": [
+					{ "color": "ffffffff" },
+					{ "time": 0.2, "color": "17ff00ff" },
+					{ "time": 0.6667, "color": "17ff0000" }
 				]
 			},
 			"PS4": {
@@ -736,25 +776,11 @@
 					{ "time": 0.6667, "color": "17ff0000" }
 				]
 			},
-			"PS7": {
+			"PS3": {
 				"color": [
 					{ "color": "ffffffff" },
 					{ "time": 0.2, "color": "17ff00ff" },
 					{ "time": 0.6667, "color": "17ff0000" }
-				]
-			},
-			"PS6": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.2, "color": "17ff00ff" },
-					{ "time": 0.6667, "color": "17ff0000" }
-				]
-			},
-			"P7": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.2, "color": "1aff00ff" },
-					{ "time": 0.6667, "color": "ffffff00" }
 				]
 			},
 			"P3": {
@@ -771,35 +797,14 @@
 					{ "time": 0.6667, "color": "ffffff00" }
 				]
 			},
-			"PS2": {
+			"PS7": {
 				"color": [
 					{ "color": "ffffffff" },
 					{ "time": 0.2, "color": "17ff00ff" },
 					{ "time": 0.6667, "color": "17ff0000" }
 				]
 			},
-			"P2": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.2, "color": "1aff00ff" },
-					{ "time": 0.6667, "color": "ffffff00" }
-				]
-			},
-			"PS3": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.2, "color": "17ff00ff" },
-					{ "time": 0.6667, "color": "17ff0000" }
-				]
-			},
-			"P5": {
-				"color": [
-					{ "color": "ffffffff" },
-					{ "time": 0.2, "color": "1aff00ff" },
-					{ "time": 0.6667, "color": "ffffff00" }
-				]
-			},
-			"PS5": {
+			"PS6": {
 				"color": [
 					{ "color": "ffffffff" },
 					{ "time": 0.2, "color": "17ff00ff" },
@@ -822,7 +827,32 @@
 	},
 	"bar/bar0empty": {
 		"slots": {
+			"P7": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"PS5": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"P2": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"P5": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
 			"P4": {
+				"color": [
+					{ "color": "ffffff00" }
+				]
+			},
+			"PS2": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
@@ -832,17 +862,7 @@
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS7": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS6": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"P7": {
+			"PS3": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
@@ -857,27 +877,12 @@
 					{ "color": "ffffff00" }
 				]
 			},
-			"PS2": {
+			"PS7": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
 			},
-			"P2": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS3": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"P5": {
-				"color": [
-					{ "color": "ffffff00" }
-				]
-			},
-			"PS5": {
+			"PS6": {
 				"color": [
 					{ "color": "ffffff00" }
 				]
@@ -893,17 +898,17 @@
 	},
 	"button/idle": {
 		"slots": {
+			"P1": {
+				"color": [
+					{ "color": "ffffff30", "curve": "stepped" },
+					{ "time": 1.3333, "color": "ffffff30" }
+				]
+			},
 			"PS1": {
 				"color": [
 					{ "color": "ffffffff" },
 					{ "time": 0.6667, "color": "ffffff8e" },
 					{ "time": 1.3333, "color": "ffffffff" }
-				]
-			},
-			"P1": {
-				"color": [
-					{ "color": "ffffff30", "curve": "stepped" },
-					{ "time": 1.3333, "color": "ffffff30" }
 				]
 			}
 		},
