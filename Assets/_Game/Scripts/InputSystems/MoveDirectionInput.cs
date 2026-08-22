@@ -46,7 +46,7 @@ namespace _Game.Scripts.Input
 
         public Vector2 GetDirection()
         {
-            if (_inputSystemActions.Player.Move.ReadValue<Vector2>() != Vector2.zero && !_isMove)
+            if (_inputSystemActions.Player.Move.ReadValue<Vector2>() != Vector2.zero && !_isMove && _canMove)
             {
                 OnStartPlayerMoved?.Invoke();
                 _isMove = true;

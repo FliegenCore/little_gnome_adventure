@@ -6,197 +6,145 @@ namespace Core.Common
 {
     public class EventBus
     {
-        private Dictionary<Type, Dictionary<object, object>> m_Events;
+        // Тип сигнала -> (слушатель -> список обёрток)
+        private readonly Dictionary<Type, Dictionary<object, List<Action<object[]>>>> _subscriptions;
 
         public EventBus()
         {
-            m_Events = new Dictionary<Type, Dictionary<object, object>>();
+            _subscriptions = new Dictionary<Type, Dictionary<object, List<Action<object[]>>>>();
         }
 
-        private bool CheckSub<T>(object listener)
+        // ------------------ Вспомогательные методы ------------------
+
+        private bool CheckAndAddListener<T>(object listener, Action<object[]> wrapper)
         {
-            var type = typeof(T);
-            if (!m_Events.ContainsKey(type))
+            Type type = typeof(T);
+            if (!_subscriptions.TryGetValue(type, out var listenerMap))
             {
-                m_Events.Add(type, new Dictionary<object, object>());
+                listenerMap = new Dictionary<object, List<Action<object[]>>>();
+                _subscriptions[type] = listenerMap;
             }
 
-            if (m_Events[type].ContainsKey(listener))
+            if (!listenerMap.TryGetValue(listener, out var wrappers))
             {
-                Debug.LogError($"you try to subscribe on {type} twice with object: {listener} type: {listener.GetType()}");
-                return false;
+                wrappers = new List<Action<object[]>>();
+                listenerMap[listener] = wrappers;
             }
-
+         
+            wrappers.Add(wrapper);
             return true;
         }
 
         public void Subscribe<T>(object listener, Action action) where T : class
         {
-            if (CheckSub<T>(listener))
-            {
-                var type = typeof(T);
-
-                m_Events[type].Add(listener, action);
-            }
+            Action<object[]> wrapper = args => action();
+            CheckAndAddListener<T>(listener, wrapper);
         }
 
         public void Subscribe<T, U>(object listener, Action<U> action) where T : class
         {
-            if (CheckSub<T>(listener))
+            Action<object[]> wrapper = args =>
             {
-                var type = typeof(T);
-
-                m_Events[type].Add(listener, action);
-            }
+                U arg = args.Length > 0 ? (U)args[0] : default(U);
+                action(arg);
+            };
+            CheckAndAddListener<T>(listener, wrapper);
         }
 
         public void Subscribe<T, U, Q>(object listener, Action<U, Q> action) where T : class
         {
-            if (CheckSub<T>(listener))
+            Action<object[]> wrapper = args =>
             {
-                var type = typeof(T);
-
-                m_Events[type].Add(listener, action);
-            }
+                U arg1 = args.Length > 0 ? (U)args[0] : default(U);
+                Q arg2 = args.Length > 1 ? (Q)args[1] : default(Q);
+                action(arg1, arg2);
+            };
+            CheckAndAddListener<T>(listener, wrapper);
         }
+
         public void Subscribe<T, U, Q, E>(object listener, Action<U, Q, E> action) where T : class
         {
-            if (CheckSub<T>(listener))
+            Action<object[]> wrapper = args =>
             {
-                var type = typeof(T);
-
-                m_Events[type].Add(listener, action);
-            }
+                U arg1 = args.Length > 0 ? (U)args[0] : default(U);
+                Q arg2 = args.Length > 1 ? (Q)args[1] : default(Q);
+                E arg3 = args.Length > 2 ? (E)args[2] : default(E);
+                action(arg1, arg2, arg3);
+            };
+            CheckAndAddListener<T>(listener, wrapper);
         }
-        
-        public void Subscribe<T, U, Q, E,Y>(object listener, Action<U, Q, E,Y> action) where T : class
+
+        public void Subscribe<T, U, Q, E, Y>(object listener, Action<U, Q, E, Y> action) where T : class
         {
-            if (CheckSub<T>(listener))
+            Action<object[]> wrapper = args =>
             {
-                var type = typeof(T);
-
-                m_Events[type].Add(listener, action);
-            }
+                U arg1 = args.Length > 0 ? (U)args[0] : default(U);
+                Q arg2 = args.Length > 1 ? (Q)args[1] : default(Q);
+                E arg3 = args.Length > 2 ? (E)args[2] : default(E);
+                Y arg4 = args.Length > 3 ? (Y)args[3] : default(Y);
+                action(arg1, arg2, arg3, arg4);
+            };
+            CheckAndAddListener<T>(listener, wrapper);
         }
+
 
         public void Unsubscribe<T>(object listener) where T : class
         {
-            var type = typeof(T);
-            if (m_Events.ContainsKey(type))
+            Type type = typeof(T);
+            if (_subscriptions.TryGetValue(type, out var listenerMap))
             {
-                m_Events[type].Remove(listener);
+                listenerMap.Remove(listener);
+                if (listenerMap.Count == 0)
+                    _subscriptions.Remove(type);
             }
         }
 
-        public void TriggerEvenet<T>()
+        public void TriggerEvenet<T>() where T : class
         {
-            var type = typeof(T);
+            TriggerEvenet<T>(Array.Empty<object>());
+        }
 
-            if (m_Events.ContainsKey(type))
+        public void TriggerEvenet<T, U>(U arg) where T : class
+        {
+            TriggerEvenet<T>(arg);
+        }
+
+        public void TriggerEvenet<T, U, Q>(U arg, Q arg2) where T : class
+        {
+            TriggerEvenet<T>(arg, arg2);
+        }
+
+        public void TriggerEvenet<T, U, Q, E>(U arg, Q arg2, E arg3) where T : class
+        {
+            TriggerEvenet<T>(arg, arg2, arg3);
+        }
+
+        public void TriggerEvenet<T, U, Q, E, Y>(U arg, Q arg2, E arg3, Y arg4) where T : class
+        {
+            TriggerEvenet<T>(arg, arg2, arg3, arg4);
+        }
+
+        private void TriggerEvenet<T>(params object[] args) where T : class
+        {
+            Type type = typeof(T);
+            if (!_subscriptions.TryGetValue(type, out var listenerMap))
+                return;
+
+            var listenersCopy = new List<KeyValuePair<object, List<Action<object[]>>>>(listenerMap);
+            foreach (var kvp in listenersCopy)
             {
-                if (m_Events.TryGetValue(type, out var events))
+                foreach (var wrapper in kvp.Value)
                 {
-                    foreach (var myEvent in events)
+                    try
                     {
-                        Action action = myEvent.Value as Action;
-                        if (action == null)
-                        {
-                            Debug.LogError($"u trigger {type}, u not add action");
-                        }
-
-                        action.Invoke();
+                        wrapper(args);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError($"Error invoking event {type} for listener {kvp.Key}: {e}");
                     }
                 }
             }
         }
-
-        public void TriggerEvenet<T, U>(U arg)
-        {
-            var type = typeof(T);
-
-            if (m_Events.ContainsKey(type))
-            {
-                if (m_Events.TryGetValue(type, out var events))
-                {
-                    foreach (var myEvent in events)
-                    {
-                        Action<U> action = myEvent.Value as Action<U>;
-                        if (action == null)
-                        {
-                            Debug.LogError($"u trigger {type}, u not add action");
-                        }
-
-                        action.Invoke(arg);
-                    }
-                }
-            }
-        }
-
-        public void TriggerEvenet<T, U, Q>(U arg, Q arg2)
-        {
-            var type = typeof(T);
-
-            if (m_Events.ContainsKey(type))
-            {
-                if (m_Events.TryGetValue(type, out var events))
-                {
-                    foreach (var myEvent in events)
-                    {
-                        Action<U, Q> action = myEvent.Value as Action<U, Q>;
-                        if (action == null)
-                        {
-                            Debug.LogError($"u trigger {type}, u not add action");
-                        }
-
-                        action.Invoke(arg, arg2);
-                    }
-                }
-            }
-        }
-
-        public void TriggerEvenet<T, U, Q, E>(U arg, Q arg2, E arg3)
-        {
-            var type = typeof(T);
-
-            if (m_Events.ContainsKey(type))
-            {
-                if (m_Events.TryGetValue(type, out var events))
-                {
-                    foreach (var myEvent in events)
-                    {
-                        Action<U, Q, E> action = myEvent.Value as Action<U, Q, E>;
-                        if (action == null)
-                        {
-                            Debug.LogError($"u trigger {type}, u not add action");
-                        }
-
-                        action.Invoke(arg, arg2, arg3);
-                    }
-                }
-            }
-        }
-        
-        public void TriggerEvenet<T, U, Q, E, Y>(U arg, Q arg2, E arg3, Y arg4)
-        {
-            var type = typeof(T);
-
-            if (m_Events.ContainsKey(type))
-            {
-                if (m_Events.TryGetValue(type, out var events))
-                {
-                    foreach (var myEvent in events)
-                    {
-                        Action<U, Q, E, Y> action = myEvent.Value as Action<U, Q, E, Y>;
-                        if (action == null)
-                        {
-                            Debug.LogError($"u trigger {type}, u not add action");
-                        }
-
-                        action.Invoke(arg, arg2, arg3, arg4);
-                    }
-                }
-            }
-        }
-
     }
 }

@@ -36,6 +36,7 @@ namespace _Game.Scripts.PlayerSystems.PlayerStates
 
         public override void Enter()
         {
+            _eventBus.TriggerEvenet<SetPlayerMotionStateSignal, Type>(typeof(PlayerIdleMotionState));
             _cameraController.SetFollowTarget(_playerView.transform);
             _playerModel.MoveDirectionInput.SetCanMove(true);
             _playerModel.CanInteract.Value = true;

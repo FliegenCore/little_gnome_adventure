@@ -1,23 +1,14 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using _Game.Scripts.CameraSystem;
-using _Game.Scripts.GameInitializeSystems;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.PlayerSystems.InspectSystem;
 using _Game.Scripts.RoomSystems;
-using _Game.Scripts.RoomSystems.Impl.DreamForest;
-using _Game.Scripts.RoomSystems.Impl.DreamQuestFirst;
-using _Game.Scripts.RoomSystems.Impl.DreamRoom1;
-using _Game.Scripts.RoomSystems.LocationsStates;
-using _Game.Scripts.RoomSystems.Variants;
 using _Game.Scripts.UpdateSystems;
-using UnityEngine;
 using VContainer.Unity;
 
 namespace _Game.Scripts.ChaptersSystem
 {
-    public class LocationsInitializer: IInitializable
+    public class LocationsInitializer : IInitializable
     {
         private readonly DoorFactory _doorFactory;
         private readonly IPlayerFactory _playerFactory;
@@ -88,14 +79,11 @@ namespace _Game.Scripts.ChaptersSystem
         private void SetStartLocation()
         {
             _locationsController.Initialize();
-
-            //_locationsController.LocationsModel.CurrentLocation.Value = typeof(DreamForestLocationState);
         }
         
         private void TieCamera()
         {
             _cameraController.SetFollowTarget(_playerFactory.GetPlayer().PlayerView.transform);
-           // _cameraController.SetFollowZone(_locationsController.GetCurrentLocation().AbstractLocationView.CameraCollider);
         }
         
         private void CacheAllDoorView()

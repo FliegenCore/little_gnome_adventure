@@ -16,7 +16,7 @@ namespace _Game.Scripts.PlayerSystems
         public readonly AnimationPlayerModel AnimationPlayerModel;
         public readonly Observable<bool> CanInteract;
         public readonly Observable<bool> IsActive;
-        public readonly ReactiveCommand OnPosition = new();
+        public ReactiveCommand OnPosition = new ReactiveCommand();
         public readonly float MoveSpeed;
         public readonly float RunSpeed;
         public Transform AutoMoveTransform;
