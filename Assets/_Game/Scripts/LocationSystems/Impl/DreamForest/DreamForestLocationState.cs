@@ -13,8 +13,8 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
     {
         public readonly DreamForestLocationView DreamForestLocationView;
 
-        private readonly ICutsceneManager _cutsceneManager;
-        private readonly StartCutscene _startCutscene;
+        
+        private readonly StartQuestManager _startQuestManager;
         
         public DreamForestLocationState(
             Fsm fsm, 
@@ -22,19 +22,19 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             DreamForestLocationView abstractLocation,
             IDialogueManager dialogueManager,
             EventBus eventBus,
-            StartCutscene startCutscene,
-            ICutsceneManager cutsceneManager
+            
+            StartQuestManager startQuestManager
             ) : base(fsm, locationModel, abstractLocation, dialogueManager, eventBus)
         {
+            _startQuestManager = startQuestManager;
             DreamForestLocationView = abstractLocation;
-            _cutsceneManager = cutsceneManager;
-            _startCutscene = startCutscene;
+            
         }
 
         public override void Enter()
         {
             base.Enter();
-            _cutsceneManager.Play(_startCutscene);
+            _startQuestManager.Initialize();
         }
     }
 }

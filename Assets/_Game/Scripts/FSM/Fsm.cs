@@ -11,7 +11,6 @@ namespace _Game.Scripts.FSM
         private Dictionary<Type, FsmAbstractState> _states = new();
 
         public FsmAbstractState CurrentState => _currentState;
-      
 
         public T GetState<T>() where T : FsmAbstractState
         {
@@ -41,6 +40,19 @@ namespace _Game.Scripts.FSM
         public void AddState(FsmAbstractState state)
         {
             _states.Add(state.GetType(), state);
+        }
+
+        public void SetStateWithParameter<T>(Type type, Action callback = null, T parameter = default)
+        {
+            if (!EqualityComparer<T>.Default.Equals(parameter, default(T)) && _states.TryGetValue(type, out FsmAbstractState stateToSet))
+            {
+                if (stateToSet is IParameterReceiver<T> parameterReceiver)
+                {
+                    parameterReceiver.ApplyParameter(parameter);
+                }
+            }
+            
+            SetState(type, callback);
         }
 
         public void SetState(Type type, Action callback = null)

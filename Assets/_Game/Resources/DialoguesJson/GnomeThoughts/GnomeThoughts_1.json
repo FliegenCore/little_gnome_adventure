@@ -3,24 +3,61 @@
     {
       "NodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
       "DialogueName": "Player",
-      "Text": "Ебать мой хуй! \nВот это меня занесло",
+      "Text": "Блин сбежал!",
       "Type": 0,
       "Position": {
-        "x": 208.0,
-        "y": 117.0,
+        "x": 225.0,
+        "y": 118.0,
         "normalized": {
-          "x": 0.871575534,
-          "y": 0.490261257,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
+          "x": 0.885600269,
+          "y": 0.464448154,
+          "normalized": {
+            "x": 0.8856003,
+            "y": 0.464448184,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.99999994
         },
-        "magnitude": 238.64827,
-        "sqrMagnitude": 56953.0
+        "magnitude": 254.064957,
+        "sqrMagnitude": 64549.0
       },
       "IsStartNode": true,
       "OnStartEvents": [
         "a_Player_emotion/speak_1_1"
       ],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "64c9c9ce-80e3-4905-88ac-8fdf8724a2b5",
+      "DialogueName": "Player",
+      "Text": "Ну ничего, я быстрее!",
+      "Type": 0,
+      "Position": {
+        "x": 626.0,
+        "y": 118.0,
+        "normalized": {
+          "x": 0.982694,
+          "y": 0.185236245,
+          "normalized": {
+            "x": 0.98269403,
+            "y": 0.18523626,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
+        },
+        "magnitude": 637.024353,
+        "sqrMagnitude": 405800.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
       "OnEndEvents": [
         "a_Player_emotion/idle_1_1"
       ],
@@ -30,5 +67,12 @@
       ]
     }
   ],
-  "Edges": []
+  "Edges": [
+    {
+      "InputNodeId": "64c9c9ce-80e3-4905-88ac-8fdf8724a2b5",
+      "OutputNodeId": "7e3c5d89-3260-4e4d-b3ae-ad9455fbf3df",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    }
+  ]
 }

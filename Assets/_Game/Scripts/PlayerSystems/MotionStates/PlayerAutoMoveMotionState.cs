@@ -1,15 +1,20 @@
 using _Game.Scripts.FSM;
+using UniRx;
 using UnityEngine;
 
 namespace _Game.Scripts.PlayerSystems.MotionStates
 {
-    public class PlayerAutoMoveMotionState : PlayerMotionState
+    public class PlayerAutoMoveMotionState : PlayerMotionState, IParameterReceiver<float>
     {
         protected readonly PlayerModel _playerModel;
+
+        private float _moveSpeed;
 
         public PlayerAutoMoveMotionState(Fsm fsm, PlayerModel playerModel) : base(fsm, playerModel)
         {
             _playerModel = playerModel;
+            
+            _moveSpeed = _playerModel.MoveSpeed;
         }
 
         public override void Enter()
@@ -19,15 +24,23 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
 
         public override void Exit()
         {
+            _playerModel.OnPosition = new();
             _playerModel.AnimationPlayerModel.IsMove.Value = false;
             _playerModel.Transformation.Direction.Value = Vector2.zero;
+            
+            _moveSpeed = _playerModel.MoveSpeed;
+        }
+        
+        public void ApplyParameter(float speed)
+        {
+            _moveSpeed = speed;
         }
 
         public override void Update(float deltaTime)
         {
             Vector2 targetPosition = _playerModel.AutoMoveTransform.transform.position;
             Vector2 moveDirection = (targetPosition - _playerModel.Transformation.Position.Value).normalized;
-            _playerModel.Transformation.Direction.Value = moveDirection * _playerModel.MoveSpeed;
+            _playerModel.Transformation.Direction.Value = moveDirection * _moveSpeed;
             
             if (moveDirection.x != 0)
             {
@@ -53,5 +66,7 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
                 _playerModel.Transformation.Direction.Value = Vector2.zero;
             }
         }
+
+        
     }
 }

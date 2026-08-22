@@ -16,6 +16,7 @@ using _Game.Scripts.Quests.MushroomQuest;
 using _Game.Scripts.Quests.StartGameQuest;
 using _Game.Scripts.RoomSystems.LocationsStates;
 using _Game.Scripts.Sound;
+using _Game.Scripts.UpdateSystems;
 using Core.Common;
 
 namespace _Game.Scripts.RoomSystems.Impl.DreamForest
@@ -35,8 +36,10 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         private readonly InspectRegistratorService _inspectRegistratorService;
         private readonly CameraControllerHelper _cameraControllerHelper;
         private readonly DialogueModel _dialogueModel;
+        private readonly UpdateController _updateController;
         
         private LocationAbstractState _lastCreated;
+        
         public LocationAbstractState GetLastCreated()
         {
             return _lastCreated;
@@ -55,7 +58,8 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             ISoundManager soundManager,
             InspectRegistratorService inspectRegistratorService ,
             CameraControllerHelper cameraControllerHelper,
-            DialogueModel dialogueModel
+            DialogueModel dialogueModel,
+            UpdateController updateController
             )
         {
             _dialogueModel             = dialogueModel;
@@ -71,28 +75,32 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             _rootViewFactory           = rootViewFactory;
             _eventBus                  = eventBus;
             _cutsceneManager           = cutsceneManager;
+            _updateController          = updateController;
         }
         
         public LocationAbstractState Create(Fsm fsm)
         {
             DreamForestLocationModel forestLocationModel = new DreamForestLocationModel(typeof(DreamForestLocationState));
-
-            StartCutscene startCutscene = new StartCutscene(
+            
+            StartQuestManager startQuestManager = new StartQuestManager
+            (
+                _cutsceneManager,
+                _rootViewFactory,
                 _eventBus,
                 _playerFactory,
-                _rootViewFactory.GetLocationsRootView().DreamForestLocationView.StartMovePoint,
-                _dialogueModel
-                );
-                
+                _dialogueModel,
+                _updateController
+            );
+            
             DreamForestLocationState dreamForestLocation =
                 new DreamForestLocationState(fsm,
                     forestLocationModel,
                     _rootViewFactory.GetLocationsRootView().DreamForestLocationView,
                     _dialogueManager,
                     _eventBus,
-                    startCutscene, 
-                    _cutsceneManager
+                    startQuestManager
                     );
+            
             fsm.AddState(dreamForestLocation);
             
             MushroomQuestManager mushroomQuestManager =

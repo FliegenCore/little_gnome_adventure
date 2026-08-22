@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.FSM;
@@ -42,17 +43,37 @@ namespace _Game.Scripts.PlayerSystems
             _playerStateMachine   = playerStateMachine;
             _cameraController     = cameraController;
             
-            _eventBus.Subscribe<SetPlayerStateSignal, Type>(this, SetPlayerState);
-            _eventBus.Subscribe<SetPlayerMotionStateSignal, Type>(this, SetPlayerMotionState);
+            _eventBus.Subscribe<SetPlayerStateSignal, Type, object>(this, SetPlayerState);
+            _eventBus.Subscribe<SetPlayerMotionStateSignal, Type, object>(this, SetPlayerMotionState);
             _eventBus.Subscribe<SetPlayerActiveSignal, bool>(this, SetActive);
         }
         
-        private void SetPlayerState(Type type)
+        public  void SetPlayerState<T>(Type type, T parameter = default)
+        {
+            if (EqualityComparer<T>.Default.Equals(parameter, default(T)))
+            {
+                _playerStateMachine.SetState(type);
+            }
+            else
+                _playerStateMachine.SetStateWithParameter(type, parameter: parameter);
+        }
+        
+        public  void SetPlayerState(Type type)
         {
             _playerStateMachine.SetState(type);
         }
 
-        private void SetPlayerMotionState(Type type)
+        public void SetPlayerMotionState<T>(Type type, T parameter = default)
+        {
+            if (EqualityComparer<T>.Default.Equals(parameter, default(T)))
+            {
+                _motionStateMachine.SetState(type);
+            }
+            else
+                _motionStateMachine.SetStateWithParameter(type, parameter: parameter);
+        }
+        
+        public void SetPlayerMotionState(Type type)
         {
             _motionStateMachine.SetState(type);
         }
@@ -60,6 +81,7 @@ namespace _Game.Scripts.PlayerSystems
         public void Update(float deltaTime)
         {
             _motionStateMachine?.Update(deltaTime);
+            _playerStateMachine?.Update(deltaTime);
         }
 
         public void Teleport(Vector2 position)
