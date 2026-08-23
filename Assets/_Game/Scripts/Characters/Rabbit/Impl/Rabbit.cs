@@ -1,4 +1,5 @@
 using _Game.Scripts.FSM;
+using _Game.Scripts.Quests.StartGameQuest.Rabbit.States;
 using _Game.Scripts.UpdateSystems;
 using UnityEngine;
 
@@ -18,6 +19,11 @@ namespace _Game.Scripts.Quests.StartGameQuest.Rabbit
         public void Update(float deltaTime)
         {
             StateMachine?.Update(deltaTime);
+        }
+
+        public void SetState<T>() where T : RabbitState
+        {
+            StateMachine?.SetState<T>();
         }
     }
 }

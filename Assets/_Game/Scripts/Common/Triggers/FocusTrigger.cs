@@ -43,12 +43,28 @@ namespace _Game.Scripts.Quests.PlantsQuest
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            
             if(!other.GetComponent<PlayerView>())
                 return;
             
             _cameraController.SetFollowTarget(_playerFactory.GetPlayer().PlayerView.transform);
-            _cameraController.ZoomTo(5, 1, null);
+            _cameraController.ZoomTo(_locationsControllerFactory.Get().GetCurrentCameraSize, 1, null);
             OnUnfocused?.Invoke();
+        }
+        
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+
+            float previewAspect = 16f / 9f;
+
+            float height = _cameraSize * 2f;
+            float width = height * previewAspect;
+
+            Gizmos.DrawWireCube(transform.position, new Vector3(width, height, 0f));
+            
+            Gizmos.color = new Color(1f, 0f, 0f, 0.1f);
+            Gizmos.DrawCube(transform.position, new Vector3(width, height, 0f));
         }
     }
 }
