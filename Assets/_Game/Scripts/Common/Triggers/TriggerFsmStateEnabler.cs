@@ -1,7 +1,6 @@
 using System;
 using _Game.Scripts.FSM;
 using _Game.Scripts.InteractionSystems;
-using _Game.Scripts.Quests.StartGameQuest.Rabbit.States;
 using UnityEngine;
 
 namespace _Game.Scripts.Characters.Rabbit.OtherComponents
@@ -13,13 +12,13 @@ namespace _Game.Scripts.Characters.Rabbit.OtherComponents
         
         private readonly Fsm _stateMachine;
         private readonly IContactTriggerProvider _contactTriggerProvider;
-        private readonly FsmAbstractState _state;
+        private readonly Type _state;
         private readonly bool _unsubscribeAfterTrigger;
         
         public TriggerFsmStateEnabler(
             Fsm stateMachine,
             IContactTriggerProvider contactTriggerProvider,
-            FsmAbstractState state,
+            Type state,
             bool unsubscribeAfterTrigger
             )
         {
@@ -37,7 +36,7 @@ namespace _Game.Scripts.Characters.Rabbit.OtherComponents
             
             PreareSetState?.Invoke();
             
-            _stateMachine.SetState(_state.GetType());
+            _stateMachine.SetState(_state);
         }
     }
 }
