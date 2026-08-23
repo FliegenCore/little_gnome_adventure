@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "QpAv/c2QadkkcE5pK0tw6cmxIKc",
+	"hash": "8d8xp608hVmZeNkip4xfMgJ174A",
 	"spine": "3.8.0",
 	"x": -277.94,
 	"y": -322.51,
@@ -126,7 +126,8 @@
 		"bones": {
 			"hand": {
 				"rotate": [
-					{ "angle": 71.1, "curve": "stepped" },
+					{ "angle": 71.1 },
+					{ "time": 1.1667, "angle": 78.15 },
 					{ "time": 6.6667, "angle": 71.1 },
 					{ "time": 8.1, "angle": 88.97 },
 					{ "time": 11.6667, "angle": 81.6 },
@@ -144,7 +145,8 @@
 			},
 			"head": {
 				"rotate": [
-					{ "angle": -7.14, "curve": "stepped" },
+					{ "angle": -7.14 },
+					{ "time": 1, "angle": -1.4 },
 					{ "time": 4, "angle": -7.14 },
 					{ "time": 6.6667, "angle": -8.11 },
 					{ "time": 8, "angle": -0.9 },
@@ -409,6 +411,149 @@
 					{ "time": 1.8667, "y": -6.1 },
 					{ "time": 2.2 }
 				]
+			},
+			"head": {
+				"rotate": [
+					{ "angle": -7.14 },
+					{ "time": 0.5, "angle": -1.73 },
+					{ "time": 1.5667, "angle": 2.37 },
+					{ "time": 2.2, "angle": -7.14 }
+				]
+			},
+			"hand": {
+				"rotate": [
+					{ "angle": 71.1 },
+					{ "time": 0.6667, "angle": 82.48 },
+					{ "time": 1.3333, "angle": 66.76 },
+					{ "time": 2.2, "angle": 71.1 }
+				],
+				"translate": [
+					{ "x": 17.75, "y": -109.45 },
+					{ "time": 0.6667, "x": 17.75, "y": -126.8 },
+					{ "time": 2.2, "x": 17.75, "y": -109.45 }
+				]
+			}
+		}
+	},
+	"no2": {
+		"bones": {
+			"veko": {
+				"rotate": [
+					{ "angle": -15.77, "curve": "stepped" },
+					{ "time": 0.8, "angle": -15.77 }
+				],
+				"translate": [
+					{ "x": 3.07, "y": -1.53, "curve": "stepped" },
+					{ "time": 0.8, "x": 3.07, "y": -1.53 },
+					{ "time": 0.9667, "x": -5.7, "y": -1.53 },
+					{ "time": 1.2, "x": 3.07, "y": -1.53 }
+				],
+				"scale": [
+					{ "time": 0.8 },
+					{ "time": 0.9667, "x": 1.333 },
+					{ "time": 1.2 }
+				]
+			},
+			"veko2": {
+				"rotate": [
+					{ "angle": 7.62, "curve": "stepped" },
+					{ "time": 0.8, "angle": 7.62 }
+				],
+				"translate": [
+					{ "x": -0.77, "y": 1.53, "curve": "stepped" },
+					{ "time": 0.8, "x": -0.77, "y": 1.53 },
+					{ "time": 0.9667, "x": -9.54, "y": 1.53 },
+					{ "time": 1.2, "x": -0.77, "y": 1.53 }
+				],
+				"scale": [
+					{ "time": 0.8 },
+					{ "time": 0.9667, "x": 1.333 },
+					{ "time": 1.2 }
+				]
+			},
+			"rot": {
+				"translate": [
+					{},
+					{ "time": 0.2667, "x": -1.36, "y": 14.92 },
+					{ "time": 0.5 },
+					{ "time": 0.7, "x": -2.71, "y": -6.1 },
+					{ "time": 0.8 },
+					{ "time": 1.3667, "x": -1.36, "y": 14.92 },
+					{ "time": 1.7 },
+					{ "time": 1.8667, "x": -2.71, "y": -6.1 },
+					{ "time": 2.2 }
+				]
+			},
+			"nose": {
+				"translate": [
+					{},
+					{ "time": 0.2667, "x": -1.36, "y": 14.92 },
+					{ "time": 0.5 },
+					{ "time": 0.7, "x": -2.71, "y": -6.1 },
+					{ "time": 0.8 },
+					{ "time": 1.3667, "x": -1.36, "y": 14.92 },
+					{ "time": 1.7 },
+					{ "time": 1.8667, "x": -2.71, "y": -6.1 },
+					{ "time": 2.2 }
+				]
+			},
+			"eye": {
+				"translate": [
+					{},
+					{ "time": 0.2667, "x": -1.36, "y": 14.92 },
+					{ "time": 0.5 },
+					{ "time": 0.7, "x": -2.71, "y": -6.1 },
+					{ "time": 0.8 },
+					{ "time": 1.3667, "x": -1.36, "y": 14.92 },
+					{ "time": 1.7 },
+					{ "time": 1.8667, "x": -2.71, "y": -6.1 },
+					{ "time": 2.2 }
+				]
+			},
+			"uho1": {
+				"translate": [
+					{},
+					{ "time": 0.2667, "x": -8.14, "y": -7.46 },
+					{ "time": 0.8 },
+					{ "time": 1.3667, "x": -8.14, "y": -7.46 },
+					{ "time": 2.2 }
+				]
+			},
+			"uho2": {
+				"translate": [
+					{ "time": 0.5 },
+					{ "time": 0.7, "x": -4.75, "y": 8.81 },
+					{ "time": 0.8, "curve": "stepped" },
+					{ "time": 1.7 },
+					{ "time": 1.8667, "x": -4.75, "y": 8.81 },
+					{ "time": 2.2 }
+				]
+			},
+			"hair2": {
+				"translate": [
+					{},
+					{ "time": 0.2667, "y": 10.85 },
+					{ "time": 0.5 },
+					{ "time": 0.7, "y": -6.1 },
+					{ "time": 0.8 },
+					{ "time": 1.3667, "y": 10.85 },
+					{ "time": 1.7 },
+					{ "time": 1.8667, "y": -6.1 },
+					{ "time": 2.2 }
+				]
+			},
+			"hair": {
+				"translate": [
+					{},
+					{ "time": 0.2667, "y": 10.85 },
+					{ "time": 0.5 },
+					{ "time": 0.7, "y": -6.1 },
+					{ "time": 0.8 },
+					{ "time": 1.3667, "y": 10.85 },
+					{ "time": 1.7 },
+					{ "time": 1.8667, "y": -6.1 },
+					{ "time": 2.2 }
+				]
 			}
 		},
 		"drawOrder": [
@@ -454,6 +599,20 @@
 	},
 	"yes": {
 		"slots": {
+			"rot1": {
+				"attachment": [
+					{ "time": 2.1, "name": null },
+					{ "time": 2.5333, "name": "rot1" },
+					{ "time": 3.2333, "name": null },
+					{ "time": 4.0667, "name": "rot1" }
+				]
+			},
+			"veko2": {
+				"attachment": [
+					{ "time": 1.4333, "name": null },
+					{ "time": 4.0667, "name": "veko2" }
+				]
+			},
 			"ticket": {
 				"color": [
 					{ "time": 2.1, "color": "ffffffff" },
@@ -471,24 +630,10 @@
 					{ "time": 4.0667, "name": null }
 				]
 			},
-			"rot1": {
-				"attachment": [
-					{ "time": 2.1, "name": null },
-					{ "time": 2.5333, "name": "rot1" },
-					{ "time": 3.2333, "name": null },
-					{ "time": 4.0667, "name": "rot1" }
-				]
-			},
 			"veko": {
 				"attachment": [
 					{ "time": 1.4333, "name": null },
 					{ "time": 4.0667, "name": "veko" }
-				]
-			},
-			"veko2": {
-				"attachment": [
-					{ "time": 1.4333, "name": null },
-					{ "time": 4.0667, "name": "veko2" }
 				]
 			}
 		},
@@ -779,6 +924,20 @@
 	},
 	"yes old": {
 		"slots": {
+			"rot1": {
+				"attachment": [
+					{ "time": 2.1667, "name": null },
+					{ "time": 2.5333, "name": "rot1" },
+					{ "time": 4.8333, "name": null },
+					{ "time": 5.6667, "name": "rot1" }
+				]
+			},
+			"veko2": {
+				"attachment": [
+					{ "time": 4.8667, "name": null },
+					{ "time": 5.6667, "name": "veko2" }
+				]
+			},
 			"ticket": {
 				"color": [
 					{ "time": 2.1667, "color": "ffffffff" },
@@ -796,24 +955,10 @@
 					{ "time": 5.6667, "name": null }
 				]
 			},
-			"rot1": {
-				"attachment": [
-					{ "time": 2.1667, "name": null },
-					{ "time": 2.5333, "name": "rot1" },
-					{ "time": 4.8333, "name": null },
-					{ "time": 5.6667, "name": "rot1" }
-				]
-			},
 			"veko": {
 				"attachment": [
 					{ "time": 4.8667, "name": null },
 					{ "time": 5.6667, "name": "veko" }
-				]
-			},
-			"veko2": {
-				"attachment": [
-					{ "time": 4.8667, "name": null },
-					{ "time": 5.6667, "name": "veko2" }
 				]
 			}
 		},
