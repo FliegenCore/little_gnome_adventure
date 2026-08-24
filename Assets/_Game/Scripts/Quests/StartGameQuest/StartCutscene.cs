@@ -74,7 +74,7 @@ namespace _Game.Scripts.Quests.StartGameQuest
         {
             player.PlayerView.AnimationPlayer.AnimationControl.SubscribeOnEvents(HandleEvent);
             
-            player.PlayerView.AnimationPlayer.AnimationControl.SetAnimation(0, PlayerAnimationsName.CATCH_RABBIT_ANIMATION_NAME, false,
+            player.PlayerView.AnimationPlayer.AnimationControl.SetAnimation(0, PlayerAnimationsName.CATCH_RABBIT_ANIMATION_NAME666, false,
                 () =>
                 {
                     player.SetPlayerMotionState(typeof(PlayerIdleMotionState));
@@ -91,7 +91,6 @@ namespace _Game.Scripts.Quests.StartGameQuest
             
             Player player = _playerFactory.GetPlayer();
             player.PlayerView.AnimationPlayer.AnimationControl.UnsubscribeOnEvents(HandleEvent);
-            
             Rabbit.Rabbit rabbit = _rabbitFactory.CachedRabbit;
             rabbit.StateMachine.SetState<RabbitAutoWalkState>();
         }

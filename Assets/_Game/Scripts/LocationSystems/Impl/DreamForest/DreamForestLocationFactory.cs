@@ -37,6 +37,7 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         private readonly CameraControllerHelper _cameraControllerHelper;
         private readonly DialogueModel _dialogueModel;
         private readonly UpdateController _updateController;
+        private readonly LocationsControllerFactory _locationsControllerFactory;
         
         private LocationAbstractState _lastCreated;
         
@@ -59,23 +60,25 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
             InspectRegistratorService inspectRegistratorService ,
             CameraControllerHelper cameraControllerHelper,
             DialogueModel dialogueModel,
-            UpdateController updateController
+            UpdateController updateController,
+            LocationsControllerFactory locationsControllerFactory
             )
         {
-            _dialogueModel             = dialogueModel;
-            _cameraControllerHelper    = cameraControllerHelper;
-            _inspectRegistratorService = inspectRegistratorService;
-            _soundManager              = soundManager;
-            _itemFactory               = itemFactory;
-            _inventoryProxy            = inventoryProxy;
-            _cameraController          = cameraController;
-            _interactableFactory       = interactableFactory;
-            _playerFactory             = playerFactory;
-            _dialogueManager           = dialogueManager;
-            _rootViewFactory           = rootViewFactory;
-            _eventBus                  = eventBus;
-            _cutsceneManager           = cutsceneManager;
-            _updateController          = updateController;
+            _locationsControllerFactory = locationsControllerFactory;
+            _dialogueModel              = dialogueModel;
+            _cameraControllerHelper     = cameraControllerHelper;
+            _inspectRegistratorService  = inspectRegistratorService;
+            _soundManager               = soundManager;
+            _itemFactory                = itemFactory;
+            _inventoryProxy             = inventoryProxy;
+            _cameraController           = cameraController;
+            _interactableFactory        = interactableFactory;
+            _playerFactory              = playerFactory;
+            _dialogueManager            = dialogueManager;
+            _rootViewFactory            = rootViewFactory;
+            _eventBus                   = eventBus;
+            _cutsceneManager            = cutsceneManager;
+            _updateController           = updateController;
         }
         
         public LocationAbstractState Create(Fsm fsm)
@@ -89,7 +92,8 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
                 _eventBus,
                 _playerFactory,
                 _dialogueModel,
-                _updateController
+                _updateController,
+                _locationsControllerFactory
             );
             
             DreamForestLocationState dreamForestLocation =

@@ -35,6 +35,7 @@ namespace _Game.Scripts.Quests.StartGameQuest.Rabbit
                 rabbitAnimationModel
                 );
             
+            rabbitView.Activator.Construct(rabbitModel.IsActive);
             Fsm fsm = CreateFsm(rabbitModel);
             
             Rabbit rabbit = new Rabbit(fsm, rabbitModel);
@@ -49,6 +50,7 @@ namespace _Game.Scripts.Quests.StartGameQuest.Rabbit
             Fsm fsm = new Fsm();
 
             fsm.AddState(new RabbitSeatState(fsm, rabbitModel));
+            fsm.AddState(new RabbitJumpState(fsm, rabbitModel));
             fsm.AddState(new RabbitIdleState(fsm, rabbitModel));
             fsm.AddState(new RabbitAutoWalkState(fsm, rabbitModel));
             fsm.AddState(new RabbitWaitCatchState(fsm, rabbitModel));

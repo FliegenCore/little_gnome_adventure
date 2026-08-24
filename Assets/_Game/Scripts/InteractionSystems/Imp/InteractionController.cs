@@ -18,6 +18,7 @@ namespace _Game.Scripts.InteractionSystems
         private AbstractInteractable _currentAbstractInteractable;
         
         private CompositeDisposable _disposables = new CompositeDisposable();
+        private CompositeDisposable _interactDisposable = new CompositeDisposable();
         private readonly CompositeDisposable _interactableOnPointDisposables = new CompositeDisposable();
         private readonly InputSystem_Actions _inputSystemActions;
         private readonly PlayerModel _playerModel;
@@ -33,7 +34,9 @@ namespace _Game.Scripts.InteractionSystems
             _playerModel = playerModel;
             _eventBus = eventBus;
             
-            _playerModel.CanInteract.Subscribe(OnCanInteractChanged);
+            _playerModel.CanInteract
+                .Subscribe(OnCanInteractChanged)
+                .AddTo(_interactDisposable);
             
             _eventBus.Subscribe<SetCurrentInteractableSignal, AbstractInteractable>(this, SetCurrentInteractable);
             _eventBus.Subscribe<RemoveCurrentInteractableSignal, AbstractInteractable>(this, RemoveCurrentInteractable);
@@ -269,10 +272,10 @@ namespace _Game.Scripts.InteractionSystems
         
         public void Dispose()
         {
-            _playerModel.CanInteract.Unsubscribe(OnCanInteractChanged);
             _eventBus.Unsubscribe<SetCurrentInteractableSignal>(this);
             _interactableOnPointDisposables?.Dispose();
-            _disposables.Dispose();
+            _disposables?.Dispose();
+            _interactDisposable?.Dispose();
         }
     }
 }

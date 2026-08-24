@@ -18,6 +18,18 @@ namespace _Game.Scripts.Characters.Rabbit.Animations
             _rabbitAnimationModel.IsSeatAnimation.Subscribe(SetSeatAnimation).AddTo(gameObject);
             _rabbitAnimationModel.IsWalkAnimation.Subscribe(SetWalkAnimation).AddTo(gameObject);
             _rabbitAnimationModel.IsWaitCatchAnimation.Subscribe(SetWaitAnimation).AddTo(gameObject);
+            _rabbitAnimationModel.IsJumpAnimation.Subscribe(SetJumpAnimation).AddTo(gameObject);
+        }
+
+        private void SetJumpAnimation(bool isEnabled)
+        {
+            if (isEnabled)
+            {
+                _animationControl.SetAnimation(0, RabbitAnimationNames.JUMP, false, () =>
+                {
+                    _rabbitAnimationModel.JumpIsEnded.Execute();
+                });
+            }
         }
 
         private void SetSeatAnimation(bool isEnabled)

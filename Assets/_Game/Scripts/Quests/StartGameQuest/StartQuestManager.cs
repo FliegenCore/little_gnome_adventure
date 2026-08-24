@@ -3,6 +3,7 @@ using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.Quests.StartGameQuest.Rabbit;
 using _Game.Scripts.Quests.StartGameQuest.Rabbit.States;
+using _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours;
 using _Game.Scripts.RoomSystems;
 using _Game.Scripts.UpdateSystems;
 using Core.Common;
@@ -17,7 +18,9 @@ namespace _Game.Scripts.Quests.StartGameQuest
         private readonly EventBus _eventBus;
         private readonly IPlayerFactory _playerFactory;
         private readonly DialogueModel _dialogueModel;
-        private readonly UpdateController _updateController;
+        private readonly LocationsControllerFactory _locationsControllerFactory;
+        
+        private StartGameQuestRabbitInitializer _startGameQuestRabbitInitializer;
         
         public StartQuestManager(
             ICutsceneManager cutsceneManager,
@@ -25,16 +28,16 @@ namespace _Game.Scripts.Quests.StartGameQuest
             EventBus eventBus,
             IPlayerFactory playerFactory,
             DialogueModel dialogueModel,
-            UpdateController updateController
+            UpdateController updateController,
+            LocationsControllerFactory locationsControllerFactory
         )
         {
-            _updateController = updateController;
             _dialogueModel    = dialogueModel;
             _playerFactory    = playerFactory;
             _eventBus         = eventBus;
             _rootViewFactory  = rootViewFactory;
             _cutsceneManager  = cutsceneManager;
-            
+            _locationsControllerFactory = locationsControllerFactory;
             _rabbitFactory = new RabbitFactory(updateController);
         }
 
@@ -53,6 +56,15 @@ namespace _Game.Scripts.Quests.StartGameQuest
             
             Rabbit.Rabbit rabbit = _rabbitFactory.CreateRabbit(rabbitView);
             
+            _startGameQuestRabbitInitializer
+                = new StartGameQuestRabbitInitializer(
+                    _locationsControllerFactory,
+                    rabbit, 
+                    _rootViewFactory.GetLocationsRootView().DreamForestLocationView.RabbitMovePointTransform,
+                    _rootViewFactory.GetLocationsRootView().DreamForestLocationView.RabbitSetMoveTriggers
+                );
+            
+            _startGameQuestRabbitInitializer.Initialize();
             rabbit.StateMachine.SetState<RabbitWaitCatchState>();
             _cutsceneManager.Play(startCutscene);
         }

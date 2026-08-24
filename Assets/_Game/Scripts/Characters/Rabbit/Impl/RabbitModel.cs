@@ -1,5 +1,7 @@
 using _Game.Scripts.Characters.Rabbit.Animations;
+using _Game.Scripts.Utils;
 using Game.PlayerSystem;
+using UniRx;
 using UnityEngine;
 
 namespace _Game.Scripts.Quests.StartGameQuest.Rabbit
@@ -8,6 +10,7 @@ namespace _Game.Scripts.Quests.StartGameQuest.Rabbit
     {
         public readonly Transformation Transformation;
         public readonly RabbitAnimationModel AnimationModel;
+        public readonly ReactiveProperty<bool> IsActive = new ReactiveProperty<bool>(true);
         
         public Transform AutoMovePoint;
         public readonly float Speed;

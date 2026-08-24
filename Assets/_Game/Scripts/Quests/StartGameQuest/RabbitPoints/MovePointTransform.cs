@@ -8,6 +8,7 @@ namespace _Game.Scripts.Quests.StartGameQuest
         
         public bool TryGetNextPoint(out MovePointTransform movePointTransform)
         {
+            Debug.Log(_nextPoint);
             movePointTransform = _nextPoint;
             
             if (_nextPoint == null)

@@ -14,8 +14,8 @@ namespace _Game.Scripts.PlayerSystems
         public readonly Transformation Transformation;
         public readonly IMoveDirectionInput MoveDirectionInput;
         public readonly AnimationPlayerModel AnimationPlayerModel;
-        public readonly Observable<bool> CanInteract;
-        public readonly Observable<bool> IsActive;
+        public readonly ReactiveProperty<bool> CanInteract;
+        public readonly ReactiveProperty<bool> IsActive;
         public ReactiveCommand OnPosition = new ReactiveCommand();
         public readonly float MoveSpeed;
         public readonly float RunSpeed;
@@ -31,8 +31,8 @@ namespace _Game.Scripts.PlayerSystems
             float runSpeed
             )
         {
-            CanInteract          = new Observable<bool>(true);
-            IsActive             = new Observable<bool>(true);
+            CanInteract          = new ReactiveProperty<bool>(true);
+            IsActive             = new ReactiveProperty<bool>(true);
             MoveDirectionInput   = moveDirectionInput;
             AnimationPlayerModel = animationPlayerModel;
             Transformation       = transformation;

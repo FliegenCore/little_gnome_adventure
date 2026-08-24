@@ -3,6 +3,7 @@ using _Game.Scripts.Characters.Rabbit.OtherComponents;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.Quests.StartGameQuest.Rabbit.States;
 using _Game.Scripts.RoomSystems;
+using UnityEngine;
 
 namespace _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours
 {
@@ -31,12 +32,20 @@ namespace _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours
         public void Initialize()
         {
             MovePointTransform currentMovePointTransform = _movePointTransform;
-            
+            _movePointTransforms.Add(currentMovePointTransform);
+
+            int index = 0;
+
             foreach (var triggerProvider in _triggerProviders)
             {
                 if (currentMovePointTransform == null)
                 {
-                    
+                    TriggerFsmStateEnabler triggerFsmStateEnabler = new TriggerFsmStateEnabler(
+                        _rabbit.StateMachine,
+                        triggerProvider, 
+                        typeof(RabbitJumpState), 
+                        true
+                    );
                 }
                 else
                 {
@@ -47,15 +56,19 @@ namespace _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours
                         true
                         );
 
-                    triggerFsmStateEnabler.PreareSetState += () =>
+                    Transform movePoint = _movePointTransforms[index].transform;
+                    triggerFsmStateEnabler.PrepareSetState += () =>
                     {
-                        _rabbit.RabbitModel.AutoMovePoint = currentMovePointTransform.transform;
+                        _rabbit.RabbitModel.AutoMovePoint = movePoint;
                     };
 
-                    if (currentMovePointTransform.TryGetNextPoint(out var nextMovePointTransform))
-                    {
-                        currentMovePointTransform = nextMovePointTransform;
-                    }
+                    currentMovePointTransform.TryGetNextPoint(out var nextMovePointTransform);
+                    
+                    currentMovePointTransform = nextMovePointTransform;
+                    
+                    
+                    _movePointTransforms.Add(currentMovePointTransform);
+                    index++;
                 }
             }
         }

@@ -1,4 +1,3 @@
-using System;
 using _Game.Scripts.CameraSystem;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems;
@@ -37,8 +36,6 @@ namespace _Game.Scripts.Common.Triggers
             }
             
             _cameraController.ZoomTo(_cameraSize, 0.5f, null);
-            
-            
         }
 
         private void OnDrawGizmos()
