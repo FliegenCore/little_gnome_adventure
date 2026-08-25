@@ -2,6 +2,7 @@ using _Game.Scripts.Input;
 using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems.Animations;
 using _Game.Scripts.PlayerSystems.Animations.Impl;
+using _Game.Scripts.PlayerSystems.OverridedStates;
 using _Game.Scripts.Utils;
 using Game.PlayerSystem;
 using UniRx;
@@ -16,6 +17,7 @@ namespace _Game.Scripts.PlayerSystems
         public readonly AnimationPlayerModel AnimationPlayerModel;
         public readonly ReactiveProperty<bool> CanInteract;
         public readonly ReactiveProperty<bool> IsActive;
+        public readonly MotionOverridedStates MotionOverridedStates;
         public ReactiveCommand OnPosition = new ReactiveCommand();
         public readonly float MoveSpeed;
         public readonly float RunSpeed;
@@ -31,13 +33,14 @@ namespace _Game.Scripts.PlayerSystems
             float runSpeed
             )
         {
-            CanInteract          = new ReactiveProperty<bool>(true);
-            IsActive             = new ReactiveProperty<bool>(true);
-            MoveDirectionInput   = moveDirectionInput;
-            AnimationPlayerModel = animationPlayerModel;
-            Transformation       = transformation;
-            MoveSpeed            = moveSpeed;
-            RunSpeed             = runSpeed;
+            CanInteract           = new ReactiveProperty<bool>(true);
+            IsActive              = new ReactiveProperty<bool>(true);
+            MotionOverridedStates = new MotionOverridedStates();
+            MoveDirectionInput    = moveDirectionInput;
+            AnimationPlayerModel  = animationPlayerModel;
+            Transformation        = transformation;
+            MoveSpeed             = moveSpeed;
+            RunSpeed              = runSpeed;
         }
     }
 }

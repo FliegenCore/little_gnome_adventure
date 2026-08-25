@@ -8,6 +8,11 @@ namespace _Game.Scripts.InteractionSystems
         public event Action<Collider2D> OnEnter;
         public event Action<Collider2D> OnExit;
         public event Action<Collider2D> OnStay;
+        
+        public void SetActive(bool acitve)
+        {
+            gameObject.SetActive(acitve);
+        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {

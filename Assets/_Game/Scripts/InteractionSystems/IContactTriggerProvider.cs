@@ -8,5 +8,7 @@ namespace _Game.Scripts.InteractionSystems
         event Action<Collider2D> OnEnter;
         event Action<Collider2D> OnExit;
         event Action<Collider2D> OnStay;
+        
+        void SetActive(bool acitve);
     }
 }

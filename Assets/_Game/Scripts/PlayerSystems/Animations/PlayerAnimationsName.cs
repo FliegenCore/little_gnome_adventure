@@ -5,6 +5,7 @@ namespace _Game.Scripts.PlayerSystems.Animations
         public const string MOVE_ANIMATION_NAME = "body/walk";
         public const string RUN_ANIMATION_NAME = "body/run";
         public const string IDLE_ANIMATION_NAME = "body/idle";
+        public const string IDLE_CROUCH_ANIMATION_NAME = "body/idle";
         public const string CROUCH_WALK_ANIMATION_NAME = "body/crouch_walk";
         public const string CATCH_RABBIT_ANIMATION_NAME = "body/catch_rabbit";
         public const string CATCH_RABBIT_ANIMATION_NAME666 = "666/catch_rabbit7";

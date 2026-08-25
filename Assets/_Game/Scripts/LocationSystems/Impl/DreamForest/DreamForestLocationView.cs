@@ -20,6 +20,6 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         [field: SerializeField] public RabbitView RabbitView { get; private set; }
         [field: SerializeField] public MovePointTransform RabbitMovePointTransform { get; private set; }
         [field: SerializeField] public ContactTriggerProvider[] RabbitSetMoveTriggers { get; private set; }
-        [field: SerializeField] public ContactTriggerProvider[] PlayerSet { get; private set; }
+        [field: SerializeField] public ContactTriggerProvider[] PlayerSetSneakTriggers { get; private set; }
     }
 }

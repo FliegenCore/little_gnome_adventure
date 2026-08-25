@@ -151,7 +151,8 @@ namespace _Game.Scripts.PlayerSystems
             fsm.AddState(new PlayerIdleMotionState(fsm, model));
             fsm.AddState(new PlayerRunMotionState(fsm, model));
             fsm.AddState(new PlayerAutoMoveMotionState(fsm, model));
-            fsm.AddState(new PlayerCrouchMoveMotionState(fsm, model));
+            fsm.AddState(new PlayerSneakMoveMotionState(fsm, model));
+            fsm.AddState(new PlayerIdleSneakMotionState(fsm, model));
             fsm.AddState(new PlayerEmptyMotionState(fsm, model));
             fsm.AddState(new PlayerMoveMotionState(fsm, model));
             

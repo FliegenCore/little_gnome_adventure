@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.FSM;
 using _Game.Scripts.InteractionSystems;
+using _Game.Scripts.PlayerSystems;
 using UnityEngine;
 
 namespace _Game.Scripts.Characters.Rabbit.OtherComponents
@@ -39,8 +40,11 @@ namespace _Game.Scripts.Characters.Rabbit.OtherComponents
             _contactTriggerProvider.OnExit  += OnExit;
         }
 
-        private void OnEnter(Collider2D _)
+        private void OnEnter(Collider2D collider)
         {
+            if (!collider.GetComponent<PlayerView>())
+                return;
+            
             if(_unsubscribeAfterTrigger)
                 _contactTriggerProvider.OnEnter -= OnEnter;
             
@@ -49,8 +53,11 @@ namespace _Game.Scripts.Characters.Rabbit.OtherComponents
             AfterSetState?.Invoke();
         }
 
-        private void OnExit(Collider2D _)
+        private void OnExit(Collider2D collider)
         {
+            if (!collider.GetComponent<PlayerView>())
+                return;
+            
             if (_afterExitState == null)
                 return;
             

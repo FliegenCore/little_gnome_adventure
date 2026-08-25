@@ -13,6 +13,7 @@ namespace _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours
         private readonly MovePointTransform _movePointTransform;
         private readonly LocationsControllerFactory _locationsControllerFactory;
         private readonly IContactTriggerProvider[] _triggerProviders;
+        private readonly IContactTriggerProvider[] _playerTriggerProviders;
 
         private List<MovePointTransform> _movePointTransforms = new();
         
@@ -20,9 +21,11 @@ namespace _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours
             LocationsControllerFactory locationsControllerFactory, 
             Rabbit.Rabbit rabbit,
             MovePointTransform firstMovePointTransform,
-            IContactTriggerProvider[] triggerProviders
+            IContactTriggerProvider[] triggerProviders,
+            IContactTriggerProvider[] playerTriggerProviders
             )
         {
+            _playerTriggerProviders     = playerTriggerProviders;
             _triggerProviders           = triggerProviders;
             _locationsControllerFactory = locationsControllerFactory;
             _movePointTransform         = firstMovePointTransform;
@@ -46,6 +49,12 @@ namespace _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours
                         typeof(RabbitJumpState), 
                         true
                     );
+                    
+                    IContactTriggerProvider playerTriggerProvider = _playerTriggerProviders[index];
+                    triggerFsmStateEnabler.PrepareSetState += () =>
+                    {
+                        playerTriggerProvider.SetActive(false);
+                    };
                 }
                 else
                 {
@@ -57,15 +66,18 @@ namespace _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours
                         );
 
                     Transform movePoint = _movePointTransforms[index].transform;
+                    
+                    IContactTriggerProvider playerTriggerProvider = _playerTriggerProviders[index];
+                    
                     triggerFsmStateEnabler.PrepareSetState += () =>
                     {
                         _rabbit.RabbitModel.AutoMovePoint = movePoint;
+                        playerTriggerProvider.SetActive(false);
                     };
 
                     currentMovePointTransform.TryGetNextPoint(out var nextMovePointTransform);
                     
                     currentMovePointTransform = nextMovePointTransform;
-                    
                     
                     _movePointTransforms.Add(currentMovePointTransform);
                     index++;

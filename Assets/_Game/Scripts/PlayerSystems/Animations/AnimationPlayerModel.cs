@@ -8,6 +8,8 @@ namespace _Game.Scripts.PlayerSystems.Animations
         public readonly ReactiveProperty<bool> IsMove;
         public readonly ReactiveProperty<bool> IsRun;
         public readonly ReactiveProperty<bool> IsIdle;
+        public readonly ReactiveProperty<bool> IsMoveSneak;
+        public readonly ReactiveProperty<bool> IsIdleSneak;
         public readonly ReactiveProperty<bool> InInventory;
 
         public AnimationPlayerModel()
@@ -16,6 +18,8 @@ namespace _Game.Scripts.PlayerSystems.Animations
             IsMove      = new ReactiveProperty<bool>();
             IsRun       = new ReactiveProperty<bool>();
             IsIdle      = new ReactiveProperty<bool>();
+            IsMoveSneak = new  ReactiveProperty<bool>();
+            IsIdleSneak = new ReactiveProperty<bool>();
         }
     }
 }

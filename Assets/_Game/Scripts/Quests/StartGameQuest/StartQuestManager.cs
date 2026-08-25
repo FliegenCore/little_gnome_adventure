@@ -1,5 +1,6 @@
 using _Game.Scripts.CutsceneSystem;
 using _Game.Scripts.DialogueSystem;
+using _Game.Scripts.InteractionSystems;
 using _Game.Scripts.PlayerSystems;
 using _Game.Scripts.Quests.StartGameQuest.Rabbit;
 using _Game.Scripts.Quests.StartGameQuest.Rabbit.States;
@@ -21,6 +22,7 @@ namespace _Game.Scripts.Quests.StartGameQuest
         private readonly LocationsControllerFactory _locationsControllerFactory;
         
         private StartGameQuestRabbitInitializer _startGameQuestRabbitInitializer;
+        private StartGameQuestPlayerTriggersInitializer _startGameQuestPlayerTriggersInitializer;
         
         public StartQuestManager(
             ICutsceneManager cutsceneManager,
@@ -55,15 +57,26 @@ namespace _Game.Scripts.Quests.StartGameQuest
             RabbitView rabbitView = _rootViewFactory.GetLocationsRootView().DreamForestLocationView.RabbitView;
             
             Rabbit.Rabbit rabbit = _rabbitFactory.CreateRabbit(rabbitView);
+
+            IContactTriggerProvider[] playerTriggers = _rootViewFactory.GetLocationsRootView().DreamForestLocationView.PlayerSetSneakTriggers;
+            IContactTriggerProvider[] rabbitTriggers = _rootViewFactory.GetLocationsRootView().DreamForestLocationView.RabbitSetMoveTriggers;
+
+            _startGameQuestPlayerTriggersInitializer
+                = new StartGameQuestPlayerTriggersInitializer(
+                    playerTriggers,
+                    _playerFactory
+                );
             
             _startGameQuestRabbitInitializer
                 = new StartGameQuestRabbitInitializer(
                     _locationsControllerFactory,
                     rabbit, 
                     _rootViewFactory.GetLocationsRootView().DreamForestLocationView.RabbitMovePointTransform,
-                    _rootViewFactory.GetLocationsRootView().DreamForestLocationView.RabbitSetMoveTriggers
+                    rabbitTriggers, 
+                    playerTriggers
                 );
             
+            _startGameQuestPlayerTriggersInitializer.Initialize();
             _startGameQuestRabbitInitializer.Initialize();
             rabbit.StateMachine.SetState<RabbitWaitCatchState>();
             _cutsceneManager.Play(startCutscene);

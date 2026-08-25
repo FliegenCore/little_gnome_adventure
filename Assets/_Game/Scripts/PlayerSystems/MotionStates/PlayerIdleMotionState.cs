@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.FSM;
 using UnityEngine;
 
@@ -12,6 +13,13 @@ namespace _Game.Scripts.PlayerSystems.MotionStates
 
         public override void Enter()
         {
+            if (_playerModel.MotionOverridedStates.IdleType != null)
+            {
+                Type type = _playerModel.MotionOverridedStates.IdleType;
+                _fsm.SetState(type);
+                return;
+            }
+            
             _playerModel.AnimationPlayerModel.IsIdle.Value = true;
             base.Enter();
         }

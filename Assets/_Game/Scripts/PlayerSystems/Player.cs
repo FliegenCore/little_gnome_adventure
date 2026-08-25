@@ -23,6 +23,8 @@ namespace _Game.Scripts.PlayerSystems
         public readonly InteractionController InteractionController;
         public readonly PlayerView PlayerView;
         
+        public Fsm MotionStateMachine => _motionStateMachine;
+        
         public Player(
             PlayerModel playerModel, 
             PlayerView playerView,
@@ -47,7 +49,8 @@ namespace _Game.Scripts.PlayerSystems
             _eventBus.Subscribe<SetPlayerMotionStateSignal, Type, object>(this, SetPlayerMotionState);
             _eventBus.Subscribe<SetPlayerActiveSignal, bool>(this, SetActive);
         }
-        
+
+
         public  void SetPlayerState<T>(Type type, T parameter = default)
         {
             if (EqualityComparer<T>.Default.Equals(parameter, default(T)))
