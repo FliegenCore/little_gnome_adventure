@@ -5,6 +5,7 @@ using _Game.Scripts.InventorySystem;
 using _Game.Scripts.PlayerSystems.InspectSystem.ViewVariants;
 using _Game.Scripts.RoomSystems;
 using Core.Common;
+using UnityEngine;
 
 namespace _Game.Scripts.PlayerSystems.InspectSystem
 {
@@ -59,10 +60,13 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
 
         public void RegisterInspect(string id, InspectAbstractView view, bool isClosable = true, InspectInputHandler inspectInputHandler = null, params AbstractInteractable[] interactables)
         {
-            InspectModel inspectModel = new InspectModel(isClosable, interactables);
-            
-            if(view != null)
+            InspectModel inspectModel = new InspectModel(view.OpenTransform, isClosable, interactables);
+
+            if (view != null)
+            {
                 view.Activator.Construct(inspectModel.IsOpen);
+                view.transform.position = view.OpenTransform ? view.OpenTransform.position : Vector3.zero;
+            }
             
             _inspectController.AddInspectModel(id, inspectModel, inspectInputHandler);
         }

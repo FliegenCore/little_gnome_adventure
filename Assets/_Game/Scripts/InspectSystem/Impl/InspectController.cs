@@ -73,7 +73,16 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
                 isMultyInspect = true;
             }
             
+            
             _currentInspectModelId = id;
+            
+            Transform openTransform = _inspectModels[id].OpenTranform;
+            
+            if (openTransform != null)
+            {
+                _inspectCamera.transform.position = new Vector3(openTransform.position.x, openTransform.position.y, -5f);
+            }
+            
             _inspectModels[id].IsOpen.Value = true;
             _currentInspectModel = _inspectModels[id];
 

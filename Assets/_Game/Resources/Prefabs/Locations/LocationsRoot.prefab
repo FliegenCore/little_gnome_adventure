@@ -913,6 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Activator>k__BackingField: {fileID: 6060380988427503711}
+  <OpenTransform>k__BackingField: {fileID: 8555814583478377787}
   _animationControl: {fileID: 6029274445878003947}
 --- !u!1001 &6664415726434696864
 PrefabInstance:
@@ -1310,6 +1311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e19f4d71f3409e9584092faf5fd115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8555814583478377787 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2068664767022386057, guid: a22d6c2ee562d4c4f8d7b39dfd4fe05d, type: 3}
+  m_PrefabInstance: {fileID: 7640642285480810162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8983986506489067317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1631582405469364615, guid: a22d6c2ee562d4c4f8d7b39dfd4fe05d, type: 3}
