@@ -1,0 +1,244 @@
+
+ManInGate.png
+size: 752,1038
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ArmDown
+  rotate: false
+  xy: 601, 718
+  size: 133, 176
+  orig: 138, 180
+  offset: 3, 2
+  index: -1
+ArmDown2
+  rotate: false
+  xy: 599, 85
+  size: 133, 176
+  orig: 138, 180
+  offset: 2, 2
+  index: -1
+HOP
+  rotate: false
+  xy: 369, 896
+  size: 359, 140
+  orig: 363, 144
+  offset: 2, 2
+  index: -1
+Rot
+  rotate: true
+  xy: 697, 308
+  size: 61, 52
+  orig: 66, 56
+  offset: 2, 2
+  index: -1
+SHAP1
+  rotate: true
+  xy: 446, 478
+  size: 235, 142
+  orig: 239, 146
+  offset: 2, 2
+  index: -1
+Shap2
+  rotate: true
+  xy: 446, 263
+  size: 213, 184
+  orig: 217, 188
+  offset: 2, 2
+  index: -1
+armUp
+  rotate: true
+  xy: 109, 24
+  size: 103, 218
+  orig: 107, 222
+  offset: 2, 2
+  index: -1
+armUp2
+  rotate: false
+  xy: 590, 495
+  size: 103, 218
+  orig: 107, 222
+  offset: 2, 2
+  index: -1
+body
+  rotate: false
+  xy: 2, 721
+  size: 365, 315
+  orig: 369, 319
+  offset: 2, 2
+  index: -1
+brow
+  rotate: true
+  xy: 695, 641
+  size: 75, 55
+  orig: 79, 59
+  offset: 2, 2
+  index: -1
+brow1
+  rotate: true
+  xy: 632, 271
+  size: 93, 63
+  orig: 97, 67
+  offset: 2, 2
+  index: -1
+foot
+  rotate: false
+  xy: 536, 42
+  size: 74, 38
+  orig: 78, 42
+  offset: 2, 2
+  index: -1
+foot2
+  rotate: false
+  xy: 536, 42
+  size: 74, 38
+  orig: 78, 42
+  offset: 2, 2
+  index: -1
+gaz1
+  rotate: true
+  xy: 109, 129
+  size: 269, 185
+  orig: 273, 190
+  offset: 2, 3
+  index: -1
+gaz2
+  rotate: true
+  xy: 382, 82
+  size: 179, 215
+  orig: 184, 219
+  offset: 3, 2
+  index: -1
+gaz3
+  rotate: false
+  xy: 369, 715
+  size: 230, 179
+  orig: 234, 183
+  offset: 2, 2
+  index: -1
+glaz1
+  rotate: false
+  xy: 691, 433
+  size: 59, 60
+  orig: 63, 64
+  offset: 2, 2
+  index: -1
+glaz2
+  rotate: false
+  xy: 691, 433
+  size: 59, 60
+  orig: 63, 64
+  offset: 2, 2
+  index: -1
+grib
+  rotate: true
+  xy: 366, 18
+  size: 62, 77
+  orig: 67, 81
+  offset: 3, 2
+  index: -1
+hair
+  rotate: true
+  xy: 296, 134
+  size: 154, 84
+  orig: 158, 88
+  offset: 2, 2
+  index: -1
+head
+  rotate: false
+  xy: 2, 400
+  size: 326, 319
+  orig: 330, 323
+  offset: 2, 2
+  index: -1
+legDown
+  rotate: false
+  xy: 329, 14
+  size: 35, 118
+  orig: 39, 122
+  offset: 2, 2
+  index: -1
+legDown2
+  rotate: false
+  xy: 329, 14
+  size: 35, 118
+  orig: 39, 122
+  offset: 2, 2
+  index: -1
+legUp
+  rotate: true
+  xy: 445, 43
+  size: 37, 89
+  orig: 41, 94
+  offset: 2, 2
+  index: -1
+legUp2
+  rotate: true
+  xy: 445, 43
+  size: 37, 89
+  orig: 41, 94
+  offset: 2, 2
+  index: -1
+nose
+  rotate: false
+  xy: 670, 32
+  size: 38, 51
+  orig: 42, 55
+  offset: 2, 2
+  index: -1
+ochki
+  rotate: true
+  xy: 632, 366
+  size: 127, 57
+  orig: 131, 61
+  offset: 2, 2
+  index: -1
+palto1
+  rotate: false
+  xy: 330, 290
+  size: 114, 423
+  orig: 118, 427
+  offset: 2, 2
+  index: -1
+palto2
+  rotate: false
+  xy: 2, 11
+  size: 105, 387
+  orig: 109, 391
+  offset: 2, 2
+  index: -1
+point1
+  rotate: false
+  xy: 670, 2
+  size: 26, 28
+  orig: 30, 32
+  offset: 2, 2
+  index: -1
+point2
+  rotate: false
+  xy: 670, 2
+  size: 26, 28
+  orig: 30, 32
+  offset: 2, 2
+  index: -1
+uho1
+  rotate: true
+  xy: 691, 371
+  size: 60, 57
+  orig: 64, 62
+  offset: 2, 2
+  index: -1
+uho2
+  rotate: true
+  xy: 612, 29
+  size: 54, 56
+  orig: 58, 60
+  offset: 2, 2
+  index: -1
+usiki
+  rotate: true
+  xy: 695, 528
+  size: 111, 52
+  orig: 115, 56
+  offset: 2, 2
+  index: -1

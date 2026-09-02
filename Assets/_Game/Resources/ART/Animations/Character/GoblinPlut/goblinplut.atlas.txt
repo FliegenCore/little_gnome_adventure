@@ -1,229 +1,229 @@
 
 goblinplut.png
-size: 1017,525
+size: 1346,399
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 1redmushroom
   rotate: true
-  xy: 670, 127
+  xy: 1249, 162
   size: 60, 90
   orig: 64, 92
   offset: 2, 0
   index: -1
 H1
   rotate: false
-  xy: 2, 2
+  xy: 766, 4
   size: 84, 119
   orig: 88, 123
   offset: 2, 2
   index: -1
 H2
-  rotate: false
-  xy: 513, 32
+  rotate: true
+  xy: 609, 7
   size: 74, 89
   orig: 78, 93
   offset: 2, 2
   index: -1
 Lbrow
   rotate: true
-  xy: 825, 220
+  xy: 153, 11
   size: 32, 20
   orig: 36, 25
   offset: 2, 2
   index: -1
 Leye
-  rotate: false
-  xy: 621, 474
+  rotate: true
+  xy: 1112, 162
   size: 47, 49
   orig: 51, 53
   offset: 2, 2
   index: -1
 Lpoint
   rotate: false
-  xy: 546, 9
+  xy: 200, 22
   size: 19, 21
   orig: 23, 25
   offset: 2, 2
   index: -1
 Rbrow
-  rotate: false
-  xy: 513, 7
+  rotate: true
+  xy: 175, 12
   size: 31, 23
   orig: 35, 27
   offset: 2, 2
   index: -1
 Reye
-  rotate: true
-  xy: 771, 199
+  rotate: false
+  xy: 1281, 108
   size: 53, 52
   orig: 57, 56
   offset: 2, 2
   index: -1
 Rpoint
-  rotate: true
-  xy: 567, 11
+  rotate: false
+  xy: 221, 22
   size: 19, 21
   orig: 23, 25
   offset: 2, 2
   index: -1
 US1
-  rotate: true
-  xy: 818, 5
+  rotate: false
+  xy: 1249, 224
   size: 94, 50
   orig: 98, 54
   offset: 2, 2
   index: -1
 US2
   rotate: true
-  xy: 462, 17
+  xy: 1281, 2
   size: 104, 49
   orig: 108, 53
   offset: 2, 2
   index: -1
 am2
   rotate: false
-  xy: 318, 123
+  xy: 1112, 263
   size: 135, 50
   orig: 140, 54
   offset: 2, 2
   index: -1
 am2LEFT
   rotate: false
-  xy: 455, 123
+  xy: 1112, 211
   size: 135, 50
   orig: 140, 54
   offset: 3, 2
   index: -1
 arm1
   rotate: false
-  xy: 944, 118
+  xy: 982, 129
   size: 63, 148
   orig: 67, 152
   offset: 2, 2
   index: -1
 arm1LEFT
-  rotate: true
-  xy: 621, 189
+  rotate: false
+  xy: 1047, 129
   size: 63, 148
   orig: 67, 152
   offset: 2, 2
   index: -1
 arm3
-  rotate: false
-  xy: 944, 459
+  rotate: true
+  xy: 700, 10
   size: 71, 64
   orig: 75, 68
   offset: 2, 2
   index: -1
 arm3LEFT
   rotate: false
-  xy: 944, 393
+  xy: 1259, 276
   size: 71, 64
   orig: 75, 68
   offset: 2, 2
   index: -1
 body
   rotate: true
-  xy: 318, 175
-  size: 348, 301
+  xy: 2, 45
+  size: 352, 305
   orig: 352, 305
-  offset: 2, 2
+  offset: 0, 0
   index: -1
 cap
-  rotate: true
-  xy: 2, 123
+  rotate: false
+  xy: 309, 83
   size: 400, 314
   orig: 405, 318
   offset: 3, 2
   index: -1
 hairchup
   rotate: false
-  xy: 217, 10
+  xy: 981, 12
   size: 123, 111
   orig: 127, 115
   offset: 2, 2
   index: -1
 head
-  rotate: false
-  xy: 670, 254
+  rotate: true
+  xy: 711, 125
   size: 272, 269
   orig: 276, 273
   offset: 2, 2
   index: -1
 leg1
-  rotate: false
-  xy: 849, 101
+  rotate: true
+  xy: 1106, 315
   size: 82, 151
   orig: 86, 156
   offset: 2, 2
   index: -1
 leg2
-  rotate: true
-  xy: 670, 15
+  rotate: false
+  xy: 1178, 14
   size: 101, 146
   orig: 105, 150
   offset: 2, 2
   index: -1
 meshok
-  rotate: false
-  xy: 592, 18
+  rotate: true
+  xy: 452, 5
   size: 76, 155
   orig: 80, 159
   offset: 2, 2
   index: -1
 nose
   rotate: false
-  xy: 88, 7
+  xy: 852, 9
   size: 127, 114
   orig: 131, 118
   offset: 2, 2
   index: -1
 rot
-  rotate: false
-  xy: 621, 430
+  rotate: true
+  xy: 1163, 166
   size: 43, 42
   orig: 47, 46
   offset: 2, 2
   index: -1
 shadow
-  rotate: true
-  xy: 621, 279
+  rotate: false
+  xy: 2, 11
   size: 149, 32
   orig: 150, 32
   offset: 0, 0
   index: -1
 shous1
-  rotate: true
-  xy: 342, 12
+  rotate: false
+  xy: 982, 339
   size: 109, 58
   orig: 113, 62
   offset: 2, 2
   index: -1
 shous2
-  rotate: true
-  xy: 402, 12
+  rotate: false
+  xy: 982, 279
   size: 109, 58
   orig: 113, 62
   offset: 2, 2
   index: -1
 ticket
   rotate: false
-  xy: 762, 132
+  xy: 1259, 342
   size: 85, 55
   orig: 85, 55
   offset: 0, 0
   index: -1
 uho1
   rotate: false
-  xy: 870, 20
+  xy: 309, 2
   size: 141, 79
   orig: 145, 83
   offset: 2, 2
   index: -1
 uho2
   rotate: true
-  xy: 944, 268
+  xy: 1106, 4
   size: 123, 70
   orig: 127, 74
   offset: 2, 2

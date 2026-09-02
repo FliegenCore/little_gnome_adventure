@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: ad5c580d08accf44da5391717c1f9373
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2691058461684088904
+    second: ManInGate_0
+  - first:
+      213: 5825697440446474816
+    second: ManInGate_1
+  - first:
+      213: -342496363972807940
+    second: ManInGate_2
+  - first:
+      213: 7966556871060149848
+    second: ManInGate_3
+  - first:
+      213: 4008798278346930083
+    second: ManInGate_4
+  - first:
+      213: -803052018872186507
+    second: ManInGate_5
+  - first:
+      213: 4427392872495007331
+    second: ManInGate_6
+  - first:
+      213: -8567026060718366086
+    second: ManInGate_7
+  - first:
+      213: 7144966897279678910
+    second: ManInGate_8
+  - first:
+      213: -1510084241329257420
+    second: ManInGate_9
+  - first:
+      213: -9066028418516321363
+    second: ManInGate_10
+  - first:
+      213: 1770724981730192593
+    second: ManInGate_11
+  - first:
+      213: -2354427189093505784
+    second: ManInGate_12
+  - first:
+      213: -3207050343570836324
+    second: ManInGate_13
+  - first:
+      213: -1254638006591972126
+    second: ManInGate_14
+  - first:
+      213: -5339019895733829301
+    second: ManInGate_15
+  - first:
+      213: -7403673061246345801
+    second: ManInGate_16
+  - first:
+      213: -2077763731536859078
+    second: ManInGate_17
+  - first:
+      213: -8978182497636648652
+    second: ManInGate_18
+  - first:
+      213: 8344970811208167941
+    second: ManInGate_19
+  - first:
+      213: 1906981613927337256
+    second: ManInGate_20
+  - first:
+      213: 5050933496618010182
+    second: ManInGate_21
+  - first:
+      213: -1946719207976391525
+    second: ManInGate_22
+  - first:
+      213: -509167022714576859
+    second: ManInGate_23
+  - first:
+      213: 2199220591858877500
+    second: ManInGate_24
+  - first:
+      213: 7295062441783259012
+    second: ManInGate_25
+  - first:
+      213: 2544741181834417564
+    second: ManInGate_26
+  - first:
+      213: -4639867769939429625
+    second: ManInGate_27
+  - first:
+      213: -5212120959705643883
+    second: ManInGate_28
+  - first:
+      213: 789282250521797423
+    second: ManInGate_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ManInGate_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 639
+        width: 107
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bfb281469077aad0800000000000000
+      internalID: -2691058461684088904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 910
+        width: 220
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ae6bac4f809d050800000000000000
+      internalID: 5825697440446474816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_2
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 905
+        width: 37
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2b9802f553f3bf0800000000000000
+      internalID: -342496363972807940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_3
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 957
+        width: 79
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856dc7ef345ee8e60800000000000000
+      internalID: 7966556871060149848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_4
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 954
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7f01d6bcc12a730800000000000000
+      internalID: 4008798278346930083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_5
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1007
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57986fe817cfad4f0800000000000000
+      internalID: -803052018872186507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_6
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 954
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36649263c52417d30800000000000000
+      internalID: 4427392872495007331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_7
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 776
+        width: 217
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a722e55103fcb1980800000000000000
+      internalID: -8567026060718366086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_8
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 957
+        width: 91
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9b7449985082360800000000000000
+      internalID: 7144966897279678910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_9
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 957
+        width: 76
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43487ae126a1b0be0800000000000000
+      internalID: -1510084241329257420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_10
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 639
+        width: 187
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dabfcbeef2ffe2280800000000000000
+      internalID: -9066028418516321363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_11
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 749
+        width: 86
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc20fa3df0e29810800000000000000
+      internalID: 1770724981730192593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_12
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 561
+        width: 186
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8056f8022f4635fd0800000000000000
+      internalID: -2354427189093505784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_13
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 776
+        width: 135
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c947aa644b44e73d0800000000000000
+      internalID: -3207050343570836324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_14
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 324
+        width: 116
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec916f5161a69ee0800000000000000
+      internalID: -1254638006591972126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_15
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 673
+        width: 65
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41ca0231bdf7e5b0800000000000000
+      internalID: -5339019895733829301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_16
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 620
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd584fb39ed04990800000000000000
+      internalID: -7403673061246345801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_17
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 668
+        width: 54
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a303e8605ec4a23e0800000000000000
+      internalID: -2077763731536859078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 318
+        width: 328
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439fcbb3696176380800000000000000
+      internalID: -8978182497636648652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_19
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 606
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502f01f3dba4fc370800000000000000
+      internalID: 8344970811208167941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_20
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 544
+        width: 61
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d075b9ca5f67a10800000000000000
+      internalID: 1906981613927337256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_21
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 324
+        width: 144
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646c9021145881640800000000000000
+      internalID: 5050933496618010182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_22
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 324
+        width: 105
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c232bc13ddbf4e0800000000000000
+      internalID: -1946719207976391525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_23
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 544
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52021cf5a431fe8f0800000000000000
+      internalID: -509167022714576859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_24
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 398
+        width: 54
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c340970f973358e10800000000000000
+      internalID: 2199220591858877500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_25
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 321
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fe8c0d3a44d3560800000000000000
+      internalID: 7295062441783259012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 367
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c955c8c4f9cb05320800000000000000
+      internalID: 2544741181834417564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_27
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 143
+        width: 232
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 707f9f7a8d0eb9fb0800000000000000
+      internalID: -4639867769939429625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_28
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1
+        width: 361
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59480662a93daa7b0800000000000000
+      internalID: -5212120959705643883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManInGate_29
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 143
+        width: 135
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f236fd9660814fa00800000000000000
+      internalID: 789282250521797423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ManInGate_0: -2691058461684088904
+      ManInGate_1: 5825697440446474816
+      ManInGate_10: -9066028418516321363
+      ManInGate_11: 1770724981730192593
+      ManInGate_12: -2354427189093505784
+      ManInGate_13: -3207050343570836324
+      ManInGate_14: -1254638006591972126
+      ManInGate_15: -5339019895733829301
+      ManInGate_16: -7403673061246345801
+      ManInGate_17: -2077763731536859078
+      ManInGate_18: -8978182497636648652
+      ManInGate_19: 8344970811208167941
+      ManInGate_2: -342496363972807940
+      ManInGate_20: 1906981613927337256
+      ManInGate_21: 5050933496618010182
+      ManInGate_22: -1946719207976391525
+      ManInGate_23: -509167022714576859
+      ManInGate_24: 2199220591858877500
+      ManInGate_25: 7295062441783259012
+      ManInGate_26: 2544741181834417564
+      ManInGate_27: -4639867769939429625
+      ManInGate_28: -5212120959705643883
+      ManInGate_29: 789282250521797423
+      ManInGate_3: 7966556871060149848
+      ManInGate_4: 4008798278346930083
+      ManInGate_5: -803052018872186507
+      ManInGate_6: 4427392872495007331
+      ManInGate_7: -8567026060718366086
+      ManInGate_8: 7144966897279678910
+      ManInGate_9: -1510084241329257420
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

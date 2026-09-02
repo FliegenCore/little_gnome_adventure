@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 9eab161073873e64c9c26a06cd2afff2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1897422430638923264
+    second: UlitkaMan_0
+  - first:
+      213: -5348929995661042065
+    second: UlitkaMan_1
+  - first:
+      213: -4379752461141349673
+    second: UlitkaMan_2
+  - first:
+      213: 6051632619585936337
+    second: UlitkaMan_3
+  - first:
+      213: -4535723486998810171
+    second: UlitkaMan_4
+  - first:
+      213: 8992182109269894200
+    second: UlitkaMan_5
+  - first:
+      213: 336682705468755006
+    second: UlitkaMan_6
+  - first:
+      213: 7040386297066490469
+    second: UlitkaMan_7
+  - first:
+      213: -6734792471440283565
+    second: UlitkaMan_8
+  - first:
+      213: -2775439886092693196
+    second: UlitkaMan_9
+  - first:
+      213: 3887993472849878497
+    second: UlitkaMan_10
+  - first:
+      213: -4777853960766000379
+    second: UlitkaMan_11
+  - first:
+      213: 2340754508958266137
+    second: UlitkaMan_12
+  - first:
+      213: -6539003392382922328
+    second: UlitkaMan_13
+  - first:
+      213: 4019027998792753227
+    second: UlitkaMan_14
+  - first:
+      213: -4258980889700000241
+    second: UlitkaMan_15
+  - first:
+      213: 4390682708256830802
+    second: UlitkaMan_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UlitkaMan_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 620
+        width: 198
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002a8e03a500ba5e0800000000000000
+      internalID: -1897422430638923264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 445
+        width: 205
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e11304288c4c5b0800000000000000
+      internalID: -5348929995661042065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_2
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 619
+        width: 159
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dae68d675ef733c0800000000000000
+      internalID: -4379752461141349673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 172
+        width: 284
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db1699fdc7bbf350800000000000000
+      internalID: 6051632619585936337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 445
+        width: 184
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c13a06158fdd01c0800000000000000
+      internalID: -4535723486998810171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 335
+        width: 90
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834a7aa5cf5aacc70800000000000000
+      internalID: 8992182109269894200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_6
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 282
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c8b7503232ca400800000000000000
+      internalID: 336682705468755006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_7
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 321
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a0d2e190a74b160800000000000000
+      internalID: 7040386297066490469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_8
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 200
+        width: 44
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358a3dffde53982a0800000000000000
+      internalID: -6734792471440283565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_9
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 297
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4319ef5e028ab79d0800000000000000
+      internalID: -2775439886092693196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_10
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 229
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed114ec67de4f530800000000000000
+      internalID: 3887993472849878497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_11
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 172
+        width: 66
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50379d70327a1bdb0800000000000000
+      internalID: -4777853960766000379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 350
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913f9d4f2d70c7020800000000000000
+      internalID: 2340754508958266137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_13
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 148
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a111fb4f0bc045a0800000000000000
+      internalID: -6539003392382922328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_14
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 107
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b402462dba476c730800000000000000
+      internalID: 4019027998792753227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_15
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 35
+        width: 41
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e1144227f05e4c0800000000000000
+      internalID: -4258980889700000241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UlitkaMan_16
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255391b09a6deec30800000000000000
+      internalID: 4390682708256830802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UlitkaMan_0: -1897422430638923264
+      UlitkaMan_1: -5348929995661042065
+      UlitkaMan_10: 3887993472849878497
+      UlitkaMan_11: -4777853960766000379
+      UlitkaMan_12: 2340754508958266137
+      UlitkaMan_13: -6539003392382922328
+      UlitkaMan_14: 4019027998792753227
+      UlitkaMan_15: -4258980889700000241
+      UlitkaMan_16: 4390682708256830802
+      UlitkaMan_2: -4379752461141349673
+      UlitkaMan_3: 6051632619585936337
+      UlitkaMan_4: -4535723486998810171
+      UlitkaMan_5: 8992182109269894200
+      UlitkaMan_6: 336682705468755006
+      UlitkaMan_7: 7040386297066490469
+      UlitkaMan_8: -6734792471440283565
+      UlitkaMan_9: -2775439886092693196
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
