@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: f73548b369e2cc24da23a86f772fbfb1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8777784417420518194
+    second: chel_0
+  - first:
+      213: -8023592594431401875
+    second: chel_1
+  - first:
+      213: -4842773162446703010
+    second: chel_2
+  - first:
+      213: -8754432866653931058
+    second: chel_3
+  - first:
+      213: 5733383116057834296
+    second: chel_4
+  - first:
+      213: -7800731609454508755
+    second: chel_5
+  - first:
+      213: -249547458972140131
+    second: chel_6
+  - first:
+      213: -1330019804954244956
+    second: chel_7
+  - first:
+      213: -2086591106423448581
+    second: chel_8
+  - first:
+      213: -4295827809856761971
+    second: chel_9
+  - first:
+      213: -984929807738958811
+    second: chel_10
+  - first:
+      213: -5298328904323649946
+    second: chel_11
+  - first:
+      213: -1763090046228452973
+    second: chel_12
+  - first:
+      213: -786584534086183878
+    second: chel_13
+  - first:
+      213: -536757058492797652
+    second: chel_14
+  - first:
+      213: 4614860514811191334
+    second: chel_15
+  - first:
+      213: 7471144571417899091
+    second: chel_16
+  - first:
+      213: 8645848824415549311
+    second: chel_17
+  - first:
+      213: -4284981190280852578
+    second: chel_18
+  - first:
+      213: 1281019349525128028
+    second: chel_19
+  - first:
+      213: -7942172779344508873
+    second: chel_20
+  - first:
+      213: -6977448100033617378
+    second: chel_21
+  - first:
+      213: 2730578484307902136
+    second: chel_22
+  - first:
+      213: -8244359393343772980
+    second: chel_23
+  - first:
+      213: 9070090199642760108
+    second: chel_24
+  - first:
+      213: 3553480277176241709
+    second: chel_25
+  - first:
+      213: 4456536447836918785
+    second: chel_26
+  - first:
+      213: 8279199056154985800
+    second: chel_27
+  - first:
+      213: 2928501541396752468
+    second: chel_28
+  - first:
+      213: -8012562569757777893
+    second: chel_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chel_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 407
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eccd0bc349b0f2680800000000000000
+      internalID: -8777784417420518194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_1
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 345
+        width: 55
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d602672db0976a090800000000000000
+      internalID: -8023592594431401875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_2
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 345
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56b19487730bccb0800000000000000
+      internalID: -4842773162446703010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_3
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 345
+        width: 39
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec97615d0b1028680800000000000000
+      internalID: -8754432866653931058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_4
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 253
+        width: 363
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83379d93191119f40800000000000000
+      internalID: 5733383116057834296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_5
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 253
+        width: 221
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d258d466eeb3eb390800000000000000
+      internalID: -7800731609454508755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_6
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 335
+        width: 93
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d3d5188ed698cf0800000000000000
+      internalID: -249547458972140131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_7
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 249
+        width: 90
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8c77db802da8de0800000000000000
+      internalID: -1330019804954244956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_8
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 348
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb1426a170fa03e0800000000000000
+      internalID: -2086591106423448581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_9
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 340
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f4e310e572264c0800000000000000
+      internalID: -4295827809856761971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_10
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 258
+        width: 72
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c8609ee83d452f0800000000000000
+      internalID: -984929807738958811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_11
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 321
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66eaa9aeeed8876b0800000000000000
+      internalID: -5298328904323649946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1
+        width: 379
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399a687b1fe3887e0800000000000000
+      internalID: -1763090046228452973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_13
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 251
+        width: 174
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a341af3a88d7515f0800000000000000
+      internalID: -786584534086183878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_14
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 331
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d6ad59c4e0d88f0800000000000000
+      internalID: -536757058492797652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_15
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 307
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6202c4900374b0040800000000000000
+      internalID: 4614860514811191334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_16
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 272
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350b3f46766dea760800000000000000
+      internalID: 7471144571417899091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_17
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 251
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f777409b2b93cf770800000000000000
+      internalID: 8645848824415549311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_18
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 167
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b441c6f40b884c0800000000000000
+      internalID: -4284981190280852578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_19
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 272
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53e8deaf4817c110800000000000000
+      internalID: 1281019349525128028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_20
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 258
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738c466cfebb7c190800000000000000
+      internalID: -7942172779344508873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_21
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1
+        width: 205
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12a5cecbef1b2f90800000000000000
+      internalID: -6977448100033617378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_22
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 6
+        width: 92
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be3f7c0aa6f4e520800000000000000
+      internalID: 2730578484307902136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_23
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1
+        width: 310
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6e61fefc6269d80800000000000000
+      internalID: -8244359393343772980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_24
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 167
+        width: 155
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3657e2bfe6fdd70800000000000000
+      internalID: 9070090199642760108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_25
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 167
+        width: 59
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e42752c7f705130800000000000000
+      internalID: 3553480277176241709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_26
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 185
+        width: 102
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10496ed994cc8dd30800000000000000
+      internalID: 4456536447836918785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_27
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 1
+        width: 147
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8450ede2daf95e270800000000000000
+      internalID: 8279199056154985800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_28
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 185
+        width: 45
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4582323d2a024a820800000000000000
+      internalID: 2928501541396752468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chel_29
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 1
+        width: 322
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b102ff09bc8adc090800000000000000
+      internalID: -8012562569757777893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      chel_0: -8777784417420518194
+      chel_1: -8023592594431401875
+      chel_10: -984929807738958811
+      chel_11: -5298328904323649946
+      chel_12: -1763090046228452973
+      chel_13: -786584534086183878
+      chel_14: -536757058492797652
+      chel_15: 4614860514811191334
+      chel_16: 7471144571417899091
+      chel_17: 8645848824415549311
+      chel_18: -4284981190280852578
+      chel_19: 1281019349525128028
+      chel_2: -4842773162446703010
+      chel_20: -7942172779344508873
+      chel_21: -6977448100033617378
+      chel_22: 2730578484307902136
+      chel_23: -8244359393343772980
+      chel_24: 9070090199642760108
+      chel_25: 3553480277176241709
+      chel_26: 4456536447836918785
+      chel_27: 8279199056154985800
+      chel_28: 2928501541396752468
+      chel_29: -8012562569757777893
+      chel_3: -8754432866653931058
+      chel_4: 5733383116057834296
+      chel_5: -7800731609454508755
+      chel_6: -249547458972140131
+      chel_7: -1330019804954244956
+      chel_8: -2086591106423448581
+      chel_9: -4295827809856761971
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
