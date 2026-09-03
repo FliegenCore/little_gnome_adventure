@@ -3,7 +3,7 @@
     {
       "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
       "DialogueName": "McMushroom",
-      "Text": "Давай сюда, давай ДАВАЙ!!",
+      "Text": "Надо три гриба!",
       "Type": 0,
       "Position": {
         "x": 154.0,
@@ -43,23 +43,29 @@
     {
       "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
       "DialogueName": "McMushroom",
-      "Text": "У тебя за пазухой мухомор лежит? А?",
+      "Text": "D3 Ещё гибочек!",
       "Type": 0,
       "Position": {
-        "x": -248.0,
-        "y": 170.0,
+        "x": -230.0,
+        "y": 210.0,
         "normalized": {
-          "x": -0.8248175,
-          "y": 0.5653991,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
+          "x": -0.738485456,
+          "y": 0.6742693,
+          "normalized": {
+            "x": -0.7384855,
+            "y": 0.6742694,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
         },
-        "magnitude": 300.672577,
-        "sqrMagnitude": 90404.0
+        "magnitude": 311.448242,
+        "sqrMagnitude": 97000.0
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_Player_eyes/forward_2_1",
+        "a_McMushroom_giveGrib1_0_0",
         "a_McMushroom_speak_0_1"
       ],
       "OnEndEvents": [],
