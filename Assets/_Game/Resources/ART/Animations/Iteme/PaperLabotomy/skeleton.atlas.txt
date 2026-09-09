@@ -1,0 +1,13 @@
+
+skeleton.png
+size: 1160,797
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+PaperLobotomy
+  rotate: false
+  xy: 2, 2
+  size: 1156, 793
+  orig: 1156, 793
+  offset: 0, 0
+  index: -1
