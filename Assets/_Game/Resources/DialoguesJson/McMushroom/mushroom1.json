@@ -29,28 +29,34 @@
       ]
     },
     {
-      "NodeId": "3b7b4b02-2e57-4ad2-9aa6-691777916704",
+      "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
       "DialogueName": "McMushroom",
-      "Text": "Топай уже! ТРИ ГРИБА! Я ЖДУ!",
+      "Text": "Не, Это особенный билет для приключений. \nЯ отдам тебе его в обмен на три красных гриба!",
       "Type": 0,
       "Position": {
-        "x": 578.0,
-        "y": 215.0,
+        "x": -24.0,
+        "y": 203.0,
         "normalized": {
-          "x": 0.93725884,
-          "y": 0.348634362,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
+          "x": -0.1174089,
+          "y": 0.9930836,
+          "normalized": {
+            "x": -0.117408909,
+            "y": 0.993083656,
+            "magnitude": 1.0,
+            "sqrMagnitude": 1.0
+          },
+          "magnitude": 0.99999994,
+          "sqrMagnitude": 0.9999999
         },
-        "magnitude": 616.691956,
-        "sqrMagnitude": 380309.0
+        "magnitude": 204.4138,
+        "sqrMagnitude": 41785.0
       },
       "IsStartNode": false,
       "OnStartEvents": [
         "a_McMushroom_speak_0_1"
       ],
       "OnEndEvents": [
-        "a_McMushroom_idle"
+        "a_Player_emotion/idle_2_1"
       ],
       "ChoiceEvents": [],
       "Choices": [
@@ -58,28 +64,28 @@
       ]
     },
     {
-      "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
+      "NodeId": "3b7b4b02-2e57-4ad2-9aa6-691777916704",
       "DialogueName": "McMushroom",
-      "Text": "Не, Это особенный билет для приключений. \nЯ отдам тебе его в обмен на три красных гриба!",
+      "Text": "Топай уже! ТРИ ГРИБА! Я ЖДУ!",
       "Type": 0,
       "Position": {
-        "x": -21.0,
-        "y": 214.0,
+        "x": 357.0,
+        "y": 202.0,
         "normalized": {
-          "x": -0.09766174,
-          "y": 0.995219648,
+          "x": 0.8703357,
+          "y": 0.49245885,
           "magnitude": 1.0,
           "sqrMagnitude": 0.99999994
         },
-        "magnitude": 215.027908,
-        "sqrMagnitude": 46237.0
+        "magnitude": 410.186554,
+        "sqrMagnitude": 168253.0
       },
       "IsStartNode": false,
       "OnStartEvents": [
         "a_McMushroom_speak_0_1"
       ],
       "OnEndEvents": [
-        "a_Player_emotion/idle_1_1"
+        "a_McMushroom_idle_0_1"
       ],
       "ChoiceEvents": [],
       "Choices": [

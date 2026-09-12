@@ -3,25 +3,31 @@
     {
       "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
       "DialogueName": "McMushroom",
-      "Text": "Мне нужны грибочки!",
+      "Text": "Неси еще один и билетик твой!",
       "Type": 0,
       "Position": {
-        "x": 162.0,
-        "y": 199.0,
+        "x": 154.0,
+        "y": 210.0,
         "normalized": {
-          "x": 0.6313259,
-          "y": 0.7755176,
+          "x": 0.591363668,
+          "y": 0.806405067,
           "normalized": {
-            "x": 0.63132596,
-            "y": 0.775517642,
-            "magnitude": 1.0,
-            "sqrMagnitude": 1.00000012
+            "x": 0.5913636,
+            "y": 0.806404948,
+            "normalized": {
+              "x": 0.591363668,
+              "y": 0.806405,
+              "magnitude": 1.0,
+              "sqrMagnitude": 1.0
+            },
+            "magnitude": 0.99999994,
+            "sqrMagnitude": 0.9999999
           },
-          "magnitude": 0.99999994,
-          "sqrMagnitude": 0.99999994
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000012
         },
-        "magnitude": 256.6028,
-        "sqrMagnitude": 65845.0
+        "magnitude": 260.415039,
+        "sqrMagnitude": 67816.0
       },
       "IsStartNode": false,
       "OnStartEvents": [],
@@ -37,29 +43,30 @@
     {
       "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
       "DialogueName": "McMushroom",
-      "Text": "D2 Ты так и будешь на меня смотреть?",
+      "Text": "D5 Мои хорошие грибочки! ",
       "Type": 0,
       "Position": {
-        "x": -233.0,
-        "y": 199.0,
+        "x": -230.0,
+        "y": 210.0,
         "normalized": {
-          "x": -0.7604072,
-          "y": 0.6494465,
+          "x": -0.738485456,
+          "y": 0.6742693,
           "normalized": {
-            "x": -0.760407269,
-            "y": 0.649446547,
+            "x": -0.7384855,
+            "y": 0.6742694,
             "magnitude": 1.0,
             "sqrMagnitude": 1.0
           },
           "magnitude": 0.99999994,
           "sqrMagnitude": 0.9999999
         },
-        "magnitude": 306.414764,
-        "sqrMagnitude": 93890.0
+        "magnitude": 311.448242,
+        "sqrMagnitude": 97000.0
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_Player_eyes/forward_2_1",
+        "a_McMushroom_giveGrib1_0_0",
+        "a_McMushroom_giveGrib1_0_0",
         "a_McMushroom_speak_0_1"
       ],
       "OnEndEvents": [],

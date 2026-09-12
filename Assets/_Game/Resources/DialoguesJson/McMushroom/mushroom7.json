@@ -1,0 +1,66 @@
+{
+  "Nodes": [
+    {
+      "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
+      "DialogueName": "McMushroom",
+      "Text": "мне нормально! уууу!!",
+      "Type": 0,
+      "Position": {
+        "x": 124.0,
+        "y": 198.0,
+        "normalized": {
+          "x": 0.5307682,
+          "y": 0.847517,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 233.623627,
+        "sqrMagnitude": 54580.0
+      },
+      "IsStartNode": false,
+      "OnStartEvents": [],
+      "OnEndEvents": [
+        "a_McMushroom_verydrunk_0_1"
+      ],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    },
+    {
+      "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
+      "DialogueName": "McMushroom",
+      "Text": "D7 УооУУУУУооо!",
+      "Type": 0,
+      "Position": {
+        "x": -235.0,
+        "y": 200.0,
+        "normalized": {
+          "x": -0.7615394,
+          "y": 0.6481186,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 308.58548,
+        "sqrMagnitude": 95225.0
+      },
+      "IsStartNode": true,
+      "OnStartEvents": [
+        "a_McMushroom_verydrunk_0_1"
+      ],
+      "OnEndEvents": [],
+      "ChoiceEvents": [],
+      "Choices": [
+        "Next dialogue"
+      ]
+    }
+  ],
+  "Edges": [
+    {
+      "InputNodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
+      "OutputNodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
+      "InputPortIndex": 0,
+      "OutputPortIndex": 0
+    }
+  ]
+}

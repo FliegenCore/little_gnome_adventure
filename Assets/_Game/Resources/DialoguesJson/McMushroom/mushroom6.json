@@ -3,30 +3,30 @@
     {
       "NodeId": "6ef643ac-8238-471e-852e-5b06ca58dfcb",
       "DialogueName": "McMushroom",
-      "Text": "D4 Опа! гибочек!",
+      "Text": "D6 ОООО какой кайф",
       "Type": 0,
       "Position": {
-        "x": -230.0,
-        "y": 210.0,
+        "x": -278.0,
+        "y": 184.0,
         "normalized": {
-          "x": -0.738485456,
-          "y": 0.6742693,
+          "x": -0.8338916,
+          "y": 0.5519282,
           "normalized": {
-            "x": -0.7384855,
-            "y": 0.6742694,
+            "x": -0.83389163,
+            "y": 0.5519283,
             "magnitude": 1.0,
-            "sqrMagnitude": 1.0
+            "sqrMagnitude": 1.00000012
           },
           "magnitude": 0.99999994,
-          "sqrMagnitude": 0.9999999
+          "sqrMagnitude": 0.99999994
         },
-        "magnitude": 311.448242,
-        "sqrMagnitude": 97000.0
+        "magnitude": 333.376678,
+        "sqrMagnitude": 111140.0
       },
       "IsStartNode": true,
       "OnStartEvents": [
-        "a_McMushroom_giveGrib1_0_0",
-        "a_McMushroom_speak_0_1"
+        "a_McMushroom_drunkspeak_0_1",
+        "a_Player_eyes/forward_2_1"
       ],
       "OnEndEvents": [],
       "ChoiceEvents": [],
@@ -37,7 +37,7 @@
     {
       "NodeId": "707aa3fe-989a-49c4-af00-60db400d9cbb",
       "DialogueName": "McMushroom",
-      "Text": "Но этого всё ещё мало! ",
+      "Text": "Держи билетик за такой подгон!",
       "Type": 0,
       "Position": {
         "x": 154.0,
@@ -64,10 +64,14 @@
         "sqrMagnitude": 67816.0
       },
       "IsStartNode": false,
-      "OnStartEvents": [],
+      "OnStartEvents": [
+        "dialogue_skip_disable",
+        "a_McMushroom_drunkticket_0_0_drunk_(dialogue_skip_enable)"
+      ],
       "OnEndEvents": [
         "a_Player_emotion/idle_1_1",
-        "a_McMushroom_idle_0_1"
+        "a_McMushroom_drunk_0_1_(dialogue_skip_enable)",
+        "inventory_add_Ticket"
       ],
       "ChoiceEvents": [],
       "Choices": [
