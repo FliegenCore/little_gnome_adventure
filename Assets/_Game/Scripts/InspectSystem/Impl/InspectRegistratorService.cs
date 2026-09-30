@@ -60,11 +60,18 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
 
         public void RegisterInspect(string id, InspectAbstractView view, bool isClosable = true, InspectInputHandler inspectInputHandler = null, params AbstractInteractable[] interactables)
         {
-            InspectModel inspectModel = new InspectModel(view.OpenTransform, isClosable, interactables);
+            bool needMomentalEndActive = !view.InspectActivator;
+
+            InspectModel inspectModel = new InspectModel(
+                view.OpenTransform,
+                needMomentalEndActive,
+                isClosable,
+                interactables);
 
             if (view != null)
             {
                 view.Activator.Construct(inspectModel.IsOpen);
+                view.InspectActivator.Construct(inspectModel.IsOpen);
                 view.transform.position = view.OpenTransform ? view.OpenTransform.position : Vector3.zero;
             }
             

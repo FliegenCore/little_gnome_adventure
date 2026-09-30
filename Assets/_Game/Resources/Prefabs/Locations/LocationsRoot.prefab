@@ -913,7 +913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Activator>k__BackingField: {fileID: 6060380988427503711}
-  <OpenTransform>k__BackingField: {fileID: 8555814583478377787}
+  <OpenTransform>k__BackingField: {fileID: 0}
+  <InspectActivator>k__BackingField: {fileID: 0}
   _animationControl: {fileID: 6029274445878003947}
 --- !u!1001 &6664415726434696864
 PrefabInstance:
@@ -1311,11 +1312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e19f4d71f3409e9584092faf5fd115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &8555814583478377787 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2068664767022386057, guid: a22d6c2ee562d4c4f8d7b39dfd4fe05d, type: 3}
-  m_PrefabInstance: {fileID: 7640642285480810162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8983986506489067317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1631582405469364615, guid: a22d6c2ee562d4c4f8d7b39dfd4fe05d, type: 3}
@@ -1369,6 +1365,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2977994347000835662, guid: b4bebca329229464d988efc2b600e337, type: 3}
+      propertyPath: <InspectActivator>k__BackingField
+      value: 
+      objectReference: {fileID: 4249673182851103782}
     - target: {fileID: 5100961396806712072, guid: b4bebca329229464d988efc2b600e337, type: 3}
       propertyPath: m_Name
       value: Instruction_paper
@@ -1382,6 +1382,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4bebca329229464d988efc2b600e337, type: 3}
+--- !u!114 &4249673182851103782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5827226929550330695, guid: b4bebca329229464d988efc2b600e337, type: 3}
+  m_PrefabInstance: {fileID: 7649266362919417697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e4613e071767147ab5d0b0843e3dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4860599157430999343 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2977994347000835662, guid: b4bebca329229464d988efc2b600e337, type: 3}
