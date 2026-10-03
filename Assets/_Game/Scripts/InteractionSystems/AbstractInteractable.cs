@@ -24,10 +24,11 @@ namespace _Game.Scripts.InteractionSystems
             EventBus = eventBus;
             AbstractInteractableModel = abstractInteractableModel;
             InteractableView = interactableView;
+            
             Debug.Log($"[{nameof(AbstractInteractable)}] Create {AbstractInteractableModel.Id}");
+            
             if (AbstractInteractableModel.ContactTriggerProvider != null)
             {
-                Debug.Log($"[{nameof(AbstractInteractable)}] Create {AbstractInteractableModel.Id}");
                 AbstractInteractableModel.ContactTriggerProvider.OnEnter += OnPlayerCollided;
                 AbstractInteractableModel.ContactTriggerProvider.OnExit += OnPlayerExit;
             }
@@ -47,11 +48,12 @@ namespace _Game.Scripts.InteractionSystems
         
         protected virtual void OnPlayerCollided(Collider2D collider2D)
         {
-            Debug.Log($"[{nameof(AbstractInteractable)}] {AbstractInteractableModel.Id}");
             if (!collider2D.GetComponent<PlayerView>())
             {
                 return;
             }
+
+            Debug.Log($"[{nameof(AbstractInteractable)}] {AbstractInteractableModel.Id}");
             if(AbstractInteractableModel.CanSelected.Value)
                 EventBus.TriggerEvenet<SetCurrentInteractableSignal, AbstractInteractable>(this);
         }
