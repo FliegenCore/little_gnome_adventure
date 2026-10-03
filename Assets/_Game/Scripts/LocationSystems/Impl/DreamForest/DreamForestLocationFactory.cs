@@ -93,7 +93,8 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
                 _playerFactory,
                 _dialogueModel,
                 _updateController,
-                _locationsControllerFactory
+                _locationsControllerFactory,
+                _interactableFactory
             );
             
             DreamForestLocationState dreamForestLocation =

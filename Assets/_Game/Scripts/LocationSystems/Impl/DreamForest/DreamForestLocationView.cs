@@ -1,4 +1,5 @@
 using _Game.Scripts.InteractionSystems;
+using _Game.Scripts.InteractionSystems.Interactables.Common;
 using _Game.Scripts.InteractionSystems.Interactables.Items;
 using _Game.Scripts.PlayerSystems.Animations.Impl;
 using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.View;
@@ -21,5 +22,6 @@ namespace _Game.Scripts.RoomSystems.Impl.DreamForest
         [field: SerializeField] public MovePointTransform RabbitMovePointTransform { get; private set; }
         [field: SerializeField] public ContactTriggerProvider[] RabbitSetMoveTriggers { get; private set; }
         [field: SerializeField] public ContactTriggerProvider[] PlayerSetSneakTriggers { get; private set; }
+        [field: SerializeField] public PitView PitView { get; private set; }
     }
 }

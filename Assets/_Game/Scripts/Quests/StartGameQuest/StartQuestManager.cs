@@ -1,13 +1,18 @@
 using _Game.Scripts.CutsceneSystem;
 using _Game.Scripts.DialogueSystem;
 using _Game.Scripts.InteractionSystems;
+using _Game.Scripts.InteractionSystems.Interactables.Common;
 using _Game.Scripts.PlayerSystems;
+using _Game.Scripts.PlayerSystems.Animations.Factory;
+using _Game.Scripts.PlayerSystems.Animations.Factory.Impl;
+using _Game.Scripts.PlayerSystems.InspectSystem.Interactable.Nightstand;
 using _Game.Scripts.Quests.StartGameQuest.Rabbit;
 using _Game.Scripts.Quests.StartGameQuest.Rabbit.States;
 using _Game.Scripts.Quests.StartGameQuest.RabbitBehaviours;
 using _Game.Scripts.RoomSystems;
 using _Game.Scripts.UpdateSystems;
 using Core.Common;
+using UnityEngine;
 
 namespace _Game.Scripts.Quests.StartGameQuest
 {
@@ -20,6 +25,7 @@ namespace _Game.Scripts.Quests.StartGameQuest
         private readonly IPlayerFactory _playerFactory;
         private readonly DialogueModel _dialogueModel;
         private readonly LocationsControllerFactory _locationsControllerFactory;
+        private readonly IInteractableFactory _interactableFactory;
         
         private StartGameQuestRabbitInitializer _startGameQuestRabbitInitializer;
         private StartGameQuestPlayerTriggersInitializer _startGameQuestPlayerTriggersInitializer;
@@ -31,14 +37,16 @@ namespace _Game.Scripts.Quests.StartGameQuest
             IPlayerFactory playerFactory,
             DialogueModel dialogueModel,
             UpdateController updateController,
-            LocationsControllerFactory locationsControllerFactory
+            LocationsControllerFactory locationsControllerFactory,
+            IInteractableFactory interactableFactory
         )
         {
-            _dialogueModel    = dialogueModel;
-            _playerFactory    = playerFactory;
-            _eventBus         = eventBus;
-            _rootViewFactory  = rootViewFactory;
-            _cutsceneManager  = cutsceneManager;
+            _interactableFactory        = interactableFactory;
+            _dialogueModel              = dialogueModel;
+            _playerFactory              = playerFactory;
+            _eventBus                   = eventBus;
+            _rootViewFactory            = rootViewFactory;
+            _cutsceneManager            = cutsceneManager;
             _locationsControllerFactory = locationsControllerFactory;
             _rabbitFactory = new RabbitFactory(updateController);
         }
@@ -53,6 +61,8 @@ namespace _Game.Scripts.Quests.StartGameQuest
                 _dialogueModel,
                 _rabbitFactory
             );
+            
+            CreatePitCutscene();
             
             RabbitView rabbitView = _rootViewFactory.GetLocationsRootView().DreamForestLocationView.RabbitView;
             
@@ -80,6 +90,24 @@ namespace _Game.Scripts.Quests.StartGameQuest
             _startGameQuestRabbitInitializer.Initialize();
             rabbit.StateMachine.SetState<RabbitWaitCatchState>();
             _cutsceneManager.Play(startCutscene);
+        }
+
+        private void CreatePitCutscene()
+        {
+            PitCutscene pitCutscene = new PitCutscene(_eventBus, _playerFactory);
+            CreatePitInteractable(pitCutscene);
+        }
+
+        private void CreatePitInteractable(PitCutscene pitCutscene)
+        {
+            PitInteractableBehaviour pitInteractableBehaviour = new PitInteractableBehaviour(_eventBus, pitCutscene);
+            PitView pitView = _rootViewFactory.GetLocationsRootView().DreamForestLocationView.PitView;
+            
+            _interactableFactory.CreateInteractable(pitInteractableBehaviour,
+                pitView, 
+                new NightstandModel(pitView.Position,
+                nameof(pitView),
+                pitView.ContactTriggerProvider));
         }
     }
 }

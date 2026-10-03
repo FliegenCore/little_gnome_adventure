@@ -703,14 +703,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6368458148237311094}
     m_Modifications:
-    - target: {fileID: 2826409155473078118, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
-      propertyPath: <ConnectedDoor>k__BackingField
-      value: 
-      objectReference: {fileID: 4576913446126443915}
-    - target: {fileID: 2826409155473078118, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
-      propertyPath: <ConnectedLocationView>k__BackingField
-      value: 
-      objectReference: {fileID: 3867871346510530663}
     - target: {fileID: 4158314165433188126, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -755,6 +747,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7569706796655845951, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
+      propertyPath: m_Size.x
+      value: 5.022522
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569706796655845951, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
+      propertyPath: m_Size.y
+      value: 5.641378
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569706796655845951, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
+      propertyPath: m_Offset.x
+      value: -4.0225296
+      objectReference: {fileID: 0}
+    - target: {fileID: 7569706796655845951, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.88959765
+      objectReference: {fileID: 0}
     - target: {fileID: 8796029365294511961, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
       propertyPath: m_Name
       value: DreamForest
@@ -762,6 +770,10 @@ PrefabInstance:
     - target: {fileID: 8796029365294511961, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122635398530768221, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 69.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -777,17 +789,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60d6fafbb1504946ac49f1e7331c6c1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4576913446126443915 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2826409155473078118, guid: 4c79e0c9d3c1f2d47bb1e1869ed0301c, type: 3}
-  m_PrefabInstance: {fileID: 1782610308346489581}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd65e348c0b4acf9032a7ded563d471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &5737515379442666074 stripped
@@ -1296,6 +1297,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8622568278682427138, guid: a22d6c2ee562d4c4f8d7b39dfd4fe05d, type: 3}
+      propertyPath: <HellGatesView>k__BackingField
+      value: 
+      objectReference: {fileID: 4996615028313707554}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1310,6 +1315,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0e19f4d71f3409e9584092faf5fd115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4996615028313707554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3413316511600591504, guid: a22d6c2ee562d4c4f8d7b39dfd4fe05d, type: 3}
+  m_PrefabInstance: {fileID: 7640642285480810162}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217c15b73b1d49869d698f5835704f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8983986506489067317 stripped

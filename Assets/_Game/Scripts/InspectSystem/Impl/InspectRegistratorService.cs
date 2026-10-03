@@ -71,7 +71,8 @@ namespace _Game.Scripts.PlayerSystems.InspectSystem
             if (view != null)
             {
                 view.Activator.Construct(inspectModel.IsOpen);
-                view.InspectActivator.Construct(inspectModel.IsOpen);
+                if(view.InspectActivator != null)
+                    view.InspectActivator.Construct(inspectModel.IsOpen);
                 view.transform.position = view.OpenTransform ? view.OpenTransform.position : Vector3.zero;
             }
             

@@ -10,5 +10,6 @@ namespace _Game.Scripts.PlayerSystems.Animations
         public const string CATCH_RABBIT_ANIMATION_NAME = "body/catch_rabbit";
         public const string CATCH_RABBIT_ANIMATION_NAME666 = "666/catch_rabbit7";
         public const string IN_INVENTORY_ANIMATION_NAME = "body/inventary_searching";
+        public const string PIT_ANIMATION_NAME = "body/obriv";
     }
 }
